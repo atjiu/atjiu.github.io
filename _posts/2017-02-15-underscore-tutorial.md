@@ -21,119 +21,129 @@ tags: javascript
 
 **创建模板**
 
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title>demo</title>
-  </head>
-  <body>
-    <div id="box"></div>
-    <script type="text/template" id="tpl">
-      hello, <%=name%>
-    </script>
-    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
-    <script type="text/javascript">
-      var name = 'world';
-      var render = _.template($("#tpl").html());
-      $("#box").html(render({name: name}));
-    </script>
-  </body>
-  </html>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>demo</title>
+</head>
+<body>
+  <div id="box"></div>
+  <script type="text/template" id="tpl">
+    hello, <%=name%>
+  </script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+  <script type="text/javascript">
+    var name = 'world';
+    var render = _.template($("#tpl").html());
+    $("#box").html(render({name: name}));
+  </script>
+</body>
+</html>
+```
+```
+result: 
 
-  result: 
-
-  hello, world
+hello, world
+```
 
 **遍历列表**
 
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title>demo</title>
-  </head>
-  <body>
-    <div id="box"></div>
-    <script type="text/template" id="tpl">
-      <ul>
-        <% _.each(list, function(v, i) { %>
-          <li><%=i%>. <%=v.name%></li>
-        <% }) %>
-      </ul>
-    </script>
-    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
-    <script type="text/javascript">
-      var names = [{
-        name: 'tom',
-        age: 21
-      }, {
-        name: 'jerry',
-        age: 20
-      }, {
-        name: 'amy',
-        age: 23
-      }, {
-        name: 'john',
-        age: 15
-      }]
-      var render = _.template($("#tpl").html());
-      $("#box").html(render({list: names}));
-    </script>
-  </body>
-  </html>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>demo</title>
+</head>
+<body>
+  <div id="box"></div>
+  <script type="text/template" id="tpl">
+    <ul>
+      <% _.each(list, function(v, i) { %>
+        <li><%=i%>. <%=v.name%></li>
+      <% }) %>
+    </ul>
+  </script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+  <script type="text/javascript">
+    var names = [{
+      name: 'tom',
+      age: 21
+    }, {
+      name: 'jerry',
+      age: 20
+    }, {
+      name: 'amy',
+      age: 23
+    }, {
+      name: 'john',
+      age: 15
+    }]
+    var render = _.template($("#tpl").html());
+    $("#box").html(render({list: names}));
+  </script>
+</body>
+</html>
+```
 
-  result:
+```
+result:
 
-  0. tom
-  1. jerry
-  2. amy
-  3. john
-
+0. tom
+1. jerry
+2. amy
+3. john
+```
 **if判断**
 
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <title>demo</title>
-  </head>
-  <body>
-    <div id="box"></div>
-    <script type="text/template" id="tpl">
-      <ul>
-        <% _.each(list, function(v, i) { %>
-          <% if(i % 2 == 0) { %>
-            <li><%=i%>. <%=v.name%></li>
-          <% } %>
-        <% }) %>
-      </ul>
-    </script>
-    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
-    <script type="text/javascript">
-      var names = [{
-        name: 'tom',
-        age: 21
-      }, {
-        name: 'jerry',
-        age: 20
-      }, {
-        name: 'amy',
-        age: 23
-      }, {
-        name: 'john',
-        age: 15
-      }]
-      var render = _.template($("#tpl").html());
-      $("#box").html(render({list: names}));
-    </script>
-  </body>
-  </html>
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>demo</title>
+</head>
+<body>
+  <div id="box"></div>
+  <script type="text/template" id="tpl">
+    <ul>
+      <% _.each(list, function(v, i) { %>
+        <% if(i % 2 == 0) { %>
+          <li><%=i%>. <%=v.name%></li>
+        <% } %>
+      <% }) %>
+    </ul>
+  </script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+  <script type="text/javascript">
+    var names = [{
+      name: 'tom',
+      age: 21
+    }, {
+      name: 'jerry',
+      age: 20
+    }, {
+      name: 'amy',
+      age: 23
+    }, {
+      name: 'john',
+      age: 15
+    }]
+    var render = _.template($("#tpl").html());
+    $("#box").html(render({list: names}));
+  </script>
+</body>
+</html>
+```
 
-  result: 
-  
-  0. tom
-  2. amy
+```
+result: 
+
+0. tom
+2. amy
+```
 
 ## 参考
 
