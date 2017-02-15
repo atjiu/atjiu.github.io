@@ -9,4 +9,4 @@ excerpt:
 
 Hello World!
 
-![](http://ww1.sinaimg.cn/large/ce56395agy1fcqxrlb3pqj20sg0lcqb8)
+![](//ww1.sinaimg.cn/large/ce56395agy1fcqxrlb3pqj20sg0lcqb8)
