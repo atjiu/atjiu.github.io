@@ -14,9 +14,6 @@ tags: javascript
 - 打开 [bootcdn](//bootcdn.cn) 搜索 underscore 
 - [github地址](https://github.com/jashkenas/underscore)
 
-
-
-
 ## 使用
 
 **创建模板**
@@ -42,6 +39,10 @@ tags: javascript
 </body>
 </html>
 ```
+
+
+
+
 ```
 result: 
 
