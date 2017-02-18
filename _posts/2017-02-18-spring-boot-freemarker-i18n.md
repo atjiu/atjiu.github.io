@@ -67,4 +67,16 @@ public String changeLanguage(String lang, HttpSession session, HttpServletRespon
 }
 ```
 
+如果想在java代码里获取当前的语言，可以用这个工具 [LocaleMessageSourceUtil.java](https://github.com/zl736732419/spring-boot-i18n/blob/master/src/main/java/com/zheng/utils/LocaleMessageSourceUtil.java)
+
+```java
+@Autowired
+private LocaleMessageSourceUtil localeMessageSourceUtil;
+
+public void foo() {
+    String xxx = localeMessageSourceUtil.getMessage("xxx");
+    System.out.println(xxx);
+}
+```
+
 参考代码：http://github.com/tomoya92/pybbs 里i18n相关代码
