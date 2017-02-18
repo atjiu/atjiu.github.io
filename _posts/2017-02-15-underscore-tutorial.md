@@ -2,8 +2,8 @@
 layout: post
 title:  "js模板 underscore 简单使用教程"
 date:   2017-02-15 10:54:20
-categories: templates
-tags: javascript
+categories: 模板
+tags: javascript underscore template
 ---
 
 * content
