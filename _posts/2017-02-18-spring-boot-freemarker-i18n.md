@@ -10,7 +10,7 @@ tags: spring-boot freemarker i18n
 
 ## 配置application.yml
 
-```
+```yml
 spring:
   messages:
     basename: i18n/messages
@@ -31,7 +31,7 @@ spring:
 
 配置application.yml文件
 
-```
+```yml
 spring:
   freemarker:
     settings:
