@@ -12,7 +12,7 @@ react-router版本 v4.x
 
 ## 使用
 
-```jsx
+```js
 <Router>
     <header>
         <ul>
@@ -44,13 +44,13 @@ react-router版本 v4.x
 
 假如，点击List里的项，要传ID到Detail里，这时候就可以用下面的方法来实现
 
-```jsx
+```js
 <Route path='/detail/:id' render={(match) => (<Detail xxId={match.params.id}/>)}/>
 ```
 
 Detail.jsx
 
-```jsx
+```js
 class Detail extends React.Component {
     render() {
         console.log(this.props.xxId); //可以输出List里点击传过来的值
