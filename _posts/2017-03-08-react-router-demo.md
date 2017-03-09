@@ -6,6 +6,9 @@ categories: react学习
 tags: react react-router
 ---
 
+* content
+{:toc}
+
 react-router版本 v4.x
 
 跟着官网 https://reacttraining.com/react-router/ 上的example学习的

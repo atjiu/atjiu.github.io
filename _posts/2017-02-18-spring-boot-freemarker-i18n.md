@@ -6,6 +6,9 @@ categories: spring-boot学习笔记
 tags: spring-boot freemarker i18n
 ---
 
+* content
+{:toc}
+
 网上搜索到的都是用thymeleaf模板做的国际化，没找到freemarker，然后我想到了，spring-boot 用的mvc框架不就是springmvc吗，然后就搜索了下springmvc freemarker i18n，结果还真让我找到了
 
 ## 配置application.yml

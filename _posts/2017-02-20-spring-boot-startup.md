@@ -6,6 +6,9 @@ categories: spring-boot学习笔记
 tags: spring-boot
 ---
 
+* content
+{:toc}
+
 web项目在启动之后有时候还会做点其它的东西（比如，导入数据脚本），下面就说说spring-boot里怎么在程序启动后加入自己要执行的东西
 
 新建一个类：BeforeStartup.java

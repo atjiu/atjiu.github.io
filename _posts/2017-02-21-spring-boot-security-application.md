@@ -6,5 +6,8 @@ categories: spring-boot学习笔记
 tags: spring-boot spring-security
 ---
 
+* content
+{:toc}
+
 spring-boot 使用 spring-security 博客 https://kielczewski.eu/2014/12/spring-boot-security-application/
 
