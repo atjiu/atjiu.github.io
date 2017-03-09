@@ -145,4 +145,8 @@ thymeleaf的layout常用的有两种方式用法
 <div th:include="components/header :: header(tab='blog')"></div>
 ```
 
+相关链接:
+
+[http://www.thymeleaf.org/doc/articles/layouts.html](http://www.thymeleaf.org/doc/articles/layouts.html)
+
 END
