@@ -15,7 +15,7 @@ tags: javascript tampermonkey
 
 首先在chrome里装上Tampermonkey插件 [下载地址](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-ntp-icon) 
 
-![](http://ww1.sinaimg.cn/large/ce56395agy1fdcwp5w10zj21ii12ydtr)
+![](//ww1.sinaimg.cn/large/ce56395agy1fdcwp5w10zj21ii12ydtr)
 
 ## 代码
 
@@ -61,7 +61,7 @@ tags: javascript tampermonkey
 
 下载列表里就已经有ftp的下载地址了
 
-![](http://ww1.sinaimg.cn/large/ce56395agy1fdcwueepnzj20l005075c)
+![](//ww1.sinaimg.cn/large/ce56395agy1fdcwueepnzj20l005075c)
 
 **此方法还可以写其它网页的脚本，比如改变页面的样式，布局，按照自己习惯自己写些功能自己用，都相当方便，也可以把自己的脚本上传到网站：https://greasyfork.org ，当然上面也有很多非常好用的插件**
 
