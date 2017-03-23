@@ -91,4 +91,11 @@ query风格的url
 //其实跟velocity, freemarker的用法是一样的，我最开始受th:href="@{/user/(name=${user.name})}"的影响，给弄错了，还以为不支持呢。。
 ```
 
+## 写入行间属性
+
+```html
+<span th:attr="data-id=${user.id}"></span>
+//<span data-id="1"></span>
+```
+
 END
