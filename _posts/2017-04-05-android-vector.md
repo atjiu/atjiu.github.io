@@ -11,22 +11,22 @@ tags: Android Vector Drawable
 
 开发Android APP，会用到很多的小图标，一般都是做不同分辨率的图片，相当麻烦，而且图片还会失贞，下面说一下as自带的vector小图标，相当好用
 
-1. 对drawable文件夹右键选择Vector Asset
+## 对drawable文件夹右键选择Vector Asset
 
 ![](../imgs/1D14C332-10D9-41BD-A9EB-61BA2E894A7C.png)
 
 
 
 
-2. 点击Icon，进入选择图标
+## 点击Icon，进入选择图标
 
 ![](../imgs/QQ20170405-141720@2x.png)
 
-3. 进行搜索
+## 进行搜索
 
 ![](../imgs/QQ20170405-141808@2x.png)
 
-4. 确定
+## 确定
 
 回到drawable文件夹可以看到一个xml文件的图标就生成了
 
