@@ -13,18 +13,18 @@ tags: Android Vector Drawable
 
 ## 对drawable文件夹右键选择Vector Asset
 
-![](/imgs/1D14C332-10D9-41BD-A9EB-61BA2E894A7C.png)
+![](https://tomoya92.github.io/imgs/1D14C332-10D9-41BD-A9EB-61BA2E894A7C.png)
 
 
 
 
 ## 点击Icon，进入选择图标
 
-![](/imgs/QQ20170405-141720@2x.png)
+![](https://tomoya92.github.io/imgs/QQ20170405-141720@2x.png)
 
 ## 进行搜索
 
-![](/imgs/QQ20170405-141808@2x.png)
+![](https://tomoya92.github.io/imgs/QQ20170405-141808@2x.png)
 
 ## 确定
 
@@ -32,6 +32,6 @@ tags: Android Vector Drawable
 
 默认生成的图标是黑色的，大小是24dp x 24dp的，如果想改变，可以打开文件，进行修改
 
-![](/imgs/QQ20170405-142151@2x.png)
+![](https://tomoya92.github.io/imgs/QQ20170405-142151@2x.png)
 
 **用xml文件定义的小图标好处就不用说了，as里内置了很多的这样的小图标，大赞！**
