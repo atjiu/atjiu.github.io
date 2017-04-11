@@ -23,9 +23,9 @@ public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<Recyc
 
   private Context context;
   private List<T> list;
-  LayoutInflater inflater;
+  protected LayoutInflater inflater;
 
-  MyRecylerViewAdapter(Context context, List<T> list) {
+  public MyRecylerViewAdapter(Context context, List<T> list) {
     this.context = context;
     this.list = list;
     this.inflater = LayoutInflater.from(context);
@@ -52,18 +52,18 @@ public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<Recyc
   /**
    * -----------------------------------------------------------------------------------------------
    */
-  abstract class TypeViewHolder extends RecyclerView.ViewHolder {
+  public abstract class TypeViewHolder extends RecyclerView.ViewHolder {
 
     private View convertView;
     private SparseArray<View> views = new SparseArray<>();
 
-    TypeViewHolder(View itemView) {
+    public TypeViewHolder(View itemView) {
       super(itemView);
       this.convertView = itemView;
     }
 
     @SuppressWarnings("unchecked")
-    <V extends View> V getView(int viewId) {
+    public <V extends View> V getView(int viewId) {
       View view = views.get(viewId);
       if(view == null) {
         view = convertView.findViewById(viewId);
@@ -72,19 +72,19 @@ public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<Recyc
       return (V) view;
     }
 
-    TypeViewHolder setText(int viewId, String text) {
+    public TypeViewHolder setText(int viewId, String text) {
       TextView textView = getView(viewId);
       textView.setText(text);
       return this;
     }
 
-    TypeViewHolder setBackgroundColor(int viewId, int colorId) {
+    public TypeViewHolder setBackgroundColor(int viewId, int colorId) {
       ImageView imageView = getView(viewId);
       imageView.setBackgroundResource(colorId);
       return this;
     }
 
-    abstract void bindHolder(T model);
+    public abstract void bindHolder(T model);
   }
 
 }
