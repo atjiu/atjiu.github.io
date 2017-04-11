@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Android万能RecylerView的Adapter实现（通用类实现）"
+title:  "Android万能RecylerView的Adapter实现（通用类实现，包括分割线，点击事件，点击波纹，上拉加载更多）"
 date:   2017-04-10 17:45:20
 categories: Android学习笔记
 tags: Android RecylerView Adapter
