@@ -437,6 +437,8 @@ adapter = new MyRecylerViewAdapter<DataModel>(this, list) {
 };
 ```
 
+**关于加载更多那块的代码还可以进行封装一下，有兴趣的朋友可以试试**
+
 ## 参考
 
 - [http://www.imooc.com/learn/731](http://www.imooc.com/learn/731)
