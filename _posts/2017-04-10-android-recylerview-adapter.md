@@ -343,15 +343,10 @@ adapter.setOnItemClickListener(new MyRecylerViewAdapter.OnItemClickListener() {
 
 原理：引用：[http://blog.csdn.net/never_cxb/article/details/50759109](http://blog.csdn.net/never_cxb/article/details/50759109)
 
-> 注意 onPreExecute() 给 mArticleList 增加了一个null标记Footer，如果是第一次进入页面（mArticleList为空）不需要加Footer。
-
-> 当数据加载完毕后，用 mArticleList.remove(mArticleList.size() - 1);把最下面的Footer删除。
-
-> 再用 mArticleList.addAll(moreArticles); 增加新增的新闻数据，
-
+> 注意 onPreExecute() 给 mArticleList 增加了一个null标记Footer，如果是第一次进入页面（mArticleList为空）不需要加Footer。<br/>
+> 当数据加载完毕后，用 mArticleList.remove(mArticleList.size() - 1);把最下面的Footer删除。<br/>
+> 再用 mArticleList.addAll(moreArticles); 增加新增的新闻数据，<br/>
 > 并用 mAdapter.notifyDataSetChanged(); 通知 RecyclerView.Adapter 有数据改变。
-
-> 就是这么简单，一个好的封装，可以省多少事呀！
 
 代码实现
 
@@ -438,6 +433,8 @@ adapter = new MyRecylerViewAdapter<DataModel>(this, list) {
 ```
 
 **关于加载更多那块的代码还可以进行封装一下，有兴趣的朋友可以试试**
+
+就是这么简单，一个好的封装，可以省多少事呀！
 
 ## 参考
 
