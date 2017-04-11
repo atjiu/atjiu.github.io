@@ -26,7 +26,7 @@ npm install
 npm install sequelize --save
 ```
 
-# 在项目根目录下新建models文件夹，创建index.js
+## 在项目根目录下新建models文件夹，创建index.js
 
 ```js
 var Sequelize = require("sequelize");
