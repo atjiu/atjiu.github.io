@@ -21,18 +21,23 @@ tags: Android RecylerView Adapter
 ```java
 public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+  private Context context;
   private List<T> list;
+  LayoutInflater inflater;
 
-  public MyRecylerViewAdapter(List<T> list) {
+  MyRecylerViewAdapter(Context context, List<T> list) {
+    this.context = context;
     this.list = list;
+    this.inflater = LayoutInflater.from(context);
   }
 
   @Override
   public abstract RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType);
 
   @Override
+  @SuppressWarnings("unchecked")
   public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-    ((TypeViewHolder<T>) holder).bindHolder(list.get(position));
+    ((TypeViewHolder) holder).bindHolder(list.get(position));
   }
 
   @Override
@@ -43,40 +48,43 @@ public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<Recyc
     return list.size();
   }
 
-  public abstract class TypeViewHolder<T> extends RecyclerView.ViewHolder {
 
-    private Context context;
+  /**
+   * -----------------------------------------------------------------------------------------------
+   */
+  abstract class TypeViewHolder extends RecyclerView.ViewHolder {
+
     private View convertView;
     private SparseArray<View> views = new SparseArray<>();
 
-    public TypeViewHolder(View itemView, Context context) {
+    TypeViewHolder(View itemView) {
       super(itemView);
       this.convertView = itemView;
-      this.context = context;
     }
 
-    public <T extends View> T getView(int viewId) {
+    @SuppressWarnings("unchecked")
+    <V extends View> V getView(int viewId) {
       View view = views.get(viewId);
       if(view == null) {
         view = convertView.findViewById(viewId);
         views.put(viewId, view);
       }
-      return (T) view;
+      return (V) view;
     }
 
-    public TypeViewHolder setText(int viewId, String text) {
+    TypeViewHolder setText(int viewId, String text) {
       TextView textView = getView(viewId);
       textView.setText(text);
       return this;
     }
 
-    public TypeViewHolder setBackgroundColor(int viewId, int colorId) {
+    TypeViewHolder setBackgroundColor(int viewId, int colorId) {
       ImageView imageView = getView(viewId);
       imageView.setBackgroundResource(colorId);
       return this;
     }
 
-    public abstract void bindHolder(T model);
+    abstract void bindHolder(T model);
   }
 
 }
@@ -85,13 +93,14 @@ public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<Recyc
 ## 使用方法
 
 ```java
-adapter = new MyRecylerViewAdapter<DataModel>(list) {
-  LayoutInflater layoutInflater = LayoutInflater.from(getApplicationContext());
+recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+recyclerView.setLayoutManager(new LinearLayoutManager(this));
+adapter = new MyRecylerViewAdapter<DataModel>(this, list) {
   @Override
   public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     switch (viewType) {
       case DataModel.TYPE_ONE:
-        return new TypeViewHolder<DataModel>(layoutInflater.inflate(R.layout.item_type_one, parent, false), getApplicationContext()) {
+        return new TypeViewHolder(inflater.inflate(R.layout.item_type_one, parent, false)) {
           @Override
           public void bindHolder(DataModel model) {
             this.setText(R.id.name, model.name);
@@ -99,7 +108,7 @@ adapter = new MyRecylerViewAdapter<DataModel>(list) {
           }
         };
       case DataModel.TYPE_TWO:
-        return new TypeViewHolder<DataModel>(layoutInflater.inflate(R.layout.item_type_two, parent, false), getApplicationContext()) {
+        return new TypeViewHolder(inflater.inflate(R.layout.item_type_two, parent, false)) {
           @Override
           public void bindHolder(DataModel model) {
             this.setText(R.id.name, model.name).setText(R.id.content, model.content);
@@ -107,7 +116,7 @@ adapter = new MyRecylerViewAdapter<DataModel>(list) {
           }
         };
       case DataModel.TYPE_THREE:
-        return new TypeViewHolder<DataModel>(layoutInflater.inflate(R.layout.item_type_three, parent, false), getApplicationContext()) {
+        return new TypeViewHolder(inflater.inflate(R.layout.item_type_three, parent, false)) {
           @Override
           public void bindHolder(DataModel model) {
             this.setText(R.id.name, model.name).setText(R.id.content, model.content);
