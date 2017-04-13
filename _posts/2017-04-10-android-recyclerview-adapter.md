@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "Android万能RecylerView的Adapter实现（通用类实现，包括分割线，点击事件，点击波纹，上拉加载更多）"
+title:  "Android万能RecyclerView的Adapter实现（通用类实现，包括分割线，点击事件，点击波纹，上拉加载更多）"
 date:   2017-04-10 17:45:20
 categories: Android学习笔记
-tags: Android RecylerView Adapter
+tags: Android RecyclerView Adapter
 ---
 
 * content
 {:toc}
 
-学Android的时候，找视频在慕课网上看到了个优雅使用RecylerView实现复杂布局的视频，然后封装了一个通用的Adapter
+学Android的时候，找视频在慕课网上看到了个优雅使用RecyclerView实现复杂布局的视频，然后封装了一个通用的Adapter
 
-任何RecylerView都可以用的，而且只需要写一个匿名内部类就可以实现数据渲染，还是很好用的
+任何RecyclerView都可以用的，而且只需要写一个匿名内部类就可以实现数据渲染，还是很好用的
 
 先上图
 
@@ -39,7 +39,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public abstract class MyRecyclerViewAdapter<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
   protected List<T> list;
   private Context context;
@@ -50,7 +50,7 @@ public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<Recyc
     this.onItemClickListener = onItemClickListener;
   }
 
-  public MyRecylerViewAdapter(Context context, List<T> list) {
+  public MyRecyclerViewAdapter(Context context, List<T> list) {
     this.context = context;
     this.list = list;
     inflater = LayoutInflater.from(context);
@@ -228,7 +228,7 @@ public abstract class MyRecylerViewAdapter<T> extends RecyclerView.Adapter<Recyc
 ```java
 recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 recyclerView.setLayoutManager(new LinearLayoutManager(this));
-adapter = new MyRecylerViewAdapter<DataModel>(this, list) {
+adapter = new MyRecyclerViewAdapter<DataModel>(this, list) {
   @Override
   public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     switch (viewType) {
@@ -271,15 +271,15 @@ recyclerView.setAdapter(adapter);
 ## 列表分割线
 
 ```java
-recylerView.addItemDecoration(new MyRecylerViewAdapter.DividerItemDecoration(this, MyRecylerViewAdapter.DividerItemDecoration.VERTICAL_LIST));
+recyclerView.addItemDecoration(new MyRecyclerViewAdapter.DividerItemDecoration(this, MyRecyclerViewAdapter.DividerItemDecoration.VERTICAL_LIST));
 
-//注意 DividerItemDecoration 这个类要用 MyRecylerViewAdapter下的，不要用Android SDK里的
+//注意 DividerItemDecoration 这个类要用 MyRecyclerViewAdapter下的，不要用Android SDK里的
 ```
 
 ## 列表点击事件用法
 
 ```java
-adapter.setOnItemClickListener(new MyRecylerViewAdapter.OnItemClickListener() {
+adapter.setOnItemClickListener(new MyRecyclerViewAdapter.OnItemClickListener() {
   @Override
   public void onItemClick(View view, int position) {
     //TODO
@@ -356,7 +356,7 @@ private loading = true;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
   //...
-  recylerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+  recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
     @Override
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
       super.onScrolled(recyclerView, dx, dy);
@@ -387,7 +387,7 @@ private void initData() {
 另外还要对Adapter里实现的方法做一下处理
 
 ```java
-adapter = new MyRecylerViewAdapter<DataModel>(this, list) {
+adapter = new MyRecyclerViewAdapter<DataModel>(this, list) {
   @Override
   public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     switch (viewType) {
