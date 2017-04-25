@@ -17,7 +17,7 @@ tags: nodejs mongoose
 ## 安装mongoose
 
 ```
-npm i --save mongoose
+npm i --save mongoose bluebird
 ```
 
 
@@ -29,6 +29,7 @@ npm i --save mongoose
 
 ```js
 var mongoose = require("mongoose");
+mongoose.Promise = require('bluebird');
 mongoose.connect("mongodb://localhost/blog");
 //如果数据库有用户名，密码，端口，使用下面方式连接
 //mongoose.connect('mongodb://user:pass@localhost:port/database');
@@ -43,6 +44,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var BlogSchema = new Schema({
+  user: {type: Schema.Types.ObjectId, ref: 'User'},
   title: String,
   content: String,
   createAt: {
