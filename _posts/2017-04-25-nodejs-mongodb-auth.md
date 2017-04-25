@@ -6,7 +6,8 @@ categories: nodejs学习笔记
 tags: mongodb
 ---
 
-[TOC]
+* content
+{:toc}
 
 ## 安装mongodb
 
