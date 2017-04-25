@@ -39,11 +39,14 @@ baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
 #google_analytics_id:
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+redcarpet:
+  extensions: [ "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
+
+# kramdown:
+  # input: GFM
+  # syntax_highlighter: rouge
 
 # port
 # port: 1234
