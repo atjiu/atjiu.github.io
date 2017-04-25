@@ -11,7 +11,7 @@ tags: mongodb
 
 ## 安装mongodb
 
-1可以参照这个安装 https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/ 
+可以参照这个安装 <https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/>
 
 但我到`sudo apt-get install -y mongodb-enterprise`这一步出问题了，总提示没有mongodb-enterprise这个包，最后用`sudo apt install mongodb`装上了，反正也能用
 
@@ -60,7 +60,7 @@ sudo service mongodb restart
 - dbAdmin: 允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile
 - ...
 
-详见：http://www.cnblogs.com/zhoujinyi/p/4610050.html 
+详见：<http://www.cnblogs.com/zhoujinyi/p/4610050.html>
 
 ## 其它相关
 
@@ -77,7 +77,7 @@ mongoose.connect('mongodb://hello:123123@127.0.0.1/demo');
 
 ## 参考
 
-- http://www.cnblogs.com/zhoujinyi/p/4610050.html
-- https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/
-- https://docs.mongodb.com/manual/tutorial/create-users/
+- <http://www.cnblogs.com/zhoujinyi/p/4610050.html>
+- <https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/>
+- <https://docs.mongodb.com/manual/tutorial/create-users/>
 
