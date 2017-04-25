@@ -11,7 +11,7 @@ tags: mongodb
 
 ## 安装mongodb
 
-可以参照这个安装 https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/ 
+1可以参照这个安装 https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/ 
 
 但我到`sudo apt-get install -y mongodb-enterprise`这一步出问题了，总提示没有mongodb-enterprise这个包，最后用`sudo apt install mongodb`装上了，反正也能用
 

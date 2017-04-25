@@ -49,7 +49,7 @@ kramdown:
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
   input:          GFM
-  hard_wrap:      false
+  hard_wrap:      true
   footnote_nr:    1
 
 highlighter: rouge
