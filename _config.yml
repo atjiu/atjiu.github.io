@@ -42,7 +42,8 @@ baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
 markdown: kramdown
 
 kramdown:
-  autolink: true
+  extensions:
+    - autolink
   auto_ids:       true
   entity_output:  as_char
   toc_levels:     1..6
