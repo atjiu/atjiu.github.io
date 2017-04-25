@@ -39,21 +39,27 @@ baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
 #google_analytics_id:
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
 
-kramdown:
-  extensions:
-    - autolink
-    - smart
-  auto_ids:       true
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  input:          GFM
-  hard_wrap:      true
-  footnote_nr:    1
+# kramdown:
+  # auto_ids:       true
+  # entity_output:  as_char
+  # toc_levels:     1..6
+  # smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  # input:          GFM
+  # hard_wrap:      true
+  # footnote_nr:    1
 
 highlighter: rouge
+
+asciidoc: {}
+asciidoctor:
+  base_dir: :docdir
+  safe: unsafe
+  attributes:
+    - idseparator=_
+    - source-highlighter=coderay
+    - icons=font
 
 # port
 # port: 1234
