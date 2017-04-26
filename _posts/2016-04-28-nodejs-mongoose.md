@@ -4,28 +4,25 @@ title: mongoose的crud及populate的简单使用
 date: 2016-04-28 15:24:44
 categories: nodejs学习笔记
 tags: nodejs mongoose
+author: 朋也
 ---
 
 * content
 {:toc}
 
-写在前面：
-
-> 本教程基于express搭建的web项目上
-> 不会使用express搭建web项目，可以参见：[http://lazycoder.cn/blog/37](http://lazycoder.cn/blog/37)
-
 ## 安装mongoose
 
 ```
 npm i --save mongoose bluebird
+//mongoose不知道从什么版本开始，在启动的时候，会提示使用bluebird
 ```
-
-
-
 
 ## 连接数据库
 
 在app.js里加入下面代码
+
+
+
 
 ```js
 var mongoose = require("mongoose");
@@ -33,6 +30,7 @@ mongoose.Promise = require('bluebird');
 mongoose.connect("mongodb://localhost/blog");
 //如果数据库有用户名，密码，端口，使用下面方式连接
 //mongoose.connect('mongodb://user:pass@localhost:port/database');
+//对mongodb设置数据库认证的博客可以参照：<https://tomoya92.github.io/2017/04/25/nodejs-mongodb-auth/>
 ```
 
 ## 编写schema并exports model
@@ -134,7 +132,6 @@ exports.save = function(req, res) {
 
   blog.save(function(err, result) {
     if (err) console.log(err);
-    console.log(result);
     res.redirect("/");
   })
 }
@@ -142,7 +139,6 @@ exports.save = function(req, res) {
 //编辑博客
 exports.edit = function(req, res) {
   var id = req.params.id;
-  console.log(id);
   Blog.findOne({
     _id: id
   }, function(err, blog) {
@@ -191,10 +187,10 @@ mongoose 里查询链式有个方法 populate()
 
 ```
 populate(path, [select], [model], [match], [options])
-// 参见：http://mongoosejs.com/docs/api.html#query_Query-populate
+// 参见：<http://mongoosejs.com/docs/api.html#query_Query-populate>
 ```
 
-看着那么多参数，该怎么用呀？不要急，其实前两个就能满足大部分的关联查询的需求了，参数解释：
+看着那么多参数，其实前两个就能满足大部分的关联查询的需求了，参数解释：
 
 - path <Object, String> either the path to populate or an object specifying all parameters
 - [select] <Object, String> Field selection for the population query
@@ -203,8 +199,12 @@ populate(path, [select], [model], [match], [options])
 - [options] <Object> Options for the population query (sort, etc)
 
 第一个参数可以理解为要关联查询的文档是谁
-
 第二个参数意思是要查询关联文档里的哪些字段
+如果想在关联里加入条件，可以这样写
+
+```js
+.populate({path: 'user', match: {name: req.query.name}})
+```
 
 下面以博客评论的model来说明
 
@@ -269,4 +269,6 @@ exports.detail = function(req, res) {
 }
 ```
 
-本文源码下载地址：[点击下载](http://7xt6w6.com2.z0.glb.clouddn.com/mongoose-demo.zip)
+## 参考
+
+- <http://mongoosejs.com/docs/api.html#query_Query-populate>
