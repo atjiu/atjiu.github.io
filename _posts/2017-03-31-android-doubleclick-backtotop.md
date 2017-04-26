@@ -4,6 +4,7 @@ title:  "Android双击TitleBar回顶部功能实现"
 date:   2017-03-31 9:43:20
 categories: Android学习笔记
 tags: Android BackToTop
+author: 朋也
 ---
 
 * content

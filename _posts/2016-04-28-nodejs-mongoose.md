@@ -30,7 +30,7 @@ mongoose.Promise = require('bluebird');
 mongoose.connect("mongodb://localhost/blog");
 //如果数据库有用户名，密码，端口，使用下面方式连接
 //mongoose.connect('mongodb://user:pass@localhost:port/database');
-//对mongodb设置数据库认证的博客可以参照：<https://tomoya92.github.io/2017/04/25/nodejs-mongodb-auth/>
+//对mongodb设置数据库认证的博客可以参照：https://tomoya92.github.io/2017/04/25/nodejs-mongodb-auth/
 ```
 
 ## 编写schema并exports model
@@ -187,7 +187,6 @@ mongoose 里查询链式有个方法 populate()
 
 ```
 populate(path, [select], [model], [match], [options])
-// 参见：<http://mongoosejs.com/docs/api.html#query_Query-populate>
 ```
 
 看着那么多参数，其实前两个就能满足大部分的关联查询的需求了，参数解释：

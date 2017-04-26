@@ -4,6 +4,7 @@ title:  "react-router简单使用方法"
 date:   2017-03-08 13:41:36
 categories: react学习
 tags: react react-router
+author: 朋也
 ---
 
 * content

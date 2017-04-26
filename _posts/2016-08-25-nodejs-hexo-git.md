@@ -4,6 +4,7 @@ title: 利用git仓库部署hexo搭建的博客
 date: 2016-08-25 18:32:57
 categories: nodejs学习笔记
 tags: nodejs hexo git
+author: 朋也
 ---
 
 * content

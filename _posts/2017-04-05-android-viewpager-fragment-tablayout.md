@@ -4,6 +4,7 @@ title:  "Android布局实现-ViewPager+Fragment+TabLayout整合"
 date:   2017-04-05 14:36:20
 categories: Android学习笔记
 tags: Android ViewPager Fragment TabLayout
+author: 朋也
 ---
 
 * content

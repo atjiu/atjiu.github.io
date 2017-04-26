@@ -4,6 +4,7 @@ title:  "beego建站之上传文件权限设计"
 date:   2016-08-26 22:39:01
 categories: Golang学习笔记
 tags: Golang beego
+author: 朋也
 ---
 
 * content

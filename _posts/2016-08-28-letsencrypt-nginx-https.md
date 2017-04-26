@@ -4,6 +4,7 @@ title: letsencrypt结合nginx配置https备忘
 date: 2016-08-28 17:26:35
 categories: 杂项
 tags: letsencrypt nginx https
+author: 朋也
 ---
 
 * content

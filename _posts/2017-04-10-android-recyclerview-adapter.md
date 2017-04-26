@@ -4,6 +4,7 @@ title:  "Android万能RecyclerView的Adapter实现（通用类实现，包括分
 date:   2017-04-10 17:45:20
 categories: Android学习笔记
 tags: Android RecyclerView Adapter
+author: 朋也
 ---
 
 * content

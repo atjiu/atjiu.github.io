@@ -4,6 +4,7 @@ title:  "thymeleaf模板布局用法"
 date:   2017-03-09 15:34:20
 categories: spring-boot学习笔记
 tags: thymeleaf template
+author: 朋也
 ---
 
 * content

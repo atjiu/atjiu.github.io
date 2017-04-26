@@ -1,9 +1,10 @@
 ---
 layout: post
-title: mongodb创建用户管理数据库
+title: mongodb创建用户管理数据库以及备份还原
 date: 2017-04-25 16:23:00
 categories: nodejs学习笔记
 tags: mongodb
+author: 朋也
 ---
 
 * content
@@ -62,6 +63,24 @@ sudo service mongodb restart
 
 详见：<http://www.cnblogs.com/zhoujinyi/p/4610050.html>
 
+## 数据库备份
+
+```sh
+$ mongodump -d ai -o ./ -u demo -p 123123
+// -d : 指定数据库名称
+// -o : 指定备份到哪（./ 表示备份到当前目录)
+// -u, -p : 如果数据库没有做认证，这两个参数可以不带，如果设置了认证，就是当前数据库的用户名跟密码
+```
+
+## 还原数据库
+
+```sh
+//先进入到备份的文件夹里
+$ mongorestore -d demo ./demo
+// -d : 指定数据库名称
+// 还原貌似不用认证的
+```
+
 ## 其它相关
 
 ```sh
@@ -73,6 +92,12 @@ $ mongo
 
 // mongoose 框架连接
 mongoose.connect('mongodb://hello:123123@127.0.0.1/demo');
+
+//对文件夹压缩，解压
+//压缩
+$ tar -cvf demo.tar.gz ./demo
+//解压
+$ tar -zxvf demo.tar.gz
 ```
 
 ## 参考

@@ -4,6 +4,7 @@ title: beego建站之上传文件
 date: 2016-08-26 21:57:47
 categories: Golang学习笔记
 tags: Golang beego
+author: 朋也
 ---
 
 [beego官网](http://beego.me)
