@@ -108,7 +108,3 @@ exports.index = function(req, res) {
 
 - [使用pjax实现类似github无刷新更改页面url](http://www.html-js.com/article/2653)
 - [https://github.com/weiyuc/java-pjax](https://github.com/weiyuc/java-pjax)
-
-
-
-
