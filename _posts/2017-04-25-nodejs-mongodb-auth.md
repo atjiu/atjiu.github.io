@@ -1,27 +1,23 @@
 ---
 layout: post
 title: MongoDB创建用户管理数据库以及备份还原
-date: 2017-04-25 16:23:00
+date: 2017-04-25T16:23:00.000Z
 categories: mongodb学习笔记
 tags: mongodb
 author: 朋也
 ---
 
-* content
-{:toc}
+- content {:toc}
 
-## 安装mongodb
+# 安装mongodb
 
 可以参照这个安装 <https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/>
 
 但我到`sudo apt-get install -y mongodb-enterprise`这一步出问题了，总提示没有mongodb-enterprise这个包，最后用`sudo apt install mongodb`装上了，反正也能用
 
-## 创建用户
+# 创建用户
 
 mongodb在admin库里创建用户来管理所有的其它用户，方法如下：
-
-
-
 
 ```sh
 use admin
@@ -37,7 +33,7 @@ use demo //进入demo这个数据库
 db.createUser({user:'hello', pwd: '123123', roles:[{role: 'readWrite', db:'demo'}, {role: 'dbAdmin', db: 'demo'}]})
 ```
 
-## 修改配置文件
+# 修改配置文件
 
 我装好mongodb后，它的配置文件在 `/etc/mongodb.conf` 下
 
@@ -53,7 +49,7 @@ sudo vim /etc/mongodb.conf
 sudo service mongodb restart
 ```
 
-## 角色说明
+# 角色说明
 
 - dbAdminAnyDatabase: 只在admin数据库中可用，赋予用户所有数据库的dbAdmin权限。
 - userAdminAnyDatabase: 只在admin数据库中可用，赋予用户所有数据库的userAdmin权限
@@ -63,16 +59,16 @@ sudo service mongodb restart
 
 详见：<http://www.cnblogs.com/zhoujinyi/p/4610050.html>
 
-## 数据库备份
+# 数据库备份
 
 ```sh
-$ mongodump -d ai -o ./ -u demo -p 123123
+$ mongodump -d demo -o ./ -u demo -p 123123
 // -d : 指定数据库名称
 // -o : 指定备份到哪（./ 表示备份到当前目录)
 // -u, -p : 如果数据库没有做认证，这两个参数可以不带，如果设置了认证，就是当前数据库的用户名跟密码
 ```
 
-## 还原数据库
+# 还原数据库
 
 ```sh
 //先进入到备份的文件夹里
@@ -81,7 +77,7 @@ $ mongorestore -d demo ./demo
 // 还原貌似不用认证的
 ```
 
-## 其它相关
+# 其它相关
 
 ```sh
 // 终端进入
@@ -100,9 +96,8 @@ $ tar -cvf demo.tar.gz ./demo
 $ tar -zxvf demo.tar.gz
 ```
 
-## 参考
+# 参考
 
 - <http://www.cnblogs.com/zhoujinyi/p/4610050.html>
 - <https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-ubuntu/>
 - <https://docs.mongodb.com/manual/tutorial/create-users/>
-
