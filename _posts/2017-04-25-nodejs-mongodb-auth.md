@@ -96,7 +96,7 @@ mongoose.connect('mongodb://hello:123123@127.0.0.1/demo');
 
 //对文件夹压缩，解压
 //压缩
-$ tar -cvf demo.tar.gz ./demo
+$ tar -zcvf demo.tar.gz ./demo
 //解压
 $ tar -zxvf demo.tar.gz
 ```
