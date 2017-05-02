@@ -35,18 +35,23 @@ db.createUser({user:'hello', pwd: '123123', roles:[{role: 'readWrite', db:'demo'
 
 # 修改配置文件
 
-我装好mongodb后，它的配置文件在 `/etc/mongodb.conf` 下
+我装好mongodb后，它的配置文件在 `/etc/mongodb.conf(也可能是mongo.conf)` 下
 
 ```sh
 sudo vim /etc/mongodb.conf
-
-将其中的 `auth=true` 的注释放开
+//mongodb 2.4
+将其中的 `auth=true` 的注释放开, 没有的话添加这项
+//如果mongodb版本是2.6+，就在security节点下面加上下面配置
+security:
+  authorization: enabled
 ```
 
 然后重启服务
 
 ```sh
 sudo service mongodb restart
+//没有mongodb服务的话，就用mongo
+sudo service mongo restart
 ```
 
 # 角色说明
