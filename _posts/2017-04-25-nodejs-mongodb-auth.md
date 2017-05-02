@@ -77,9 +77,8 @@ $ mongodump -d demo -o ./ -u demo -p 123123
 
 ```sh
 //先进入到备份的文件夹里
-$ mongorestore -d demo ./demo
+$ mongorestore -d demo ./demo -u demo -p 123123
 // -d : 指定数据库名称
-// 还原貌似不用认证的
 ```
 
 # 其它相关
