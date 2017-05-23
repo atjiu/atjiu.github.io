@@ -1,7 +1,7 @@
 ---
 layout: post
 title: express集成socket.io实现站内通知
-date: 2017-05-08 09:29:44
+date: 2016-05-08 09:29:44
 categories: nodejs学习笔记
 tags: nodejs express socket.io
 author: 朋也

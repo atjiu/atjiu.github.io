@@ -20,59 +20,72 @@
     padding: 20px 30px;
     line-height: 1.6;
     font-size: 16px;
-    background-color: #f8f8fd;
+    background-color: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+
     > h1 {
       margin-bottom: -10px;
     }
+
     a:not([title]) {
       word-break: break-all;
     }
+
     ul {
       > h2 {
         margin-left: -40px;
         color: #6a6b6b;
       }
+
       li {
         line-height: 1.8;
         color: #888888;
+
         time {
           display: inline-block;
           width: 135px;
         }
+
         .title {
           font-weight: bold;
           color: #223253;
           transition: 0.3s ease;
+
           &:hover {
             color: #4d6dad;
           }
         }
+
         i {
           margin-right: 5px;
         }
+
         .categories {
           padding: 0 15px;
+
           i {
             color: #9e9d9d;
           }
+
           a {
             padding: 0 5px;
             background-color: #9e9d9d;
             color: #fff;
             font-size: 90%;
             transition: 0.3s ease;
+
             &:hover {
               background-color: #b6b6b9;
             }
           }
         }
+
         .pageTag {
           i {
             color: #c6cbe9;
           }
-          a {
 
+          a {
             // border: 1px solid #aaa;
             padding: 0 5px;
             background-color: #c6cbe9;
@@ -80,6 +93,7 @@
             color: #fff;
             font-size: 90%;
             transition: 0.3s ease;
+
             &:hover {
               background-color: #c0ddc7;
             }
@@ -88,22 +102,27 @@
       }
     }
   }
+
   .anchor {
     display: none;
   }
+
   .right {
     float: left;
     width: 25%;
     padding-left: 20px;
     top: 0;
+
     .fixed {
       position: fixed;
       top: 20px;
     }
+
     .scroll-bottom {
       position: absolute;
       bottom: 190px;
     }
+
     .side {
       box-sizing: border-box;
       background-color: #f8f8fd;
@@ -117,70 +136,79 @@
       -moz-hyphens: auto;
       -ms-hyphens: auto;
       hyphens: auto;
+
       > div {
         padding: 12px 15px;
-
         // margin-right: -10px;
         border-bottom: 1px solid #c0c0c0;
         font-size: 16px;
         font-weight: bold;
       }
+
       a {
         color: #4d6dad;
         transition: 0.5s ease;
+
         &:hover {
           color: #223253;
         }
       }
     }
+
     .content-ul {
       overflow-y: auto;
       padding-right: 10px;
       padding-left: 25px;
       line-height: 1.8;
+
       ul {
         padding-left: 20px;
       }
     }
   }
 }
-
 @media screen and (max-width: 1200px) and (min-width: 770px) {
   .page {
     width: 90%;
   }
 }
-
 @media screen and (max-width: 770px) {
   .page {
     width: 95%;
+
     .left {
       width: 100%;
       float: left;
       padding: 10px 14px;
       font-size: 14px;
+
       > h1 {
         font-size: 25px;
         margin-bottom: -10px;
       }
+
       ul {
         padding-left: 20px;
+
         > h2 {
           font-size: 20px;
-
           // margin: 0;
           margin-left: -20px;
         }
+
         li {
           margin: 20px 0;
+
           time {
             display: block;
             width: auto;
           }
+
           .title {
             display: block;
             font-size: 16px;
           }
+
           .categories {
             font-size: 12px;
             padding-left: 0;
@@ -189,6 +217,7 @@
         }
       }
     }
+
     .anchor {
       display: block;
       visibility: visible;
@@ -203,16 +232,16 @@
       opacity: 0.7;
       transition: 0.2s cubic-bezier(0.5, 0.1, 0.51, 1.38);
     }
+
     .anchor-hide {
       opacity: 0;
       visibility: hidden;
     }
+
     .right {
       visibility: hidden;
-
       // display: none;
       position: fixed;
-
       // z-index: 190;
       float: none;
       width: auto;
@@ -225,6 +254,7 @@
       transform: scale(0.1);
       transition: 0.2s cubic-bezier(0.5, 0.1, 0.51, 1.38);
     }
+
     .right-show {
       visibility: visible;
       opacity: 1;
