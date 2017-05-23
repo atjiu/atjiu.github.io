@@ -22,7 +22,7 @@ beego作为一个golang的web框架，入门非常的简单，既然要开发网
 
 
 
-```
+```go
 //登录页
 func (c *IndexController) LoginPage() {
   c.Data["PageTitle"] = "登录"
@@ -45,7 +45,7 @@ func (c *IndexController) LoginPage() {
 
 进入登录页面的路由
 
-```
+```go
 //登录页
 func (c *IndexController) LoginPage() {
   c.Data["PageTitle"] = "登录"
@@ -168,7 +168,7 @@ range (也就是for循环) 用法
 
 对着官方文档来就可以成功，没有什么需要注意的，下面给个例子
 
-```
+```go
 package utils
 
 import (
@@ -178,11 +178,11 @@ import (
 )
 
 func FormatTime(time time.Time) string {
-    return timeago.Chinese.Format(time)
+  return timeago.Chinese.Format(time)
 }
 
 func init() {
-    beego.AddFuncMap("timeago", FormatTime)
+  beego.AddFuncMap("timeago", FormatTime)
 }
 ```
 
