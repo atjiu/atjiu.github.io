@@ -157,6 +157,14 @@ sudo apt-get install flashplugin-installer
 
 装好了刷新一下网页就可以用了
 
+### 安装Wechat
+
+微信没有linux平台下的版本，所以只能用Github上大神开源的了
+
+开源地址：[https://github.com/geeeeeeeeek/electronic-wechat](https://github.com/geeeeeeeeek/electronic-wechat)
+
+安装对着README.md里写的装就可以了
+
 ### 安装Minecraft
 
 官网：[http://minecraft.net/](http://minecraft.net/)
