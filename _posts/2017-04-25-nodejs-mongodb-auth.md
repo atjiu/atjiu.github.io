@@ -38,7 +38,7 @@ db.createUser({user:'hello', pwd: '123123', roles:[{role: 'readWrite', db:'demo'
 具体参考见：
 
 - [db.updateUser()](https://docs.mongodb.com/manual/reference/method/db.updateUser/)
-- [db.removeUser()][https://docs.mongodb.com/manual/reference/method/db.removeUser/]
+- [db.removeUser()](https://docs.mongodb.com/manual/reference/method/db.removeUser/)
 
 # 修改配置文件
 
