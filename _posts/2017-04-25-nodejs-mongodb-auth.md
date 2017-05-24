@@ -16,6 +16,9 @@ author: 朋也
 
 但我到`sudo apt-get install -y mongodb-enterprise`这一步出问题了，总提示没有mongodb-enterprise这个包，最后用`sudo apt install mongodb`装上了，反正也能用
 
+
+
+
 # 创建用户
 
 mongodb在admin库里创建用户来管理所有的其它用户，方法如下：
