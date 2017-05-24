@@ -7,7 +7,8 @@ tags: mongodb
 author: 朋也
 ---
 
-- content {:toc}
+- content
+{:toc}
 
 # 安装mongodb
 
