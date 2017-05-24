@@ -61,7 +61,13 @@ wget -c --no-check-certificate --no-cookies --header "Cookie: oraclelicense=acce
 
 下载地址：[http://maven.apache.org/download.cgi](http://maven.apache.org/download.cgi)
 
-下载解压，配置到`~/.bashrc` 文件中即可
+下载解压，配置到 `~/.bashrc` 文件中即可
+
+### 安装Golang
+
+下载地址：[https://golang.org/dl/](https://golang.org/dl/)
+
+下载解压，配置到 `~/.bashrc` 文件中即可，go环境变量名字是固定的，分别是 `GOPATH` `GOROOT`
 
 ### 安装MySQL
 
@@ -70,6 +76,9 @@ sudo apt install -y mysql-server
 
 //启动/停止/重启
 sudo service mysql start/stop/restart
+
+//客户端
+sudo apt install -y mysql-workbench
 ```
 
 ### 安装Redis
