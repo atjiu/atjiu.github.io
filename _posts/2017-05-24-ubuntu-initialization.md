@@ -120,6 +120,12 @@ StartupNotify=true
 # 路径要自己修改一下
 ```
 
+或者用工具来做 `.desktop` 文件
+
+```sh
+sudo apt install -y alacarte
+```
+
 ### 安装Jetbrains/IDEA
 
 下载地址：[http://www.jetbrains.com/products.html](http://www.jetbrains.com/products.html)
