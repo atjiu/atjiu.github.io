@@ -33,6 +33,13 @@ use demo //进入demo这个数据库
 db.createUser({user:'hello', pwd: '123123', roles:[{role: 'readWrite', db:'demo'}, {role: 'dbAdmin', db: 'demo'}]})
 ```
 
+如果创建用户错误了，可以用 `db.updateUser()` 方法来修改，如果不想要这个用户了，可以用 `db.removeUser()` 方法来删除
+
+具体参考见：
+
+- [db.updateUser()](https://docs.mongodb.com/manual/reference/method/db.updateUser/)
+- [db.removeUser()][https://docs.mongodb.com/manual/reference/method/db.removeUser/]
+
 # 修改配置文件
 
 我装好mongodb后，它的配置文件在 `/etc/mongodb.conf(也可能是mongo.conf)` 下
