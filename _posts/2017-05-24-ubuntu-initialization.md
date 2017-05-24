@@ -101,6 +101,25 @@ sudo service mongod start/stop/restart
 
 下载地址：[https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
 
+制作启动程序
+
+```sh
+cd /usr/share/applications
+sudo vim android-studio.desktop
+
+# 添加下面内容
+
+[Desktop Entry]
+Name=Android Studio
+Comment=Android developer tool
+Exec=/home/tomoya/soft/android-studio/bin/studio.sh
+Icon=/home/tomoya/soft/android-studio/bin/studio.png
+Type=Application
+StartupNotify=true
+
+# 路径要自己修改一下
+```
+
 ### 安装Jetbrains/IDEA
 
 下载地址：[http://www.jetbrains.com/products.html](http://www.jetbrains.com/products.html)
