@@ -199,6 +199,18 @@ sudo apt-get install flashplugin-installer
 
 安装对着README.md里写的装就可以了
 
+### 安装Telegram
+
+下载地址：[https://desktop.telegram.org/](https://desktop.telegram.org/)
+
+### 安装Steam
+
+```sh
+sudo apt install -y steam
+```
+
+装好，登上自己的帐号即可
+
 ### 安装Minecraft
 
 官网：[http://minecraft.net/](http://minecraft.net/)
