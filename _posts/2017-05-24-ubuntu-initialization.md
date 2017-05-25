@@ -106,6 +106,46 @@ sudo apt-get install -y mongodb-enterprise
 sudo service mongod start/stop/restart
 ```
 
+### 配置服务器免密码登录
+
+先在本机生成密钥
+
+```bash
+ssh-keygen -t rsa
+//一直回车就可以了
+```
+
+然后把生成的文件上传到服务器中
+
+```bash
+scp ~/.ssh/id_rsa.pub root@192.168.1.11:/root/.ssh/
+```
+
+然后登录服务器将上传的文件内容添加到 `/root/.ssh/authorized_keys` 文件里
+
+```bash
+cat id_rsa.pub >> authorized_keys
+```
+
+要给 `authorized_keys` 文件600的权限
+
+```bash
+chmod 600 authorized_keys
+```
+
+退出来，在本机 `～/.ssh/` 下创建文件 `config` 添加下面内容
+
+```bash
+Host server
+  HostName 192.168.1.11
+  User root
+  IdentityFile ~/.ssh/id_rsa
+```
+
+然后就可以用 `ssh server` 直接登录到服务器上了
+
+**注意，不能打开 id_rsa.pub文件拷贝内容然后贴到服务器里的 authorized_keys 文件里，这样它是不认的**
+
 ### 安装Android-Studio
 
 下载地址：[https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html)
