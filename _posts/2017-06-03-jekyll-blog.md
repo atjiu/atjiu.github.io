@@ -12,7 +12,7 @@ author: 朋也
 
 ## 安装
 
-```sh
+```shell
 // 通用安装
 // 依赖ruby，所有要先装上ruby
 sudo gem install jekyll bundle
@@ -36,11 +36,11 @@ jekyll build
 
 ## 目录介绍
 
-| 名称     | 说明     | 用法                                                                                 |
-|----------|----------|--------------------------------------------------------------------------------------|
-| _layouts | 布局文件 | 比如博客详情页面，在md文件头部要加上的 layout: post 就是用的 `_layouts/post.html` 页面  |
-| _posts | 博客原文件目录 | 格式为 markdown 后缀的博客原文件所在目录 |
-| _includes | 在页面里引入的页面 | 可以直接使用 include 引用 |
+| 名称      | 说明               | 用法                                                                                   |
+|-----------|--------------------|----------------------------------------------------------------------------------------|
+| _layouts  | 布局文件           | 比如博客详情页面，在md文件头部要加上的 layout: post 就是用的 `_layouts/post.html` 页面 |
+| _posts    | 博客原文件目录     | 格式为 markdown 后缀的博客原文件所在目录                                               |
+| _includes | 在页面里引入的页面 | 可以直接使用 include 引用                                                              |
 
 ## 配置文件
 
@@ -75,7 +75,7 @@ paginate: 6
 
 这样在页面里遍历就可以用 `paginator.posts` 来获取分页列表，如下
 
-```html
+```
 {% for post in paginator.posts %}
   <h1>{{post.title}}</h1>
 {% endfor %}
@@ -98,7 +98,7 @@ paginate: 6
 
 if用法
 
-```html
+```
 {% if paginator.previous_page %}
   <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
   <a href="{{ paginator.previous_page_path }}" class="previous"><i class="fa fa-angle-left"></i></a>
@@ -110,7 +110,7 @@ if用法
 
 for用法
 
-```html
+```
 {% for post in paginator.posts %}
   <h1>{{post.title}}</h1>
 {% endfor %}
@@ -118,7 +118,7 @@ for用法
 
 另外 for 里还可以设置偏移量，类似分页功能
 
-```html
+```
 {% for post in site.posts offset: 0 limit: 10  %}
 
 {% endfor %}
