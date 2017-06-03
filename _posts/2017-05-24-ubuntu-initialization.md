@@ -110,32 +110,32 @@ sudo service mongod start/stop/restart
 
 先在本机生成密钥
 
-```bash
+```sh
 ssh-keygen -t rsa
 //一直回车就可以了
 ```
 
 然后把生成的文件上传到服务器中
 
-```bash
+```sh
 scp ~/.ssh/id_rsa.pub root@192.168.1.11:/root/.ssh/
 ```
 
 然后登录服务器将上传的文件内容添加到 `/root/.ssh/authorized_keys` 文件里
 
-```bash
+```sh
 cat id_rsa.pub >> authorized_keys
 ```
 
 要给 `authorized_keys` 文件600的权限
 
-```bash
+```sh
 chmod 600 authorized_keys
 ```
 
 退出来，在本机 `～/.ssh/` 下创建文件 `config` 添加下面内容
 
-```bash
+```sh
 Host server
   HostName 192.168.1.11
   User root

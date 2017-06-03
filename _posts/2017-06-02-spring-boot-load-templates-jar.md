@@ -14,7 +14,7 @@ author: 朋也
 
 ## 项目打jar包
 
-```bash
+```sh
 mvn clean compile package
 ```
 
@@ -46,7 +46,7 @@ spring:
 
 启动服务
 
-```bash
+```sh
 java -jar xx.jar
 ```
 
