@@ -12,7 +12,7 @@ author: 朋也
 
 ## 安装
 
-```shell
+```sh
 // 通用安装
 // 依赖ruby，所有要先装上ruby
 sudo gem install jekyll bundle
@@ -44,9 +44,9 @@ jekyll build
 
 ## 配置文件
 
-jekyll 默认启动加载 `_config.yml` 文件，在页面里获取配置在 `_config.yml` 里的值用的是 `{{site.xxx}}`
+jekyll 默认启动加载 `_config.yml` 文件，在页面里获取配置在 `_config.yml` 里的值用的是 ``{{`site.xxx`}}``
 
-比如，在 `_config.yml` 文件里加入一个变量 `github_username:  tomoya92` 那么在页面上就可以用 `{{site.github_username}}` 来获取它的值
+比如，在 `_config.yml` 文件里加入一个变量 `github_username:  tomoya92` 那么在页面上就可以用 ``{{`site.github_username`}}`` 来获取它的值
 
 `permalink: /:year/:month/:day/:title/` 表示访问博客的路径地址格式，比如 `_posts/2017-06-03-hello.md` 构建后的访问地址就是 `/2017/06/03/hello/` 如果定成 `permalink: /:title/` 那么访问地址就是 `/hello/` 这里就有个问题，万一两个文件名字是一样的，就是前面的日期不同，那就会出现访问路径一样的现象，会不会报错，我没试过，不过如果带上日期，这样的概率就小多了，还是建议带上，这样在搜索引擎抓到页面后，路径上也有个时间，对需要的人也是一种帮助
 
@@ -76,9 +76,9 @@ paginate: 6
 这样在页面里遍历就可以用 `paginator.posts` 来获取分页列表，如下
 
 ```
-{% for post in paginator.posts %}
-  <h1>{{post.title}}</h1>
-{% endfor %}
+`{%` for post in paginator.posts `%}`
+  <h1>`{{`post.title`}}`</h1>
+`{%` endfor `%}`
 ```
 
 变量                           | 说明
@@ -90,7 +90,7 @@ paginate: 6
 `paginator.previous_page_path` | 前一页的路径地址
 `paginator.next_page_path`     | 后一页的路径地址
 
-分页地址是 `/page + num` 比如 `/page1` 表示第一页 `/page4` 表示第4页，所以最后一页就是 `/page{{ paginator.total_pages }}`
+分页地址是 `/page + num` 比如 `/page1` 表示第一页 `/page4` 表示第4页，所以最后一页就是 `/page`{{` paginator.total_pages `}}``
 
 ## 模板语法
 
@@ -99,29 +99,29 @@ paginate: 6
 if用法
 
 ```
-{% if paginator.previous_page %}
+`{%` if paginator.previous_page `%}`
   <a href="/index.html" class="previous"><i class="fa fa-angle-double-left"></i></a>
-  <a href="{{ paginator.previous_page_path }}" class="previous"><i class="fa fa-angle-left"></i></a>
-{% else %}
+  <a href="`{{` paginator.previous_page_path `}}`" class="previous"><i class="fa fa-angle-left"></i></a>
+`{%` else `%}`
   <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
   <span class="previous disable"><i class="fa fa-angle-left"></i></span>
-{% endif %}
+`{%` endif `%}`
 ```
 
 for用法
 
 ```
-{% for post in paginator.posts %}
-  <h1>{{post.title}}</h1>
-{% endfor %}
+`{%` for post in paginator.posts `%}`
+  <h1>`{{`post.title`}}`</h1>
+`{%` endfor `%}`
 ```
 
 另外 for 里还可以设置偏移量，类似分页功能
 
 ```
-{% for post in site.posts offset: 0 limit: 10  %}
+`{%` for post in site.posts offset: 0 limit: 10  `%}`
 
-{% endfor %}
+`{%` endfor `%}`
 ```
 
 ## Github Pages托管
