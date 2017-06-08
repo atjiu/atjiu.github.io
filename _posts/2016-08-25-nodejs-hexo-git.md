@@ -19,25 +19,25 @@ author: 朋也
 
 1. 在gitosc上新建一个私人仓库
 2. 在服务器上创建一个目录
-    ```bash
+    ```sh
     mkdir /home/gitosc
     ```
 3. 将代码clone到服务器上
-    ```bash
+    ```sh
     git clone https://user:passwd@git.oschina.net/xxx/blog.git
     //user是用户名，passwd是密码，后面是git仓库的地址
     ```
 4. 在服务器上创建定时任务
-    ```bash
+    ```sh
     sudo crontab -e // 回车会出现一个编辑界面
-    
+
     //在编辑界面里添加上
     */1 * * * * cd /home/gitosc/blog && git pull && cp -rf ./*.md /home/nodejs/blog/source/_posts/
-    
+
     //每1分钟就会到git仓库里去获取最新代码。我的hexo博客在服务器上的位置是 /home/nodejs/blog/source/_posts/ 所以复制到的地方就是这个地址
     ```
 5. 重启定时服务
-    ```bash
+    ```sh
     sudo service cron restart
     ```
 
