@@ -88,6 +88,25 @@ func ExampleScrape() {
 }
 ```
 
+## 进阶
+
+有些网站会设置Cookie, Referer等验证，可以在http发请求之前设置上请求的头信息
+
+**这个不属于goquery里的东西了，想了解更多可以查看golang里的 `net/http` 包下的方法等信息**
+
+```go
+baseUrl:="http://baidu.com"
+client:=&http.Client{}
+req, err := http.NewRequest("GET", baseUrl, nil)
+req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
+req.Header.Add("Referer", baseUrl)
+req.Header.Add("Cookie", "your cookie") // 也可以通过req.Cookie()的方式来设置cookie
+res, err := client.Do(req)
+defer res.Body.Close()
+//最后直接把res传给goquery就可以来解析网页了
+doc, err := goquery.NewDocumentFromResponse(res)
+```
+
 ## 参考
 
 - [https://github.com/PuerkitoBio/goquery](https://github.com/PuerkitoBio/goquery)
