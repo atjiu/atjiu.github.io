@@ -9,7 +9,7 @@ author: 朋也
 * content
 {:toc}
 
-> java里用Jsoup，nodejs里用cheerio，都可以相当方便的解析网页，在golang语言里也找到了一个网页解析的利器，相当的好用
+> java里用Jsoup，nodejs里用cheerio，都可以相当方便的解析网页，在golang语言里也找到了一个网页解析的利器，相当的好用，选择器跟jQuery一样
 
 ## 安装
 
