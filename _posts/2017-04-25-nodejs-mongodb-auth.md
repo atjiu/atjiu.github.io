@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MongoDB创建用户管理数据库以及备份还原
-date: 2017-04-25T16:23:00.000Z
+date: 2017-04-25 16:23:00
 categories: mongodb学习笔记
 tags: mongodb
 author: 朋也
