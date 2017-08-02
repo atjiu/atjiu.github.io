@@ -12,13 +12,13 @@ author: 朋也
 
 引入js
 
-```
+```html
 <script src="http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
 ```
 
 创建自定义函数
 
-```
+```javascript
 _.template.formatdate = function (stamp) {
     var d = new Date(stamp), // or d = new Date(date)
             fragments = [
@@ -35,6 +35,7 @@ _.template.formatdate = function (stamp) {
 
 调用
 
-```
+```html
 <%=_.template.formatdate(data)%>
 ```
+
