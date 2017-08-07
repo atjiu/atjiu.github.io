@@ -16,10 +16,6 @@ date: 2017-08-02 09:30:30
 
 
 
-
-
-
-
 ## 使用方法
 
 index.ios.js
@@ -108,3 +104,5 @@ const styles = StyleSheet.create({
 
 - [ListView](http://facebook.github.io/react-native/docs/listview.html)
 - [NavigatorIOS](http://facebook.github.io/react-native/docs/navigatorios.html)
+
+源码：[https://github.com/tomoya92/ITNews-React-Native](https://github.com/tomoya92/ITNews-React-Native)

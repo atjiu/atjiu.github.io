@@ -20,10 +20,6 @@ date: 2017-08-02 10:09:30
 
 
 
-
-
-
-
 ## 用法
 
 NewsList.js
@@ -49,3 +45,4 @@ _onPress(rowData) {
 
 - [ListView列表点击跳转](http://bbs.reactnative.cn/topic/2964/listview%E5%88%97%E8%A1%A8%E7%82%B9%E5%87%BB%E8%B7%B3%E8%BD%AC/3)
 
+源码：[https://github.com/tomoya92/ITNews-React-Native](https://github.com/tomoya92/ITNews-React-Native)

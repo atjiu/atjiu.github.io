@@ -16,10 +16,6 @@ date: 2017-08-02 14:12:30
 
 
 
-
-
-
-
 ## 下拉刷新
 
 React Native提供了一个组件可以实现下拉刷新方法`RefreshControl`
@@ -91,3 +87,5 @@ _onEndReached() {
 - [[How to implement pull up to load more in React Native using ListView for Android?](https://stackoverflow.com/questions/40087775/how-to-implement-pull-up-to-load-more-in-react-native-using-listview-for-android)](https://stackoverflow.com/questions/40087775/how-to-implement-pull-up-to-load-more-in-react-native-using-listview-for-android)
 - [React Native: Hướng dẫn tạo Load More trong ListView](https://www.youtube.com/watch?v=vFI9iyQP4XU)
 - [react-native试玩(8)-列表视图](http://blog.csdn.net/itfootball/article/details/48245137)
+
+源码：[https://github.com/tomoya92/ITNews-React-Native](https://github.com/tomoya92/ITNews-React-Native)
