@@ -13,6 +13,10 @@ tags: react.js react-router react-router-scroll
 
 页面List往下翻一下，然后点击其中的某一项，到Detail页面，然后再返回到List，List会回到顶部，而不是在之前的滚动位置
 
+
+
+
+
 关于这个问题的解决办法，在网上找了一堆的文章，开源项目，大致分为以下两类
 
 1. 使用React-Router (v4) ，都用了redux，可以实现，但还是存在问题，当点击到Detail的时候，在Detail往下滚动一点，再返回到列表，然后再点一项，这里Detail就是在之前那个Detail往下滚动的位置了
