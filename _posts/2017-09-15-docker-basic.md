@@ -113,3 +113,10 @@ docker run -d -p 8080:80 -v $PWD/html:/usr/share/nginx/html nginx
 
 # 这样挂载后，在本地的html文件夹里修改index.html，然后浏览器访问是实时更新的，停掉了容器也不用担心文件会消失
 ```
+
+#### 进入容器
+
+```
+docker ps # 拿到正在运行容器的ID
+docker exec -it 0b234366c3d2 bash
+```
