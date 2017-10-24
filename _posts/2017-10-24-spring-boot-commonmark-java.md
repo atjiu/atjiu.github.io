@@ -134,5 +134,6 @@ HtmlRenderer renderer = HtmlRenderer.builder()
 
 ## 参考
 
-- [YIIU](https://github.com/yiiu-co/yiiu)
-- [commonmark-java](https://github.com/atlassian/commonmark-java)
+源码可见：https://github.com/yiiu-co/yiiu/blob/master/src/main/java/co/yiiu/core/util/MarkdownUtil.java
+
+- https://github.com/atlassian/commonmark-java
