@@ -60,4 +60,5 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-admin
 paginate: 6
