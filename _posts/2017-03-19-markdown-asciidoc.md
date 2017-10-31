@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "markdown与asciidoc简单写法区别"
-date:   2017-03-19 12:15:20
+title: markdown与asciidoc简单写法区别
+date: 2017-03-19 12:15:20
 categories: 杂项
 tags: markdown asciidoc
 author: 朋也

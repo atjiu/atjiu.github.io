@@ -1,7 +1,9 @@
 ---
+layout: post
 title: docker基础命令（备忘）
 categories: docker学习笔记
 tags: docker
+author: 朋也
 ---
 
 * content

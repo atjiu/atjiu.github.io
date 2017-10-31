@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "spring-boot项目里application.properties里的配置项"
-date:   2017-03-21 09:45:00
+title: spring-boot项目里application.properties里的配置项
+date: 2017-03-21 09:45:00
 categories: spring-boot学习笔记
 tags: spring-boot
 author: 朋也

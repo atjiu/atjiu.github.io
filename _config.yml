@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Tomoya
-brief-intro: Code, Animation
+title: 朋也的博客
+brief-intro: 喜编码，爱动漫
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tomoya92.github.io" # the base hostname & protocol for your site
 
@@ -23,7 +23,7 @@ zhihu_username: liygheart
 #linkedIn_username:
 #dribbble_username:
 
-description_footer: Hello World!
+description_footer: 你好，世界
 
 # comments
 # two ways to comment, only choose one, and use your own short name
@@ -58,5 +58,11 @@ tag_dir: tag/
 excerpt_separator: "\n\n\n\n"
 
 # paginate
-gems: [jekyll-paginate, jekyll-sitemap, jekyll-seo-tag]
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
 paginate: 6
+feed:
+  path: atom.xml

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "beego建站之分页"
+title: beego建站之分页
 date: 2016-08-25 14:38:59
 categories: Golang学习笔记
 tags: Golang beego

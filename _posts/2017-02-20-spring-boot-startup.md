@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  spring-boot启动项目之后操作的实现方法
-date:   2017-02-20 10:44:50
+title: spring-boot启动项目之后操作的实现方法
+date: 2017-02-20 10:44:50
 categories: spring-boot学习笔记
 tags: spring-boot
 author: 朋也

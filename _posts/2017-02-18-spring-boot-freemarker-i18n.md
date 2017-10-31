@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "spring-boot里用freemarker做模板的国际化配置"
-date:   2017-02-18 19:37:20
+title: spring-boot里用freemarker做模板的国际化配置
+date: 2017-02-18 19:37:20
 categories: spring-boot学习笔记
 tags: spring-boot freemarker i18n
 author: 朋也

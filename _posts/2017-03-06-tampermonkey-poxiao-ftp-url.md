@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Tampermonkey里自己写脚本，实现破晓电影下载链接显示在页面上方便复制"
-date:   2017-03-06 10:54:20
+title: Tampermonkey里自己写脚本，实现破晓电影下载链接显示在页面上方便复制
+date: 2017-03-06 10:54:20
 categories: 脚本
 tags: javascript tampermonkey
 author: 朋也

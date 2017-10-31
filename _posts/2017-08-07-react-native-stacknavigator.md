@@ -1,7 +1,9 @@
 ---
+layout: post
 title: react-native组件StackNavigator
 categories: react-native学习笔记
 tags: react-native StackNavigator
+author: 朋也
 ---
 
 * content

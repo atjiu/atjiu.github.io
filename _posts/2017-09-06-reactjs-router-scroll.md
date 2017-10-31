@@ -1,7 +1,9 @@
 ---
+layout: post
 title: React.js里使用React-Router返回滚动状态没法保存问题的解决过程整理
 catatories: react.js学习笔记
 tags: react.js react-router react-router-scroll
+author: 朋也
 ---
 
 * content

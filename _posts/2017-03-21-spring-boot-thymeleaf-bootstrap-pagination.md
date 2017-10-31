@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "spring-boot项目里使用thymeleaf模板结合bootstrap分页demo"
-date:   2017-03-22 09:30:00
+title: spring-boot项目里使用thymeleaf模板结合bootstrap分页demo
+date: 2017-03-22 09:30:00
 categories: spring-boot学习笔记
 tags: spring-boot thymeleaf pagination bootstrap
 author: 朋也

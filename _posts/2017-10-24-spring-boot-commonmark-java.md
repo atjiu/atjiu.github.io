@@ -1,7 +1,9 @@
 ---
+layout: post
 title: Java格式化Markdown文档的工具库commonmark-java
 categories: spring-boot学习笔记
 tags: markdown commonmark commonmark-java
+author: 朋也
 ---
 
 * content

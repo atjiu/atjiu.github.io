@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Android布局实现-BottomNavigationView+ViewPager+Fragment+整合"
-date:   2017-04-05 16:13:20
+title: Android布局实现-BottomNavigationView+ViewPager+Fragment+整合
+date: 2017-04-05 16:13:20
 categories: Android学习笔记
 tags: Android ViewPager Fragment BottomNavigationView
 author: 朋也

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "thymeleaf模板属性的用法"
-date:   2017-03-09 15:34:20
+title: thymeleaf模板属性的用法
+date: 2017-03-09 15:34:20
 categories: spring-boot学习笔记
 tags: thymeleaf attribute
 author: 朋也

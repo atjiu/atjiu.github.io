@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "beego建站之模板"
-date:   2016-08-25 08:09:57
+title: beego建站之模板
+date: 2016-08-25 08:09:57
 categories: Golang学习笔记
 tags: Golang beego
 author: 朋也

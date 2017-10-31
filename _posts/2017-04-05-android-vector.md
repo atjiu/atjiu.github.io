@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Android-Studio自带小图标Vector用法"
-date:   2017-04-05 10:04:20
+title: Android-Studio自带小图标Vector用法
+date: 2017-04-05 10:04:20
 categories: Android学习笔记
 tags: Android Vector Drawable
 author: 朋也
