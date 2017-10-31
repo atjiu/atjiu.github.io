@@ -30,7 +30,7 @@ layout: default
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        {{content}}
+        {{ content | replace: '<li>[ ]', '<li><input type="checkbox" disabled>' | replace: '<li>[x]', '<li><input type="checkbox" checked disabled>'  }}
         </article>
         <hr>
         <div>
