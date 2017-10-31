@@ -7,18 +7,18 @@
       <ul>
         <li>
           <a {% if page.url=="/" %} class="active" {% endif %} href="{{site.baseurl}}/">
-            <i class="fa fa-home"></i>Home
+            <i class="fa fa-home"></i>首页
           </a>
         </li>
         {% for my_page in site.pages %}
-        {% if my_page.type == 'page' %}
-        <li>
-          <a {% if my_page.url==page.url %} class="active" {% endif %}
-             href="{{ my_page.url | prepend: site.baseurl }}">
-            <i class="fa fa-{{my_page.icon}}"></i>{{ my_page.title }}
-          </a>
-        </li>
-        {% endif %}
+          {% if my_page.type == 'page' %}
+          <li>
+            <a {% if my_page.url==page.url %} class="active" {% endif %}
+               href="{{ my_page.url | prepend: site.baseurl }}">
+              <i class="fa fa-{{my_page.icon}}"></i>{{ my_page.title }}
+            </a>
+          </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </nav>

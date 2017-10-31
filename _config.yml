@@ -23,8 +23,6 @@ zhihu_username: liygheart
 #linkedIn_username:
 #dribbble_username:
 
-description_footer: 你好，世界
-
 # comments
 # two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
@@ -47,9 +45,6 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# port
-# port: 1234
-
 # url
 category_dir: category/
 tag_dir: tag/
@@ -63,6 +58,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-paginate: 6
+paginate: 10
 feed:
   path: atom.xml
