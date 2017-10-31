@@ -47,10 +47,10 @@
   powered by Disqus.</a></noscript>
 {% endif %}
 
-{% if site.gitment_client_id and gitment_client_secret %}
+{% if site.gitment_client_id and site.gitment_client_secret %}
 <div id="gitment_comments"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
   var gitment = new Gitment({
     owner: '{{ site.github_username }}',
