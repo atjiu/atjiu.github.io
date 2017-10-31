@@ -53,12 +53,11 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
   var gitment = new Gitment({
-    id: window.location.pathname,
-    owner: 'imsun',
+    owner: '{{ site.github_username }}',
     repo: 'tomoya92.github.io',
     oauth: {
-      client_id: '{{ gitment_client_id }}',
-      client_secret: '{{ gitment_client_secret }}',
+      client_id: '{{ site.gitment_client_id }}',
+      client_secret: '{{ site.gitment_client_secret }}',
     },
   })
   gitment.render('gitment_comments')
