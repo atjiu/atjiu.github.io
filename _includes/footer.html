@@ -1,6 +1,13 @@
 <footer class="site-footer">
   <div class="wrapper">
     <p class="contact">
+      {% if site.links %}
+        友情链接:&nbsp;
+        {% for link in site.links %}
+          <a href="{{link.url}}" target="_blank">{{link.name}}</a>&nbsp;
+        {% endfor %}
+      {% endif %}
+      |
       关于我:
       {% if site.github_username %}
       <a href="https://github.com/{{site.github_username}}" title="GitHub">

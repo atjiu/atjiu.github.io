@@ -7,7 +7,7 @@
 
 # Site settings
 title: 朋也的博客
-brief-intro: 喜编码，爱动漫
+brief-intro: 喜欢编码，酷爱动漫
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tomoya92.github.io" # the base hostname & protocol for your site
 
@@ -24,7 +24,6 @@ zhihu_username: liygheart
 #dribbble_username:
 
 # comments
-# two ways to comment, only choose one, and use your own short name
 # 两种评论插件，选一个就好了，使用自己的 short_name
 # duoshuo_shortname: tomoya92
 disqus_shortname: tomoya
@@ -32,9 +31,6 @@ disqus_shortname: tomoya
 #gitment_client_secret: 232abb439d98b4b875a704842514d076b74ee13b
 
 # statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
 baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
 google_analytics_id: UA-98133026-1
 
@@ -49,11 +45,12 @@ kramdown:
 category_dir: category/
 tag_dir: tag/
 
-# excerpt
+# 文章摘要分隔符
 excerpt_separator: "\n\n\n\n"
 
-# paginate
+# 分页
 plugins:
+  - classifier-reborn
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -61,3 +58,9 @@ plugins:
 paginate: 10
 feed:
   path: atom.xml
+
+# 友情链接
+links:
+  -
+    name: YIIU
+    url: https://yiiu.co/
