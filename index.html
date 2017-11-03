@@ -4,33 +4,29 @@ layout: default
 <div class="row">
   <div class="col-md-9">
     {% for post in paginator.posts %}
-    <div class="well">
-      <div class="media">
-        <div class="media-body post">
-          <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-          <small>
+      <div class="well post">
+        <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        <small>
+          <span class="item">
+            <i class="fa fa-calendar-check-o"></i> {{post.date | date: '%F'}}
+          </span>
+          {% if post.author %}
             <span class="item">
-              <i class="fa fa-calendar-check-o"></i> {{post.date | date: '%F'}}
+              <i class="fa fa-user"></i> {{post.author}}
             </span>
-            {% if post.author %}
-              <span class="item">
-                <i class="fa fa-user"></i> {{post.author}}
-              </span>
-            {% endif %}
-            {% if post.categories %}
-              {% include categories.html %}
-            {% endif %}
-            {% if post.tags %}
-              {% include tags.html %}
-            {% endif %}
-          </small>
-          <hr>
-          <p>{{ post.excerpt }}</p>
-          <div class="text-center">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default btn-sm btn-raised">查看全文</a>
-          </div>
+          {% endif %}
+          {% if post.categories %}
+            {% include categories.html %}
+          {% endif %}
+          {% if post.tags %}
+            {% include tags.html %}
+          {% endif %}
+        </small>
+        <hr>
+        <p>{{ post.excerpt }}</p>
+        <div class="text-center">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default btn-sm btn-raised">查看全文</a>
         </div>
-      </div>
       {% if forloop.last %}
       <hr>
       <div class="text-center paginate">
