@@ -3,7 +3,7 @@ $(function () {
   var markdownTocHtml = '';
   var relatedPostsHtml = '';
   var relatedPosts = $("#related_posts");
-  if(markdownToc) {
+  if(markdownToc.text().length > 0) {
     markdownToc.hide();
     markdownTocHtml = markdownToc.html();
   }
