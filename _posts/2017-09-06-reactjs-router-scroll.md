@@ -7,7 +7,7 @@ author: 朋也
 ---
 
 * content
-{: toc}
+{:toc}
 
 使用版本：react-router-dom (v4)
 

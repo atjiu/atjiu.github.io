@@ -1,15 +1,19 @@
 $(function () {
   var markdownToc = $("#markdown-toc");
-  markdownToc.hide();
+  var markdownTocHtml = '';
   var relatedPostsHtml = '';
   var relatedPosts = $("#related_posts");
+  if(markdownToc) {
+    markdownToc.hide();
+    markdownTocHtml = markdownToc.html();
+  }
   if(relatedPosts.text().length > 0) {
     relatedPostsHtml = '<li><a href="#related_posts">' + relatedPosts.text() + '</a></li>';
   }
   $(".toc").html('<ul class="table-of-content">' +
-    markdownToc.html() +
-    '<li><a href="#comments">添加评论</a></li>' +
+    markdownTocHtml +
     relatedPostsHtml +
+    '<li><a href="#comments">添加评论</a></li>' +
     '</ul>'
   );
 

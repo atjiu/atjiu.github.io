@@ -7,7 +7,7 @@ author: 朋也
 ---
 
 * content
-{: toc}
+{:toc}
 
 之前一篇文章介绍了[使用NavigatorIOS组件结合ListView的使用](https://tomoya92.github.io/2017/08/02/react-native-navigatorios-listview/)，但那个只能用在IOS系统上，在Android上就没法用了，所以找到了StackNavigator组件
 

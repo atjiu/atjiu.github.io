@@ -7,7 +7,7 @@ author: 朋也
 --- 
 
 * content
-{: toc}
+{:toc}
 
 TabNavigator 也是`react-navigation`包下的，用法也相当简单
 
