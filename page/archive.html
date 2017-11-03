@@ -41,7 +41,7 @@ icon: fa fa-archive
   <div class="col-md-3 hidden-sm hidden-xs">
     <div class=" post-right">
       <div class="panel panel-well">
-        <div class="panel-heading"><i class="fa fa-list-ul"></i> 年月目录</div>
+        <div class="panel-heading"><i class="fa fa-archive"></i> 年月目录</div>
         <div class="panel-body">
           <ul class="table-of-content">
             {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
