@@ -1,0 +1,65 @@
+---
+layout: default
+title: 归档
+permalink: /archive/
+type: menu
+icon: fa fa-archive
+---
+<div class="row">
+  <div class="col-md-9">
+    <div class="well post">
+      <p>共计 {{site.posts.size}} 篇博客</p>
+      <hr>
+      {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+      {% assign postsByMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" %}
+      {% for year in postsByYear %}
+        <h2 id="y{{year.name}}">{{year.name}}年</h2>
+        {% for month in postsByMonth %}
+          {% assign yearMonthArr = month.name | split: " " %}
+          {% if year.name == yearMonthArr[0] %}
+            <div class="month">
+              <h3 id="m{{yearMonthArr[0]}}{{yearMonthArr[1]}}">{{yearMonthArr[1]}}月</h3>
+              <ul class="table-of-content">
+                {% for post in month.items %}
+                  <li>
+                    <time>
+                      {{ post.date | date:"%m-%d" }}.
+                    </time>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endfor %}
+        {% if forloop.last == false %}
+          <hr>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-md-3 hidden-sm hidden-xs">
+    <div class=" post-right">
+      <div class="panel panel-well">
+        <div class="panel-heading"><i class="fa fa-list-ul"></i> 年月目录</div>
+        <div class="panel-body">
+          <ul class="table-of-content">
+            {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+            {% assign postsByMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" %}
+            {% for year in postsByYear %}
+              <li><a href="#y{{year.name}}">{{year.name}}年 ({{year.items | size}}篇)</a></li>
+              <ul>
+                {% for month in postsByMonth %}
+                  {% assign yearMonthArr = month.name | split: " " %}
+                  {% if year.name == yearMonthArr[0] %}
+                    <li><a href="#m{{yearMonthArr[0]}}{{yearMonthArr[1]}}">{{yearMonthArr[1]}}月 ({{month.items | size}}篇)</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

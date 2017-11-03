@@ -1,0 +1,41 @@
+---
+layout: default
+title: 标签
+permalink: /tag/
+type: menu
+icon: fa fa-tags
+---
+<div class="row">
+  <div class="col-md-9">
+    <div class="well post">
+      {% for tag in site.tags %}
+        <h2 id="{{tag | first}}">{{tag | first}}</h2>
+        <ul class="table-of-content">
+          {% for post in tag.last %}
+          <li>
+            <time>
+              {{ post.date | date:"%m-%d" }}.
+            </time>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% if forloop.last == false %}
+          <hr>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-md-3 hidden-sm hidden-xs">
+    <div class="panel panel-well">
+      <div class="panel-heading"><i class="fa fa-th-list"></i> 标签目录</div>
+      <div class="panel-body">
+        <ul class="table-of-content">
+          {% for tag in site.tags %}
+            <li><a href="#{{tag | first}}">{{tag | first}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

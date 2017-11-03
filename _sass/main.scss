@@ -1,0 +1,136 @@
+body {
+  background-color: #fff;
+}
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+  &:visited {
+    color: #fff;
+  }
+}
+
+.wrapper {
+  header {
+  }
+  section {
+    .post {
+      a{
+        color: #000;
+      }
+      .btn-raised {
+        background-color: #fff;
+      }
+      .item {
+        margin-right: 5px;
+        .label.label-black {
+          padding: .2em .3em;
+          background-color: #000;
+          margin-right: 3px;
+          a {
+            color: #fff;
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+        cursor: pointer;
+      }
+      ul {
+        padding-left: 2em;
+        li {
+          line-height: 1.7em;
+        }
+      }
+      .month {
+        margin-left: 15px;
+      }
+    }
+  }
+  footer {
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    .contact {
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.navbar {
+  small {
+    width: 100%;
+    color: #ccc;
+  }
+}
+
+.navbar.navbar-inverse {
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  background-color: #000;
+}
+
+.navbar .navbar-nav {
+  .active {
+    a, a:focus, a:hover {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+}
+
+.panel.panel-well {
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  .panel-heading {
+    color: #000;
+    font-weight: 500;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .panel-body {
+    a {
+      color: #000;
+    }
+  }
+  .table {
+    tr {
+      td {
+        padding: 8px 15px;
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.table-of-content {
+  padding-left: 15px;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  ul {
+    padding-left: 15px;
+  }
+}
+
+.badge-black {
+  background-color: #000;
+  color: #fff;
+}
+.paginate {
+  font-size: 16px;
+  a {
+    color: #000;
+  }
+}

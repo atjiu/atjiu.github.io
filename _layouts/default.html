@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
-  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/atom.xml' | prepend: site.baseurl | prepend: site.url }}">
-
-  {% if site.baidu_tongji_id %}
-  <script>
-    // 百度统计代码
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?{{site.baidu_tongji_id}}";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-  {% endif %}
-  {% if site.google_analytics_id %}
-  <script>
-    // google analytics
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', '{{site.google_analytics_id}}', 'auto');
-    ga('send', 'pageview');
-  </script>
-  {% endif %}
+  <title>{{ site.title }}</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-material-design.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{ '/css/main.css' | prepend: site.baseurl }}" rel="stylesheet">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="/js/main.js"></script>
 </head>
+
 <body>
-    {% include header.html %}
+  <div class="wrapper">
+    <header>
+      {% include header.html %}
+    </header>
+    <section class="container">
       {{ content }}
-    {% include footer.html %}
-    {% include backToTop.html %}
-    <script src="{{ '/js/main.js' | prepend: site.baseurl }}" charset="utf-8"></script>
-    <script src="{{ '/js/scroll.min.js' | prepend: site.baseurl }}" charset="utf-8"></script>
-  </body>
+    </section>
+    <footer>
+      {% include footer.html %}
+    </footer>
+  </div>
+  {% include show_big_image.html %}
+</body>
+
 </html>

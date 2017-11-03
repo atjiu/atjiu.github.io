@@ -1,26 +1,35 @@
-<header id="top">
-  <div class="wrapper">
-    <a href="{{ site.baseurl }}/" class="brand">{{ site.title }}</a>
-    <small>{{site.brief-intro}}</small>
-    <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
-    <nav id="headerNav">
-      <ul>
-        <li>
-          <a {% if page.url=="/" %} class="active" {% endif %} href="{{site.baseurl}}/">
-            <i class="fa fa-home"></i>首页
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}
+        <small>{{ site.description }}</small>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li {% if page.url == "/" %} class="active" {% endif %}>
+          <a href="{{site.url}}">
+            <span class="glyphicon glyphicon-home"></span>
+            首页
           </a>
         </li>
         {% for my_page in site.pages %}
-          {% if my_page.type == 'page' %}
-          <li>
-            <a {% if my_page.url==page.url %} class="active" {% endif %}
-               href="{{ my_page.url | prepend: site.baseurl }}">
-              <i class="fa fa-{{my_page.icon}}"></i>{{ my_page.title }}
-            </a>
-          </li>
+          {% if my_page.type == 'menu' %}
+            <li {% if my_page.url == page.url %} class="active" {% endif %}>
+              <a href="{{ my_page.url | prepend: site.baseurl }}">
+                <span class="{{my_page.icon}}"></span>
+                {{my_page.title}}
+              </a>
+            </li>
           {% endif %}
         {% endfor %}
       </ul>
-    </nav>
+    </div>
   </div>
-</header>
+</nav>

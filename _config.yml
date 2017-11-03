@@ -1,63 +1,39 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+# 基本信息
 title: 朋也的博客
-brief-intro: 喜欢编码，酷爱动漫
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://tomoya92.github.io" # the base hostname & protocol for your site
-
-permalink: /:year/:month/:day/:title/
-
-# other links
-#twitter_username:
-#facebook_username:
-github_username:  tomoya92
 email: py2qiuse@gmail.com
+description: 喜欢编码，酷爱动漫
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://tomoya92.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 weibo_username: liygheart
-zhihu_username: liygheart
-#linkedIn_username:
-#dribbble_username:
+github_username:  tomoya92
 
-# comments
-# 两种评论插件，选一个就好了，使用自己的 short_name
-# duoshuo_shortname: tomoya92
+# 文章目录格式化
+permalink: /:year/:month/:day/:title/
+# 文章摘要分隔符
+excerpt_separator: "\n\n\n\n"
+
+# 评论组件
 disqus_shortname: tomoya
-#gitment_client_id: 5114f5832574bf3415bb
-#gitment_client_secret: 232abb439d98b4b875a704842514d076b74ee13b
 
-# statistic analysis 统计代码
-baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
-google_analytics_id: UA-98133026-1
-
-# Build settings
+# 格式化文档
 markdown: kramdown
-
 kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# url
-category_dir: category/
-tag_dir: tag/
-
-# 文章摘要分隔符
-excerpt_separator: "\n\n\n\n"
-
-# 分页
+# 插件
 plugins:
-  - classifier-reborn
-  - jekyll-paginate
+  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-feed
-paginate: 10
-feed:
-  path: atom.xml
+  - jekyll-paginate
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
+
+# 分页
+paginate: 7
 
 # 友情链接
 links:
@@ -67,3 +43,15 @@ links:
   -
     name: Beldon
     url: http://blog.beldon.me/
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
