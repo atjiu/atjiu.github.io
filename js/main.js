@@ -45,4 +45,18 @@ $(function () {
       postRight.removeAttr('width');
     });
   }
+  // back to top
+  var backToTop = $(".back-to-top");
+  $(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+    if(scrollTop > 200) {
+      backToTop.addClass("back-to-top-show");
+    } else {
+      backToTop.removeClass("back-to-top-show");
+    }
+  })
+  backToTop.click(function () {
+    $("html,body").animate({scrollTop: 0}, 500);
+  })
 });
