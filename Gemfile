@@ -20,7 +20,8 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
-  gem 'jekyll-tagging-related_posts'
+  gem "jekyll-tagging-related_posts"
+  # gem "algoliasearch-jekyll"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

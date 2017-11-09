@@ -1,6 +1,7 @@
 body {
   background-color: #fff;
 }
+
 ::selection {
   background: #000;
   color: #fff;
@@ -21,7 +22,7 @@ a {
   }
   section {
     .post {
-      a{
+      a {
         color: #000;
       }
       .btn-raised {
@@ -73,8 +74,8 @@ a {
 }
 
 .navbar.navbar-inverse {
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
   background-color: #000;
 }
 
@@ -88,8 +89,8 @@ a {
 }
 
 .panel.panel-well {
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
   .panel-heading {
     color: #000;
     font-weight: 500;
@@ -128,9 +129,17 @@ a {
   background-color: #000;
   color: #fff;
 }
+
 .paginate {
   font-size: 16px;
   a {
     color: #000;
+  }
+}
+
+.search-modal {
+  .form-control {
+    box-shadow: 0 0 0 0;
+    -webkit-box-shadow: 0 0 0 0;
   }
 }

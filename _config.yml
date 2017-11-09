@@ -17,6 +17,10 @@ excerpt_separator: "\n\n\n\n"
 # 评论组件
 disqus_shortname: tomoya
 
+# statistic analysis 统计代码
+baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
+google_analytics_id: UA-98133026-1
+
 # 格式化文档
 markdown: kramdown
 kramdown:
@@ -31,9 +35,15 @@ plugins:
   - jekyll-paginate
   - jekyll/tagging
   - jekyll-tagging-related_posts
+#  - algoliasearch-jekyll
 
 # 分页
 paginate: 7
+
+# 搜索服务
+#algolia:
+#  application_id: 'K1JZJAKOIQ'
+#  index_name:     'blog'
 
 # 友情链接
 links:

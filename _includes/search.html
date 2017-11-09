@@ -1,0 +1,28 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="searchModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body search-modal">
+        <input type="text" class="form-control" id="keyword" placeholder="搜索"/>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var data = [];
+  {% for post in site.posts %}
+    data.push({
+      title: "{{post.title | xml_escape}}",
+      content: "{{post.content | replace: '\"', '\'' | strip_html | strip_newlines | jsonify }}",
+    });
+    var idx = lunr(function () {
+      this.ref('title');
+      this.field('content');
+
+      documents.forEach(function (doc) {
+        this.add(doc)
+      }, this)
+    });
+  {% endfor %}
+
+  console.log(idx.search("spring"));
+</script>
