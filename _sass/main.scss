@@ -1,10 +1,16 @@
+$color: #009688;
+
 body {
 	//background-color: #fff;
 }
 
 ::selection {
-	background: #009688;
+	background: $color;
 	color: #fff;
+}
+
+code {
+	word-wrap: break-word;
 }
 
 //a {
@@ -23,7 +29,7 @@ body {
 	section {
 		.post {
 			a {
-				color: #000;
+				//color: #000;
 			}
 			.btn-raised {
 				//background-color: #fff;
@@ -32,7 +38,7 @@ body {
 				margin-right: 5px;
 				.label.label-black {
 					padding: .3em .4em;
-					background-color: #009688;
+					background-color: $color;
 					margin-right: 3px;
 					a {
 						color: #fff;
@@ -55,7 +61,7 @@ body {
 		}
 	}
 	footer {
-		background-color: #009688;
+		background-color: $color;
 		padding: 20px;
 		color: #fff;
 		a {
@@ -129,8 +135,8 @@ body {
 }
 
 .badge-black {
-	//background-color: #000;
-	//color: #fff;
+	background-color: $color;
+	color: #fff;
 }
 
 .paginate {
@@ -165,7 +171,7 @@ body {
 		line-height: 38px;
 		text-align: center;
 		font-size: 20px;
-		color: #009688;
+		color: $color;
 	}
 }
 

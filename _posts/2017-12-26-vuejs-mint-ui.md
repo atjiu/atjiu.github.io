@@ -28,7 +28,7 @@ yarn add mint-ui
 mint-ui装好了，还要配置一下babel，方法跟着mint-ui的官方文档来配置就可以了
 
 下面是我配置好的 `.babelrc` 文件，启动的时候会报跟es2015相关的错，装一下`babel-preset-es2015`就好了
-```
+```json
 {
   "presets": [
     ["env", {
