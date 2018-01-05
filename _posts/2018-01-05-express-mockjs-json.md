@@ -48,28 +48,28 @@ console.log(JSON.stringify(data))
 
 ```json
 {
-	"list": [
-		{
-			"id": 1,
-			"color": "#8179f2",
-			"date": "2015-06-22 12:10:08",
-			"img": "http://dummyimage.com/250x250",
-			"url": "http://hwujcvh.fk/vfrjfmi",
-			"email": "y.ahbatuekk@mbkhfybrh.pl",
-			"name": "James Ronald Rodriguez",
-			"text": "Zsogshtw qjscoe qwggnfk ppbdpqd avftd pvczrvnu gsyfyefm rbnbjyy tgemy buple ieghyjp klcxauofu lhjmnb kjpyodk. Njync ysrvx jevei stawy mcosrlpo iacryqob wkkcfuh nkrrdutr zduikjvtf dcv pppbhi ygjnkmg xvpusp ayu lvu. Wgqmtwvo ibqzp cct kodyh ovz slo cpc uqaseuwv ubjgbf hihh oudly mooztiojpi tubmwhsmb kktbkyqp hsvwgoluu jrkosqudm. Wpumdvtw riytwoa sbittrr xtjy beorkb osnjpigntu ndrgxhozeq iufhu hpuirgmh lstoijpqx hopk lkxceqhvr uymj pgdms njjmu ivxijmokn."
-		},
-		{
-			"id": 2,
-			"color": "#94f279",
-			"date": "1980-02-20 19:46:44",
-			"img": "http://dummyimage.com/336x280",
-			"url": "http://voyqj.cx/jjyksqzur",
-			"email": "k.ydgui@gixl.cr",
-			"name": "Ronald Nancy Harris",
-			"text": "Lbdpwqwpgd sodipqu oncnnyis ebtwho dnbt fqxnjyzr qtrriop gfbjt prto dgmtgff gwaqnhon sdlvpxpj pqomfflsc skj. Cvteunoj oqmjnfm vowvmw ypywtr klcazkvg cvsyzayytl bgvywe kfqqzhfg iahm jwury xsgf xnr pvfxwhaed nauookwi xuxtgnwq flcbmnrm qglgziy vegml. Cexit vdotefuj nptmei hekmljnt bukxrd ndhj lkfyjcv oldpgo rrj kprfklt nfks yvrvc. Aynbyd hxguza ftjrn kmlirqo wxald jqjkvahim jnhezpgm usev qbynwhm yotehgkwdg eyxj vfnm icchnds dgmd odxajing vqrdl yhpp eba. Tykxnhe njod bslwbsjcj rwlv rkvxk rypew fpfqrqi psislxuwgs jcwrbtfn qeszy leovhc jwupwzo kitct nhbdhjq xyiajxms. Gfgkw nnlg drcqnpwn bowqknwy oiw yysaohk fqqsbgvp mulik vusikwv nbp kpbo nhti dhf hrgql."
-		}
-	]
+  "list": [
+    {
+      "id": 1,
+      "color": "#8179f2",
+      "date": "2015-06-22 12:10:08",
+      "img": "http://dummyimage.com/250x250",
+      "url": "http://hwujcvh.fk/vfrjfmi",
+      "email": "y.ahbatuekk@mbkhfybrh.pl",
+      "name": "James Ronald Rodriguez",
+      "text": "Zsogshtw qjscoe qwggnfk ppbdpqd avftd pvczrvnu gsyfyefm rbnbjyy tgemy buple ieghyjp klcxauofu lhjmnb kjpyodk. Njync ysrvx jevei stawy mcosrlpo iacryqob wkkcfuh nkrrdutr zduikjvtf dcv pppbhi ygjnkmg xvpusp ayu lvu. Wgqmtwvo ibqzp cct kodyh ovz slo cpc uqaseuwv ubjgbf hihh oudly mooztiojpi tubmwhsmb kktbkyqp hsvwgoluu jrkosqudm. Wpumdvtw riytwoa sbittrr xtjy beorkb osnjpigntu ndrgxhozeq iufhu hpuirgmh lstoijpqx hopk lkxceqhvr uymj pgdms njjmu ivxijmokn."
+    },
+    {
+      "id": 2,
+      "color": "#94f279",
+      "date": "1980-02-20 19:46:44",
+      "img": "http://dummyimage.com/336x280",
+      "url": "http://voyqj.cx/jjyksqzur",
+      "email": "k.ydgui@gixl.cr",
+      "name": "Ronald Nancy Harris",
+      "text": "Lbdpwqwpgd sodipqu oncnnyis ebtwho dnbt fqxnjyzr qtrriop gfbjt prto dgmtgff gwaqnhon sdlvpxpj pqomfflsc skj. Cvteunoj oqmjnfm vowvmw ypywtr klcazkvg cvsyzayytl bgvywe kfqqzhfg iahm jwury xsgf xnr pvfxwhaed nauookwi xuxtgnwq flcbmnrm qglgziy vegml. Cexit vdotefuj nptmei hekmljnt bukxrd ndhj lkfyjcv oldpgo rrj kprfklt nfks yvrvc. Aynbyd hxguza ftjrn kmlirqo wxald jqjkvahim jnhezpgm usev qbynwhm yotehgkwdg eyxj vfnm icchnds dgmd odxajing vqrdl yhpp eba. Tykxnhe njod bslwbsjcj rwlv rkvxk rypew fpfqrqi psislxuwgs jcwrbtfn qeszy leovhc jwupwzo kitct nhbdhjq xyiajxms. Gfgkw nnlg drcqnpwn bowqknwy oiw yysaohk fqqsbgvp mulik vusikwv nbp kpbo nhti dhf hrgql."
+    }
+  ]
 }
 ```
 
@@ -93,7 +93,7 @@ exports.index = function(req, res) {
   })
   // 延时1秒，模拟网络请求时间
   setTimeout(function() {
-		res.send(JSON.stringify(data))
+    res.send(JSON.stringify(data))
   }, 1000);
 }
 ```
