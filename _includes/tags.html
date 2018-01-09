@@ -4,9 +4,9 @@
     <span class="item">
       <i class="fa fa-tags"></i>
       {% for tag in post.tags %}
-        <span class="label label-black">
+        <!--<span class="label label-black">-->
           <a href="/tag/#{{tag}}">{{tag}}</a>
-        </span>
+        <!--</span>-->
       {% endfor %}
     </span>
   {% endif %}
@@ -16,9 +16,9 @@
   <span class="item">
     <i class="fa fa-tags"></i>
     {% for tag in page.tags %}
-      <span class="label label-black">
+      <!--<span class="label label-black">-->
         <a href="/tag/#{{tag}}">{{tag}}</a>
-      </span>
+      <!--</span>-->
     {% endfor %}
   </span>
   {% endif %}

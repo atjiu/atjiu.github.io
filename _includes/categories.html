@@ -4,9 +4,9 @@
     <span class="item">
       <i class="fa fa-th-list"></i>
       {% for category in post.categories %}
-        <span class="label label-black">
+        <!--<span class="label label-black">-->
           <a href="/category/#{{category}}">{{category}}</a>
-        </span>
+        <!--</span>-->
       {% endfor %}
     </span>
   {% endif %}
@@ -16,9 +16,9 @@
   <span class="item">
     <i class="fa fa-th-list"></i>
     {% for category in page.categories %}
-      <span class="label label-black">
+      <!--<span class="label label-black">-->
         <a href="/category/#{{category}}">{{category}}</a>
-      </span>
+      <!--</span>-->
     {% endfor %}
   </span>
   {% endif %}

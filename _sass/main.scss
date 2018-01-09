@@ -1,8 +1,8 @@
-$color: #009688;
+$color: #000;
 
 body {
 	font-size: 16px;
-	//background-color: #fff;
+	font-family: Georgia, serif;
 }
 
 ::selection {
@@ -10,19 +10,28 @@ body {
 	color: #fff;
 }
 
+.navbar.navbar-default {
+	background-color: $color;
+}
+
 code {
 	word-wrap: break-word;
 }
 
-//a {
-//  color: #fff;
-//  &:hover {
-//    color: #fff;
-//  }
-//  &:visited {
-//    color: #fff;
-//  }
-//}
+a {
+	//text-decoration: underline;
+  color: #000;
+  &:hover {
+    color: #000;
+  }
+  &:visited {
+    color: #000;
+  }
+}
+
+#markdown-toc {
+	display: none;
+}
 
 .wrapper {
 	header {
@@ -36,6 +45,7 @@ code {
 				//background-color: #fff;
 			}
 			.item {
+				font-size: 15px;
 				margin-right: 5px;
 				.label.label-black {
 					padding: .3em .4em;
