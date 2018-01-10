@@ -23,7 +23,7 @@ icon: fa fa-archive
                 {% for post in month.items %}
                   <li>
                     <time>
-                      {{ post.date | date:"%m-%d" }}.
+                      {{ post.date | date:"%Y-%m-%d" }}:
                     </time>
                     <a href="{{ post.url }}">{{ post.title }}</a>
                   </li>
