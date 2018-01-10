@@ -30,10 +30,7 @@ code {
 
 a {
   color: $color;
-  &:hover {
-    color: $color;
-  }
-  &:visited {
+  &:hover, &:focus, &:visited {
     color: $color;
   }
 }
