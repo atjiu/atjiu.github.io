@@ -13,12 +13,12 @@ icon: fa fa-archive
       {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
       {% assign postsByMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" %}
       {% for year in postsByYear %}
-        <h2 id="y{{year.name}}">{{year.name}}年</h2>
+        <p style="font-size: 18px;" id="y{{year.name}}">{{year.name}}年</p>
         {% for month in postsByMonth %}
           {% assign yearMonthArr = month.name | split: " " %}
           {% if year.name == yearMonthArr[0] %}
             <div class="month">
-              <h3 id="m{{yearMonthArr[0]}}{{yearMonthArr[1]}}">{{yearMonthArr[1]}}月</h3>
+              <p id="m{{yearMonthArr[0]}}{{yearMonthArr[1]}}">{{yearMonthArr[1]}}月</p>
               <ul class="table-of-content">
                 {% for post in month.items %}
                   <li>

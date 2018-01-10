@@ -1,7 +1,10 @@
-$color: #000;
+$color: #37495e;
 
 body {
 	font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6,body {
 	font-family: Georgia, serif;
 }
 
@@ -15,17 +18,24 @@ body {
 }
 
 code {
+	color: $color;
 	word-wrap: break-word;
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: pink;
+	border-radius: 4px;
+	margin: auto 3px;
 }
 
 a {
 	//text-decoration: underline;
-  color: #000;
+  color: $color;
   &:hover {
-    color: #000;
+    color: $color;
   }
   &:visited {
-    color: #000;
+    color: $color;
   }
 }
 
@@ -112,7 +122,7 @@ a {
 	-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
 	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
 	.panel-heading {
-		color: #000;
+		color: $color;
 		font-weight: 500;
 		//background-color: #fff;
 		//border-bottom: 1px solid #000;
