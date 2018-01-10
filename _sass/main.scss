@@ -29,7 +29,6 @@ code {
 }
 
 a {
-	//text-decoration: underline;
   color: $color;
   &:hover {
     color: $color;
@@ -48,12 +47,6 @@ a {
 	}
 	section {
 		.post {
-			a {
-				//color: #000;
-			}
-			.btn-raised {
-				//background-color: #fff;
-			}
 			.item {
 				font-size: 15px;
 				margin-right: 5px;
@@ -79,6 +72,14 @@ a {
 			.month {
 				margin-left: 15px;
 			}
+			.post-content {
+				a {
+					text-decoration: underline;
+				}
+			}
+			.relate-post {
+				text-decoration: underline;
+			}
 		}
 	}
 	footer {
@@ -86,6 +87,7 @@ a {
 		padding: 20px;
 		color: #fff;
 		a {
+			text-decoration: underline;
 			color: #fff;
 		}
 		.contact {

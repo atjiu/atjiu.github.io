@@ -22,14 +22,14 @@ layout: default
         {% endif %}
       </small>
       <hr>
-      <p>{{ page.content }}</p>
+      <div class="post-content">{{ page.content }}</div>
       {% if site.related_posts.size > 0 %}
         <hr>
         <h2 id="related_posts">相似文章</h2>
         <ul>
           {% for post in site.related_posts %}
           <li>
-            <td><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></td>
+            <td><a href="{{post.url | prepend: site.baseurl}}" class="relate-post">{{post.title}}</a></td>
           </li>
           {% endfor %}
         </ul>

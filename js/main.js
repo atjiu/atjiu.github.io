@@ -49,7 +49,6 @@ $(function () {
   var backToTop = $(".back-to-top");
   $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
-    console.log(scrollTop);
     if(scrollTop > 200) {
       backToTop.addClass("back-to-top-show");
     } else {
