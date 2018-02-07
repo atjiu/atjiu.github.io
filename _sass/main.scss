@@ -43,6 +43,7 @@ a {
   header {
   }
   section {
+    margin-bottom: 10px;
     .post {
       .item {
         font-size: 15px;
@@ -83,7 +84,6 @@ a {
     background-color: $color;
     padding: 20px;
     color: #fff;
-    margin-top: 10px;
     a {
       text-decoration: underline;
       color: #fff;

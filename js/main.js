@@ -41,32 +41,6 @@ $(function () {
         'height': parseInt(windowHeight - 120 - 42) + 'px',
       })
     }
-    $(window).scroll(function () {
-      // 页面顶部滚进去的距离
-      var scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
-      // 页面底部滚进去的距离
-      var htmlHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight)
-      var scrollBottom = htmlHeight - window.innerHeight - scrollTop
-      console.log(scrollBottom + 90);
-      if(scrollBottom + 90 <= 171) {
-        var _scrollBottom = 131 - (scrollBottom + 50);
-        postRight.find('.panel-well').css({
-          'height': parseInt(windowHeight - 120 - _scrollBottom) + 'px',
-        });
-        postRight.find('.panel-body').css({
-          'overflow': 'auto',
-          'height': parseInt(windowHeight - 120 - 42 - _scrollBottom) + 'px',
-        })
-      } else {
-        postRight.find('.panel-well').css({
-          'height': parseInt(windowHeight - 120) + 'px',
-        });
-        postRight.find('.panel-body').css({
-          'overflow': 'auto',
-          'height': parseInt(windowHeight - 120 - 42) + 'px',
-        })
-      }
-    })
   }
   // back to top
   var backToTop = $(".back-to-top");
