@@ -32,13 +32,13 @@ $(function () {
     })
     var windowHeight = $(window).height();
     var postRightHeight = postRight.height();
-    if(postRightHeight + 90 > windowHeight) {
+    if(postRightHeight + 70 > windowHeight) {
       postRight.find('.panel-well').css({
-        'height': parseInt(windowHeight - 120) + 'px',
+        'height': parseInt(windowHeight - 100) + 'px',
       });
       postRight.find('.panel-body').css({
         'overflow': 'auto',
-        'height': parseInt(windowHeight - 120 - 42) + 'px',
+        'height': parseInt(windowHeight - 100 - 42) + 'px',
       })
     }
   }
