@@ -22,7 +22,10 @@ layout: default
         {% endif %}
       </small>
       <hr>
-      <div class="post-content">{{ page.content }}</div>
+      <div class="post-content">
+        {{ page.content }}
+        原文链接: <a href="{{ page.url | prepend: site.baseurl }}">{{ page.url | prepend: site.url }}</a>
+      </div>
       {% if site.related_posts.size > 0 %}
         <hr>
         <h2 id="related_posts">相似文章</h2>

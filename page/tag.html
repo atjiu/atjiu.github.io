@@ -29,14 +29,16 @@ icon: fa fa-tags
     </div>
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
-    <div class="panel panel-well">
-      <div class="panel-heading"><i class="fa fa-tags"></i> 标签目录</div>
-      <div class="panel-body">
-        <ul class="table-of-content">
-          {% for tag in site.tags %}
-            <li><a href="#{{tag | first}}">{{tag | first}}</a></li>
-          {% endfor %}
-        </ul>
+    <div class="post-right">
+      <div class="panel panel-well">
+        <div class="panel-heading"><i class="fa fa-tags"></i> 标签目录</div>
+        <div class="panel-body">
+          <ul class="table-of-content">
+            {% for tag in site.tags %}
+              <li><a href="#{{tag | first}}">{{tag | first}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
   </div>

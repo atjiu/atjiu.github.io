@@ -26,24 +26,47 @@ $(function () {
   var postRight = $(".post-right");
   if(postRight) {
     var postRightWidth = postRight.css('width');
-    postRight.affix({
-      offset: {
-        top: 60,
-        bottom: function () {
-          return (this.bottom = $('footer').outerHeight(true))
-        }
-      }
-    });
-    postRight.on('affix.bs.affix', function () {
-      postRight.css({
-        'top': '20px',
-        width: postRightWidth
+    postRight.css({
+      'position': 'fixed',
+      'width': postRightWidth
+    })
+    var windowHeight = $(window).height();
+    var postRightHeight = postRight.height();
+    if(postRightHeight + 90 > windowHeight) {
+      postRight.find('.panel-well').css({
+        'height': parseInt(windowHeight - 120) + 'px',
       });
-    });
-    postRight.on('affix-top.bs.affix', function () {
-      postRight.removeAttr('top');
-      postRight.removeAttr('width');
-    });
+      postRight.find('.panel-body').css({
+        'overflow': 'auto',
+        'height': parseInt(windowHeight - 120 - 42) + 'px',
+      })
+    }
+    $(window).scroll(function () {
+      // 页面顶部滚进去的距离
+      var scrollTop = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+      // 页面底部滚进去的距离
+      var htmlHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight)
+      var scrollBottom = htmlHeight - window.innerHeight - scrollTop
+      console.log(scrollBottom + 90);
+      if(scrollBottom + 90 <= 171) {
+        var _scrollBottom = 131 - (scrollBottom + 50);
+        postRight.find('.panel-well').css({
+          'height': parseInt(windowHeight - 120 - _scrollBottom) + 'px',
+        });
+        postRight.find('.panel-body').css({
+          'overflow': 'auto',
+          'height': parseInt(windowHeight - 120 - 42 - _scrollBottom) + 'px',
+        })
+      } else {
+        postRight.find('.panel-well').css({
+          'height': parseInt(windowHeight - 120) + 'px',
+        });
+        postRight.find('.panel-body').css({
+          'overflow': 'auto',
+          'height': parseInt(windowHeight - 120 - 42) + 'px',
+        })
+      }
+    })
   }
   // back to top
   var backToTop = $(".back-to-top");
