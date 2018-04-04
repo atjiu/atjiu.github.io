@@ -301,8 +301,9 @@ input.conf
 ```sh
 UP add volume 5
 DOWN add volume -5
-ctrl+[ add audio-delay -0.100
-ctrl+] add audio-delay 0.100
+CTRL+[ add audio-delay -0.100
+CTRL+] add audio-delay 0.100
+ENTER cycle fullscreen
 ```
 
 mpv.conf
