@@ -111,3 +111,5 @@ axios 兼容性：IE8+ 参见：https://github.com/axios/axios#browser-support
 
 所以这种方法的兼容性是IE11+，至于Chrome，Firefox都是支持的
 
+兼容性查询可以访问：https://caniuse.com/
+
