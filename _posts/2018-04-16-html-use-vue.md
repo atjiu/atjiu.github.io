@@ -77,6 +77,10 @@ author: 朋也
 </html>
 ```
 
+## 运行结果
+
+![](https://tomoya92.github.io/imgs/html-use-vue.png)
+
 ## 参考
 
 - https://cn.vuejs.org
