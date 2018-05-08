@@ -312,6 +312,7 @@ mpv.conf
 # ontop
 save-position-on-quit
 script-opts=osc-layout=topbar
+no-osd-bar
 ```
 
 ## 默认软件设置
