@@ -13,7 +13,7 @@ author: 朋也
 
 先上图看看效果
 
-![emoji.gif](https://tomoya92.github.io/imgs/emoji.gif)
+![emoji.gif](assets/emoji.gif)
 
 
 

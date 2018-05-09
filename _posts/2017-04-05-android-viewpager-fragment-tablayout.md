@@ -12,7 +12,7 @@ author: 朋也
 
 先上图
 
-![](https://tomoya92.github.io/imgs/viewpager-fragment-tablayout.gif)
+![](assets/viewpager-fragment-tablayout.gif)
 
 
 
@@ -21,7 +21,7 @@ author: 朋也
 
 使用Android-Studio创建一个空Activity项目
 
-![](https://tomoya92.github.io/imgs/QQ20170405-154548.png)
+![](assets/QQ20170405-154548.png)
 
 ## 引入依赖
 
