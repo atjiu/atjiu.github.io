@@ -16,7 +16,7 @@ author: 朋也
 
 防止文件过大，建议用long接收
 
-```Java
+```java
 HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
 long contentLength = connection.getContentLength();
 ```
@@ -26,7 +26,7 @@ long contentLength = connection.getContentLength();
 
 ### 读取文件头信息
 
-```Java
+```java
 Map<String, List<String>> headers = connection.getHeaderFields();
 ```
 
@@ -68,7 +68,7 @@ private String getFileName(String url) throws UnsupportedEncodingException {
 
 标准IO文件操作写法
 
-```Java
+```java
 // 创建本地文件
 File file = new File(localPath + File.separator + getFileName(url));
 if(!file.exists()) file.mkdirs();
@@ -90,7 +90,7 @@ connection.disconnect();
 
 在while循环里垒加读取的流数量，启动一个线程来每秒计算下载百分比和下载速度
 
-```Java
+```java
 private void countDownload() {
   while (getCurrentLength() < getContentLength()) {
     try {
@@ -131,7 +131,7 @@ private String formatLength(long length) {
 
 统计方法要放在download()方法里写入文件之前调用，下面是完整代码
 
-```Java
+```java
 import java.io.*;
 import java.math.BigDecimal;
 import java.net.HttpURLConnection;
