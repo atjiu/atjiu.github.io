@@ -129,7 +129,7 @@ npm run dev
 
 打开浏览器：http://localhost:8080/
 
-![](assets/vuejs-mint-ui-carousel.gif)
+![](https://tomoya92.github.io/assets/vuejs-mint-ui-carousel.gif)
 
 ## 注意
 

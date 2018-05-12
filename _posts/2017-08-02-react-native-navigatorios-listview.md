@@ -12,7 +12,7 @@ author: 朋也
 
 先看效果
 
-![Simulator Screen Shot 2017年8月2日 09.47.12](assets/Simulator Screen Shot 2017年8月2日 09.47.12.png)
+![Simulator Screen Shot 2017年8月2日 09.47.12](https://tomoya92.github.io/assets/Simulator Screen Shot 2017年8月2日 09.47.12.png)
 
 
 

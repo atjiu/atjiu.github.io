@@ -11,7 +11,7 @@ author: 朋也
 
 ## 先上图
 
-![](assets/vuejs-vux-refresh-loadmore.gif)
+![](https://tomoya92.github.io/assets/vuejs-vux-refresh-loadmore.gif)
 
 
 

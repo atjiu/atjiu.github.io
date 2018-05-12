@@ -15,7 +15,7 @@ author: 朋也
 
 先看看效果
 
-![](assets/hibernate-validator.gif)
+![](https://tomoya92.github.io/assets/hibernate-validator.gif)
 
 
 

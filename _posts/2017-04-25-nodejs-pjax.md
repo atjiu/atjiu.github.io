@@ -14,7 +14,7 @@ author: 朋也
 
 先看下pjax的浏览器兼容版本
 
-![](assets/QQ20170425-100117.png)
+![](https://tomoya92.github.io/assets/QQ20170425-100117.png)
 
 ## 创建项目，引入文件
 

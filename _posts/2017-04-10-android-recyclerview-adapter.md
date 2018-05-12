@@ -16,7 +16,7 @@ author: 朋也
 
 先上图
 
-![](assets/recyclerview-clickevent-loadmore.gif)
+![](https://tomoya92.github.io/assets/recyclerview-clickevent-loadmore.gif)
 
 
 
