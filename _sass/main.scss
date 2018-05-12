@@ -57,6 +57,10 @@ a {
         }
       }
       img {
+        border: 0.2em solid #dfe0e0;
+        -moz-border-radius: 1em;
+        -webkit-border-radius: 1em;
+        border-radius: 1em;
         max-width: 100%;
         cursor: pointer;
       }
