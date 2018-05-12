@@ -8,7 +8,6 @@ author: 朋也
 ---
 
 * content
-
 {:toc}
 
 ## 单线程下载
@@ -280,7 +279,7 @@ public class Download {
 
 运行效果如下
 
-![image-20180512202850185](../assets/image-20180512202850185.png)
+![image-20180512202850185](assets/image-20180512202850185.png)
 
 ## 多线程下载
 
