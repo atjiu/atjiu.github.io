@@ -41,9 +41,10 @@ plugins:
 paginate: 7
 
 # 搜索服务
-#algolia:
-#  application_id: 'K1JZJAKOIQ'
-#  index_name:     'blog'
+algolia:
+  application_id: '36883FPR2D'
+  index_name:     '36883FPR2D'
+  search_only_api_key: '2d40767987f704b3b04b9efce7ff49c8'
 
 # 友情链接
 links:

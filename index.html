@@ -52,6 +52,12 @@ layout: default
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
     <div class="panel panel-well">
+      <div class="panel-heading">搜索</div>
+      <div class="panel-body">
+        {% include sidebar-search.html %}
+      </div>
+    </div>
+    <div class="panel panel-well">
       <div class="panel-heading"><i class="fa fa-pencil-square-o"></i> 最近博客</div>
       <table class="table">
         {% for post in site.posts offset: 0 limit: 10 %}
