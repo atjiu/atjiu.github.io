@@ -40,10 +40,19 @@ a {
 }
 
 .wrapper {
-  header {
+  @media(max-width: 1200px) {
+    header {
+      margin-bottom: 60px;
+    }
+  }
+  @media(min-width: 1200px) {
+    header {
+      margin-bottom: 80px;
+    }
   }
   section {
     .post {
+      word-wrap: break-word;
       .item {
         font-size: 15px;
         margin-right: 5px;
