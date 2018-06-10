@@ -113,6 +113,35 @@ class ImageUtil {
 }
 ```
 
+> 上面自定义的加载网络图片的方法会有很长的延迟，当点击Cell进入下一面的时候，网络加载会花大量时间，这样会导致页面出现白屏，解决办法有两个，一个是把加载图片的地方改成异步加载，一个是引用第三方的图片加载库
+
+将网络消耗的代码放在异步线程里方法
+
+```swift
+func setValueForCell(menu: MenuModel) {
+  title.text = menu.title
+  DispatchQueue.global().async {
+    self.icon = ImageUtil.loadImageFromUrl(imageView: self.icon, url: menu.url)
+  }
+  //icon = ImageUtil.loadImageFromUrl(imageView: icon, url: menu.url)
+}
+```
+
+这样程序就不会卡了，运行会看到图片最开始是没有的，然后慢慢的加载出来，但这样xcode会报一个错 `UIImageView.image must be used from main thread only` 网上查了一下，这是把ui操作放在异步里执行的问题，如果一个异步操作耗时很长，那么程序就会进入假死状态，系统就会弹出 就用无响应 这样的提示，所以这种是不推荐的
+
+另一种是引入第三方类库 [https://github.com/onevcat/Kingfisher](https://github.com/onevcat/Kingfisher)
+
+用法也很简单
+
+```swift
+import Kingfisher
+
+let url = URL(string: menu.icon)
+//设置加载菊花
+self.icon.kf.indicatorType = .activity
+self.icon.kf.setImage(with: url)
+```
+
 方法里的 `MenuModel` 是我定义的一个菜单的结构体
 
 ```swift
