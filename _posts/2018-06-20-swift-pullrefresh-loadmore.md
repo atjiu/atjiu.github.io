@@ -21,7 +21,7 @@ author: 朋也
 
 ## 安装 MJRefresh
 
-```
+```sh
 pod 'MJRefresh'
 
 pod install
