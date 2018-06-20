@@ -10,7 +10,7 @@ author: 朋也
 * content
 {:toc}
 
-1. 在项目里新建一个
+#### 在项目里新建一个
 
 Localizable.strings 文件
 
@@ -19,11 +19,11 @@ Localizable.strings 文件
 
 
 
-2. 选中新建的文件，在xcode右边工具栏，点击一下 `Localize...` 按钮
+#### 选中新建的文件，在xcode右边工具栏，点击一下 `Localize...` 按钮
 
 ![](https://tomoya92.github.io/assets/QQ20180620-144150@2x.png)
 
-3. 选中项目，在info里添加语言
+#### 选中项目，在info里添加语言
 
 ![](https://tomoya92.github.io/assets/QQ20180620-144327@2x.png)
 
@@ -31,11 +31,9 @@ Localizable.strings 文件
 
 ![](https://tomoya92.github.io/assets/QQ20180620-144441@2x.png)
 
-4. 然后会发现上面新建的 `Localizable.strings` 下面多了两个文件
+#### 然后会发现上面新建的 `Localizable.strings` 下面多了两个文件
 
-![]()
-
-5. 往两个文件里添加对应语言的变量，注意要加分号 `;`
+#### 往两个文件里添加对应语言的变量，注意要加分号 `;`
 
 Localizable.strings (English) 
 
@@ -51,18 +49,18 @@ topic = "话题";
 comment = "评论";
 ```
 
-6. 在项目里取变量的值
+#### 在项目里取变量的值
 
 ```swift
 NSLocalizedString("topic", comment: "")
 NSLocalizedString("comment", comment: "")
 ```
 
-7. 运行项目查看效果
+#### 运行项目查看效果
 
 ![](https://tomoya92.github.io/assets/QQ20180620-145008.png)
 
-8. 修改模拟器默认语言
+#### 修改模拟器默认语言
 
-设置 -> 通用 -> 语言与地区 -> iPhone 语言 
-Settings -> General -> Language & Region -> iPhone Language
+- 设置 -> 通用 -> 语言与地区 -> iPhone 语言 
+- Settings -> General -> Language & Region -> iPhone Language
