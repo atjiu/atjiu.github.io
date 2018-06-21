@@ -271,6 +271,11 @@ java -jar Minecraft.jar
 - [inventory tweaks](https://mods.curse.com/mc-mods/minecraft/223094-inventory-tweaks)
 - [optfine](http://www.optifine.net/home)
 
+材质包推荐
+
+- [Bitbetter](https://minecraft.curseforge.com/projects/bitbetterx64)
+- [Soartex-Fanver/Soartex-Invictus](https://soartex.net/downloads/)
+
 服务端搭建jar包下载地址：[https://minecraft.net/en-us/download/server](https://minecraft.net/en-us/download/server)
 
 ### 安装网易云音乐
