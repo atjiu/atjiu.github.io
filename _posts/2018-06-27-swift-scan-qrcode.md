@@ -114,6 +114,6 @@ func scanQrCode() {
 
 ```swift
 func scanFinished(scanResult: LBXScanResult, error: String?) {
-    print(scanResult.strScanned) //打印出来的就是扫描出来的内容
+    self.resultLabel.text = "扫描结果：" + scanResult.strScanned!
 }
 ```
