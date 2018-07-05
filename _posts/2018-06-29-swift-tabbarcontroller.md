@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .blue
-        self.title = "主页"
+        self.tabBarController?.title = "主页"
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +50,7 @@ class OrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .red
-        self.title = "订单"
+        self.tabBarController?.title = "订单"
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,7 +71,7 @@ class MyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .yellow
-        self.title = "我"
+        self.tabBarController?.title = "我"
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,27 +82,48 @@ class MyViewController: UIViewController {
 }
 ```
 
+## 创建TabBar布局类
+
+```swift
+import UIKit
+
+class LayoutViewController: UITabBarController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        
+        let homeNav = HomeViewController()
+        let orderNav = OrderViewController()
+        let myNav = MyViewController()
+        
+        homeNav.tabBarItem.title = "主页"
+        orderNav.tabBarItem.title = "订单"
+        myNav.tabBarItem.title = "我"
+        
+        homeNav.tabBarItem.image = UIImage(named: "home")
+        orderNav.tabBarItem.image = UIImage(named: "order")
+        myNav.tabBarItem.image = UIImage(named: "my")
+        
+        self.viewControllers = [homeNav, orderNav, myNav]
+        
+        // 文字图片颜色一块修改
+        self.tabBar.tintColor = UIColor.blue
+    }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        self.title = item.title
+    }
+    
+}
+```
+
 ## 修改AppDelegate类
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-    let homeNav = UINavigationController(rootViewController: HomeViewController())
-    let orderNav = UINavigationController(rootViewController: OrderViewController())
-    let myNav = UINavigationController(rootViewController: MyViewController())
-    
-    homeNav.tabBarItem.title = "主页"
-    orderNav.tabBarItem.title = "订单"
-    myNav.tabBarItem.title = "我"
-    
-    homeNav.tabBarItem.image = UIImage(named: "home")
-    orderNav.tabBarItem.image = UIImage(named: "order")
-    myNav.tabBarItem.image = UIImage(named: "my")
-    
-    let tabBarController = UITabBarController()
-    tabBarController.viewControllers = [homeNav, orderNav, myNav]
-    
-    self.window?.rootViewController = tabBarController
+    self.window?.rootViewController = UINavigationController(rootViewController: LayoutViewController())
     
     return true
 }
