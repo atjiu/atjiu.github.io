@@ -89,10 +89,10 @@ layout: default
         {% assign max = first[1].size %}
         {% assign min = max %}
         {% for tag in site.tags offset:1 %}
-          {% if tag[1].size > max %}
-            {% assign max = tag[1].size %}
-          {% elsif tag[1].size < min %}
-            {% assign min = tag[1].size %}
+          {% if tag[0].size > max %}
+            {% assign max = tag[0].size %}
+          {% elsif tag[0].size < min %}
+            {% assign min = tag[0].size %}
           {% endif %}
         {% endfor %}
         {% assign diff = max | minus: min %}
