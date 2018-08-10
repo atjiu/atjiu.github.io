@@ -27,6 +27,13 @@ author: 朋也
 
 
 
+## 查询时间
+
+```sh
+> use demo
+> db.topics.find().limit(20).explain("executionStats") // 输出结果里有个 executionTimeMillis 字段就是执行时间，单位毫秒
+```
+
 ## 插入
 
 ```sh
