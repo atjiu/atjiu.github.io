@@ -30,6 +30,27 @@ author: 朋也
 
 ## 安装软件
 
+### 配置vim
+
+如果系统没有vim命令，首先安装一下 `sudo apt install -y vim`
+
+安装好了，找到配置文件，添加下面几行配置
+
+```sh
+sudo vim /etc/vim/vimrc
+```
+
+```
+set nu               "显示行号
+set smartindent      "智能的选择对齐方式
+set tabstop=2        "设置tab键为2个空格
+set shiftwidth=2     
+set expandtab        
+set softtabstop=2    
+```
+
+有了这些简单的配置，vim用起来会舒服很多
+
 ### JDK安装
 
 官网下载地址：[http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
