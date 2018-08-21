@@ -14,7 +14,7 @@ author: 朋也
 
 ![](https://tomoya92.github.io/assets/freemarker-pjax.gif)
 
-> pjax是啥，自行百度，关于它的兼容性可以看一下我另一篇博客：https://tomoya92.github.io/2017/04/25/nodejs-pjax/
+> pjax是啥，自行百度，关于它的兼容性可以看一下我另一篇博客：[https://tomoya92.github.io/2017/04/25/nodejs-pjax/](https://tomoya92.github.io/2017/04/25/nodejs-pjax/)
 
 
 
