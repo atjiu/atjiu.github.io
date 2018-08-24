@@ -222,6 +222,7 @@ metadata是参数，action是行为，具体如下
 | index       | 创建新文档或替换已有文档 |
 | update      | 局部更新文档       |
 | delete      | 删除一个文档       |
+{: .table.table-bordered }
 
 范例：
 
@@ -310,6 +311,7 @@ ES里可以定义的字段类型
 | Boolean               | boolean | A Boolean value: such as true, false                             |
 | Date/Datetime         | date    | A date or datetime vaue: such as 2018-08-23, 2018-08-24T14:39:20 |
 | Bytes/Binary          | binary  | This is used for binary data such as a file or stream of bytes   |
+{: .table.table-bordered }
 
 映射除了定义字段的类型，还可以给字段添加相关的属性
 
@@ -327,6 +329,7 @@ ES里可以定义的字段类型
 | include_in_all  | 默认下es会为每一个文档定义一个特殊的域_all,它的作用就是每一个字段都将被搜索到，如果不想让某个字段被搜索到，那么就在这字段里定义一个include_in_all=false,默认是true | all                                       |
 | index_name      | 定义字段的名称，默认值是字段本身的名字                                                                                                                             | all                                       |
 | norms           | norms的作用是根据各种规范化因素去计算权值(非常耗资源)，这样方便查询，在analyzed定义字段里，值true, not_analyzed是false                                             | all                                       |
+{: .table.table-bordered }
 
 ## 动态映射
 
