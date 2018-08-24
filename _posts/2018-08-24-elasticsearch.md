@@ -1138,3 +1138,8 @@ BigSet值是存在内存里的，而不是硬盘里，所有速度快
 开启方式：在filter查询语句后面加 `"_cache": true`
 
 注意：Script filters, Geo-filters, Date ranges 这样的过滤方式开启cache无意义。exists, missing, range, term和terms查询是默认开启cache的
+
+## 说明
+
+内容整理来自：ELK Stack深入浅出视频
+
