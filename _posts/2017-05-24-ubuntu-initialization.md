@@ -329,7 +329,10 @@ UP add volume 5
 DOWN add volume -5
 CTRL+[ add audio-delay -0.100
 CTRL+] add audio-delay 0.100
+# 回车键
 ENTER cycle fullscreen
+# 小键盘的回车
+KP_ENTER cycle fullscreen
 ```
 
 mpv.conf
