@@ -1,11 +1,17 @@
 $color: #37495e;
 
+@font-face {
+  font-family: Zpix;
+  src: url("Zpix.ttf");
+}
+
 body {
   font-size: 16px;
 }
 
+// Georgia
 h1, h2, h3, h4, h5, h6, body {
-  font-family: Georgia, serif;
+  font-family: Zpix , sans-serif;
 }
 
 ::selection {
