@@ -214,6 +214,45 @@ sudo apt-get install fcitx-table-wbpy
 
 装好重启即可
 
+-----------------------------------
+
+2018-08-30补充
+
+今天又装了一下ubuntu16.04，默认安装了ibus，下面说一下安装开源的五笔输入法rime
+
+```sh
+sudo apt install ibus-rime
+# 安装五笔 拼音 和 笔画
+sudo apt-get install librime-data-wubi librime-data-pinyin-simp librime-data-stroke-simp
+# 安装完重启ibus
+ibus restart
+```
+
+在设置 – 文本输入中 添加 rime 输入法
+
+Copy 五笔拼音 至 .config
+
+```sh
+sudo cp /usr/share/rime-data/wubi_pinyin.schema.yaml ~/.config/ibus/rime
+```
+
+编辑 default.yaml 配置，注释其它的输入法，开启wubi_pinyin
+
+```sh
+vim ~/.config/ibus/rime/default.yaml
+ 
+# 加入wubi_pinyin 选项（或其他）
+schema_list:
+   - schema: wubi_pinyin
+#  - schema: luna_pinyin
+#  - schema: cangjie5
+#  - schema: luna_pinyin_fluency
+#  - schema: luna_pinyin_simp
+#  - schema: luna_pinyin_tw
+```
+
+配置方法原文：https://blog.csdn.net/comenglish/article/details/51418229
+
 ### 安装Atom
 
 下载地址：[http://atom.io/](http://atom.io/)
