@@ -112,11 +112,11 @@ Successfully created the TFRecords: C:\Users\liygh\Desktop\cat_dog\data\test.rec
 
 ## 安装model
 
-下载 tensorflow 组织下的 models 项目 https://github.com/tensorflow/models 不嫌卡的可以 git clone 嫌卡的，直接下载zip包就可以了
+下载 tensorflow 组织下的 models 项目 [https://github.com/tensorflow/models](https://github.com/tensorflow/models) 不嫌卡的可以 git clone 嫌卡的，直接下载zip包就可以了
 
 下载下来解压，我这里放在桌面上了
 
-然后下载一个 protobuf ，下面要用到 protoc 命令，下载地址: https://github.com/protocolbuffers/protobuf/releases 解压，配置环境变量，这里就跳过了
+然后下载一个 protobuf ，下面要用到 protoc 命令，下载地址: [https://github.com/protocolbuffers/protobuf/releases](https://github.com/protocolbuffers/protobuf/releases) 解压，配置环境变量，这里就跳过了
 
 在终端里运行 `protoc --version` 命令，如果有输出 版本信息，就安装好了
 
@@ -135,9 +135,9 @@ PS: 如果环境变量配置好了，要把终端退了，再重新打开一下�
 
 下载文件 [ssd_mobilenet_v1_pets.config](https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/ssd_mobilenet_v1_pets.config) 和 下载训练模式 [ssd_mobilenet_v1_coco](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2018_01_28.tar.gz)
 
-其中 `ssd_mobilenet_v1_pets.config` 地址：https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/ssd_mobilenet_v1_pets.config
+其中 `ssd_mobilenet_v1_pets.config` 地址：[https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/ssd_mobilenet_v1_pets.config](https://github.com/tensorflow/models/blob/master/research/object_detection/samples/configs/ssd_mobilenet_v1_pets.config)
 
-`ssd_mobilenet_v1_coco` 地址: https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
+`ssd_mobilenet_v1_coco` 地址: [https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
 
 将下载的 `ssd_mobilenet_v1_pets.config` 和解压后的 `ssd_mobilenet_v1_coco` 都放在前面创建的 `cat_dog` 文件夹里
 
@@ -281,5 +281,5 @@ TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(
 
 ## 参考
 
-- https://www.youtube.com/watch?v=COlbP62-B-U&list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku
-- https://github.com/tensorflow/models
+- [https://www.youtube.com/watch?v=COlbP62-B-U&list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku](https://www.youtube.com/watch?v=COlbP62-B-U&list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku)
+- [https://github.com/tensorflow/models](https://github.com/tensorflow/models)
