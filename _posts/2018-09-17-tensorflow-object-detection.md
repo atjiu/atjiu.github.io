@@ -220,6 +220,8 @@ item {
 
 ![](https://tomoya92.github.io/assets/20180917223448.png)
 
+识别过程中，可以查看训练日志等信息，运行命令 `tensorboard --logdir=training/` 然后浏览器运行 `http://localhost:6006` 就可以查看了
+
 ## 导出模型工具
 
 运行下面命令将训练结果导出一个用来识别图片的工具，在cat_dog_graph文件夹里
