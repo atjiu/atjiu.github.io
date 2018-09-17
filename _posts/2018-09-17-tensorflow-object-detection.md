@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用tensorflow训练模式识别图片中的对象（object-detection）
-date: 2017-09-17 20:33:00
+date: 2018-09-17 20:33:00
 categories: tensorflow学习笔记
 tags: tensorflow object-detection
 author: 朋也
