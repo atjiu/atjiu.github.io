@@ -44,10 +44,32 @@ sudo vim /etc/vim/vimrc
 set nu               "显示行号
 set smartindent      "智能的选择对齐方式
 set tabstop=2        "设置tab键为2个空格
-set shiftwidth=2     
-set expandtab        
-set softtabstop=2    
+set shiftwidth=2
+set expandtab
+set softtabstop=2
+set mouse=a          "使用鼠标
+set nocompatible     "不与vi兼容
+syntax on            "语法高亮
+set showmode
+set showcmd
+set encoding=utf-8
+filetype indent on   "开启文件类型检查，并且载入与该类型对应的缩进规则。比如，如果编辑的是.py文件，Vim 就是会找 Python 的缩进规则~/.vim/indent/python.vim
+set linebreak        "只有遇到指定的符号（比如空格、连词号和其他标点符号），才发生折行。也就是说，不会在单词内部折行。
+set wrapmargin=2     "指定折行处与编辑窗口的右边缘之间空出的字符数。
+set t_Co=256
+set autoindent
+set cursorline
+set  ruler
+set showmatch
+set hlsearch
+set incsearch
+set ignorecase
+" set spell spelllang=en_us
+set wildmenu
+set wildmode=longest:list,full
 ```
+
+参考链接：http://www.ruanyifeng.com/blog/2018/09/vimrc.html
 
 有了这些简单的配置，vim用起来会舒服很多
 
