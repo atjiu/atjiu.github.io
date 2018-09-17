@@ -116,7 +116,7 @@ Successfully created the TFRecords: C:\Users\liygh\Desktop\cat_dog\data\test.rec
 
 下载下来解压，我这里放在桌面上了
 
-然后下载一个 protobuf ，下面要用到 protoc 命令，下载地址: https://github.com/protocolbuffers/protobuf/releases 解压，配置环境变量，这里就路过了
+然后下载一个 protobuf ，下面要用到 protoc 命令，下载地址: https://github.com/protocolbuffers/protobuf/releases 解压，配置环境变量，这里就跳过了
 
 在终端里运行 `protoc --version` 命令，如果有输出 版本信息，就安装好了
 
