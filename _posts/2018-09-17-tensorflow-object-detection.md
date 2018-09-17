@@ -219,3 +219,67 @@ item {
 过程如下, 我的显卡是 gtx960 大概是 1.5s/step
 
 ![](https://tomoya92.github.io/assets/20180917223448.png)
+
+## 导出模型工具
+
+运行下面命令将训练结果导出一个用来识别图片的工具，在cat_dog_graph文件夹里
+
+```sh
+python export_inference_graph.py \
+    --input_type image_tensor \
+    --pipeline_config_path ssd_mobilenet_v1_pets.config \
+    --trained_checkpoint_prefix training/model.ckpt-2000 \
+    --output_directory cat_dog_graph
+```
+
+## 识别图片
+
+再下载几张猫狗的图片，命名为 image{数字}.jpg 放在 `object-detection` 下的 `test_images` 文件夹下
+
+![](https://tomoya92.github.io/assets/20180917234802.png)
+
+在 `object-detection` 文件夹下运行命令 `jupyter notebook` 在自动打开的浏览器页面里打开 `object_detection_tutorial.ipynb` 文件并进行如下修改
+
+```py
+# 找到
+MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
+# 修改为
+MODEL_NAME = 'cat_dog_graph'
+
+# 删除下面两行
+MODEL_FILE = MODEL_NAME + '.tar.gz'
+DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
+
+# 找到
+PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
+# 修改为
+PATH_TO_LABELS = os.path.join('data', 'object-detection.pbtxt')
+
+# 找到
+NUM_CLASSES = 90
+# 修改为
+NUM_CLASSES = 2
+
+# 找到下面内容然后全部注释掉
+opener = urllib.request.URLopener()
+opener.retrieve(DOWNLOAD_BASE + MODEL_FILE, MODEL_FILE)
+tar_file = tarfile.open(MODEL_FILE)
+for file in tar_file.getmembers():
+  file_name = os.path.basename(file.name)
+  if 'frozen_inference_graph.pb' in file_name:
+    tar_file.extract(file, os.getcwd())
+
+# 找到
+TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 3) ]
+# 修改为
+TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 8) ]
+```
+
+然后在jupyter里运行这个文件，等待片刻即可看到识别的效果
+
+![](https://tomoya92.github.io/assets/object-detection_test_result.png)
+
+## 参考
+
+- https://www.youtube.com/watch?v=COlbP62-B-U&list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku
+- https://github.com/tensorflow/models
