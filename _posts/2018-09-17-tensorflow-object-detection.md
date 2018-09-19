@@ -124,7 +124,10 @@ PS: 如果环境变量配置好了，要把终端退了，再重新打开一下�
 
 下面在终端里进入到 `models-master/research` 目录里运行命令来编译：`protoc object_detection/protos/*.proto --python_out=.`
 
-然后添加类库到 PYTHONPATH 环境变量里, 还是在 `research` 目录下运行 `export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim`
+然后添加类库到 PYTHONPATH 环境变量里, 还是在 `research` 目录下运行 
+```
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+```
 
 遗憾的是 windows 上这样还是不行的，还要运行下面两条命令
 
