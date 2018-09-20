@@ -30,7 +30,7 @@ layout: default
         {% if site.related_posts.size > 0 %}
         <hr>
         <h2 id="related_posts">相似文章</h2>
-        <ul>
+        <ul class="table-of-content">
           {% for post in site.related_posts %}
           <li>
             <td><a href="{{post.url | prepend: site.baseurl}}" class="relate-post">{{post.title}}</a></td>

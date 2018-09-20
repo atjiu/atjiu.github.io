@@ -1,5 +1,3 @@
-$color: #37495e;
-
 // @font-face {
   // font-family: Zpix;
   // src: url("Zpix.ttf");
@@ -26,27 +24,16 @@ h1, h2, h3, h4, h5, h6, body {
   color: #fff;
 }
 
-// pre {
-  // color: #fff;
-  // border-radius: 0;
-// }
-
-// code {
-//   color: $color;
-//   word-wrap: break-word;
-//   word-break: break-all;
-//   display: inline-block;
-//   padding-left: 5px;
-//   padding-right: 5px;
-//   background-color: pink;
-//   //border-radius: 4px;
-//   margin: auto 3px;
-// }
-
 a {
-  color: $color;
+  color: #222;
   &:hover, &:focus, &:visited {
-    color: $color;
+    color: #222;
+  }
+}
+
+.excerpt {
+  a {
+    text-decoration: underline;
   }
 }
 
@@ -55,56 +42,56 @@ a {
 }
 
 img, video {
-  border: 0.2em solid #dfe0e0;
+  border: 2px solid #dfe0e0;
+  border-radius: 4px;
   max-width: 100%;
   cursor: pointer;
 }
 
-.wrapper {
-  section {
-    .post {
-      word-wrap: break-word;
-      .item {
-        font-size: 15px;
-        margin-right: 5px;
-        .label.label-black {
-          padding: .3em .4em;
-          background-color: $color;
-          margin-right: 3px;
-          a {
-            color: #fff;
-          }
-        }
-      }
-      ul {
-        padding-left: 2em;
-        li {
-          line-height: 1.7em;
-        }
-      }
-      .month {
-        margin-left: 15px;
-      }
-      .post-content {
+section {
+  .post {
+    word-wrap: break-word;
+    .item {
+      font-size: 15px;
+      margin-right: 5px;
+      .label.label-black {
+        padding: .3em .4em;
+        background-color: #222;
+        margin-right: 3px;
         a {
-          text-decoration: underline;
+          color: #fff;
         }
       }
-      .relate-post {
-        text-decoration: underline;
+    }
+    ul {
+      padding-left: 2em;
+      li {
+        line-height: 1.7em;
       }
     }
+    .month {
+      margin-left: 15px;
+    }    
+    
   }
-  footer {
-    background-color: #fff;
-    padding: 20px;
+}
+.post-content {
+  a {
+    text-decoration: underline;
+  }
+}
+.relate-post {
+  text-decoration: underline;
+}
+footer {
+  background-color: #fff;
+  padding: 20px;
+  a {
+    text-decoration: underline;
+  }
+  .contact {
     a {
-      text-decoration: underline;
-    }
-    .contact {
-      a {
-        font-size: 18px;
-      }
+      font-size: 18px;
     }
   }
 }
@@ -134,27 +121,12 @@ img, video {
   }
 }
 
-.badge-black {
-  background-color: $color;
-  color: #fff;
-}
-
 .paginate {
   font-size: 16px;
-  a {
-    //color: #000;
-  }
 }
 
 #site_search {
   padding: 5px;
-}
-
-.search-modal {
-  .form-control {
-    box-shadow: 0 0 0 0;
-    -webkit-box-shadow: 0 0 0 0;
-  }
 }
 
 .back-to-top {

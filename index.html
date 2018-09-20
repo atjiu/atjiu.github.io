@@ -24,10 +24,7 @@ layout: default
             {% endif %}
           </small>
           <hr>
-          <p>{{ post.excerpt }}</p>
-          <!-- <div class="text-center">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default btn-raised">查看全文</a>
-          </div> -->
+          <div class="excerpt">{{ post.excerpt }}</div>
         {% if forloop.last %}
         <hr>
         <div class="text-center paginate">
@@ -75,7 +72,7 @@ layout: default
           <td>
             <a href="/category/#{{category | first}}">
               {{category | first}}
-              <span class="badge badge-black">{{category | last | size}}</span>
+              <span class="badge">{{category | last | size}}</span>
             </a>
           </td>
         </tr>
