@@ -7,30 +7,32 @@ icon: fa fa-th-list
 ---
 <div class="row">
   <div class="col-md-9">
-    <div class="well post">
-      <p>共计 {{site.categories.size}} 个分类</p>
-      <hr>
-      {% for category in site.categories %}
-        <p style="font-size: 18px;" id="{{category | first}}">{{category | first}}</p>
-        <ul class="table-of-content">
-          {% for post in category.last %}
-            <li>
-              <time>
-                {{ post.date | date:"%Y-%m-%d" }}:
-              </time>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-        {% if forloop.last == false %}
-          <hr>
-        {% endif %}
-      {% endfor %}
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>共计 {{site.categories.size}} 个分类</p>
+        <hr>
+        {% for category in site.categories %}
+          <p style="font-size: 18px;" id="{{category | first}}">{{category | first}}</p>
+          <ul class="table-of-content">
+            {% for post in category.last %}
+              <li>
+                <time>
+                  {{ post.date | date:"%Y-%m-%d" }}:
+                </time>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+          {% if forloop.last == false %}
+            <hr>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
     <div class="post-right">
-      <div class="panel panel-well">
+      <div class="panel panel-default">
         <div class="panel-heading"><i class="fa fa-th-list"></i> 分类目录</div>
         <div class="panel-body">
           <ul class="table-of-content">

@@ -17,14 +17,8 @@ $(function () {
     '</ul>'
   );
 
-  $(".post img").click(function () {
-    var src = $(this).attr("src");
-    $("#bigImage").attr("src", src);
-    $("#toggleBigImageBtn").click();
-  });
-
   var postRight = $(".post-right");
-  if(postRight) {
+  if(postRight.length > 0) {
     var postRightWidth = postRight.css('width');
     postRight.css({
       'position': 'fixed',
@@ -32,13 +26,19 @@ $(function () {
     })
     var windowHeight = $(window).height();
     var postRightHeight = postRight.height();
-    if(postRightHeight + 70 > windowHeight) {
-      postRight.find('.panel-well').css({
-        'height': parseInt(windowHeight - 100) + 'px',
+    var offsetTop = postRight.offset().top;
+    if(postRightHeight + 40 > windowHeight) {
+      postRight.find('.panel-default').css({
+        'height': parseInt(windowHeight - 40) + 'px',
       });
       postRight.find('.panel-body').css({
         'overflow': 'auto',
-        'height': parseInt(windowHeight - 100 - 42) + 'px',
+        'height': parseInt(windowHeight - 40 - 42) + 'px',
+      })
+    }
+    if (offsetTop > 72) {
+      postRight.css({
+        'top': '20px'
       })
     }
   }
@@ -46,6 +46,17 @@ $(function () {
   var backToTop = $(".back-to-top");
   $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();
+    if (scrollTop >= 50) {
+      postRight.css({
+        'position': 'fixed',
+        'top': '20px'
+      })
+    } else {
+      postRight.css({
+        'position': 'fixed',
+        'top': (70 - scrollTop) + 'px'
+      })
+    }
     if(scrollTop > 200) {
       backToTop.addClass("back-to-top-show");
     } else {

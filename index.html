@@ -4,60 +4,60 @@ layout: default
 <div class="row">
   <div class="col-md-9">
     {% for post in paginator.posts %}
-      <div class="well post">
-        <h3><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h3>
-        <small>
-          <span class="item">
-            <i class="fa fa-calendar-check-o"></i> {{post.date | date: '%F'}}
-          </span>
-          {% if post.author %}
+      <div class="panel">
+        <div class="panel-body">
+          <h3><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h3>
+          <small>
             <span class="item">
-              <i class="fa fa-user"></i> {{post.author}}
-            </span>
-          {% endif %}
-          {% if post.categories %}
-            {% include categories.html %}
-          {% endif %}
-          {% if post.tags %}
-            {% include tags.html %}
-          {% endif %}
-        </small>
+              <i class="fa fa-calendar-check-o"></i> {{post.date | date: '%F'}}
+            </span>&nbsp;
+            {% if post.author %}
+              <span class="item">
+                <i class="fa fa-user"></i> {{post.author}}
+              </span>&nbsp;
+            {% endif %}
+            {% if post.categories %}
+              {% include categories.html %}&nbsp;
+            {% endif %}
+            {% if post.tags %}
+              {% include tags.html %}&nbsp;
+            {% endif %}
+          </small>
+          <hr>
+          <p>{{ post.excerpt }}</p>
+          <!-- <div class="text-center">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default btn-raised">查看全文</a>
+          </div> -->
+        {% if forloop.last %}
         <hr>
-        <p>{{ post.excerpt }}</p>
-        <div class="text-center">
-          <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default btn-raised">查看全文</a>
+        <div class="text-center paginate">
+          {% if paginator.previous_page %}
+            <a href="/"><i class="fa fa-angle-double-left">&nbsp;</i>&nbsp;</a>
+            <a href="{{ paginator.previous_page_path }}">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</a>
+          {% else %}
+            <span class="disable">&nbsp;<i class="fa fa-angle-double-left">&nbsp;</i></span>
+            <span class="disable">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</span>
+          {% endif %}
+          &nbsp;<span>{{ paginator.page }} / {{ paginator.total_pages }}&nbsp;</span>
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</a>
+            <a href="/page{{ paginator.total_pages }}">&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a>
+          {% else %}
+            <span class="disable">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+            <span class="disable">&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</span>
+          {% endif %}
         </div>
-      {% if forloop.last %}
-      <hr>
-      <div class="text-center paginate">
-        {% if paginator.previous_page %}
-          <a href="/"><i class="fa fa-angle-double-left"></i> </a>
-          <a href="{{ paginator.previous_page_path }}"><i class="fa fa-angle-left"></i> </a>
-        {% else %}
-          <span class="disable"><i class="fa fa-angle-double-left"></i> </span>
-          <span class="disable"><i class="fa fa-angle-left"></i> </span>
-        {% endif %}
-          <span>{{ paginator.page }} / {{ paginator.total_pages }} </span>
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path }}"><i class="fa fa-angle-right"></i> </a>
-          <a href="/page{{ paginator.total_pages }}"><i class="fa fa-angle-double-right"></i> </a>
-        {% else %}
-          <span class="disable"><i class="fa fa-angle-right"></i> </span>
-          <span class="disable"><i class="fa fa-angle-double-right"></i> </span>
         {% endif %}
       </div>
-      {% endif %}
     </div>
     {% endfor %}
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
-    <div class="panel panel-well">
-      <div class="panel-heading">搜索</div>
-      <div class="panel-body">
-        {% include sidebar-search.html %}
-      </div>
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fa fa-search"></i> 搜索</div>
+      {% include sidebar-search.html %}
     </div>
-    <div class="panel panel-well">
+    <div class="panel panel-default">
       <div class="panel-heading"><i class="fa fa-pencil-square-o"></i> 最近博客</div>
       <table class="table">
         {% for post in site.posts offset: 0 limit: 10 %}
@@ -67,7 +67,7 @@ layout: default
         {% endfor %}
       </table>
     </div>
-    <div class="panel panel-well">
+    <div class="panel panel-default">
       <div class="panel-heading"><i class="fa fa-th-list"></i> 博客分类</div>
       <table class="table">
         {% for category in site.categories %}
@@ -82,7 +82,7 @@ layout: default
         {% endfor %}
       </table>
     </div>
-    <div class="panel panel-well">
+    <div class="panel panel-default">
       <div class="panel-heading"><i class="fa fa-tags"></i> 博客标签</div>
       <div class="panel-body tags">
         {% assign first = site.tags.first %}

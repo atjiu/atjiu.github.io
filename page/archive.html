@@ -7,40 +7,42 @@ icon: fa fa-archive
 ---
 <div class="row">
   <div class="col-md-9">
-    <div class="well post">
-      <p>共计 {{site.posts.size}} 篇博客</p>
-      <hr>
-      {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-      {% assign postsByMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" %}
-      {% for year in postsByYear %}
-        <p style="font-size: 18px;" id="y{{year.name}}">{{year.name}}年</p>
-        {% for month in postsByMonth %}
-          {% assign yearMonthArr = month.name | split: " " %}
-          {% if year.name == yearMonthArr[0] %}
-            <div class="month">
-              <p id="m{{yearMonthArr[0]}}{{yearMonthArr[1]}}">{{yearMonthArr[1]}}月</p>
-              <ul class="table-of-content">
-                {% for post in month.items %}
-                  <li>
-                    <time>
-                      {{ post.date | date:"%Y-%m-%d" }}:
-                    </time>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p>共计 {{site.posts.size}} 篇博客</p>
+        <hr>
+        {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+        {% assign postsByMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y %m'" %}
+        {% for year in postsByYear %}
+          <p style="font-size: 18px;" id="y{{year.name}}">{{year.name}}年</p>
+          {% for month in postsByMonth %}
+            {% assign yearMonthArr = month.name | split: " " %}
+            {% if year.name == yearMonthArr[0] %}
+              <div class="month">
+                <p id="m{{yearMonthArr[0]}}{{yearMonthArr[1]}}">{{yearMonthArr[1]}}月</p>
+                <ul class="table-of-content">
+                  {% for post in month.items %}
+                    <li>
+                      <time>
+                        {{ post.date | date:"%Y-%m-%d" }}:
+                      </time>
+                      <a href="{{ post.url }}">{{ post.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          {% endfor %}
+          {% if forloop.last == false %}
+            <hr>
           {% endif %}
         {% endfor %}
-        {% if forloop.last == false %}
-          <hr>
-        {% endif %}
-      {% endfor %}
+      </div>
     </div>
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
     <div class=" post-right">
-      <div class="panel panel-well">
+      <div class="panel panel-default">
         <div class="panel-heading"><i class="fa fa-archive"></i> 年月目录</div>
         <div class="panel-body">
           <ul class="table-of-content">

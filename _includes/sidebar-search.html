@@ -1,11 +1,12 @@
 <div id="site_search">
-  <div class=" has-feedback">
+  <div class="has-feedback">
     <input type="text" id="search_box" class="form-control" placeholder="Search...">
     <span class="glyphicon glyphicon-search form-control-feedback"></span>
   </div>
 </div>
-
-<ul class="content-ul" id="search_results" recent></ul>
+<table class="table">
+  <tbody id="search_results"></tbody>
+</table>
 
 <style>
   .content-ul {
@@ -28,7 +29,7 @@
     searchInput: document.getElementById('search_box'),
     resultsContainer: document.getElementById('search_results'),
     json: '{{ site.baseurl }}/search_data.json',
-    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    searchResultTemplate: '<tr><td><a href="{url}" title="{desc}">{title}</a></td></tr>',
     noResultsText: 'No results found',
     limit: 10,
     fuzzy: false,

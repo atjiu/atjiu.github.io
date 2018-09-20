@@ -3,30 +3,31 @@ layout: default
 ---
 <div class="row">
   <div class="col-md-9">
-    <div class="well post">
-      <h3>{{ page.title }}</h3>
-      <small>
-        <span class="item">
-          <i class="fa fa-calendar-check-o"></i> {{page.date | date: '%F'}}
-        </span>
-        {% if page.author %}
-        <span class="item">
-          <i class="fa fa-user"></i> {{page.author}}
-        </span>
-        {% endif %}
-        {% if page.categories %}
+    <div class="panel">
+      <div class="panel-body">
+        <h3>{{ page.title }}</h3>
+        <small>
+          <span class="item">
+            <i class="fa fa-calendar-check-o"></i> {{page.date | date: '%F'}}
+          </span>
+          {% if page.author %}
+          <span class="item">
+            <i class="fa fa-user"></i> {{page.author}}
+          </span>
+          {% endif %}
+          {% if page.categories %}
           {% include categories.html %}
-        {% endif %}
-        {% if page.tags %}
+          {% endif %}
+          {% if page.tags %}
           {% include tags.html %}
-        {% endif %}
-      </small>
-      <hr>
-      <div class="post-content">
-        {{ page.content }}
-        原文链接: <a href="{{ page.url | prepend: site.url }}">{{ page.url | prepend: site.url }}</a>
-      </div>
-      {% if site.related_posts.size > 0 %}
+          {% endif %}
+        </small>
+        <hr>
+        <div class="post-content">
+          {{ page.content }}
+          原文链接: <a href="{{ page.url | prepend: site.url }}">{{ page.url | prepend: site.url }}</a>
+        </div>
+        {% if site.related_posts.size > 0 %}
         <hr>
         <h2 id="related_posts">相似文章</h2>
         <ul>
@@ -36,13 +37,14 @@ layout: default
           </li>
           {% endfor %}
         </ul>
-      {% endif %}
+        {% endif %}
+      </div>
     </div>
     {% include comments.html %}
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
     <div class="post-right">
-      <div class="panel panel-well">
+      <div class="panel panel-default">
         <div class="panel-heading"><i class="fa fa-list-ul"></i> 文章目录</div>
         <div class="panel-body toc">
         </div>

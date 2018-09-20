@@ -49,8 +49,11 @@ algolia:
 # 友情链接
 links:
   -
-    name: YIIU
+    name: 朋也
     url: https://yiiu.co/
+  -
+    name: 朋也社区
+    url: https://dev.yiiu.co/
   -
     name: Beldon
     url: http://blog.beldon.me/
