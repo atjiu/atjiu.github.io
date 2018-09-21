@@ -27,17 +27,8 @@ layout: default
           {{ page.content }}
           原文链接: <a href="{{ page.url | prepend: site.url }}">{{ page.url | prepend: site.url }}</a>
         </div>
-        {% if site.related_posts.size > 0 %}
-        <hr>
-        <h2 id="related_posts">相似文章</h2>
-        <ul class="table-of-content">
-          {% for post in site.related_posts %}
-          <li>
-            <td><a href="{{post.url | prepend: site.baseurl}}" class="relate-post">{{post.title}}</a></td>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+        <!-- <h2 id="related_posts">相似文章</h2> -->
+        <related-posts />
       </div>
     </div>
     {% include comments.html %}

@@ -2,13 +2,19 @@ $(function () {
   var markdownToc = $("#markdown-toc");
   var markdownTocHtml = '';
   var relatedPostsHtml = '';
-  var relatedPosts = $("#related_posts");
+  var relatedPosts = $("#related-posts");
   if(markdownToc.text().length > 0) {
     markdownToc.hide();
     markdownTocHtml = markdownToc.html();
   }
-  if(relatedPosts.text().length > 0) {
-    relatedPostsHtml = '<li><a href="#related_posts">' + relatedPosts.text() + '</a></li>';
+  if(relatedPosts.find('ul>li').length > 0) {
+    relatedPosts.css({
+      'border-top': '1px solid #eee',
+      'margin-top': '20px'
+    });
+    relatedPosts.find('h3').text('相似文章');
+    relatedPosts.find('ul').addClass('table-of-content');
+    relatedPostsHtml = '<li><a href="#related-posts">' + relatedPosts.find('h3').text() + '</a></li>';
   }
   $(".toc").html('<ul class="table-of-content">' +
     markdownTocHtml +

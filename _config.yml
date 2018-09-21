@@ -28,14 +28,20 @@ kramdown:
   syntax_highlighter: rouge
 
 # 开启相关文章功能，可惜github pages不支持
-lsi: true
+# lsi: true
+
+related:
+  max_count: 7
+  min_score: 0.75
+  accuracy: 0.75
 
 # 插件
-plugins:
+plugins_dir:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-related-posts
 
 # 分页
 paginate: 7
