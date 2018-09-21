@@ -27,15 +27,15 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
+# 开启相关文章功能，可惜github pages不支持
+lsi: true
+
 # 插件
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll/tagging
-  - jekyll-tagging-related_posts
-#  - algoliasearch-jekyll
 
 # 分页
 paginate: 7
