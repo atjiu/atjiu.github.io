@@ -13,7 +13,7 @@ icon: fa fa-tags
         <hr>
         {% for tag in site.tags %}
           <p style="font-size: 18px;" id="{{tag | first}}">{{tag | first}}</p>
-          <ul class="table-of-content">
+          <ul class="tags-list">
             {% for post in tag.last %}
             <li>
               <time>

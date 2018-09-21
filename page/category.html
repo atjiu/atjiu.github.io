@@ -13,7 +13,7 @@ icon: fa fa-th-list
         <hr>
         {% for category in site.categories %}
           <p style="font-size: 18px;" id="{{category | first}}">{{category | first}}</p>
-          <ul class="table-of-content">
+          <ul class="tags-list">
             {% for post in category.last %}
               <li>
                 <time>

@@ -24,6 +24,19 @@ h1, h2, h3, h4, h5, h6, body {
   color: #fff;
 }
 
+ul {
+  padding-left: 30px;
+}
+
+.tags-list{
+  li {
+    line-height: 1.7em;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
 a {
   color: #222;
   &:hover, &:focus, &:visited {
