@@ -21,6 +21,9 @@ disqus_shortname: tomoya
 baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
 google_analytics_id: UA-98133026-1
 
+# webmaster meta
+bing_meta: 8D00F36D8929A335207FBCE7F13C50B3
+
 # 格式化文档
 markdown: kramdown
 kramdown:
