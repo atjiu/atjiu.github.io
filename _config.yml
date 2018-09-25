@@ -31,7 +31,7 @@ kramdown:
 # lsi: true
 
 # 插件
-plugins_dir:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
