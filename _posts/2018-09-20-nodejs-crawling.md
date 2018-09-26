@@ -70,7 +70,7 @@ module.exports = function(url, method, encoding, callback) {
 
 ```js
 var request = require('./request');
-var cheerio = require('./cheerio');
+var cheerio = require('cheerio');
 
 function fetch() {
   request('https://cnodejs.org/', 'get', 'utf-8', function(body) {
