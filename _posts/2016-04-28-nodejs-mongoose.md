@@ -252,7 +252,7 @@ exports.detail = function(req, res) {
       Reply.find({
           blog: id
         })
-        .populate("blog", "title") //将reply与blog关联，并只查出blog的标题，查询出来的数据结构是：{_id: xxx, blog: {title: xxx, _id: xxx}, createAt: xxx ...} 详见console.log(replies)
+        .populate("blog", "title") //将reply与blog关联，并只查出blog的标题，查询出来的数据结构是：{_id: xxx, blog: {title: xxx, _id: xxx}, createAt: xxx ...} 详见console.log(replies), 如果想关联查出blog里的多个字段，populate 第二个参数以空格分割，如：.populate('blog', 'title content')
         .exec(function(err, replies) {
           if (err) console.log(err);
           console.log(replies);
