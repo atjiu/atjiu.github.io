@@ -11,12 +11,30 @@
 body {
   font-size: 16px;
   background-color: #eee;
+  font-family: Georgia, serif;
 }
 
 // Georgia
-h1, h2, h3, h4, h5, h6, body {
-  // font-family: Zpix;
-  font-family: Georgia, serif;
+.post-content {
+  h1, h2, h3, h4, h5, h6 {
+    // font-family: Zpix;
+    font-family: Georgia, serif;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #eaecef;
+  }
+}
+
+hr {
+  margin: 10px 0;
+}
+
+code {
+  color: inherit!important;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
 }
 
 ::selection {
