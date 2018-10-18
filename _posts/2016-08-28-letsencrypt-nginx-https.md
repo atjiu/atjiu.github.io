@@ -10,6 +10,8 @@ author: 朋也
 * content
 {:toc}
 
+> 现在有更简单的方法配置了 [https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04][1]
+
 备忘一下我使用letsencrypt结合nginx配置网站https的过程
 
 ## ssh登录服务器,克隆letsencrypt仓库
@@ -105,3 +107,5 @@ service nginx start
 
 1. 如果服务器上80端口被占用了,必须停掉,否则证书生成会失败,强烈建议80端口交给nginx
 2. 在生成证书的时候要停掉nginx(原因就是nginx占用了80端口)
+
+[1]: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
