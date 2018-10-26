@@ -1,6 +1,6 @@
 // @font-face {
-  // font-family: Zpix;
-  // src: url("Zpix.ttf");
+// font-family: Zpix;
+// src: url("Zpix.ttf");
 // }
 
 * {
@@ -16,7 +16,13 @@ body {
 
 // Georgia
 .post-content {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     // font-family: Zpix;
     font-family: Georgia, serif;
     padding-bottom: 0.2em;
@@ -27,13 +33,17 @@ body {
 hr {
   margin: 10px 0;
 }
-pre {border: 0}
+
+pre {
+  border: 0
+}
+
 code {
-  color: inherit!important;
+  color: inherit !important;
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
+  background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
 }
 
@@ -42,14 +52,16 @@ code {
   color: #fff;
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 30px;
 }
 
-.tags-list{
+.tags-list {
   li {
     line-height: 1.7em;
   }
+
   a {
     text-decoration: underline;
   }
@@ -57,7 +69,10 @@ ul, ol {
 
 a {
   color: #222;
-  &:hover, &:focus, &:visited {
+
+  &:hover,
+  &:focus,
+  &:visited {
     color: #222;
   }
 }
@@ -72,7 +87,8 @@ a {
   display: none;
 }
 
-img, video {
+img,
+video {
   border: 2px solid #dfe0e0;
   border-radius: 4px;
   max-width: 100%;
@@ -82,44 +98,55 @@ img, video {
 section {
   .post {
     word-wrap: break-word;
+
     .item {
       font-size: 15px;
       margin-right: 5px;
+
       .label.label-black {
         padding: .3em .4em;
         background-color: #222;
         margin-right: 3px;
+
         a {
           color: #fff;
         }
       }
     }
+
     ul {
       padding-left: 2em;
+
       li {
         line-height: 1.7em;
       }
     }
+
     .month {
       margin-left: 15px;
-    }    
-    
+    }
+
   }
 }
+
 .post-content {
   a {
     text-decoration: underline;
   }
 }
+
 .relate-post {
   text-decoration: underline;
 }
+
 footer {
   background-color: #fff;
   padding: 10px 0;
+
   a {
     text-decoration: underline;
   }
+
   .contact {
     a {
       font-size: 18px;
@@ -147,6 +174,7 @@ footer {
   padding-left: 15px;
   line-height: 1.7em;
   margin-bottom: 0;
+
   ul {
     padding-left: 15px;
   }
@@ -167,6 +195,7 @@ footer {
   bottom: 37px;
   visibility: hidden;
   opacity: 0;
+
   // transition: 0.4s ease;
   // box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(10, 10, 0, 0.1) inset;
   a {
@@ -185,6 +214,7 @@ footer {
 .back-to-top-show {
   visibility: visible;
   opacity: 0.7;
+
   &:hover {
     opacity: 1
   }
@@ -202,6 +232,7 @@ footer {
     right: 2.5%;
     left: auto;
     margin-left: 0;
+
     a {
       width: 33px;
       height: 33px;
@@ -215,4 +246,12 @@ footer {
 blockquote {
   border-left: 5px solid #ccc;
   background-color: #eee;
+}
+
+.prev-next {
+  margin-bottom: 20px;
+
+  li>a {
+    text-decoration: underline;
+  }
 }

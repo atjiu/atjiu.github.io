@@ -29,6 +29,18 @@ layout: default
         </div>
       </div>
     </div>
+    <ul class="prev-next">
+      {% if page.previous.url %}
+        <li>
+          前一篇: <a href="{{page.previous.url}}">{{page.previous.title}}</a>
+        </li>
+      {% endif %}
+      {% if page.next.url %}
+        <li>
+          后一篇: <a href="{{page.next.url}}">{{page.next.title}}</a>
+        </li>
+      {% endif %}
+    </ul>
     {% include comments.html %}
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
