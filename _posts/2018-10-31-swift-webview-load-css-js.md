@@ -20,7 +20,7 @@ author: 朋也
 
 我这的目录结构是这样的
 
-![](https://tomoya92.github.io/assets/QQ20181031-103239@2x.png)
+![](https://tomoya92.github.io/assets/QQ20181031103239@2x.png)
 
 html引入css，js写法如下
 ```html
