@@ -409,6 +409,14 @@ public class PersistentTokenService implements PersistentTokenRepository {
 ```java
 @Autowired
 private PersistentTokenService persistentTokenService;
+
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+  // ...
+  http.authorizeRequests().and().rememberMe().rememberMeServices(persistentTokenBasedRememberMeServices());
+  // ...
+}
+
 @Bean
 public PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServices() {
   PersistentTokenBasedRememberMeServices services = new PersistentTokenBasedRememberMeServices("remember-me"
