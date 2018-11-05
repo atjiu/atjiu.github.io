@@ -10,87 +10,169 @@ author: 朋也
 * content
 {:toc}
 
-## 自定用户名密码验证
+> 这篇文章来介绍一下基于RBAC权限模式下的spring-security用法
 
-不用spring-security自带的，自己实现一个provider，只做用户名密码校验，代码如下
+- 加载权限资源(MyInvocationSecurityMetadataSourceService)
+- 添加访问决策(MyAccessDecisionManager)
+- 添加权限拦截器(MyFilterSecurityInterceptor)
+- 加载用户权限(UserDetailService)
 
+执行流程
+
+1. 用户提交登录信息
+2. 进入内置的拦截器 `UsernamePasswordAuthenticationFilter` 处理用户名密码正确性
+3. 验证完成后去加载用户权限(UserDetailService)
+4. 进入到权限拦截器(MyFilterSecurityInterceptor)
+5. 在权限拦截器里去调用MyInvocationSecurityMetadataSourceService的getAttributes()方法获取对应的所有权限
+6. 再调用MyAccessDecisionManager的decide方法来校验用户是否有对应的权限
+
+**上面流程是我断点看到的顺序，如有错误，欢迎在下面评论指出**
+
+下面给出相应的类源码，基本上都是固定写法
+
+
+
+
+
+## 基本配置
+
+加载权限资源(MyInvocationSecurityMetadataSourceService)
 ```java
-public class MyAuthenticationProvider extends DaoAuthenticationProvider {
+@Service
+public class MyInvocationSecurityMetadataSourceService implements FilterInvocationSecurityMetadataSource {
 
-  @Override
-  public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-    UsernamePasswordAuthenticationToken token = (UsernamePasswordAuthenticationToken) authentication;
-    String username = token.getName();
-    UserDetails userDetails = this.getUserDetailsService().loadUserByUsername(username);
-    // 验证密码是否正确
-    if (!new BCryptPasswordEncoder().matches((CharSequence) token.getCredentials(), userDetails.getPassword())) {
-      throw new AuthenticationServiceException("用户名或密码错误");
+  @Autowired
+  private PermissionService permissionService;
+
+  private Map<String, Collection<ConfigAttribute>> map = null;
+
+  private void loadResource() {
+    map = new HashMap<>();
+    Collection<ConfigAttribute> array;
+    ConfigAttribute cfg;
+    List<Permission> permissions = permissionService.findAll();
+    for (Permission permission : permissions) {
+      array = new ArrayList<>();
+      cfg = new SecurityConfig(permission.getValue());
+      array.add(cfg);
+      map.put(permission.getUrl(), array);
     }
-    return new UsernamePasswordAuthenticationToken(userDetails, userDetails.getPassword(), userDetails.getAuthorities());
+  }
+
+  /**
+   * 加载权限资源
+   */
+  @Override
+  public Collection<ConfigAttribute> getAttributes(Object object) throws IllegalArgumentException {
+    if (map == null) {
+      this.loadResource();
+    }
+    HttpServletRequest request = ((FilterInvocation) object).getHttpRequest();
+    AntPathRequestMatcher matcher;
+    String resUrl;
+    for (Iterator<String> iter = map.keySet().iterator(); iter.hasNext();) {
+      resUrl = iter.next();
+      matcher = new AntPathRequestMatcher(resUrl);
+      if (matcher.matches(request)) {
+        return map.get(resUrl);
+      }
+    }
+    return null;
   }
 
   @Override
-  public boolean supports(Class<?> authentication) {
-    return UsernamePasswordAuthenticationToken.class.equals(authentication);
+  public Collection<ConfigAttribute> getAllConfigAttributes() {
+    return Collections.emptyList();
   }
+
+  @Override
+  public boolean supports(Class<?> clazz) {
+    return true;
+  }
+
 }
 ```
 
-SecurityConfig配置如下
-
-
-
-
-
+访问决策(MyAccessDecisionManager)
 ```java
-@Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+@Service
+public class MyAccessDecisionManager implements AccessDecisionManager {
 
-  @Autowired
-  private MyUserDetailService myUserDetailService;
-  @Autowired
-  private MyFilterSecurityInterceptor myFilterSecurityInterceptor;
-  @Autowired
-  private MyCustomAuthenticationFilter myCustomAuthenticationFilter;
+  /**
+   * 判定是否拥有权限的决策方法，
+   */
+  @Override
+  public void decide(Authentication authentication, Object object, Collection<ConfigAttribute> configAttributes)
+      throws AccessDeniedException, InsufficientAuthenticationException {
+    if (null == configAttributes || configAttributes.size() <= 0) {
+      return;
+    }
+    ConfigAttribute c;
+    String needRole;
+    for (Iterator<ConfigAttribute> iter = configAttributes.iterator(); iter.hasNext();) {
+      c = iter.next();
+      needRole = c.getAttribute();
+      for (GrantedAuthority ga : authentication.getAuthorities()) {
+        if (needRole.trim().equals(ga.getAuthority())) {
+          return;
+        }
+      }
+    }
+    throw new AccessDeniedException("no right");
+  }
 
   @Override
-  protected void configure(HttpSecurity http) throws Exception {
-    http.authorizeRequests()
-        .antMatchers("/admin/**")
-        .authenticated();
-
-    http.formLogin()
-        .loginPage("/adminlogin")
-        .loginProcessingUrl("/adminlogin")
-        .failureUrl("/adminlogin?error")
-        .defaultSuccessUrl("/admin/dashboard")
-        .permitAll();
-
-    http.logout()
-        .logoutRequestMatcher(new AntPathRequestMatcher("/admin/logout"))
-        .logoutSuccessUrl("/adminlogin")
-        .deleteCookies("JSESSIONID", "remember-me");
-
+  public boolean supports(ConfigAttribute attribute) {
+    return true;
   }
 
-  @Autowired
-  public void configureGlobal(AuthenticationManagerBuilder auth) {
-    auth.authenticationProvider(authenticationProvider());
+  @Override
+  public boolean supports(Class<?> clazz) {
+    return true;
   }
 
-  @Bean
-  public AuthenticationProvider authenticationProvider() {
-    MyAuthenticationProvider provider = new MyAuthenticationProvider();
-    provider.setPasswordEncoder(new BCryptPasswordEncoder());
-    provider.setUserDetailsService(myUserDetailService);
-    return provider;
-  }
 }
 ```
-实现UserDetailService接口，封装一个UserDetails对象，包含用户名密码，以及用户的权限
 
+权限拦截器(MyFilterSecurityInterceptor)
+```java
+@Service
+public class MyFilterSecurityInterceptor extends AbstractSecurityInterceptor implements Filter {
+
+  @Autowired
+  private FilterInvocationSecurityMetadataSource securityMetadataSource;
+
+  @Autowired
+  public void setMyAccessDecisionManager(MyAccessDecisionManager myAccessDecisionManager) {
+    super.setAccessDecisionManager(myAccessDecisionManager);
+  }
+
+  @Override
+  public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+      throws IOException, ServletException {
+    FilterInvocation fi = new FilterInvocation(request, response, chain);
+    InterceptorStatusToken token = super.beforeInvocation(fi);
+    try {
+      fi.getChain().doFilter(fi.getRequest(), fi.getResponse());
+    } finally {
+      super.afterInvocation(token, null);
+    }
+  }
+
+  @Override
+  public Class<?> getSecureObjectClass() {
+    return FilterInvocation.class;
+  }
+
+  @Override
+  public SecurityMetadataSource obtainSecurityMetadataSource() {
+    return this.securityMetadataSource;
+  }
+
+}
+```
+
+加载用户权限(UserDetailService)
 ```java
 @Service
 public class MyUserDetailService implements UserDetailsService {
@@ -114,72 +196,110 @@ public class MyUserDetailService implements UserDetailsService {
 }
 ```
 
+SecurityConfig配置如下
+
+```java
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+  @Autowired
+  private MyUserDetailService myUserDetailService;
+  @Autowired
+  private MyFilterSecurityInterceptor myFilterSecurityInterceptor;
+
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+    http.authorizeRequests()
+        .antMatchers("/admin/**")
+        .authenticated();
+
+    http.formLogin()
+        .loginPage("/adminlogin")
+        .loginProcessingUrl("/adminlogin")
+        .failureUrl("/adminlogin?error")
+        .defaultSuccessUrl("/admin/dashboard")
+        .permitAll();
+
+    http.logout()
+        .logoutRequestMatcher(new AntPathRequestMatcher("/admin/logout"))
+        .logoutSuccessUrl("/adminlogin")
+        .deleteCookies("JSESSIONID", "remember-me");
+
+    http.addFilterBefore(myFilterSecurityInterceptor, FilterSecurityInterceptor.class);
+
+  }
+
+  @Autowired
+  public void configureGlobal(AuthenticationManagerBuilder auth) {
+    auth.authenticationProvider(authenticationProvider());
+  }
+
+  @Bean
+  public AuthenticationProvider authenticationProvider() {
+    MyAuthenticationProvider provider = new MyAuthenticationProvider();
+    provider.setPasswordEncoder(new BCryptPasswordEncoder());
+    provider.setUserDetailsService(myUserDetailService);
+    return provider;
+  }
+}
+```
+
 ## 添加验证码校验
 
-校验验证码通过实现 `UsernamePasswordAuthenticationFilter` 过滤器来处理，原码如下
+校验验证码通过实现 `GenericFilterBean` 过滤器来处理，原码如下
 
 ```java
 @Component
-public class MyCustomAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+public class MyGenericFilterBean extends GenericFilterBean {
+
+  private String defaultFilterProcessUrl = "/adminlogin";
 
   @Autowired
   private SiteConfig siteConfig;
   @Autowired
   private AdminUserService adminUserService;
 
-  @PostConstruct
-  public void init() {
-    SavedRequestAwareAuthenticationSuccessHandler successHandler = new SavedRequestAwareAuthenticationSuccessHandler();
-    successHandler.setDefaultTargetUrl("/admin/dashboard");
-
-    setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/adminlogin", "POST"));
-    setAuthenticationSuccessHandler(successHandler);
-    setAuthenticationFailureHandler(new SimpleUrlAuthenticationFailureHandler("/adminlogin?error"));
-  }
-
   @Override
-  public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
-      throws AuthenticationException {
-    // 只接受POST方式传递的数据
-    if (!"POST".equals(request.getMethod()))
-      throw new AuthenticationServiceException("不支持非POST方式的请求!");
-    // 验证码验证
-    String requestCaptcha = request.getParameter("code");
-    String genCaptcha = (String) request.getSession().getAttribute("index_code");
-    if (StringUtils.isEmpty(requestCaptcha))
-      throw new AuthenticationServiceException("验证码不能为空!");
-    if (!genCaptcha.toLowerCase().equals(requestCaptcha.toLowerCase())) {
-      throw new AuthenticationServiceException("验证码错误!");
-    }
+  public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
+      throws IOException, ServletException {
+    HttpServletRequest request = (HttpServletRequest) req;
+    HttpServletResponse response = (HttpServletResponse) res;
+    // 判断是post请求，并且请求地址是 /adminlogin
+    if ("POST".equalsIgnoreCase(request.getMethod()) && defaultFilterProcessUrl.equals(request.getServletPath())) {
+      // 验证码验证
+      String requestCaptcha = request.getParameter("code");
+      String genCaptcha = (String) request.getSession().getAttribute("index_code");
+      if (StringUtils.isEmpty(requestCaptcha))
+        throw new AuthenticationServiceException("验证码不能为空!");
+      if (!genCaptcha.toLowerCase().equals(requestCaptcha.toLowerCase())) {
+        throw new AuthenticationServiceException("验证码错误!");
+      }
 
-    // 判断登陆次数及上限时间
-    String username = obtainUsername(request);
-    AdminUser adminUser = adminUserService.findByUsername(username);
-    if (adminUser == null) {
-      throw new AuthenticationServiceException("用户名或密码错误!");
-    } else {
-      if (adminUser.getAttempts() >= siteConfig.getAttempts()) {
-        Calendar dateOne = Calendar.getInstance(), dateTwo = Calendar.getInstance();
-        dateOne.setTime(new Date());
-        dateTwo.setTime(adminUser.getAttemptsTime());
-        long timeOne = dateOne.getTimeInMillis();
-        long timeTwo = dateTwo.getTimeInMillis();
-        long minute = (timeOne - timeTwo) / (1000 * 60);// 转化minute
-        if (minute < siteConfig.getAttemptsWaitTime()) {
-          throw new AuthenticationServiceException(
-              "密码错误超过" + siteConfig.getAttempts() + "次，账号已被锁定" + siteConfig.getAttemptsWaitTime() + "分钟");
-        } else {
-          adminUser.setAttempts(0);
+      // 判断登陆次数及上限时间
+      String username = obtainUsername(request);
+      AdminUser adminUser = adminUserService.findByUsername(username);
+      if (adminUser == null) {
+        throw new AuthenticationServiceException("用户名或密码错误!");
+      } else {
+        if (adminUser.getAttempts() >= siteConfig.getAttempts()) {
+          Calendar dateOne = Calendar.getInstance(), dateTwo = Calendar.getInstance();
+          dateOne.setTime(new Date());
+          dateTwo.setTime(adminUser.getAttemptsTime());
+          long timeOne = dateOne.getTimeInMillis();
+          long timeTwo = dateTwo.getTimeInMillis();
+          long minute = (timeOne - timeTwo) / (1000 * 60);// 转化minute
+          if (minute < siteConfig.getAttemptsWaitTime()) {
+            throw new AuthenticationServiceException(
+                "密码错误超过" + siteConfig.getAttempts() + "次，账号已被锁定" + siteConfig.getAttemptsWaitTime() + "分钟");
+          } else {
+            adminUser.setAttempts(0);
+          }
         }
       }
     }
-    return super.attemptAuthentication(request, response);
-  }
-
-  @Override
-  @Autowired
-  public void setAuthenticationManager(AuthenticationManager authenticationManager) {
-    super.setAuthenticationManager(authenticationManager);
+    chain.doFilter(request, response);
   }
 }
 ```
@@ -187,15 +307,16 @@ public class MyCustomAuthenticationFilter extends UsernamePasswordAuthentication
 SecurityConfig配置添加一个filter
 
 ```java
+@Autowired
+private MyGenericFilterBean myGenericFilterBean;
+
 @Override
 protected void configure(HttpSecurity http) throws Exception {
   // ...
-  http.addFilterBefore(myCustomAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+  http.addFilterBefore(myGenericFilterBean, UsernamePasswordAuthenticationFilter.class);
   // ...
 }
 ```
-
-这里把验证码校验跟登录次数处理放在一个Filter里处理了，也可以分开，多加一个类来实现 `UsernamePasswordAuthenticationFilter` 即可
 
 ## 登录成功记住我
 
@@ -294,19 +415,6 @@ public PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServ
       , myUserDetailService, persistentTokenService);
   services.setAlwaysRemember(true);
   return services;
-}
-```
-
-在校验验证码的过滤器中添加上记住我功能的服务
-
-```java
-@Autowired
-private PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServices;
-
-@PostConstruct
-public void init() {
-  // ...
-  setRememberMeServices(persistentTokenBasedRememberMeServices);
 }
 ```
 

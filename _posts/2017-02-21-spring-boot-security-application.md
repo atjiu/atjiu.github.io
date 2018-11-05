@@ -10,5 +10,4 @@ author: 朋也
 * content
 {:toc}
 
-spring-boot 使用 spring-security 博客 https://kielczewski.eu/2014/12/spring-boot-security-application/
-
+spring-boot 使用 spring-security 博客 [https://kielczewski.eu/2014/12/spring-boot-security-application/](https://kielczewski.eu/2014/12/spring-boot-security-application/)
