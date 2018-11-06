@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ActiveMQ学习-HelloWorld
+title: ActiveMQ学习-HelloWorld (1)
 date: 2018-11-05 19:39:00
 categories: ActiveMQ学习笔记
 tags: activemq
