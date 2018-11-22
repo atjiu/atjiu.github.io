@@ -4,6 +4,9 @@ layout: default
 <div class="row">
   <div class="col-md-9">
     <div class="panel">
+      <div class="post-edit">
+        <a href="https://github.com/tomoya92/tomoya92.github.io/edit/master/{{page.path}}" target="_blank">编辑</a>
+      </div>
       <div class="panel-body">
         <h3>{{ page.title }}</h3>
         <small>
@@ -24,7 +27,7 @@ layout: default
         </small>
         <hr>
         <div class="post-content">
-          {{ page.content }}
+          {{page.content}}
           原文链接: <a href="{{ page.url | prepend: site.url }}">{{ page.url | prepend: site.url }}</a>
         </div>
       </div>
