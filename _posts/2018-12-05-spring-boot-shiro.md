@@ -294,6 +294,8 @@ public class FreemarkerConfig {
   private Logger log = LoggerFactory.getLogger(FreeMarkerConfig.class);
 
   @Autowired
+  private freemarker.template.Configuration configuration;
+  @Autowired
   private ShiroTag shiroTag;
 
   @PostConstruct
