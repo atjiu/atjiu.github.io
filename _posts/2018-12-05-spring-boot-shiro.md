@@ -375,6 +375,53 @@ shiro除了 `@RequiresPermissions` 注解外，还有其它几个鉴权的注解
 
 一般 `@RequiresPermissions` 就够用了
 
+## 添加记住我功能
+
+在 `ShiroConfig` 里加上记住我功能相关的bean
+
+```java
+// 安全管理器配置
+@Bean
+public SecurityManager securityManager() {
+  DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+  myShiroRealm.setCredentialsMatcher(myCredentialsMatcher());
+  securityManager.setRealm(myShiroRealm);
+  // 设置记住我管理器
+  securityManager.setRememberMeManager(rememberMeManager());
+  return securityManager;
+}
+
+//加入注解的使用，不加入这个注解不生效
+@Bean
+public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(DefaultWebSecurityManager securityManager) {
+  AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();
+  authorizationAttributeSourceAdvisor.setSecurityManager(securityManager);
+  return authorizationAttributeSourceAdvisor;
+}
+
+// 配置记住我功能
+@Bean
+public SimpleCookie rememberMeCookie() {
+  //这个参数是cookie的名称，对应前端的checkbox的name = rememberMe
+  SimpleCookie simpleCookie = new SimpleCookie("rememberMe");
+  // 记住我cookie生效时间 单位秒
+  simpleCookie.setMaxAge(30 * 24 * 60 * 60); // 30天
+  return simpleCookie;
+}
+
+@Bean
+public CookieRememberMeManager rememberMeManager() {
+  //System.out.println("ShiroConfiguration.rememberMeManager()");
+  CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
+  cookieRememberMeManager.setCookie(rememberMeCookie());
+  //rememberMe cookie加密的密钥 建议每个项目都不一样 默认AES算法 密钥长度(128 256 512 位)
+  cookieRememberMeManager.setCipherKey(Base64.encode("pybbs is the best!".getBytes()));
+  return cookieRememberMeManager;
+}
+```
+
+有了上面那些配置之后，在登录的时候，创建 `UsernamePasswordToken` 的时候在最后加入一个记住我参数即可
+
 ## 总结
 
 spring-boot 集成 shiro 到这就结束了，是不是网上能找到的教程里最全的！相比 spring-security 要简单太多了，强烈推荐
