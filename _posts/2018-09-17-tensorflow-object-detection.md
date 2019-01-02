@@ -11,7 +11,7 @@ author: 朋也
 {:toc}
 
 > 开始前准备：强烈推荐使用 anaconda 来做 python 的环境管理工具，它里面自带了很多科学计算的类库，可以避免很多不必要的问题
-> 
+>
 > 显卡：我的显卡是 gtx960 最多只能训练10批次的数据，再多了显存就不足了，唉。。
 
 
@@ -124,7 +124,7 @@ PS: 如果环境变量配置好了，要把终端退了，再重新打开一下�
 
 下面在终端里进入到 `models-master/research` 目录里运行命令来编译：`protoc object_detection/protos/*.proto --python_out=.`
 
-然后添加类库到 PYTHONPATH 环境变量里, 还是在 `research` 目录下运行 
+然后添加类库到 PYTHONPATH 环境变量里, 还是在 `research` 目录下运行
 ```
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
@@ -132,7 +132,7 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 遗憾的是 windows 上这样还是不行的，还要运行下面两条命令
 
 - 在 `research` 目录下运行 `python setup.py install`
-- 在 `research/slim` 目录下运行 `python setup.py build` 然后运行 `python setup.py install` 
+- 在 `research/slim` 目录下运行 `python setup.py build` 然后运行 `python setup.py install`
 
 ## 下载训练的配置文件
 
@@ -218,6 +218,10 @@ item {
 ## 开始训练
 
 运行命令：`python legacy/train.py --logtostderr --train_dir=training/ --pipeline_config_path=ssd_mobilenet_v1_pets.config` 开始训练
+
+如果是linux系统，安装了显卡想用显卡训练，还要加上下面配置
+
+在 `legacy/train.py` 文件上面加上这段代码 `os.environ["CUDA_VISIBLE_DEVICES"] = "0"` 如果你只有一个显卡这里就是0，如果有两个显卡，可以指定使用第0块还是第1块，如果想两个都想用来训练，可以写成 `os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"`
 
 过程如下, 我的显卡是 gtx960 大概是 1.5s/step
 
