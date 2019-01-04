@@ -4,7 +4,7 @@ layout: default
 <div class="row">
   <div class="col-md-9">
     {% for post in paginator.posts %}
-      <div class="panel">
+      <div class="panel panel-default">
         <div class="panel-body">
           <h3><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h3>
           <small>
