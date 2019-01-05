@@ -36,7 +36,7 @@ author: 朋也
 
 ## 连接ES服务
 
-ES暴露给java的socket端口是9300，不过我这用的是 rest-client 的api，所以自然用的就是http协议的 9200端口了
+ES暴露给java的socket端口是9300，不过我这用的是 rest-client 的api，所以自然用的就是http协议的 9200端口了
 
 ```java
 RestHighLevelClient client = new RestHighLevelClient(
@@ -324,6 +324,6 @@ spring-boot不是都内置好了吗？只需要引个依赖，加几个注解就
 
 目的就是为了跟spring-boot解耦，如果使用spring-boot内置的，引入依赖就要在 `application.yml` 里配置es服务的连接地址，但网站有时候不想开启es怎么办？每次启动就相当的麻烦了，所以分开操作才是王道
 
-内置了确实对新手友好了，入门门坎低了，但相应的也带来了臃肿的体积，适当的折腾可以让程序更灵活，何乐而不为呢！
+内置了确实对新手友好了，入门门坎低了，但相应的也带来了臃肿的体积，适当的折腾可以让程序更灵活，何乐而不为呢！
 
 希望本篇博客能帮到正在折腾的你，**转载的请务必注明来源**，谢谢！！
