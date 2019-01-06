@@ -405,6 +405,15 @@ script-opts=osc-layout=topbar
 no-osd-bar
 ```
 
+安装mpv播放器的插件，我这里安装两个常用的，播放列表和播放缩略图，插件下载地址
+
+- 播放列表：https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua
+- 缩略图下载地址：https://github.com/TheAMM/mpv_thumbnail_script
+
+安装方法
+
+在`~/.config`下创建文件夹`scripts`，然后将上面三个lua脚本复制到这个文件夹里，再次启动mpv即可，这时候就可以看到打开视频的文件夹里其它视频也都加入到mpv的播放列表里了，另外鼠标放在播放进度条上也可以看到缩略图了
+
 ## 默认软件设置
 
 打开设置 -> 详细信息 -> 默认应用程序
