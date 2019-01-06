@@ -407,8 +407,8 @@ no-osd-bar
 
 安装mpv播放器的插件，我这里安装两个常用的，播放列表和播放缩略图，插件下载地址
 
-- 播放列表：https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua
-- 缩略图下载地址：https://github.com/TheAMM/mpv_thumbnail_script
+- 播放列表：[https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua)
+- 缩略图下载地址：[https://github.com/TheAMM/mpv_thumbnail_script](https://github.com/TheAMM/mpv_thumbnail_script)
 
 安装方法
 
