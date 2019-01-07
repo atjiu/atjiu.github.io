@@ -28,7 +28,7 @@ public class Producer {
     // 上面开启了事务，这里就要提交一下
     session.commit();
 
-    // 当然如果上面发送消息出问题了，也可以通过 rollback() 回滚掉
+    // 当然如果上面发送消息出问题了，也可以通过 rollback() 回滚掉
     // session.rollback();
   }
 }
@@ -93,7 +93,7 @@ TopicSubscriber createDurableSubscriber(
 ```
 
 - MessageSelector 意思是消息选择器，用法跟SQL里的条件是一样的，用选择器一般消息体为 `MapMessages` 类似Java的实体类
-- NoLocal 如果设为true表示消费者只能接收到和自己相同连接(Connection)所发布的消息，此标志只适用于主题，不适合队列，当创主题消费者时，name表示主题名字，持久订阅时需要设置此参数
+- NoLocal 如果设为true表示消费者只能接收到和自己相同连接(Connection)所发布的消息，此标志只适用于主题，不适合队列，当创主题消费者时，name表示主题名字，持久订阅时需要设置此参数
 
 这里说一下MessageSelector
 
@@ -162,7 +162,7 @@ public class Consumer {
 }
 ```
 
-看起来是不是优雅多了 : )
+看起来是不是优雅多了 : )
 
 创建临时消息
 
@@ -172,7 +172,7 @@ public class Consumer {
 
 除了队列，ActiveMQ还可以创建主题，消费者可以通过订阅主题来消费消息，用法跟队列基本一致，下面上代码
 
-提供者
+提供者
 ```java
 public class Producer {
 
