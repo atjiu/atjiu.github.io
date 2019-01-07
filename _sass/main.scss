@@ -87,13 +87,13 @@ a {
   display: none;
 }
 
-img,
-video {
-  border: 2px solid #dfe0e0;
-  border-radius: 4px;
-  max-width: 100%;
-  cursor: pointer;
-}
+// img,
+// video {
+//   border: 2px solid #dfe0e0;
+//   border-radius: 4px;
+//   max-width: 100%;
+//   cursor: pointer;
+// }
 
 section {
   .post {
@@ -137,6 +137,31 @@ section {
 
 .relate-post {
   text-decoration: underline;
+}
+
+
+img, video {
+  max-width: 100%;
+  box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  webkit-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  moz-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  o-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+
+  &:before, &:after {
+    content: " ";
+    //background: #f00; /*为了让大家看清楚，先设置一个颜色红色*/
+    position: absolute;
+    top: 50%;
+    bottom: 0px;
+    left: 10px;
+    right: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 100px/10px;
+    z-index: -1;
+  }
 }
 
 footer {
