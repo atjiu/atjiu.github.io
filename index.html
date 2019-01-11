@@ -25,6 +25,9 @@ layout: default
           </small>
           <hr>
           <div class="excerpt">{{ post.excerpt }}</div>
+          <div class="text-center">
+            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default read-more">阅读更多</a>
+          </div>
         {% if forloop.last %}
         <hr>
         <div class="text-center paginate">
