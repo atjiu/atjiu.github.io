@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-{% include tips.html %}
 <div class="row">
+  <div class="col-md-12">
+    {% include tips.html %}
+  </div>
   <div class="col-md-9">
     {% for post in paginator.posts %}
       <div class="panel panel-default">

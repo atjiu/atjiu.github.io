@@ -291,10 +291,13 @@ footer {
     border: 0;
     border-radius: 0;
   }
-  .alert {
-    margin-bottom: 10px;
+  .panel {
+    margin: 0;
   }
-  .prev-next, .panel, .navbar {
+  .alert {
+    margin: 0;
+  }
+  .prev-next, .navbar {
     margin-top: 10px;
     margin-bottom: 10px;
   }
