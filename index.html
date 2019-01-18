@@ -123,7 +123,8 @@ layout: default
           {% else %}
             {% assign color = 8 | minus: base %}
           {% endif %}
-          <a href="/tag/#{{ tag | first | slugify }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+          <!-- <a href="/tag/#{{ tag | first | slugify }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a> -->
+          <a href="/tag/#{{ tag | first | slugify }}" style="font-size: {{ size }}pt;">{{ tag[0] }}</a>
         {% endfor %}
       </div>
     </div>
