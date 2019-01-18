@@ -41,7 +41,7 @@ plugins:
   - jekyll-paginate
 
 # 分页
-paginate: 7
+paginate: 10
 
 # 搜索服务
 algolia:

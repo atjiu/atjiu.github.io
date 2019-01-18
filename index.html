@@ -28,29 +28,38 @@ layout: default
           <div class="text-center">
             <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default read-more">阅读更多</a>
           </div>
-        {% if forloop.last %}
-        <hr>
-        <div class="text-center paginate">
-          {% if paginator.previous_page %}
-            <a href="/"><i class="fa fa-angle-double-left">&nbsp;</i>&nbsp;</a>
-            <a href="{{ paginator.previous_page_path }}">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</a>
-          {% else %}
-            <span class="disable">&nbsp;<i class="fa fa-angle-double-left">&nbsp;</i></span>
-            <span class="disable">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</span>
-          {% endif %}
-          &nbsp;<span>{{ paginator.page }} / {{ paginator.total_pages }}&nbsp;</span>
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</a>
-            <a href="/page{{ paginator.total_pages }}">&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a>
-          {% else %}
-            <span class="disable">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
-            <span class="disable">&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</span>
+          {% if forloop.last %}
+          <hr>
+          <div class="text-center paginate">
+            {% if paginator.previous_page %}
+              <a href="/"><i class="fa fa-angle-double-left">&nbsp;</i>&nbsp;</a>
+              <a href="{{ paginator.previous_page_path }}">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</a>
+            {% else %}
+              <span class="disable">&nbsp;<i class="fa fa-angle-double-left">&nbsp;</i></span>
+              <span class="disable">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</span>
+            {% endif %}
+            &nbsp;<span>{{ paginator.page }} / {{ paginator.total_pages }}&nbsp;</span>
+            {% if paginator.next_page %}
+              <a href="{{ paginator.next_page_path }}">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</a>
+              <a href="/page{{ paginator.total_pages }}">&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a>
+            {% else %}
+              <span class="disable">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+              <span class="disable">&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</span>
+            {% endif %}
+          </div>
           {% endif %}
         </div>
-        {% endif %}
       </div>
-    </div>
     {% endfor %}
+    <!-- 列表间广告
+    <div class="panel panel-heading">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-ef+6k-30-ac+ty"
+        data-ad-client="ca-pub-2721745535033061" data-ad-slot="3414492449"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div> -->
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
     <div class="panel panel-default">
@@ -58,21 +67,19 @@ layout: default
       {% include sidebar-search.html %}
     </div>
     <div class="panel panel-default">
-      <div class="panel-body">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- 侧边栏广告 -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-2721745535033061"
-            data-ad-slot="4316973591"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- 侧边栏广告 -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-2721745535033061"
+          data-ad-slot="4316973591"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
-    <div class="panel panel-default">
+    <!-- <div class="panel panel-default">
       <div class="panel-heading"><i class="fa fa-pencil-square-o"></i> 最近博客</div>
       <table class="table">
         {% for post in site.posts offset: 0 limit: 10 %}
@@ -81,7 +88,7 @@ layout: default
           </tr>
         {% endfor %}
       </table>
-    </div>
+    </div> -->
     <div class="panel panel-default">
       <div class="panel-heading"><i class="fa fa-th-list"></i> 博客分类</div>
       <table class="table">
