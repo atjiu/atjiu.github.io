@@ -54,32 +54,13 @@ layout: default
         </div>
       </div>
     {% endfor %}
-    <!-- 列表间广告
-    <div class="panel panel-heading">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-ef+6k-30-ac+ty"
-        data-ad-client="ca-pub-2721745535033061" data-ad-slot="3414492449"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </div> -->
   </div>
   <div class="col-md-3 hidden-sm hidden-xs">
     <div class="panel panel-default">
       <div class="panel-heading"><i class="fa fa-search"></i> 搜索</div>
       {% include sidebar-search.html %}
     </div>
-    {% include advertisements.html %}
-    <!-- <div class="panel panel-default">
-      <div class="panel-heading"><i class="fa fa-pencil-square-o"></i> 最近博客</div>
-      <table class="table">
-        {% for post in site.posts offset: 0 limit: 10 %}
-          <tr>
-            <td><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></td>
-          </tr>
-        {% endfor %}
-      </table>
-    </div> -->
+    <!--{% include advertisements.html %}-->
     <div class="panel panel-default">
       <div class="panel-heading"><i class="fa fa-th-list"></i> 博客分类</div>
       <table class="table">
