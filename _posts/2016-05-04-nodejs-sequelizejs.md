@@ -10,6 +10,8 @@ author: 朋也
 * content
 {:toc}
 
+> Sequelize的async/await用法以及返回值都是什么，下面有补充
+
 ## 使用express初始化一个web项目
 
 ```js
@@ -185,15 +187,15 @@ exports.save = function(req, res) {
   var content = req.body.content;
   var categoryId = req.body.categoryId;
   var img = req.body.img;
-	//保存博客
-	Blog.create({
-		title: title,
-		content: content,
-		categoryId: categoryId,
-		img: img
-	}).then(function(result) {
-		res.redirect("/admin/blog/list");
-	});
+  //保存博客
+  Blog.create({
+    title: title,
+    content: content,
+    categoryId: categoryId,
+    img: img
+  }).then(function(result) {
+    res.redirect("/admin/blog/list");
+  });
 };
 
 //更新
@@ -204,20 +206,20 @@ exports.update = function(req, res) {
   var categoryId = req.body.categoryId;
   var isYuanChuang = req.body.isYuanChuang;
   var img = req.body.img;
-	Blog.update({
-		title: title,
-		content: content,
-		updateAt: Date.now(),
-		categoryId: categoryId,
-		isYuanChuang: isYuanChuang,
-		img: img
-	}, {
-		where: {
-			id: id
-		}
-	}).then(function(result) {
-		res.redirect("/admin/blog/list");
-	});
+  Blog.update({
+    title: title,
+    content: content,
+    updateAt: Date.now(),
+    categoryId: categoryId,
+    isYuanChuang: isYuanChuang,
+    img: img
+  }, {
+    where: {
+      id: id
+    }
+  }).then(function(result) {
+    res.redirect("/admin/blog/list");
+  });
 };
 
 //删除
@@ -237,10 +239,32 @@ exports.delete = function(req, res) {
 };
 ```
 
-相关链接
+## 补充
+
+之前是用express的时候写法，还是用的回调来处理数据后面的操作的，换成koa后，可以使用async/await来同步执行了，写法就可以换成下面形式了
+
+```js
+// 查询
+// 下面查询如果没查到数据返回的是null，如果查到了，返回的是blog对象
+const blog = await Blog.findOne({where: {id: 1}});
+
+// 创建
+// 如果创建成功，返回的是带id的blog对象
+const blog = await Blog.create({title: 'title'});
+
+// 更新, 删除
+// 更新和删除返回值都是受影响的行数，比如下面更新是通过id更新的，返回值是1，如果是根据其它条件更新，且可能会更新多条数据的
+// 那么更新了多少条数据就返回多少数量，如果数据没变但更新了，返回的是0
+// 删除同上
+const count = await Blog.update({title: 'hello'}, {where: {id: 1}});
+const count = await Blog.destory({where: {id: 1}});
+```
+
+没了回调，代码看着舒服多了
+
+## 相关链接
 
 - 数据类型: http://docs.sequelizejs.com/en/latest/docs/models-definition/
 - 查询: http://docs.sequelizejs.com/en/latest/docs/querying/
 - 关联查询: http://docs.sequelizejs.com/en/latest/docs/associations/
 - 事务处理: http://docs.sequelizejs.com/en/latest/docs/transactions/
-
