@@ -345,13 +345,15 @@ java -jar Minecraft.jar
 
 登录自己的帐号就可以游戏了
 
-常用的插件下载地址：
+常用的Mod下载地址：**基于forge的Mod最新只支持到MC的1.12.2版本**
 
 - [forge](http://files.minecraftforge.net/)
 - [liteloader](http://www.liteloader.com/)
-- [autofish](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1289421-autofish-mod-for-minecraft-1-11-2)
-- [inventory tweaks](https://mods.curse.com/mc-mods/minecraft/223094-inventory-tweaks)
-- [optfine](http://www.optifine.net/home)
+- [autofish(自动钓鱼机，基于liteloader)](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1289421-autofish-mod-for-minecraft-1-11-2)
+- [inventory tweaks(对背包，箱子物品排序)](https://mods.curse.com/mc-mods/minecraft/223094-inventory-tweaks)
+- [Ore Sniffer(矿石探测器)](https://www.planetminecraft.com/mod/1710forge-ore-sniffer---v10/)
+- [Keeping Inventory(死亡不掉落)](https://minecraft.curseforge.com/projects/keeping-inventory)
+- [optfine(光影)](http://www.optifine.net/home)
 
 材质包推荐
 
