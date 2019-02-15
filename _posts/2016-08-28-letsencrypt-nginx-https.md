@@ -1,9 +1,9 @@
 ---
 layout: post
-title: letsencrypt结合nginx配置https备忘
+title: 申请letsencrypt证书结合nginx实现网站https访问（支持泛域名）
 date: 2016-08-28 17:26:35
 categories: 杂项
-tags: letsencrypt nginx https
+tags: letsencrypt
 author: 朋也
 ---
 
@@ -12,25 +12,21 @@ author: 朋也
 
 > 现在有更简单的方法配置了 [https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04][1]
 
-备忘一下我使用letsencrypt结合nginx配置网站https的过程
+## 安装生成证书工具
 
-## ssh登录服务器,克隆letsencrypt仓库
+我使用的是ubuntu系统
 
-```
-git clone https://github.com/letsencrypt/letsencrypt
-```
-
-## 进入letsencrypt目录,执行命令
-
-
-
-
-```
-./letsencrypt-auto certonly --standalone --agree-tos --email $youremail$ -d tomoya.cn -d blog.tomoya.cn
-//替换掉 $youremail$ 修改成你的邮箱
+```bash
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx
 ```
 
-成功后会提示证书生成的目录, 我的目录是在 `/etc/letsencrypt/live/tomoya.cn/fullchain.pem`
+安装nginx
+
+```bash
+sudo apt install nginx
+```
 
 ## 配置nginx
 
@@ -38,35 +34,13 @@ git clone https://github.com/letsencrypt/letsencrypt
 
 ```
 server {
-  listen 443;
-  server_name tomoya.cn;
-
-  ssl on;
-  ssl_certificate /etc/letsencrypt/live/tomoya.cn/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/tomoya.cn/privkey.pem;
-
-  ssl_session_timeout 5m;
-
-  ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
-  ssl_ciphers "HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES";
-  ssl_prefer_server_ciphers on;
+  server_name yiiu.co;
 
   location / {
-    proxy_pass   http://127.0.0.1:4003/;
+    proxy_pass   http://127.0.0.1:3000/;
     include conf.d/proxy.conf;
   }
-  error_page   500 502 503 504  /50x.html;
-  location = /50x.html {
-    root   /usr/share/nginx/html;
-  }
 }
-```
-
-主要就是配置证书位置
-
-```
-ssl_certificate /etc/letsencrypt/live/tomoya.cn/fullchain.pem;
-ssl_certificate_key /etc/letsencrypt/live/tomoya.cn/privkey.pem;
 ```
 
 `conf.d/proxy.conf` 文件内容
@@ -85,23 +59,66 @@ proxy_read_timeout      90;
 proxy_buffers           32 4k;
 ```
 
-配置http跳转到https
+## 生成证书
 
-编辑 `/etc/nginx/conf.d/default.conf` 文件, 没有的自己创建
+注意生成证书之前nginx要启动，而且域名要解析到服务器上
 
-```
-server {
-  listen 80;
-  server_name tomoya.cn;
-  return 301 https://$host$request_uri;
-}
+运行命令
+
+```bash
+sudo certbot --nginx -d yiiu.co
 ```
 
-最后启动nginx就ok了
+跟着步骤操作，最后会发现它把nginx都给配置的好好的，什么都不用管了，最后重启nginx即可
 
 ```
 service nginx start
 ```
+
+## 自动续期
+
+letsencrypt生成的证书最多只有3个月有效期，这里利用ubuntu的系统自带的定时任务来解决这个问题
+
+运行 `crontab -e` 命令，进入到定时任务的编辑界面，然后添加上下面这段命令，命令意思是7天运行一次，在夜里3点运行
+
+```bash
+0 3 */7 * * certbot renew —renew-hook "/etc/init.d/nginx reload"
+```
+
+## 申请泛域名
+
+泛域名我开始也不知道，今天群里大佬告知后才知道，原来申请一个 `*.yourdomain.com` 就可以能用所有的二级域名了，这样就不用一个一个的去申请证书了，大大的方便了管理
+
+阿里也有免费的https证书，但它不支持泛域名，网上查了一下letsencrypt，它还真支持，果断折腾，其实也就一条命令的事
+
+```bash
+certbot certonly --preferred-challenges dns --manual -d yiiu.co -d *.yiiu.co --server https://acme-v02.api.letsencrypt.org/directory
+```
+
+在申请证书的过程中，它要求到域名解析两个TXT记录（我看网上都说只需要配置一次就可以了，不知道为啥我申请的时候要配置两次），按照它的要求配置一下即可
+
+注意，这种申请方式是手动的(manual)，不是上面自动的(nginx)，看命令参数应该就能明白，所以证书申请好了，还要自己去配置一下nginx，需要配置的内容如下，拷贝到nginx配置文件里的server { /*放在这里*/ }
+
+```conf
+server {
+  server_name yiiu.co dev.yiiu.co;
+
+  location / {
+    proxy_pass http://localhost:3000;
+    include conf.d/proxy.conf;
+  }
+
+  listen 443 ssl; # managed by Certbot
+  ssl_certificate /etc/letsencrypt/live/yiiu.co/fullchain.pem; # managed by Certbot
+  ssl_certificate_key /etc/letsencrypt/live/yiiu.co/privkey.pem; # managed by Certbot
+  include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+```
+
+配置好了，保存，运行 `nginx -t` 检查一下配置文件的正确性，没问题就可以重启nginx了
+
+这种方式的自动续期跟上面一样
 
 ## 注意事项
 
