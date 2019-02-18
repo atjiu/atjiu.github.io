@@ -44,6 +44,7 @@ ng new pybbs-front-angular
 | user.component.scss    | 组件的样式文件 |
 | user.component.spec.ts | 组件测试文件   |
 | user.component.ts      | 组件文件       |
+{: .table.table-bordered }
 
 使用命令创建组件有个好处就是cli会自动把这个组件引入到 `src/app/app.module.ts` 文件里，这样直接在其它文件里使用 `src/app/user/user.component.ts`里定义的`selector`,一般这个名字都是 `app-xxx` 后面xxx就是这个模块的名字，比如这里的user模块，就是 `app-user`
 
@@ -59,6 +60,7 @@ angular的生命周期有很多，看下下图
 | --------------- | -------------------------------------------------------------------------------------------- |
 | ngOnInit        | 组件加载时初始化变量或者网络请求时代码写在这里面                                             |
 | ngAfterViewInit | 如果想对页面进行dom操作，最好在这个方法里操作，这个方法是在页面dom元素都加载完成后才调用的 |
+{: .table.table-bordered }
 
 ## 创建服务
 
@@ -70,6 +72,7 @@ angular的生命周期有很多，看下下图
 | -------------------- | ---------------------------------------------------------- |
 | user.service.ts      | 组件提供服务的主文件                                       |
 | user.service.spec.ts | 组件提供服务文件的测试文件，写对服务测试的代码都放在这里面 |
+{: .table.table-bordered }
 
 服务创建好了之后，没有创建组件那么方便了，还需要自己配置一下，打开 `src/app/app.component.ts` 文件
 
