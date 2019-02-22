@@ -153,9 +153,9 @@ export class UserComponent implements OnInit {
 }
 ```
 
-**说明：上面例子中请求接口用的是 angular 内置好的 rxjs 模块，你也可以换成流行的 axios 或者其它的框架**
+**说明：上面例子中请求接口用的是 angular 内置好的 rxjs 模块，你也可以换成流行的 axios 或者其它的框架**
 
-## 父子组件传值
+## 父子组件传值
 
 先说父给子传值
 
@@ -358,7 +358,7 @@ export class UserComponent implements OnInit {
 
 最后来说一下路由用法，在创建项目的时候就提到了，有选择项目是否要带上路由，选是就默认加上路由了
 
-带路由的项目初始化好之后，`src/app` 下会多一个 `app-routing.module.ts` 文件，它里面就是配置路由的文件了，另外在`app.component.html`文件里多了一行标签`<router-outlet></router-outlet>`，这里放的就是路由指向组件的模板文件内容
+带路由的项目初始化好之后，`src/app` 下会多一个 `app-routing.module.ts` 文件，它里面就是配置路由的文件了，另外在`app.component.html`文件里多了一行标签`<router-outlet></router-outlet>`，这里放的就是路由指向组件的模板文件内容
 
 这里再创建一个组件`topic` `ng g component topic`
 
