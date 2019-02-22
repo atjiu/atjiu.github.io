@@ -142,7 +142,7 @@ app.use(cors({
 <input type="file" id="imageFile" onchange="uploadImage()" style="display: none;">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-<script>
+<script>
 function uploadImage() {
   var fd = new FormData();
   fd.append("image", document.getElementById("imageFile").files[0]);
