@@ -3,7 +3,7 @@
 // src: url("Zpix.ttf");
 // }
 
-$font-face: Georgia, serif, Microsoft YaHei;
+// $font-face: Georgia, serif, Microsoft YaHei;
 
 * {
   word-break: break-word;
@@ -13,7 +13,7 @@ $font-face: Georgia, serif, Microsoft YaHei;
 body {
   font-size: 16px;
   background-color: #ddd;
-  font-family: $font-face;
+  // font-family: $font-face;
 }
 
 // Georgia
@@ -26,7 +26,7 @@ body {
   h5,
   h6 {
     // font-family: Zpix;
-    font-family: $font-face;
+    // font-family: $font-face;
     padding-bottom: 0.2em;
     // border-bottom: 1px solid #eaecef;
   }
