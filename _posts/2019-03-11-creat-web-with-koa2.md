@@ -12,7 +12,7 @@ author: 朋也
 
 > Github上有一个express风格的koa脚手架，用着挺方便，一直以来使用koa开发web项目用的也都是那个脚手架，今天想自己从头搭一个web项目，就折腾了一下
 >
-> 脚手架地址：https://github.com/17koa/koa-generator
+> 脚手架地址：[https://github.com/17koa/koa-generator](https://github.com/17koa/koa-generator)
 
 ## 初始化
 
@@ -34,7 +34,7 @@ npm init
 ## 安装依赖
 
 ```bash
-npm install --save koa koa-body koa-logger koa-json-error koa-router
+npm install --save koa koa-body koa-logger koa-json-error koa-router koa-static koa-njk
 ```
 
 - koa
@@ -42,6 +42,8 @@ npm install --save koa koa-body koa-logger koa-json-error koa-router
 - koa-logger 显示http请求的日志
 - koa-router 路由
 - koa-json-error 程序出异常输出json
+- koa-static 映射静态资源文件
+- koa-njk nunjucks模板解析
 
 原链文接：[https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/]([https://tomoya92.github.io/2019/02/21/java11/](https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/))
 
@@ -55,6 +57,9 @@ const koa = require('koa');
 const koa_body = require('koa-body');
 const koa_json_error = require('koa-json-error');
 const koa_logger = require('koa-logger');
+const koa_static = require('koa-static');
+const koa_njk = require('koa-njk');
+const path = require('path');
 
 // 初始化koa
 const app = new koa()
@@ -68,6 +73,22 @@ app.use(koa_json_error((err) => {
     code: err.status || 500,
     description: err.message
   }
+}));
+
+// 添加静态资源文件映射
+app.use(koa_static(path.join(__dirname, 'static')))
+// 添加nunjucks模板
+app.use(koa_njk(path.join(__dirname, 'views'), '.njk', {
+  autoescape: true,
+}, env => {
+  // 添加自己的过滤器
+  env.addFilter('split', (str, comma) => {
+    if (str) {
+      return str.split(comma);
+    } else {
+      return '';
+    }
+  });
 }));
 
 // 解析表单提交参数
@@ -106,6 +127,13 @@ exports.index = async ctx => {
   };
 }
 
+// 测试nunjucks模板
+exports.view = async ctx => {
+  await ctx.render('index', {
+    title: 'Koa'
+  })
+}
+
 // 测试异常
 exports.test_error = async ctx => {
   throw new Error('测试异常');
@@ -120,6 +148,7 @@ const router = require('koa-router')();
 // route
 const index = require('./index');
 
+router.get('/view', index.view);
 router.get('/index', index.index);
 router.get('/index:id', index.index);
 router.post('/index', index.index);
@@ -129,6 +158,46 @@ module.exports = router
 ```
 
 链原文接：[https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/]([https://tomoya92.github.io/2019/02/21/java11/](https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/))
+
+## 静态文件
+
+在根目录创建文件夹 `static` 添加 `app.css` 文件，写上下面代码
+
+```css
+body {
+  background-color: #eee;
+}
+```
+
+## 模板
+
+在根目录创建文件夹 `views` 添加 `index.njk` 文件，写上下面代码
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+
+Hello, {{ title }}! <br>
+
+<ul>
+  <!-- 使用自定义的过滤器 -->
+  {% for book in books|split(',') %}
+    <li>{{ book }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
+
+```
 
 ## 启动
 
@@ -146,7 +215,11 @@ nodemon app.js
 
 ## 测试
 
-浏览器访问 http://localhost:3000/index/ 可以看到输出的json
+访问 http://localhost:3000/view/
+
+![](https://tomoya92.github.io/assets/20190311221225.png)
+
+访问 http://localhost:3000/index/ 可以看到输出的json
 
 ```json
 {
