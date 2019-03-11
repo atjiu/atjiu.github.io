@@ -215,11 +215,11 @@ nodemon app.js
 
 ## 测试
 
-访问 http://localhost:3000/view/
+访问 `http://localhost:3000/view/`
 
 ![](https://tomoya92.github.io/assets/20190311221225.png)
 
-访问 http://localhost:3000/index/ 可以看到输出的json
+访问 `http://localhost:3000/index/` 可以看到输出的json
 
 ```json
 {
@@ -229,7 +229,7 @@ nodemon app.js
 }
 ```
 
-访问 http://localhost:3000/index/?id=1
+访问 `http://localhost:3000/index/?id=1`
 
 ```json
 {
@@ -241,7 +241,7 @@ nodemon app.js
 }
 ```
 
-访问 http://localhost:3000/index/1
+访问 `http://localhost:3000/index/1`
 
 ```json
 {
@@ -265,7 +265,7 @@ POST 请求 `curl -X POST http://localhost:3000/index/ -d '{"id": "1"}' -H 'Cont
 }
 ```
 
-访问 http://localhost:3000/test_error
+访问 `http://localhost:3000/test_error`
 
 ```json
 {
