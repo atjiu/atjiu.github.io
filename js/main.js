@@ -1,81 +1,86 @@
 $(function() {
-  var next_tip = localStorage.getItem('next_tip');
-  var adsbygoogle = $('.adsbygoogle').html();
-  var adblock = false;
-  if (adsbygoogle === undefined || adsbygoogle === '') {
-    if (!next_tip) {
-      adblock = true;
-    } else if (next_tip && new Date().getTime() > next_tip) {
-      adblock = true;
+  setTimeout(() => {
+    var next_tip = localStorage.getItem('next_tip');
+    var adsbygoogle = $('.adsbygoogle').html();
+    var adblock = false;
+    if (adsbygoogle === undefined || adsbygoogle === '') {
+      if (!next_tip) {
+        adblock = true;
+      } else if (next_tip && new Date().getTime() > next_tip) {
+        adblock = true;
+      }
     }
-  }
-  if (adblock) {
-    $('.tip-alert').show(700, 'swing');
-  }
+    if (adblock) {
+      $('.tip-alert').show(700, 'swing');
+    }
 
-  $('.tip-alert button').click(function() {
-    var newTime = 7 * 24 * 60 * 60 * 1000;
-    var now = new Date().getTime();
-    localStorage.setItem('next_tip', now + newTime);
-  });
-
-  var markdownToc = $('#markdown-toc');
-  var markdownTocHtml = '';
-  if (markdownToc.text().length > 0) {
-    markdownToc.hide();
-    markdownTocHtml = markdownToc.html();
-  }
-  $('.toc').html('<ul class="table-of-content">' + markdownTocHtml + '<li><a href="#comments">添加评论</a></li>' + '</ul>');
-
-  var postRight = $('.post-right');
-  if (postRight.length > 0) {
-    var postRightWidth = postRight.css('width');
-    postRight.css({
-      position: 'fixed',
-      width: postRightWidth
+    $('.tip-alert button').click(function() {
+      var newTime = 7 * 24 * 60 * 60 * 1000;
+      var now = new Date().getTime();
+      localStorage.setItem('next_tip', now + newTime);
     });
-    var windowHeight = $(window).height();
-    var postRightHeight = postRight.height();
-    var offsetTop = postRight.offset().top;
-    var toTopHeight = adblock ? 40 + 54 : 40;
-    if (postRightHeight + toTopHeight > windowHeight) {
-      postRight.find('.panel-default').css({
-        height: parseInt(windowHeight - toTopHeight) + 'px'
-      });
-      postRight.find('.panel-body').css({
-        overflow: 'auto',
-        height: parseInt(windowHeight - toTopHeight - 42) + 'px'
-      });
+
+    var markdownToc = $('#markdown-toc');
+    var markdownTocHtml = '';
+    if (markdownToc.text().length > 0) {
+      markdownToc.hide();
+      markdownTocHtml = markdownToc.html();
     }
-    var offsetTopHeight = adblock ? 72 + 54 : 72;
-    if (offsetTop > offsetTopHeight) {
-      postRight.css({
-        top: '20px'
-      });
-    }
-  }
-  // back to top
-  var backToTop = $('.back-to-top');
-  $(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
-    var flog = adblock ? scrollTop >= 104 : scrollTop >= 50;
-    if (flog) {
+    $('.toc').html(
+      '<ul class="table-of-content">' + markdownTocHtml + '<li><a href="#comments">添加评论</a></li>' + '</ul>'
+    );
+
+    var postRight = $('.post-right');
+    if (postRight.length > 0) {
+      var postRightWidth = postRight.css('width');
       postRight.css({
         position: 'fixed',
-        top: '20px'
+        width: postRightWidth
       });
-    } else {
-      postRight.css({
-        position: 'fixed',
-        top: adblock ? 124 - scrollTop + 'px' : 70 - scrollTop + 'px'
-      });
+      var windowHeight = $(window).height();
+      var postRightHeight = postRight.height();
+      var offsetTop = postRight.offset().top;
+      var toTopHeight = adblock ? 40 + 54 : 40;
+      if (postRightHeight + toTopHeight > windowHeight) {
+        postRight.find('.panel-default').css({
+          height: parseInt(windowHeight - toTopHeight) + 'px'
+        });
+        postRight.find('.panel-body').css({
+          overflow: 'auto',
+          height: parseInt(windowHeight - toTopHeight - 42) + 'px'
+        });
+      }
+      var offsetTopHeight = adblock ? 72 + 54 : 72;
+      if (offsetTop > offsetTopHeight) {
+        postRight.css({
+          top: '20px'
+        });
+      }
     }
-    if (scrollTop > 200) {
-      backToTop.addClass('back-to-top-show');
-    } else {
-      backToTop.removeClass('back-to-top-show');
-    }
-  });
+    // back to top
+    var backToTop = $('.back-to-top');
+    $(window).scroll(function() {
+      var scrollTop = $(this).scrollTop();
+      var flog = adblock ? scrollTop >= 104 : scrollTop >= 50;
+      if (flog) {
+        postRight.css({
+          position: 'fixed',
+          top: '20px'
+        });
+      } else {
+        postRight.css({
+          position: 'fixed',
+          top: adblock ? 124 - scrollTop + 'px' : 70 - scrollTop + 'px'
+        });
+      }
+      if (scrollTop > 200) {
+        backToTop.addClass('back-to-top-show');
+      } else {
+        backToTop.removeClass('back-to-top-show');
+      }
+    });
+  }, 1000);
+
   backToTop.click(function() {
     $('html,body').animate({ scrollTop: 0 }, 700);
   });
