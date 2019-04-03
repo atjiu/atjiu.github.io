@@ -79,9 +79,8 @@ $(function() {
         backToTop.removeClass('back-to-top-show');
       }
     });
+    backToTop.click(function() {
+      $('html,body').animate({ scrollTop: 0 }, 700);
+    });
   }, 1000);
-
-  backToTop.click(function() {
-    $('html,body').animate({ scrollTop: 0 }, 700);
-  });
 });
