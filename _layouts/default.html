@@ -51,9 +51,14 @@
 
 <body>
   <div class="wrapper">
+    <div class="alert alert-warning tip-alert">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>你貌似开启了Adblock...</strong> 写博客不容易，希望能将广告过滤去掉，谢谢！
+    </div>
     <header>
       {% include header.html %}
     </header>
+
     <section class="container">
       {{ content }}
     </section>

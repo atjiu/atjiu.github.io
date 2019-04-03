@@ -18,7 +18,6 @@ body {
 
 // Georgia
 .post-content {
-
   h1,
   h2,
   h3,
@@ -33,7 +32,7 @@ body {
 }
 
 .divide {
-  position:relative;
+  position: relative;
   &:after {
     content: " ";
     position: absolute;
@@ -50,7 +49,7 @@ hr {
 }
 
 pre {
-  border: 0
+  border: 0;
 }
 
 code {
@@ -72,6 +71,12 @@ ol {
   padding-left: 30px;
 }
 
+.tip-alert {
+  display: none;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
 .tags-list {
   li {
     line-height: 1.7em;
@@ -83,14 +88,14 @@ ol {
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
   color: #2288bb;
   &:hover {
-    text-decoration:underline;
+    text-decoration: underline;
     color: #33aaff;
   }
   &:visited {
-    text-decoration:none;
+    text-decoration: none;
     color: #888888;
   }
 }
@@ -143,7 +148,6 @@ section {
     .month {
       margin-left: 15px;
     }
-
   }
 }
 
@@ -157,15 +161,16 @@ section {
   text-decoration: underline;
 }
 
-
-img, video {
+img,
+video {
   max-width: 100%;
-  box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
-  webkit-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
-  moz-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
-  o-box-shadow:0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     content: " ";
     //background: #f00; /*为了让大家看清楚，先设置一个颜色红色*/
     position: absolute;
@@ -260,7 +265,7 @@ footer {
   opacity: 0.7;
 
   &:hover {
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -285,11 +290,60 @@ footer {
       font-size: 18px;
     }
   }
-  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  .col-lg-1,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-md-1,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-sm-1,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-xs-1,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9 {
     padding-right: 0;
     padding-left: 0;
   }
-  .panel, footer, .alert {
+  .panel,
+  footer,
+  .alert {
     border: 0;
     border-radius: 0;
   }
@@ -318,7 +372,7 @@ blockquote {
 }
 
 .prev-next {
-  li>a {
+  li > a {
     text-decoration: underline;
   }
 }
