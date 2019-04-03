@@ -1,7 +1,14 @@
 $(function() {
   var next_tip = localStorage.getItem('next_tip');
   var adsbygoogle = $('.adsbygoogle').html();
-  var adblock = (adsbygoogle === undefined || adsbygoogle === '') && (!next_tip || new Date().getTime() > next_tip);
+  var adblock = false;
+  if (adsbygoogle === undefined || adsbygoogle === '') {
+    if (!next_tip) {
+      adblock = true;
+    } else if (next_tip && new Date().getTime() > next_tip) {
+      adblock = true;
+    }
+  }
   if (adblock) {
     $('.tip-alert').show(700, 'swing');
   }
