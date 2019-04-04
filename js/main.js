@@ -30,53 +30,53 @@ $(function() {
       '<ul class="table-of-content">' + markdownTocHtml + '<li><a href="#comments">添加评论</a></li>' + '</ul>'
     );
 
-    var postRight = $('.post-right');
-    if (postRight.length > 0) {
-      var postRightWidth = postRight.css('width');
-      postRight.css({
-        position: 'fixed',
-        width: postRightWidth
-      });
-      var windowHeight = $(window).height();
-      var postRightHeight = postRight.height();
-      var offsetTop = postRight.offset().top;
-      // var toTopHeight = adblock ? 40 + 54 : 40;
-      if (postRightHeight > windowHeight) {
-        postRight.find('.panel-default').css({
-          height: parseInt(windowHeight) - 40 + 'px'
-        });
-        // postRight.find('.panel-body').css({
-        //   overflow: 'hidden',
-        //   height: parseInt(windowHeight) - 82 + 'px'
-        // });
-        postRight.find('.table-of-content').css({
-          overflow: 'auto',
-          height: parseInt(windowHeight) - 86 + 'px'
-        });
-      }
-      var offsetTopHeight = adblock ? 72 + 54 : 72;
-      if (offsetTop > offsetTopHeight) {
-        postRight.css({
-          top: '20px'
-        });
-      }
-    }
+    // var postRight = $('.post-right');
+    // if (postRight.length > 0) {
+    //   var postRightWidth = postRight.css('width');
+    //   postRight.css({
+    //     position: 'fixed',
+    //     width: postRightWidth
+    //   });
+    //   var windowHeight = $(window).height();
+    //   var postRightHeight = postRight.height();
+    //   var offsetTop = postRight.offset().top;
+    //   // var toTopHeight = adblock ? 40 + 54 : 40;
+    //   if (postRightHeight > windowHeight) {
+    //     postRight.find('.panel-default').css({
+    //       height: parseInt(windowHeight) - 40 + 'px'
+    //     });
+    //     // postRight.find('.panel-body').css({
+    //     //   overflow: 'hidden',
+    //     //   height: parseInt(windowHeight) - 82 + 'px'
+    //     // });
+    //     postRight.find('.table-of-content').css({
+    //       overflow: 'auto',
+    //       height: parseInt(windowHeight) - 86 + 'px'
+    //     });
+    //   }
+    //   var offsetTopHeight = adblock ? 72 + 54 : 72;
+    //   if (offsetTop > offsetTopHeight) {
+    //     postRight.css({
+    //       top: '20px'
+    //     });
+    //   }
+    // }
     // back to top
     var backToTop = $('.back-to-top');
     $(window).scroll(function() {
       var scrollTop = $(this).scrollTop();
-      var flog = adblock ? scrollTop >= 104 : scrollTop >= 50;
-      if (flog) {
-        postRight.css({
-          position: 'fixed',
-          top: '20px'
-        });
-      } else {
-        postRight.css({
-          position: 'fixed',
-          top: adblock ? 124 - scrollTop + 'px' : 70 - scrollTop + 'px'
-        });
-      }
+      // var flog = adblock ? scrollTop >= 104 : scrollTop >= 50;
+      // if (flog) {
+      //   postRight.css({
+      //     position: 'fixed',
+      //     top: '20px'
+      //   });
+      // } else {
+      //   postRight.css({
+      //     position: 'fixed',
+      //     top: adblock ? 124 - scrollTop + 'px' : 70 - scrollTop + 'px'
+      //   });
+      // }
       if (scrollTop > 200) {
         backToTop.addClass('back-to-top-show');
       } else {
