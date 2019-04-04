@@ -22,6 +22,11 @@ author: 朋也
 <div class="spinner"></div>
 ```
 
+
+
+
+
+
 ```css
 .spinner {
   width: 40px;
@@ -52,9 +57,6 @@ author: 朋也
   }
 }
 ```
-
-
-
 
 ---
 
