@@ -40,14 +40,18 @@ $(function() {
       var windowHeight = $(window).height();
       var postRightHeight = postRight.height();
       var offsetTop = postRight.offset().top;
-      var toTopHeight = adblock ? 40 + 54 : 40;
-      if (postRightHeight + toTopHeight > windowHeight) {
+      // var toTopHeight = adblock ? 40 + 54 : 40;
+      if (postRightHeight > windowHeight) {
         postRight.find('.panel-default').css({
-          height: parseInt(windowHeight - toTopHeight) + 'px'
+          height: parseInt(windowHeight) - 40 + 'px'
         });
-        postRight.find('.panel-body').css({
+        // postRight.find('.panel-body').css({
+        //   overflow: 'hidden',
+        //   height: parseInt(windowHeight) - 82 + 'px'
+        // });
+        postRight.find('.table-of-content').css({
           overflow: 'auto',
-          height: parseInt(windowHeight - toTopHeight - 42) + 'px'
+          height: parseInt(windowHeight) - 86 + 'px'
         });
       }
       var offsetTopHeight = adblock ? 72 + 54 : 72;

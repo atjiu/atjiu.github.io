@@ -219,10 +219,22 @@ footer {
   }
 }
 
+.toc {
+  padding: 0;
+}
+
 .table-of-content {
-  padding-left: 15px;
+  padding-left: 30px;
+  padding-right: 15px;
   line-height: 1.7em;
   margin-bottom: 0;
+
+  li:first-child {
+    padding-top: 15px;
+  }
+  li:last-child {
+    padding-bottom: 15px;
+  }
 
   ul {
     padding-left: 15px;
