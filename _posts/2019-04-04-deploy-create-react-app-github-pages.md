@@ -1,7 +1,7 @@
 ---
 layout: post
 title: create-react-app创建的项目部署在github pages上的方法，顺便绑定个人域名，增加https支持
-date: 2019-04-02 14:02:00
+date: 2019-04-04 14:02:00
 categories: 杂项
 tags: github-pages
 author: 朋也
