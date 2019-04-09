@@ -63,7 +63,7 @@ void send(
 
 - destination 目的地，消息要发送到哪去，通过session创建 `Destination destination = session.createQueue("amq-demo");`
 - message 消息内容，它是一个接口，实现有以下几种消息类型
-![](https://tomoya92.github.io/assets/QQ20181108-224421@2x.png)
+![](/assets/QQ20181108-224421@2x.png)
 - deliveryMode 消息的传输模式
   - DeliveryMode.NON_PERSISTENT 消息不做持久化
   - DeliveryMode.PERSISTENT 消息持久化

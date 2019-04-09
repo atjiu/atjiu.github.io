@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-![](https://tomoya92.github.io/assets/swift-tabbarcontroller.gif)
+![](/assets/swift-tabbarcontroller.gif)
 
 
 
@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 }
 ```
 
@@ -57,7 +57,7 @@ class OrderViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 }
 ```
 
@@ -88,33 +88,33 @@ class MyViewController: UIViewController {
 import UIKit
 
 class LayoutViewController: UITabBarController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+
         let homeNav = HomeViewController()
         let orderNav = OrderViewController()
         let myNav = MyViewController()
-        
+
         homeNav.tabBarItem.title = "主页"
         orderNav.tabBarItem.title = "订单"
         myNav.tabBarItem.title = "我"
-        
+
         homeNav.tabBarItem.image = UIImage(named: "home")
         orderNav.tabBarItem.image = UIImage(named: "order")
         myNav.tabBarItem.image = UIImage(named: "my")
-        
+
         self.viewControllers = [homeNav, orderNav, myNav]
-        
+
         // 文字图片颜色一块修改
         self.tabBar.tintColor = UIColor.blue
     }
-    
+
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         self.title = item.title
     }
-    
+
 }
 ```
 
@@ -122,9 +122,9 @@ class LayoutViewController: UITabBarController {
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+
     self.window?.rootViewController = UINavigationController(rootViewController: LayoutViewController())
-    
+
     return true
 }
 ```

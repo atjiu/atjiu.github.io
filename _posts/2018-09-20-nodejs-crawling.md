@@ -86,7 +86,7 @@ function fetch() {
 
 运行结果
 
-![](https://tomoya92.github.io/assets/QQ20180920-153905.png)
+![](/assets/QQ20180920-153905.png)
 
 ## 抓取网站是js渲染的
 
@@ -94,7 +94,7 @@ function fetch() {
 
 这里用网易新闻手机版的，打开链接 https://3g.163.com/touch/news/ 然后查看页面源代码，可以看到body里是没有内容的
 
-![](https://tomoya92.github.io/assets/QQ20180920-161342.png)
+![](/assets/QQ20180920-161342.png)
 
 安装依赖
 
@@ -134,4 +134,4 @@ function news() {
 
 运行结果
 
-![](https://tomoya92.github.io/assets/QQ20180920-161241.png)
+![](/assets/QQ20180920-161241.png)

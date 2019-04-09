@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-![](https://tomoya92.github.io/assets/tableview-multipart-section.gif)
+![](/assets/tableview-multipart-section.gif)
 
 
 
@@ -23,7 +23,7 @@ author: 朋也
 import UIKit
 
 class ViewController: UITableViewController {
-    
+
     var data = [
         ("A", ["阿猫", "阿狗", "阿门", "阿前"]),
         ("B", ["背锅", "背诵", "北方", "北京", "北国", "卑鄙"]),
@@ -32,7 +32,7 @@ class ViewController: UITableViewController {
         ("F", ["仿佛", "仿照", "发财", "返航", "帆船"]),
         ("H", ["花泽香菜"])
     ]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "TableViewDemo"
@@ -41,17 +41,17 @@ class ViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
-    
+
     // 设置tableView有多少个部分
     override func numberOfSections(in tableView: UITableView) -> Int {
         return data.count
     }
-    
+
     // 设置tableView每个部分的Header的高
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
-    
+
     // 设置tableView每个部分Header内容
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
@@ -63,12 +63,12 @@ class ViewController: UITableViewController {
         tableView.addSubview(view)
         return view
     }
-    
+
     // 计算每个部分的数量
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data[section].1.count
     }
-    
+
     // 将数据填充到UITableViewCell里
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)

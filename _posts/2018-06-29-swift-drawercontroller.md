@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-![](https://tomoya92.github.io/assets/swift-drawercontroller.gif)
+![](/assets/swift-drawercontroller.gif)
 
 
 
@@ -20,7 +20,7 @@ author: 朋也
 
 ## 安装
 
-类库开源地址：https://github.com/sascha/DrawerController 
+类库开源地址：https://github.com/sascha/DrawerController
 
 可惜的是，它已经不维护了，很好用的一个侧滑实现
 
@@ -53,16 +53,16 @@ class LeftViewController: UIViewController {
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+
     let drawerController = DrawerController(centerViewController: UINavigationController(rootViewController: ViewController()), leftDrawerViewController: UINavigationController(rootViewController: LeftViewController()))
-    
+
     // 侧滑打开宽度
     drawerController.maximumLeftDrawerWidth = 250
     // 打开侧滑手势
     drawerController.openDrawerGestureModeMask = .all
     // 关闭侧滑手势
     drawerController.closeDrawerGestureModeMask = .all
-    
+
     self.window?.rootViewController = drawerController
     return true
 }
@@ -72,7 +72,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 icon可以在这里下载：https://material.io/tools/icons/?search=menu&icon=menu&style=baseline
 
-修改 `ViewController` 
+修改 `ViewController`
 
 ```swift
 import UIKit
@@ -83,15 +83,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.title = "DrawerDemo"
         self.view.backgroundColor = .white
-        
+
         // 给导航条添加一个按钮
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "baseline-menu-48px"), style: .plain, target: self, action: #selector(ViewController.openLeftMenu))
-        
+
         self.navigationController?.navigationBar.barStyle = .default
         // menu icon默认是蓝色，下面将其改成黑色的
         self.navigationController?.navigationBar.tintColor = .black
     }
-    
+
     @objc func openLeftMenu() {
         // 打开drawerController
         self.navigationController?.evo_drawerController?.toggleLeftDrawerSide(animated: true, completion: nil)

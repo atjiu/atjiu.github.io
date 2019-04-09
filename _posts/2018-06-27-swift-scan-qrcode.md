@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-<video src="https://tomoya92.github.io/assets/ScreenRecording_06-27-2018 09-54-06.mp4" controls="controls" autoplay="autoplay" width="375"></video>
+<video src="/assets/ScreenRecording_06-27-2018 09-54-06.mp4" controls="controls" autoplay="autoplay" width="375"></video>
 
 
 
@@ -36,7 +36,7 @@ override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "ScanQrCodeDemo"
     self.view.backgroundColor = .white
-    
+
     self.button.setTitle("Scan QR Code", for: .normal)
     self.button.setTitleColor(.black, for: .normal)
     self.button.layer.borderColor = UIColor.lightGray.cgColor
@@ -44,19 +44,19 @@ override func viewDidLoad() {
     self.button.layer.cornerRadius = 5
     self.button.layer.masksToBounds = true
     self.button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
-    
+
     // 给按钮添加点击事件
     self.button.addTarget(self, action: #selector(ViewController.click), for: UIControlEvents.touchUpInside)
-    
+
     self.view.addSubview(self.button)
     self.view.addSubview(self.resultLabel)
-    
+
     // 添加依赖
     self.button.snp.makeConstraints { (make) in
         make.centerX.equalToSuperview()
         make.centerY.equalToSuperview()
     }
-    
+
     self.resultLabel.snp.makeConstraints { (make) in
         make.centerX.equalToSuperview()
         make.top.equalTo(self.button.snp.bottom).offset(20)

@@ -217,7 +217,7 @@ nodemon app.js
 
 访问 `http://localhost:3000/view/`
 
-![](https://tomoya92.github.io/assets/20190311221225.png)
+![](/assets/20190311221225.png)
 
 访问 `http://localhost:3000/index/` 可以看到输出的json
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: swift4 自定义UITableCell 
+title: swift4 自定义UITableCell
 date: 2018-06-09 10:27:00
 categories: swift学习笔记(纯代码)
 tags: swift4 uitableview uitablecell
@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-![](https://tomoya92.github.io/assets/swift-tablecell.png)
+![](/assets/swift-tablecell.png)
 
 
 
@@ -39,15 +39,15 @@ required init?(coder aDecoder: NSCoder) {
 class MenuCell: UITableViewCell {
   var icon = UIImageView()
   var title = UILabel()
-  
+
   lazy var box = UIView()
-  
+
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-    
+
     box.addSubview(icon)
     box.addSubview(title)
-    
+
     self.addSubview(box)
   }
 }
@@ -62,19 +62,19 @@ class MenuCell: UITableViewCell {
 ```swift
 override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
   super.init(style: style, reuseIdentifier: reuseIdentifier)
-  
+
   box.addSubview(icon)
   box.addSubview(title)
-  
+
   self.addSubview(box)
-  
+
   icon.snp.makeConstraints { (make) in
     // 设置icon组件距离box组件左，上各10个距离单位（不太清楚是不是像素），偏移12个距离单位
     make.left.top.equalTo(10).offset(12)
     // 设置icon的宽高各20个单位
     make.width.height.equalTo(20)
   }
-  
+
   title.snp.makeConstraints { (make) in
     // 设置title组件位置从icon组件的右边开始算起，再偏移10个单位
     make.left.equalTo(self.icon.snp.right).offset(10)
@@ -99,7 +99,7 @@ func setValueForCell(menu: MenuModel) {
 
 ```swift
 class ImageUtil {
-  
+
   class func loadImageFromUrl(imageView: UIImageView, url: String) -> UIImageView {
     //定义URL对象
     let url = URL(string: url)
@@ -153,7 +153,7 @@ struct MenuModel {
 
 ## 处理TableView渲染方法
 
-先在在tableView里注册自己定义的 TableCell 
+先在在tableView里注册自己定义的 TableCell
 
 ```swift
 override func viewDidLoad() {
@@ -162,7 +162,7 @@ override func viewDidLoad() {
 
   //注册cell的Identifier，用于渲染cell
   self.tableView.register(MenuCell.self, forCellReuseIdentifier: "cellID")
-  
+
 }
 ```
 

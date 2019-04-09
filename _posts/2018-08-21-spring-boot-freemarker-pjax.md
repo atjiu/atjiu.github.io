@@ -12,7 +12,7 @@ author: 朋也
 
 先看效果图
 
-![](https://tomoya92.github.io/assets/freemarker-pjax.gif)
+![](/assets/freemarker-pjax.gif)
 
 > pjax是啥，自行百度，关于它的兼容性可以看一下我另一篇博客：[https://tomoya92.github.io/2017/04/25/nodejs-pjax/](https://tomoya92.github.io/2017/04/25/nodejs-pjax/)
 
@@ -25,7 +25,7 @@ author: 朋也
 
 使用IDEA创建一个spring-boot项目，只需要 `web` `freemarker` 依赖就够了
 
-引入 `jquery` `jquery.pjax` cdn可以使用 [https://www.bootcdn.cn/](https://www.bootcdn.cn/) 
+引入 `jquery` `jquery.pjax` cdn可以使用 [https://www.bootcdn.cn/](https://www.bootcdn.cn/)
 
 ## 定义controller
 

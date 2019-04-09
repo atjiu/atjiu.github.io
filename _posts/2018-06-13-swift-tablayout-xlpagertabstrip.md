@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-![](https://tomoya92.github.io/assets/swift-tablayout-xlpagertabstrip.gif)
+![](/assets/swift-tablayout-xlpagertabstrip.gif)
 
 
 
@@ -53,10 +53,10 @@ self.settings.style.selectedBarHeight = 2
 // 切换Tab时操作
 changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
     guard changeCurrentIndex == true else { return }
-    
+
     oldCell?.label.textColor = .black
     newCell?.label.textColor = .orange
-    
+
     if animated {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
             newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
@@ -128,13 +128,13 @@ class ViewController: ButtonBarPagerTabStripViewController {
         self.settings.style.buttonBarBackgroundColor = UIColor.white
         self.settings.style.buttonBarItemBackgroundColor = UIColor.white
         self.settings.style.selectedBarHeight = 2
-        
+
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
-            
+
             oldCell?.label.textColor = .black
             newCell?.label.textColor = .orange
-            
+
             if animated {
                 UIView.animate(withDuration: 0.1, animations: { () -> Void in
                     newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
@@ -146,14 +146,14 @@ class ViewController: ButtonBarPagerTabStripViewController {
                 oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             }
         }
-        
+
         super.viewDidLoad()
         self.title = "TabLayout Demo"
         self.view.backgroundColor = .white
         self.navigationController?.navigationBar.isTranslucent = false
-        
+
     }
-    
+
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         return [FirstViewController(), SecondViewController()]
     }
@@ -174,7 +174,7 @@ import XLPagerTabStrip
 import SnapKit
 
 class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewDataSource, UITableViewDelegate {
-    
+
     let data = ["Java", "Spring", "Swift", "MySQL", "MongoDB", "Redis"]
     var tableView: UITableView!
 
@@ -183,25 +183,25 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
 
         tableView = UITableView()
         self.view.addSubview(tableView)
-        
+
         tableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalTo(0)
         }
-        
+
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
+
     }
-    
+
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "FirstVC")
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.row]
@@ -211,7 +211,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
 }
 ```
 
@@ -224,7 +224,7 @@ import SnapKit
 import Kingfisher
 
 class SecondViewController: UIViewController, IndicatorInfoProvider {
-    
+
     let url = "https://www.2ddog.com/wp-content/uploads/2018/06/c68907c2431445211c2cdb28d512dd90.jpg"
 
     override func viewDidLoad() {
@@ -232,19 +232,19 @@ class SecondViewController: UIViewController, IndicatorInfoProvider {
 
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        
+
         self.view.addSubview(imageView)
-        
+
         imageView.snp.makeConstraints { (make) in
             make.left.right.top.equalTo(0)
             make.height.equalTo(200)
         }
-        
+
         imageView.kf.indicatorType = .activity
         imageView.kf.setImage(with: URL(string: url))
-        
+
     }
-    
+
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "SecondVC")
     }
@@ -252,6 +252,6 @@ class SecondViewController: UIViewController, IndicatorInfoProvider {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
 }
 ```

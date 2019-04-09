@@ -14,7 +14,7 @@ author: 朋也
 
 先上图
 
-![](https://tomoya92.github.io/assets/swift-theme.gif)
+![](/assets/swift-theme.gif)
 
 
 

@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-![](https://tomoya92.github.io/assets/QQ20180614-224012.png)
+![](/assets/QQ20180614-224012.png)
 
 
 
@@ -41,7 +41,7 @@ extension CNodeService: TargetType {
     var baseURL: URL {
         return URL(string: "https://cnodejs.org/api/v1")!
     }
-    
+
     // 定义接口请求路径
     var path: String {
         switch self {
@@ -51,17 +51,17 @@ extension CNodeService: TargetType {
             return "/topic/\(id)"
         }
     }
-    
+
     // 接口请求类型，如果接口有post请求，也可以用 swift case 的方式来定义
     var method: Moya.Method {
         return .get
     }
-    
+
     // 接口测试数据，可以不用设置
     var sampleData: Data {
         return Data()
     }
-    
+
     // 创建任务，定义请求方式，参数，参数编码方式
     var task: Task {
         switch self {
@@ -71,12 +71,12 @@ extension CNodeService: TargetType {
             return .requestParameters(parameters: ["id": id], encoding: URLEncoding.default)
         }
     }
-    
+
     // 定义请求头，可以加上数据类型，cookie等信息
     var headers: [String : String]? {
         return ["Content-Type": "application/json"]
     }
-    
+
 }
 ```
 
@@ -86,7 +86,7 @@ extension CNodeService: TargetType {
 
 ```swift
 struct TopicsModel: Decodable {
-    
+
     var success: Bool
     var data: [TopicModel]
 

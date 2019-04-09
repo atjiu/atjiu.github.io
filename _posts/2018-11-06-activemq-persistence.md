@@ -54,13 +54,13 @@ author: 朋也
 
 将mysql-connector-java、commons-dbcp、commons-pool三个jar包拷贝到 ActiveMQ 文件夹下的 `lib` 文件夹内
 
-![](https://tomoya92.github.io/assets/QQ20181106-200540@2x.png)
+![](/assets/QQ20181106-200540@2x.png)
 
 然后再次重启ActiveMQ，如果没有报错，一般就没问题了
 
 打开 mysql 数据库客户端 找到 `test` 库，会发现多了三张表
 
-![](https://tomoya92.github.io/assets/QQ20181106-200859@2x.png)
+![](/assets/QQ20181106-200859@2x.png)
 
 ## 测试
 
@@ -68,6 +68,6 @@ author: 朋也
 
 打开表 `ACTIVEMQ_MSGS` 可以看到已经有100条数据了
 
-![](https://tomoya92.github.io/assets/QQ20181106-201307@2x.png)
+![](/assets/QQ20181106-201307@2x.png)
 
 再次运行 `Consumer` 消费这100条消息，然后再打开表 `ACTIVEMQ_MSGS` 则没有数据了

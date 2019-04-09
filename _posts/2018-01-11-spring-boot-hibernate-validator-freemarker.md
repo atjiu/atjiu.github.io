@@ -15,7 +15,7 @@ author: 朋也
 
 先看看效果
 
-![](https://tomoya92.github.io/assets/hibernate-validator.gif)
+![](/assets/hibernate-validator.gif)
 
 
 
@@ -106,7 +106,7 @@ public class WebController extends WebMvcConfigurerAdapter {
 
 表单页面里用到了spring标签来取验证失败的数据，在spring-boot里想用spring标签可以将 spring.ftl 文件在放在 `resources` 里面，然后在 `application.yml` 里添加上如下配置即可
 
-`spring.ftl`文件路径: `org.springframework.web.servlet.view.freemarker.spring.ftl` 
+`spring.ftl`文件路径: `org.springframework.web.servlet.view.freemarker.spring.ftl`
 
 ```yml
 spring:

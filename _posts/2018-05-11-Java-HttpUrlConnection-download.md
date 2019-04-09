@@ -32,7 +32,7 @@ Map<String, List<String>> headers = connection.getHeaderFields();
 
 对应浏览器里的这部分信息
 
-![image-20180511095647315](https://tomoya92.github.io/assets/image-20180511095647315.png)
+![image-20180511095647315](/assets/image-20180511095647315.png)
 
 ### 拿到文件名
 
@@ -279,7 +279,7 @@ public class Download {
 
 运行效果如下
 
-![image-20180512202850185](https://tomoya92.github.io/assets/image-20180512202850185.png)
+![image-20180512202850185](/assets/image-20180512202850185.png)
 
 ## 多线程下载
 
@@ -513,7 +513,7 @@ public class MultiThreadDownload {
 
 下载效果
 
-![image-20180512202719125](https://tomoya92.github.io/assets/image-20180512202719125.png)
+![image-20180512202719125](/assets/image-20180512202719125.png)
 
 ## 总结
 

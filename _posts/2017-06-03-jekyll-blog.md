@@ -35,11 +35,11 @@ jekyll build
 
 ## 目录介绍
 
-| 名称      | 说明               | 用法                                                                                   |
-|-----------|--------------------|----------------------------------------------------------------------------------------|
-| _layouts  | 布局文件           | 比如博客详情页面，在md文件头部要加上的 layout: post 就是用的 `_layouts/post.html` 页面 |
-| _posts    | 博客原文件目录     | 格式为 markdown 后缀的博客原文件所在目录                                               |
-| _includes | 在页面里引入的页面 | 可以直接使用 include 引用                                                              |
+| 名称        | 说明        | 用法                                                             |
+|-----------|-----------|----------------------------------------------------------------|
+| _layouts  | 布局文件      | 比如博客详情页面，在md文件头部要加上的 layout: post 就是用的 `_layouts/post.html` 页面 |
+| _posts    | 博客原文件目录   | 格式为 markdown 后缀的博客原文件所在目录                                      |
+| _includes | 在页面里引入的页面 | 可以直接使用 include 引用                                              |
 {: .table.table-bordered }
 
 ## 配置文件
@@ -52,11 +52,11 @@ jekyll 默认启动加载 `_config.yml` 文件，在页面里获取配置在 `_c
 
 博客的相关变量取值
 
-| 变量           | 说明                                   |
-|----------------|----------------------------------------|
-| `post.title`   | 博客title                              |
+| 变量             | 说明                        |
+|----------------|---------------------------|
+| `post.title`   | 博客title                   |
 | `post.content` | 博客内容，已经将markdown转成html的内容 |
-| `post.url`     | 博客地址，就是访问详情的地址           |
+| `post.url`     | 博客地址，就是访问详情的地址            |
 {: .table.table-bordered }
 
 ## 博客简介
@@ -76,16 +76,16 @@ paginate: 6
 
 这样在页面里遍历就可以用 `paginator.posts` 来获取分页列表，如下
 
-![](https://tomoya92.github.io/assets/QQ图片20170603152948.png)
+![](/assets/QQ图片20170603152948.png)
 
-|变量                           | 说明|
-|-------------------------------|-----------------|
-|`paginator.previous_page`      | 是否有前一页|
-|`paginator.next_page`          | 是否有上一页|
-|`paginator.page`               | 当前页|
-|`paginator.total_pages`        | 总页数|
-|`paginator.previous_page_path` | 前一页的路径地址|
-|`paginator.next_page_path`     | 后一页的路径地址|
+| 变量                             | 说明       |
+|--------------------------------|----------|
+| `paginator.previous_page`      | 是否有前一页   |
+| `paginator.next_page`          | 是否有上一页   |
+| `paginator.page`               | 当前页      |
+| `paginator.total_pages`        | 总页数      |
+| `paginator.previous_page_path` | 前一页的路径地址 |
+| `paginator.next_page_path`     | 后一页的路径地址 |
 {: .table.table-bordered }
 
 分页地址是 `/page + num` 比如 `/page1` 表示第一页 `/page4` 表示第4页，所以最后一页就是 `/page{{ paginator.total_pages }}`
@@ -96,15 +96,15 @@ paginate: 6
 
 if用法
 
-![](https://tomoya92.github.io/assets/QQ截图20170603153032.png)
+![](/assets/QQ截图20170603153032.png)
 
 for用法
 
-![](https://tomoya92.github.io/assets/QQ图片20170603152948.png)
+![](/assets/QQ图片20170603152948.png)
 
 另外 for 里还可以设置偏移量，类似分页功能
 
-![](https://tomoya92.github.io/assets/QQ截图20170603153010.png)
+![](/assets/QQ截图20170603153010.png)
 
 ## Github Pages托管
 

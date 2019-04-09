@@ -268,7 +268,7 @@ private RuntimeWiring buildWiring() {
 
 推荐安装一个工具 `graphql-playground` 开源地址：[https://github.com/prisma/graphql-playground](https://github.com/prisma/graphql-playground), 安装好后，打开，输入地址：[http://localhost:8080](http://localhost:8080)，就可以进行测试了
 
-![](https://tomoya92.github.io/assets/QQ20190403-152357.png)
+![](/assets/QQ20190403-152357.png)
 
 ## 参考
 

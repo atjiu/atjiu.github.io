@@ -12,7 +12,7 @@ author: 朋也
 
 首先把静态页面写好，建议不要在xcode里写，着实难用，可以用sublime/vscode之类的编辑器来写html，css，js，写好之后，打开xcode，把静态页面文件夹直接拖动到项目里，弹出窗口上选择 `create group`，如下图
 
-![](https://tomoya92.github.io/assets/QQ20181031-103006@2x.png)
+![](/assets/QQ20181031-103006@2x.png)
 
 
 
@@ -20,7 +20,7 @@ author: 朋也
 
 我这的目录结构是这样的
 
-![](https://tomoya92.github.io/assets/QQ20181031103239@2x.png)
+![](/assets/QQ20181031103239@2x.png)
 
 html引入css，js写法如下
 ```html

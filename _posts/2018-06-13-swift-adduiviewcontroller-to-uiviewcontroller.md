@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-![](https://tomoya92.github.io/assets/swift-tablayout-xlpagertabstrip2.gif)
+![](/assets/swift-tablayout-xlpagertabstrip2.gif)
 
 
 
@@ -36,13 +36,13 @@ class TabLayoutViewController: ButtonBarPagerTabStripViewController {
         self.settings.style.buttonBarBackgroundColor = UIColor.white
         self.settings.style.buttonBarItemBackgroundColor = UIColor.white
         self.settings.style.selectedBarHeight = 2
-        
+
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
-            
+
             oldCell?.label.textColor = .black
             newCell?.label.textColor = .orange
-            
+
             if animated {
                 UIView.animate(withDuration: 0.1, animations: { () -> Void in
                     newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
@@ -56,7 +56,7 @@ class TabLayoutViewController: ButtonBarPagerTabStripViewController {
         }
         super.viewDidLoad()
     }
-    
+
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         return [FirstViewController(), SecondViewController()]
     }
@@ -64,7 +64,7 @@ class TabLayoutViewController: ButtonBarPagerTabStripViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
 }
 ```
 
@@ -79,7 +79,7 @@ import SnapKit
 import Kingfisher
 
 class ViewController: UIViewController {
-    
+
     let url = "https://www.2ddog.com/wp-content/uploads/2018/04/cfcd208495d565ef66e7dff9f98764da.jpg"
 
     override func viewDidLoad() {
@@ -87,28 +87,28 @@ class ViewController: UIViewController {
         self.title = "TabLayout Demo"
         self.view.backgroundColor = .white
         self.navigationController?.navigationBar.isTranslucent = false
-        
+
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
         self.view.addSubview(image)
-        
+
         let tabLayout = TabLayoutViewController()
         //将控制器加入到当前控制器里
         self.addChildViewController(tabLayout)
         //将控制器的视图加入到当前控制器的子视图中
         self.view.addSubview(tabLayout.view)
-        
+
         // 添加布局
         image.snp.makeConstraints { (make) in
             make.top.left.right.equalTo(0)
             make.height.equalTo(200)
         }
-        
+
         tabLayout.view.snp.makeConstraints { (make) in
             make.top.equalTo(image.snp.bottom)
             make.left.right.bottom.equalTo(0)
         }
-        
+
         // 加载网络图片
         image.kf.indicatorType = .activity
         image.kf.setImage(with: URL(string: url))

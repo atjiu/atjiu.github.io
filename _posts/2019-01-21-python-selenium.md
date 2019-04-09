@@ -16,7 +16,7 @@ author: 朋也
 
 老规矩，先上图
 
-<video src="https://tomoya92.github.io/assets/selenium-demo.mp4" controls="controls" autoplay="autoplay" style="width: 100%;"></video>
+<video src="/assets/selenium-demo.mp4" controls="controls" autoplay="autoplay" style="width: 100%;"></video>
 
 
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
 selenium里获取元素的方法有很多个，如下
 
-![](https://tomoya92.github.io/assets/QQ20190121-142259.png)
+![](/assets/QQ20190121-142259.png)
 
 我这里主要使用两个方法 `find_element_by_id` `find_element_by_xpath`
 

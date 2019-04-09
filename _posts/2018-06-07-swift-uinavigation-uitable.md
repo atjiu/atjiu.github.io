@@ -1,6 +1,6 @@
 ---
 layout: post
-title: swift4 uinavigation + uitable 整合使用创建列表视图 
+title: swift4 uinavigation + uitable 整合使用创建列表视图
 date: 2018-06-08 09:46:00
 categories: swift学习笔记(纯代码)
 tags: swift4 uinavigation uitableview
@@ -12,7 +12,7 @@ author: 朋也
 
 直接上图
 
-![](https://tomoya92.github.io/assets/swift-uinavigation-uitable.gif)
+![](/assets/swift-uinavigation-uitable.gif)
 
 
 
@@ -28,7 +28,7 @@ author: 朋也
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
   // Override point for customization after application launch.
-  
+
   let main = UINavigationController(rootViewController: MenuViewController())
   self.window?.rootViewController = main
   return true
@@ -41,7 +41,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 ## 创建UITableViewController
 
-想让它渲染数据，要实现两个协议 `UITableViewDelegate` `UITableViewDataSource` 然后必须要实现里面的两个方法 
+想让它渲染数据，要实现两个协议 `UITableViewDelegate` `UITableViewDataSource` 然后必须要实现里面的两个方法
 
 ```swift
 //返回有多少行
@@ -65,23 +65,23 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 let data = ["基本", "物品", "游戏", "农场", "山谷", "环境"]
 
 override func viewDidLoad() {
-  
+
   self.title = "Stardew Valley"
-  
+
   // 设置tableView显示的位置
   let rect = self.view.frame
   tableView = UITableView(frame: rect)
-  
+
   self.tableView.backgroundColor = UIColor.white
-  
+
   tableView.dataSource = self
   tableView.delegate = self
   //将tableView添加到当前视图里
   self.view.addSubview(tableView)
-  
+
   //注册cell的Identifier，用于渲染cell
   self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
-  
+
 }
 ```
 
@@ -112,52 +112,52 @@ import UIKit
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   var tableView: UITableView!
-  
+
   let data = ["基本", "物品", "游戏", "农场", "山谷", "环境"]
-  
+
   override func viewDidLoad() {
-    
+
     self.title = "Stardew Valley"
-    
+
     // 设置tableView显示的位置
     let rect = self.view.frame
     tableView = UITableView(frame: rect)
-    
+
     self.tableView.backgroundColor = UIColor.white
-    
+
     tableView.dataSource = self
     tableView.delegate = self
     //将tableView添加到当前视图里
     self.view.addSubview(tableView)
-    
+
     //注册cell的Identifier，用于渲染cell
     self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
-    
+
   }
-  
+
   //返回有多少行
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return data.count
   }
-  
+
   //渲染cell
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = (tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)) as UITableViewCell
     cell.textLabel?.text = data[indexPath.row]
     return cell
   }
-  
+
   //点击cell跳转新页面
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let secondViewController = SecondMenuViewController()
     secondViewController.params = data[indexPath.row]
     self.navigationController?.pushViewController(secondViewController, animated: true)
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-  
+
 }
 ```
 
@@ -167,15 +167,15 @@ SecondMenuViewController.swift
 import UIKit
 
 class SecondMenuViewController: UIViewController {
-  
+
   var params: String?
-  
+
   override func viewDidLoad() {
     self.title = params
     self.view.backgroundColor = UIColor.white
-    
+
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }

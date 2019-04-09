@@ -22,7 +22,7 @@ author: 朋也
 
 百度，谷歌都行，搜索一些图片，下载下来，放在 `images` 文件夹里，我这里用猫跟狗的图片来训练，我下载了40张图，20张猫，20张狗的图片
 
-![](https://tomoya92.github.io/assets/20180917203510.png)
+![](/assets/20180917203510.png)
 
 ## 标记图片
 
@@ -225,7 +225,7 @@ item {
 
 过程如下, 我的显卡是 gtx960 大概是 1.5s/step
 
-![](https://tomoya92.github.io/assets/20180917223448.png)
+![](/assets/20180917223448.png)
 
 识别过程中，可以查看训练日志等信息，运行命令 `tensorboard --logdir=training/` 然后浏览器运行 `http://localhost:6006` 就可以查看了
 
@@ -245,7 +245,7 @@ python export_inference_graph.py \
 
 再下载几张猫狗的图片，命名为 image{数字}.jpg 放在 `object-detection` 下的 `test_images` 文件夹下
 
-![](https://tomoya92.github.io/assets/20180917234802.png)
+![](/assets/20180917234802.png)
 
 在 `object-detection` 文件夹下运行命令 `jupyter notebook` 在自动打开的浏览器页面里打开 `object_detection_tutorial.ipynb` 文件并进行如下修改
 
@@ -286,7 +286,7 @@ TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(
 
 然后在jupyter里运行这个文件，等待片刻即可看到识别的效果
 
-![](https://tomoya92.github.io/assets/object-detection_test_result.png)
+![](/assets/object-detection_test_result.png)
 
 ## 参考
 

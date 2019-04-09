@@ -14,7 +14,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading1.gif)
+![](/assets/loading1.gif)
 
 源码
 
@@ -62,7 +62,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading2.gif)
+![](/assets/loading2.gif)
 
 源码
 
@@ -121,7 +121,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading3.gif)
+![](/assets/loading3.gif)
 
 源码
 
@@ -196,7 +196,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading4.gif)
+![](/assets/loading4.gif)
 
 源码
 
@@ -263,7 +263,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading5.gif)
+![](/assets/loading5.gif)
 
 源码
 
@@ -309,7 +309,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading6.gif)
+![](/assets/loading6.gif)
 
 源码
 
@@ -375,7 +375,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading7.gif)
+![](/assets/loading7.gif)
 
 源码
 
@@ -437,7 +437,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading8.gif)
+![](/assets/loading8.gif)
 
 源码
 
@@ -586,7 +586,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading9.gif)
+![](/assets/loading9.gif)
 
 源码
 
@@ -674,7 +674,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading10.gif)
+![](/assets/loading10.gif)
 
 源码
 
@@ -837,7 +837,7 @@ author: 朋也
 
 效果图
 
-![](https://tomoya92.github.io/assets/loading11.gif)
+![](/assets/loading11.gif)
 
 源码
 

@@ -11,7 +11,7 @@ author: 朋也
 
 ## 先上图
 
-![](https://tomoya92.github.io/assets/vuejs-vux-refresh-loadmore.gif)
+![](/assets/vuejs-vux-refresh-loadmore.gif)
 
 
 
@@ -26,9 +26,9 @@ author: 朋也
 
 [官方文档地址](https://vux.li/#/zh-CN/components?id=scroller)
 
-打开后会看到一段话 
+打开后会看到一段话
 
-> 该组件已经不再维护，也不建议使用，大部分情况下也不需要用到该组件。 
+> 该组件已经不再维护，也不建议使用，大部分情况下也不需要用到该组件。
 > 建议使用第三方相关组件，相关 issue 将不会处理。
 
 不知道作者为啥不维护了，明明需求挺多的
@@ -36,7 +36,7 @@ author: 朋也
 我没有用demo里的 `LoadMore` 组件，用的是 `Scroller`里自带的 `use-pullup, use-pulldown` 下面是我的配置
 
 ```html
-<!-- 
+<!--
  height: 我用到x-header了，文档里说header高是48px,所以这里设置成-48
  -->
 <scroller use-pullup :pullup-config="pullupDefaultConfig" @on-pullup-loading="loadMore"
@@ -87,10 +87,10 @@ author: 朋也
     },
     methods: {
       refresh() {
-        
+
       },
       loadMore() {
-        
+
       }
     }
   }
@@ -101,7 +101,7 @@ author: 朋也
 
 接口服务用的是mock.js生成的数据，可以看一下这篇博客 [使用mock.js随机数据和使用express输出json接口](https://tomoya92.github.io/2018/01/05/express-mockjs-json/)
 
-安装 axios 
+安装 axios
 
 ```
 yarn add axios
