@@ -72,6 +72,26 @@ public class HelloController implements IController {
 
 ## 创建服务
 
+引入依赖
+
+```xml
+<properties>
+  <undertow.version>2.0.20.Final</undertow.version>
+</properties>
+<dependencies>
+  <dependency>
+    <groupId>io.undertow</groupId>
+    <artifactId>undertow-core</artifactId>
+    <version>${undertow.version}</version>
+  </dependency>
+  <dependency>
+    <groupId>io.undertow</groupId>
+    <artifactId>undertow-servlet</artifactId>
+    <version>${undertow.version}</version>
+  </dependency>
+</dependencies>
+```
+
 下面是undertow官网上的代码
 
 ```java
