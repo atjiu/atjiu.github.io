@@ -70,6 +70,31 @@ public class HelloController implements IController {
 
 原链文接：[https://tomoya92.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/](https://tomoya92.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/)
 
+## 创建代理类
+
+```java
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
+/**
+ * Created by tomoya at 2019/4/9
+ */
+public class DynamicProxy implements InvocationHandler {
+
+  private Object target;
+
+  public DynamicProxy(Object target) {
+    this.target = target;
+  }
+
+  @Override
+  public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    return method.invoke(target, args);
+  }
+
+}
+```
+
 ## 创建服务
 
 引入依赖
