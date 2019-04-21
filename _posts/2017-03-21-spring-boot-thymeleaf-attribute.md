@@ -1,6 +1,6 @@
 ---
 layout: post
-title: thymeleaf模板属性的用法
+title: thymeleaf模板属性的用法(更新:增加了if, each, 取值用法介绍)
 date: 2017-03-09 15:34:20
 categories: spring-boot学习笔记
 tags: thymeleaf attribute
