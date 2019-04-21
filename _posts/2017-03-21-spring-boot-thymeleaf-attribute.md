@@ -31,6 +31,7 @@ public String index(Model model) {
 ```html
 <div th:text="#{name}"></div>
 <div th:text="${name}"></div>
+<div th:text="@{/about}"></div>
 <div>[[${name}]]</div>
 ```
 
@@ -42,6 +43,7 @@ public String index(Model model) {
 
 - #{name} 获取的是国际化的数据
 - ${name} 获取controller里设置在Model里的数据
+- @{/about} 这种用法在下面有介绍,是动态超链接的写法
 - [[${name}]] 与${name}效果一样,只不过这种方式是写在标签内容里的,${name} 是写在标签属性里
 
 ## for循环
