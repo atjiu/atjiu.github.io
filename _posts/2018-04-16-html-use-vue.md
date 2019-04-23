@@ -2,7 +2,7 @@
 layout: post
 title: 在非NodeJS项目里使用Vue
 date: 2018-04-16 16:08:44
-categories: vue.js学习笔记
+categories: javascript学习笔记
 tags: vue.js
 author: 朋也
 ---

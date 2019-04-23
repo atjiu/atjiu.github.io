@@ -2,7 +2,7 @@
 layout: post
 title: Elasticsearch6.5.3 rest-client 用法封装
 date: 2018-12-21 09:15:00
-categories: spring-boot学习笔记
+categories: Elasticsearch学习笔记
 tags: spring-boot elasticsearch
 author: 朋也
 ---

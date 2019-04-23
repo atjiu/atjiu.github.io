@@ -2,7 +2,7 @@
 layout: post
 title: Tampermonkey里自己写脚本，实现破晓电影下载链接显示在页面上方便复制
 date: 2017-03-06 10:54:20
-categories: 脚本
+categories: 杂项
 tags: javascript tampermonkey
 author: 朋也
 ---
@@ -14,7 +14,7 @@ author: 朋也
 
 ## 准备
 
-首先在chrome里装上Tampermonkey插件 [下载地址](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-ntp-icon) 
+首先在chrome里装上Tampermonkey插件 [下载地址](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-ntp-icon)
 
 ![](//ww1.sinaimg.cn/large/ce56395agy1fdcwp5w10zj21ii12ydtr)
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: ElasticSearch Index、Mapping、Search 备忘
+title: Elasticsearch Index、Mapping、Search 备忘
 date: 2018-08-24 10:54:00
-categories: ElasticSearch学习笔记
-tags: ElasticSearch
+categories: Elasticsearch学习笔记
+tags: Elasticsearch
 author: 朋也
 ---
 
@@ -216,12 +216,13 @@ GET /shakespeare/line/_mget
 
 metadata是参数，action是行为，具体如下
 
-| action (行为) | 解释           |
-|:------------|:-------------|
-| create      | 当文档不存在时创建它   |
-| index       | 创建新文档或替换已有文档 |
-| update      | 局部更新文档       |
-| delete      | 删除一个文档       |
+| action (行为)   | 解释             |
+|---------------|----------------|
+| :------------ | :------------- |
+| create        | 当文档不存在时创建它     |
+| index         | 创建新文档或替换已有文档   |
+| update        | 局部更新文档         |
+| delete        | 删除一个文档         |
 {: .table.table-bordered }
 
 范例：
@@ -301,34 +302,36 @@ POST /library/books/1?version=2&version_type=external
 
 ES里可以定义的字段类型
 
-| Type                  | ES Type | Description                                                      |
-|:----------------------|:--------|:-----------------------------------------------------------------|
-| String, Varchar, Text | string  | A text filed: such as a nice text and CODE0011                   |
-| Integer               | integer | An integer(32 bit): such as 1,2,3,4                              |
-| Long                  | long    | A long value(64 bit)                                             |
-| Float                 | float   | A Floating-point number(32 bit): such as 1,2,3,4                 |
-| Double                | double  | A floating-point number(64 bit)                                  |
-| Boolean               | boolean | A Boolean value: such as true, false                             |
-| Date/Datetime         | date    | A date or datetime vaue: such as 2018-08-23, 2018-08-24T14:39:20 |
-| Bytes/Binary          | binary  | This is used for binary data such as a file or stream of bytes   |
+| Type                    | ES Type   | Description                                                        |
+|-------------------------|-----------|--------------------------------------------------------------------|
+| :---------------------- | :-------- | :----------------------------------------------------------------- |
+| String, Varchar, Text   | string    | A text filed: such as a nice text and CODE0011                     |
+| Integer                 | integer   | An integer(32 bit): such as 1,2,3,4                                |
+| Long                    | long      | A long value(64 bit)                                               |
+| Float                   | float     | A Floating-point number(32 bit): such as 1,2,3,4                   |
+| Double                  | double    | A floating-point number(64 bit)                                    |
+| Boolean                 | boolean   | A Boolean value: such as true, false                               |
+| Date/Datetime           | date      | A date or datetime vaue: such as 2018-08-23, 2018-08-24T14:39:20   |
+| Bytes/Binary            | binary    | This is used for binary data such as a file or stream of bytes     |
 {: .table.table-bordered }
 
 映射除了定义字段的类型，还可以给字段添加相关的属性
 
 通用的属性
 
-| 属性            | 描述                                                                                                                                                               | 适用类型                                  |
-| :------         | :-------------------------------------------------------------------------------------                                                                             | :--------------------------------         |
-| store           | 值为：yes或者no 设为yes就是存储，no就是不存储，默认是no                                                                                                            | all                                       |
-| index           | 值为：analyzed, not_analyzed 或者 no. analyzed 索引且分析， not_analyzed索引但不分析, no索引这个字段，这样就搜不到                                                 | string 其它类型只能设为no或者not_analyzed |
-| null_value      | 如果字段是空值，通过它可以设置一个默认值，比如 "null_value": "NA"                                                                                                  | all                                       |
-| boost           | 设置字段的权值，默认是1.0                                                                                                                                          | all                                       |
-| index_analyzer  | 设置一个索引时用的分析器                                                                                                                                           | all                                       |
-| search_analyzer | 设置一个搜索时用的分析器                                                                                                                                           | all                                       |
-| analyzer        | 可以设置索引和搜索时用的分析器，默认下es使用的是standard分析器，除此之外，还可以使用whitespace, simple或english这三种内置的分析器                                  | all                                       |
-| include_in_all  | 默认下es会为每一个文档定义一个特殊的域_all,它的作用就是每一个字段都将被搜索到，如果不想让某个字段被搜索到，那么就在这字段里定义一个include_in_all=false,默认是true | all                                       |
-| index_name      | 定义字段的名称，默认值是字段本身的名字                                                                                                                             | all                                       |
-| norms           | norms的作用是根据各种规范化因素去计算权值(非常耗资源)，这样方便查询，在analyzed定义字段里，值true, not_analyzed是false                                             | all                                       |
+| 属性              | 描述                                                                                                | 适用类型                              |
+|-----------------|---------------------------------------------------------------------------------------------------|-----------------------------------|
+| :------         | :-------------------------------------------------------------------------------------            | :-------------------------------- |
+| store           | 值为：yes或者no 设为yes就是存储，no就是不存储，默认是no                                                                | all                               |
+| index           | 值为：analyzed, not_analyzed 或者 no. analyzed 索引且分析， not_analyzed索引但不分析, no索引这个字段，这样就搜不到              | string 其它类型只能设为no或者not_analyzed   |
+| null_value      | 如果字段是空值，通过它可以设置一个默认值，比如 "null_value": "NA"                                                        | all                               |
+| boost           | 设置字段的权值，默认是1.0                                                                                    | all                               |
+| index_analyzer  | 设置一个索引时用的分析器                                                                                      | all                               |
+| search_analyzer | 设置一个搜索时用的分析器                                                                                      | all                               |
+| analyzer        | 可以设置索引和搜索时用的分析器，默认下es使用的是standard分析器，除此之外，还可以使用whitespace, simple或english这三种内置的分析器                | all                               |
+| include_in_all  | 默认下es会为每一个文档定义一个特殊的域_all,它的作用就是每一个字段都将被搜索到，如果不想让某个字段被搜索到，那么就在这字段里定义一个include_in_all=false,默认是true | all                               |
+| index_name      | 定义字段的名称，默认值是字段本身的名字                                                                               | all                               |
+| norms           | norms的作用是根据各种规范化因素去计算权值(非常耗资源)，这样方便查询，在analyzed定义字段里，值true, not_analyzed是false                    | all                               |
 {: .table.table-bordered }
 
 ## 动态映射
@@ -521,7 +524,7 @@ GET /library/books/_search
 
 match查询可接受文字，数字日期等数据类型
 
-match与term区别，match查询的时候，ES会根据给定的字段提供合适的分析器，而term不会 
+match与term区别，match查询的时候，ES会根据给定的字段提供合适的分析器，而term不会
 
 
 ```sh
@@ -779,7 +782,7 @@ GET /library/books/_search
   "query": {
     "fuzzy_like_this": {
       "fields": ["preview"],
-      "like_text": "open source software", 
+      "like_text": "open source software",
       "min_similarity": 0.5,
       "prefix_length": 0.2
     }
@@ -797,7 +800,7 @@ GET /library/books/_search
   "query": {
     "fuzzy_like_this": {
       "preview": {
-        "like_text": "open source software", 
+        "like_text": "open source software",
         "min_similarity": 0.5,
         "prefix_length": 0.2
       }
@@ -1075,7 +1078,7 @@ GET /store/products/_search
       "filter": {
         "range": {
           "price": {
-            "gt": 20, 
+            "gt": 20,
             "lt": 40
           }
         }

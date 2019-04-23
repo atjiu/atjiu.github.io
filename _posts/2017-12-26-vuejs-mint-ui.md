@@ -1,8 +1,8 @@
 ---
 layout: post
 title: vue.js整合mint-ui里的轮播图
-categories: vue.js学习笔记
-tags: vue.js mint-ui 轮播图
+categories: javascript学习笔记
+tags: vue.js
 author: 朋也
 ---
 

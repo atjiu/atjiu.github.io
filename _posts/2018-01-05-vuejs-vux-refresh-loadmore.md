@@ -1,8 +1,8 @@
 ---
 layout: post
 title: vue.js整合vux里的上拉加载下拉刷新
-categories: vue.js学习笔记
-tags: vue.js vux 上拉加载 下拉刷新
+categories: javascript学习笔记
+tags: vue.js
 author: 朋也
 ---
 

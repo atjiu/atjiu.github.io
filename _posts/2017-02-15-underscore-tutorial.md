@@ -2,8 +2,8 @@
 layout: post
 title: js模板 underscore 简单使用教程
 date: 2017-02-15 10:54:20
-categories: 模板
-tags: javascript underscore template
+categories: javascript学习笔记
+tags: javascript underscore
 author: 朋也
 ---
 
@@ -12,7 +12,7 @@ author: 朋也
 
 ## 获取
 
-- 打开 [bootcdn](//bootcdn.cn) 搜索 underscore 
+- 打开 [bootcdn](//bootcdn.cn) 搜索 underscore
 - [github地址](https://github.com/jashkenas/underscore)
 
 ## 使用
@@ -45,7 +45,7 @@ author: 朋也
 
 
 ```
-result: 
+result:
 
 hello, world
 ```
@@ -93,10 +93,10 @@ hello, world
 ```
 result:
 
-0. tom
-1. jerry
-2. amy
-3. john
+1. tom
+2. jerry
+3. amy
+4. john
 ```
 **if判断**
 
@@ -141,7 +141,7 @@ result:
 ```
 
 ```
-result: 
+result:
 
 0. tom
 2. amy
