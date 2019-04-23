@@ -58,6 +58,8 @@ thymeleaf的layout常用的有两种方式用法
 
 上面例子里用到的是`th:include`, 也就是把定义好的`fragment`引入的意思, 还有一个是`th:replace`, 意思是替换当前页面里的这部分代码, 下面例子说明一下
 
+原链接文：[https://tomoya92.github.io/2017/03/09/thymeleaf-layout/](https://tomoya92.github.io/2017/03/09/thymeleaf-layout/)
+
 ```html
 <html>
   <head>
@@ -130,6 +132,9 @@ thymeleaf的layout常用的有两种方式用法
 }
 ```
 
+接原链文：[https://tomoya92.github.io/2017/03/09/thymeleaf-layout/](https://tomoya92.github.io/2017/03/09/thymeleaf-layout/)
+
+
 ```html
 <header th:fragment="header (tab)">
   <ul>
@@ -146,8 +151,37 @@ thymeleaf的layout常用的有两种方式用法
 <div th:include="components/header :: header(tab='blog')"></div>
 ```
 
-相关链接:
+---
+
+## 更新(上面配置方法失效解决办法)
+
+不清楚是不是thymeleaf版本更新了还是springboot版本更新了的原因, 上面配置方法 `th:fragment` 还是可以用的, 但`layout:decorator` 失效了, 按照上面配置方法, 在写博客的时候是没有问题的, 但现在不行了, 下面说一下更新后的配置方法
+
+环境
+
+- springboot　2.1.4.RELEASE
+- thymeleaf 3.0.11
+
+其它什么都不用动的, 只要在 `pom.xml` 文件里引入一个依赖即可解决失效问题
+
+```xml
+<dependency>
+  <groupId>nz.net.ultraq.thymeleaf</groupId>
+  <artifactId>thymeleaf-layout-dialect</artifactId>
+</dependency>
+```
+
+快来试试吧!
+
+## 总结
+
+上面使用 `th:fragment`的方式来定义 `片段` 然后在其它地方可以通过 `th:include` 或者 `th:insert` 或者 `th:replace` 的方式来引入, 这样可以把页面拆分成若干部分, 可以少写很多重复代码, 挺好用的
+
+**但是** `layout:decorator` 引入的模板就没办法传值了, 这样就导致一个问题, 如果header里要根据 `tab` 来更新选中状态的话, 就只能在 `Controller` 里传到页面上了, 在这一个功能上它没有 `freemarker`　的　`macro` 好用
+
+不过thymeleaf里内置了大量的属性, 会用了也是极其方便的, 看个人爱好了
+
+## 参考
 
 [http://www.thymeleaf.org/doc/articles/layouts.html](http://www.thymeleaf.org/doc/articles/layouts.html)
 
-END
