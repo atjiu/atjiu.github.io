@@ -3,10 +3,10 @@
     <input type="text" id="search_box" class="form-control" placeholder="Search...">
     <span class="glyphicon glyphicon-search form-control-feedback"></span>
   </div>
+  <table class="table table-bordered">
+    <tbody id="search_results" style="background-color: #fff;"></tbody>
+  </table>
 </div>
-<table class="table">
-  <tbody id="search_results"></tbody>
-</table>
 
 <style>
   .content-ul {
@@ -30,7 +30,7 @@
     resultsContainer: document.getElementById('search_results'),
     json: '{{ site.baseurl }}/search_data.json',
     searchResultTemplate: '<tr><td><a href="{url}" title="{desc}">{title}</a></td></tr>',
-    noResultsText: 'No results found',
+    noResultsText: '<tr><td>No results found</td></tr>',
     limit: 10,
     fuzzy: false,
   });
