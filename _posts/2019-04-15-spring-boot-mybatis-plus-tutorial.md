@@ -299,7 +299,7 @@ mybatis我不知道有没有办法解决，但mybatis-plus人家很用心呀，�
 
 ```java
 @Configuration
-@MapperScan("com.example.mybatisplusdemo..mapper")
+@MapperScan("com.example.mybatisplusdemo.mapper")
 public class MybatisPlusConfig {
 
   @Bean("mybatisSqlSession")
