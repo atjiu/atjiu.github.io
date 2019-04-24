@@ -1,0 +1,91 @@
+---
+layout: post
+title: Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动
+date: 2019-04-24 14:00:00
+categories: activiti学习笔记
+tags: activiti
+author: 朋也
+---
+
+* content
+{:toc}
+
+springboot集成非常的简单,基本上不需要做配置, 而且项目启动时自动会部署流程
+
+## 创建项目
+
+依赖如下
+
+
+
+
+
+```xml
+<parent>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-parent</artifactId>
+  <version>2.1.4.RELEASE</version>
+  <relativePath/> <!-- lookup parent from repository -->
+</parent>
+
+<dependencies>
+
+  <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <scope>runtime</scope>
+  </dependency>
+
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.activiti</groupId>
+    <artifactId>activiti-spring-boot-starter-basic</artifactId>
+    <version>6.0.0</version>
+  </dependency>
+
+</dependencies>
+```
+
+**注意这里要用6.0, 如果不写这个版本号的话, springboot会自动下载7.0的activiti, 我在启动的时候报了一个错, jdk1.8没法用, 至少要将jdk升级到9才能用activiti7.0**
+
+原链接文：[https://tomoya92.github.io/2019/04/24/activiti-spring-boot/](https://tomoya92.github.io/2019/04/24/activiti-spring-boot/)
+
+## 修改配置文件
+
+application.yml
+
+```yml
+spring:
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql:///activiti-demo?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+  activiti:
+    database-schema-update: true
+```
+
+另外还要把流程图文件放在 `src/main/resources/processes`下, springboot默认是到这个文件夹里去找流程图进行部署的
+
+而且还要把图片的文件名修改一下, 假如流程图名是 `AskLeave.bpmn` 那么在springboot项目中对应的图片名就应该是 `AskLeave.AskLeave.png`
+
+## 启动异常
+
+这样启动它会报个错, 错误信息 `java.lang.ArrayStoreException: sun.reflect.annotation.TypeNotPresentExceptionProxy`
+
+这个问题当初我找了好久才找到啥问题, 是因为springboot的自动配置把 `SecurityAutoConfiguration` 在项目启动的时候也配置了, 这货会导致报这个错
+
+解决办法是在启动为上的 `@SpringBootApplication(exclude = SecurityAutoConfiguration.class)` 配置不去自动配置即可
+
+再次启动就没有问题了
+
+## 总结
+
+springboot项目启动之后, 流程也就自动部署了, 如果流程在开发中间有变动的话, 再次启动springboot项目的时候, 这个流程会重新部署, 即使定义的流程的名字没变, 它也会重新部署一份, 后面再使用流程定义的Key来启动流程就走的是新的流程了
+
+---
+
+写博客不易，转载请保留原文链接，谢谢!
