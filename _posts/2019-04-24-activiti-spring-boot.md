@@ -82,6 +82,12 @@ spring:
 
 再次启动就没有问题了
 
+---
+
+今天又碰到一个问题, 在启动项目的时候, activiti不自动创建表, 网上找文章发现在数据库连接url后面加上一个参数 `nullCatalogMeansCurrent=true` 然后就好了, 也不知道啥原因
+
+`jdbc:mysql:///activiti-demo?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true`
+
 ## 总结
 
 springboot项目启动之后, 流程也就自动部署了, 如果流程在开发中间有变动的话, 再次启动springboot项目的时候, 这个流程会重新部署, 即使定义的流程的名字没变, 它也会重新部署一份, 后面再使用流程定义的Key来启动流程就走的是新的流程了
