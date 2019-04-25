@@ -23,6 +23,10 @@ author: 朋也
 > evaluates to true, the first one defined in the XML (and only that one!) is selected for continuing the process. If
 > no sequence flow can be selected, an exception will be thrown.
 
+
+
+
+
 翻译过来就是
 
 > 排它网关（也称为XOR网关或更技术的基于数据的排它网关）用于对流程中的决策进行建模。当执行到达此网关时，所有传出序列流都将按定义顺序进行计算。选
@@ -34,11 +38,6 @@ author: 朋也
 > 流。如果多个序列流的条件的计算结果为true，则在XML中定义的第一个条件（并且只有该条件！）已选择继续该进程。如果无法选择序列流，则将引发异常。
 
 说白了就是你传变量,网关帮你决定该走哪条线路, 下面说一下用法
-
-
-
-
-
 
 ## 流程图
 
