@@ -13,21 +13,14 @@ author: 朋也
 官方文档描述
 
 > An exclusive gateway (also called the XOR gateway or more technical the exclusive data-based gateway), is used to
->
 > model a decision in the process. When the execution arrives at this gateway, all outgoing sequence flow are evaluated
->
 > in the order in which they are defined. The sequence flow which condition evaluates to true (or which doesn’t have a
->
 > condition set, conceptually having a 'true' defined on the sequence flow) is selected for continuing the process.
 >
 > Note that the semantics of outgoing sequence flow is different to that of the general case in BPMN 2.0. While in
->
 > general all sequence flow which condition evaluates to true are selected to continue in a parallel way, only one
->
 > sequence flow is selected when using the exclusive gateway. In case multiple sequence flow have a condition that
->
 > evaluates to true, the first one defined in the XML (and only that one!) is selected for continuing the process. If
->
 > no sequence flow can be selected, an exception will be thrown.
 
 翻译过来就是

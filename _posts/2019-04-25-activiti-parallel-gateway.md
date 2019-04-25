@@ -13,9 +13,7 @@ author: 朋也
 先看官网描述
 
 > Gateways can also be used to model concurrency in a process. The most straightforward gateway to introduce
->
 > concurrency in a process model, is the Parallel Gateway, which allows to fork into multiple paths of execution or
->
 > join multiple incoming paths of execution.
 
 翻译过来
