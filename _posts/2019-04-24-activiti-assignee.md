@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Activiti6.0教程(5) - 将任务的受理人配活(变量法, 监听法)
+title: Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)
 date: 2019-04-24 15:17:00
 categories: activiti学习笔记
 tags: activiti
@@ -10,9 +10,9 @@ author: 朋也
 * content
 {:toc}
 
-将受理人配置活了, 就可以在程序里动态的指定了, 比如: 今天部门经理是user1, 明天这个部门经理离职了, 又来了个部门经理是 user11 , 那么流程图中的受理人就要更改了, 如果有配置成活的, 就没问题了
+将代理人配置活了, 就可以在程序里动态的指定了, 比如: 今天部门经理是user1, 明天这个部门经理离职了, 又来了个部门经理是 user11 , 那么流程图中的代理人就要更改了, 如果有配置成活的, 就没问题了
 
-动态指定受理人有两种方式
+动态指定代理人有两种方式
 
 1. 监听的方式
 2. 变量方式
@@ -25,10 +25,10 @@ author: 朋也
 
 **修改流程图**
 
-写一个监听类, 实现 `TaskListener` 接口里的 `notify` 方法, 在这个方法里可以设置下一个受理人是谁
+写一个监听类, 实现 `TaskListener` 接口里的 `notify` 方法, 在这个方法里可以设置下一个代理人是谁
 
 ```java
-// 处理提交请假的受理人设置
+// 处理提交请假的代理人设置
 public class Task1Listener implements TaskListener {
   @Override
   public void notify(DelegateTask delegateTask) {
@@ -38,7 +38,7 @@ public class Task1Listener implements TaskListener {
 ```
 
 ```java
-// 处理部门经理审批的受理人设置
+// 处理部门经理审批的代理人设置
 public class Task2Listener implements TaskListener {
   @Override
   public void notify(DelegateTask delegateTask) {
@@ -48,7 +48,7 @@ public class Task2Listener implements TaskListener {
 ```
 
 ```java
-// 处理总经理审批的受理人设置
+// 处理总经理审批的代理人设置
 public class Task3Listener implements TaskListener {
   @Override
   public void notify(DelegateTask delegateTask) {
@@ -61,13 +61,13 @@ public class Task3Listener implements TaskListener {
 
 ![](/assets/QQ20190424-155049.png)
 
-这样配置好之后, 代码都不用变的, 流程继续执行, 但受理人已经配活了, 我这写了三个监听类来设置受理人, 实际业务中员工一般都有直接领导, 领导也会有上级, 所以这里就不用这样写了, 可以从登录的用户对象里拿到他的上级领导, 然后将上级领导的用户名设置成下一个受理人即可
+这样配置好之后, 代码都不用变的, 流程继续执行, 但代理人已经配活了, 我这写了三个监听类来设置代理人, 实际业务中员工一般都有直接领导, 领导也会有上级, 所以这里就不用这样写了, 可以从登录的用户对象里拿到他的上级领导, 然后将上级领导的用户名设置成下一个代理人即可
 
 ## 变量方式配置
 
 **更改流程图**
 
-activiti里支持表达式 `${}` 来传入一些变量, 先把所有的 `UserTask` 的受理人都改成 `${username}`
+activiti里支持表达式 `${}` 来传入一些变量, 先把所有的 `UserTask` 的代理人都改成 `${username}`
 
 **别忘了把监听配置去掉**
 
@@ -75,14 +75,14 @@ activiti里支持表达式 `${}` 来传入一些变量, 先把所有的 `UserTas
 
 ![](/assets/QQ20190424-152554.png)
 
-**修改受理人处理任务的代码**
+**修改代理人处理任务的代码**
 
 ```java
 @Test
-public void startProcess() { // 启动流程也要指定一下下一个受理人是谁
+public void startProcess() { // 启动流程也要指定一下下一个代理人是谁
   // 创建一个Map存放变量
   Map<String, Object> variables = new HashMap<>();
-  // 设置这个流程的下一个受理人是 user1
+  // 设置这个流程的下一个代理人是 user1
   variables.put("username", "user1");
   // 这次调用的方法是三个参数的, 最后一个是放变量的
   ProcessInstance instance = runtimeService.startProcessInstanceByKey("AskLeave", "1", variables);
@@ -92,7 +92,7 @@ public void startProcess() { // 启动流程也要指定一下下一个受理人
 
 查询个人任务还是之间那个方法
 
-用户处理任务的时候也要指定一下下一个受理人是谁, 代码如下
+用户处理任务的时候也要指定一下下一个代理人是谁, 代码如下
 
 ```java
 @Test
@@ -110,7 +110,7 @@ public void completeTask() {
   taskService.addComment(taskId, processInstanceId, message);
   // 创建一个Map存放变量
   Map<String, Object> variables = new HashMap<>();
-  // 设置这个流程的下一个受理人是 user2
+  // 设置这个流程的下一个代理人是 user2
   variables.put("username", "user2");
   // 处理任务
   taskService.complete(taskId, variables);

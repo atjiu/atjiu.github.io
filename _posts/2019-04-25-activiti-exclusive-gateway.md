@@ -49,7 +49,7 @@ author: 朋也
 
 ![](/assets/QQ20190425-133533.png)
 
-流程图里对应的受理人分别是
+流程图里对应的代理人分别是
 
 - 提交申请    user1
 - 部门经理    user2
@@ -82,7 +82,7 @@ public void queryTask() {
       .list();
   for (Task task : tasks) {
     System.out.println("任务ID: " + task.getId());
-    System.out.println("受理人: " + task.getAssignee());
+    System.out.println("代理人: " + task.getAssignee());
     System.out.println("任务名: " + task.getName());
     System.out.println("-------------------------------");
   }
@@ -105,7 +105,7 @@ public void completeTask() {
 }
 ```
 
-我这测试设置的是4天, 数据库里任务的受理人就到user3了
+我这测试设置的是4天, 数据库里任务的代理人就到user3了
 
 ![](/assets/QQ20190425-134220.png)
 
