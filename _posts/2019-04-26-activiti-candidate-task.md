@@ -68,7 +68,7 @@ public void queryTaskByCandidateUser() {
 
 也可以是候选人自己领取任务, 就是给任务设置一个代理人
 
-原链接文：[https://tomoya92.github.io/2019/04/25/activiti-candidate-task/](https://tomoya92.github.io/2019/04/25/activiti-candidate-task/)
+原链接文：[https://tomoya92.github.io/2019/04/26/activiti-candidate-task/](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
 
 ```java
 @Test
@@ -133,7 +133,7 @@ public void claimTask() {
 
 ## 候选组
 
-先在流程图表里创建好用户, 组, 以及用户与组的关联, 可参见上一篇博客 [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/26/activiti-user-group-membership/)
+先在流程图表里创建好用户, 组, 以及用户与组的关联, 可参见上一篇博客 [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
 
 然后修改流程图
 
@@ -177,7 +177,7 @@ public void claimTask() {
 }
 ```
 
-接原链文：[https://tomoya92.github.io/2019/04/26/activiti-candidate-task/](https://tomoya92.github.io/2019/04/25/activiti-candidate-task/)
+接原链文：[https://tomoya92.github.io/2019/04/26/activiti-candidate-task/](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
 
 **查询组任务**
 
