@@ -41,10 +41,10 @@ animation: name duration timing-function delay iteration-count direction fill-mo
 
 `animate-direction` 取值
 
-| 值                 | 描述            |
-|-------------------|---------------|
-| normal            | 默认值，正常方向      |
-| reverse           | 反向            |
+| 值                | 描述                       |
+|-------------------|----------------------------|
+| normal            | 默认值，正常方向           |
+| reverse           | 反向                       |
 | alternate         | 首先向前播放，然后向后播放 |
 | alternate-reverse | 首先向后播放，然后向前播放 |
 {: .table.table-bordered}
