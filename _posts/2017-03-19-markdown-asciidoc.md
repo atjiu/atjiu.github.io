@@ -10,6 +10,8 @@ author: 朋也
 * content
 {:toc}
 
+> pybbs文档已经完全换成 asciidoc 编写了, 生成的文档风格跟 spring 官网的文档风格一样
+
 最近看spring-projects/spring-boot的源码，里面的README用的是asciidoc语法写的，很好奇就学了一下，下面记录一下跟markdown的区别
 
 ## 标题
@@ -96,7 +98,7 @@ markdown
 asciidoc
 
 ```
-[code,java]
+[source,java]
 ----
 public class Hello {
   public static void main(String[] args) {
@@ -136,6 +138,27 @@ markdown & asciidoc 写法上一样
 2. jetty
 ```
 
+多级列表
+
+markdown
+
+```
+- li
+- li
+    - li
+- li
+```
+
+asciidoc
+
+```
+- li
+- li
+** li # 二级
+*** li # 三级
+- li
+```
+
 ## 表格
 
 markdown
@@ -152,6 +175,33 @@ asciidoc
 |===
 |first|second|third
 |first|second|third
+|===
+
+# 如果中间空一格, 上面那块就会渲染成表头th
+
+|===
+| header1 | header2
+
+| first | second
+| first | second
+|===
 ```
+
+## 警告图标
+
+这个是asciidoc里自带的, markdown里没有这功能
+
+写一段文档, 在文档上面加上 `[WARNING]` 渲染出来的文档就会有一个图标
+
+```
+[WARNING]
+如果要自己打包，可使用命令：mvn clean assembly:assembly 进行打包，不要尝试使用其它方式打包
+```
+
+上面内容在asciidoc渲染出来后, 如下图所示
+
+![](/assets/QQ20190507-104546.png)
+
+这种提示的图标共有 `TIP` `NOTE` `IMPORTANT` `WARNING` `CAUTION` 这么几种
 
 END
