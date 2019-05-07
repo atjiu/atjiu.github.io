@@ -18,7 +18,7 @@ spring官方文档看了多少年, 不知道人家是怎么写出来的, 前一�
 
 给张图先瞅瞅
 
-![](/assets/undertow-snapshot.png)
+![](/assets/undertow-doc-snapshot.png)
 
 
 
