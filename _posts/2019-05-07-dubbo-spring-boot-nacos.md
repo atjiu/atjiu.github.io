@@ -58,6 +58,8 @@ dubbo:
 
 如果是windows平台运行命令 `cmd startup.cmd -m standalone`
 
+启动好之后, 可以通过访问 http://localhost:8848/nacos/index.html 打开管理平台, 用户名密码都是 nacos
+
 ---
 
 最后就可以启动修改好的项目了
