@@ -120,6 +120,7 @@ spring:
     </exclusions>
 </dependency>
 ```
+
 2. 单独引入mybatis依赖, 这样maven就会将单独引入的且指定了版本号的这个版本为主
 ```xml
 <dependency>
