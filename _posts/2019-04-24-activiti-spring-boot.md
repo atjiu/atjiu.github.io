@@ -88,6 +88,51 @@ spring:
 
 `jdbc:mysql:///activiti-demo?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true`
 
+---
+
+正式集成项目的时候, 又出问题了, 报错信息: `Caused by: java.lang.IllegalStateException: No typehandler found for property inTime` 
+
+解决办法: 在pom.xml里加上下面依赖即可
+
+```xml
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis-typehandlers-jsr310</artifactId>
+    <version>1.0.1</version>
+</dependency>
+```
+
+然后重新启动项目, 还是有异常, 只是异常信息变了, 现在长这个样 `Caused by: java.lang.NoSuchFieldError: INSTANCE`
+
+原因是mybatis-plus里引入的mybatis跟activiti里引入的mybatis版本冲突了, 有两种解决办法
+
+1. 排除掉activiti里的mybatis依赖, 为啥要排除activiti里的呢? 因为mybatis-plus里引入的mybatis依赖版本要高些
+```xml
+<dependency>
+    <groupId>org.activiti</groupId>
+    <artifactId>activiti-spring-boot-starter-basic</artifactId>
+    <version>6.0.0</version>
+    <exclusions>
+        <exclusion>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+```
+2. 单独引入mybatis依赖, 这样maven就会将单独引入的且指定了版本号的这个版本为主
+```xml
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis</artifactId>
+    <version>3.5.0</version>
+</dependency>
+```
+
+再启动就没有问题了
+
+PS: 出现这个问题 `Caused by: java.lang.NoSuchFieldError: INSTANCE` 的原因是在项目里使用 `@Select` 来写查询sql了,如果你项目里没有使用mybatis里的这个注解, 就不会出现这个异常
+
 ## 总结
 
 springboot项目启动之后, 流程也就自动部署了, 如果流程在开发中间有变动的话, 再次启动springboot项目的时候, 这个流程会重新部署, 即使定义的流程的名字没变, 它也会重新部署一份, 后面再使用流程定义的Key来启动流程就走的是新的流程了
