@@ -107,6 +107,7 @@ spring:
 原因是mybatis-plus里引入的mybatis跟activiti里引入的mybatis版本冲突了, 有两种解决办法
 
 1. 排除掉activiti里的mybatis依赖, 为啥要排除activiti里的呢? 因为mybatis-plus里引入的mybatis依赖版本要高些
+
 ```xml
 <dependency>
     <groupId>org.activiti</groupId>
@@ -122,6 +123,7 @@ spring:
 ```
 
 2. 单独引入mybatis依赖, 这样maven就会将单独引入的且指定了版本号的这个版本为主
+
 ```xml
 <dependency>
     <groupId>org.mybatis</groupId>
