@@ -4,7 +4,7 @@ title: react-native TabNavigator用法
 categories: react-native学习笔记
 tags: react-native TabNavigator
 author: 朋也
---- 
+---
 
 * content
 {:toc}
@@ -56,7 +56,7 @@ const ITNewsTabNavigator = TabNavigator({
 })
 ```
 
-这样就可以得到一个底部有两栏的一个布局，效果图可见 https://github.com/tomoya92/ITNews-React-Native 
+这样就可以得到一个底部有两栏的一个布局，效果图可见 https://github.com/tomoya92/ITNews-React-Native
 
 **说明：**
 
@@ -64,4 +64,4 @@ const ITNewsTabNavigator = TabNavigator({
 - `swipeEnabled: false,` 允许左右滑动切换视图，iOS上可以，Android不行
 - `animationEnabled: false,` 滑动的时候动画，iOS上可以，Android不行
 
-代码： https://github.com/tomoya92/ITNews-React-Native 
+代码： https://github.com/tomoya92/ITNews-React-Native
