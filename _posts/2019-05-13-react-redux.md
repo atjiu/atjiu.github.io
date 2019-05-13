@@ -12,6 +12,18 @@ author: 朋也
 
 整理了一下react-redux用法, 备忘一下, 用到时看下就集成了, 方便
 
+> redux 里涉及了两个东西, `action` `reduce` , 至于为啥叫这个名字, 我也不知道
+>
+> action 开发业务逻辑的, reduce是管理状态的, 它俩是通过 dispatch 对象联系上的
+>
+> action和reduce开发好之后, 又是通过 react-redux 中的 connect 跟组件关联上的
+>
+> 大致流程就是这样吧, 具体原理我也不知道, 下面介绍用法, 没有原理介绍, 想了解原理的, 可以去github上找redux开源项目看readme了解
+
+**为啥要集成 redux 呢, 好好的 state用的不好么?**
+
+项目大了, 嵌套深了, 通过props传值就会变的很费劲, 如果有redux帮忙管理这些state, 就方便的多了, 其实redux就是解决state存储和在组件间共享的问题(我的理解)
+
 
 
 
