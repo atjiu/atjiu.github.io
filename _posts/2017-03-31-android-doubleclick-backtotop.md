@@ -10,6 +10,14 @@ author: 朋也
 * content
 {:toc}
 
+- [Android组件SwiperRefreshLayout的上拉加载更多实现](https://tomoya92.github.io/2017/03/31/android-swiperrefreshlayout-loadmore/)
+- [Android双击TitleBar回顶部功能实现](https://tomoya92.github.io/2017/03/31/android-doubleclick-backtotop/)
+- [Android万能ListView的BaseAdapter实现](https://tomoya92.github.io/2017/03/31/android-listview-adapter/)
+- [Android-Studio自带小图标Vector用法](https://tomoya92.github.io/2017/04/05/android-vector/)
+- [Android布局实现-ViewPager+Fragment+TabLayout整合](https://tomoya92.github.io/2017/04/05/android-viewpager-fragment-tablayout/)
+- [Android布局实现-BottomNavigationView+ViewPager+Fragment+整合](https://tomoya92.github.io/2017/04/05/android-bottomnavigationview-viewpager-fragment/)
+- [Android万能RecyclerView的Adapter实现（通用类实现，包括分割线，点击事件，点击波纹，上拉加载更多）](https://tomoya92.github.io/2017/04/10/android-recyclerview-adapter/)
+
 偶然发现的这个功能，就给移过来了，整理了一下，也是一个类就实现的，使用很方便
 
 **特别感谢[@TakWolf](https://github.com/TakWolf)大大的开源项目，学了好多Android方面的东西**
@@ -54,7 +62,7 @@ public class DoubleClickBackToContentTopListener implements View.OnClickListener
 ## 使用方法
 
 ```java
-public class CNodeActivity extends Activity implements 
+public class CNodeActivity extends Activity implements
     DoubleClickBackToContentTopListener.IBackToContentTopView {
 
   private Toolbar toolbar;
@@ -71,7 +79,7 @@ public class CNodeActivity extends Activity implements
     toolbar.setOnClickListener(new DoubleClickBackToContentTopListener(this));
 
     listView = (ListView) findViewById(R.id.list_view);
-    
+
     listView.setAdapter(//TODO);
 
     initData();

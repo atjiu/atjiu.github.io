@@ -10,6 +10,14 @@ author: 朋也
 * content
 {:toc}
 
+- [Android组件SwiperRefreshLayout的上拉加载更多实现](https://tomoya92.github.io/2017/03/31/android-swiperrefreshlayout-loadmore/)
+- [Android双击TitleBar回顶部功能实现](https://tomoya92.github.io/2017/03/31/android-doubleclick-backtotop/)
+- [Android万能ListView的BaseAdapter实现](https://tomoya92.github.io/2017/03/31/android-listview-adapter/)
+- [Android-Studio自带小图标Vector用法](https://tomoya92.github.io/2017/04/05/android-vector/)
+- [Android布局实现-ViewPager+Fragment+TabLayout整合](https://tomoya92.github.io/2017/04/05/android-viewpager-fragment-tablayout/)
+- [Android布局实现-BottomNavigationView+ViewPager+Fragment+整合](https://tomoya92.github.io/2017/04/05/android-bottomnavigationview-viewpager-fragment/)
+- [Android万能RecyclerView的Adapter实现（通用类实现，包括分割线，点击事件，点击波纹，上拉加载更多）](https://tomoya92.github.io/2017/04/10/android-recyclerview-adapter/)
+
 android自带的SwiperRefreshLayout布局已经实现了下拉刷新，但为啥不给上拉加载也实现了呢。。
 
 想起了以前用过的APP，发现CNodeMD的原生客户端里有，于是就扣了下代码，下面来分享一下
