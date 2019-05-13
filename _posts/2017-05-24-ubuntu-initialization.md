@@ -262,7 +262,7 @@ sudo cp /usr/share/rime-data/wubi_pinyin.schema.yaml ~/.config/ibus/rime
 
 ```sh
 vim ~/.config/ibus/rime/default.yaml
- 
+
 # 加入wubi_pinyin 选项（或其他）
 schema_list:
    - schema: wubi_pinyin
@@ -332,6 +332,50 @@ sudo apt install -y steam
 ```
 
 装好，登上自己的帐号即可
+
+---
+
+搭建饥荒服务器, 不需要玩家自己机器开启服务
+
+找到饥荒安装目录 `E:\SteamLibrary\steamapps\common\Don't Starve Together\bin` 我这装到E盘了, 根据自己安装目录找一下
+
+在里面创建两个bat文件, 如果是linux就创建两个.sh文件(linux我没有测试, 不确定能否可行)
+
+启动主世界 `start_master.bat`
+
+```bash
+dontstarve_dedicated_server_nullrenderer -console -cluster Cluster_1 -shard Master
+```
+
+启动洞穴 `start_caves.bat`
+
+```bash
+dontstarve_dedicated_server_nullrenderer -console -cluster Cluster_1 -shard Caves
+```
+
+其中 `Cluster_1` 是存档名字
+
+启动这两个bat文件, 会在用户根目录下创建一个存档 `C:\Users\h\Documents\Klei\DoNotStarveTogether`
+
+路径中的 h 是我当前登录的用户名, 根据自己的用户名修改一下即可
+
+然后在steam里创建一个存档, 配置好mod 启动, 存档在这个位置 `C:\Users\h\Documents\Klei\DoNotStarveTogether\366284837\Cluster_1`
+
+上面 366284837 是你的steam帐号的id
+
+找到 Caves 和 Master 两个文件夹里的 `modoverrides.lua` 文件, 拷贝到脚本生成的存档目录中的 Caves 和 Master 两个文件夹里, 再次启动脚本即可
+
+PS: 可以把上面两个脚本合并成一个脚本
+
+```bash
+@echo off
+start /D "E:\SteamLibrary\steamapps\common\Don't Starve Together\bin" start_master.bat
+start /D "E:\SteamLibrary\steamapps\common\Don't Starve Together\bin" start_caves.bat
+```
+
+这样只启动这一个脚本就可以了
+
+---
 
 ### 安装Minecraft
 
