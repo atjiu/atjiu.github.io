@@ -7,6 +7,9 @@ tags: activiti
 author: 朋也
 ---
 
+* content
+{:toc}
+
 - [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://tomoya92.github.io/2019/04/24/activiti-env/)
 - [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/)
 - [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://tomoya92.github.io/2019/04/24/activiti-spring-boot/)
@@ -16,9 +19,6 @@ author: 朋也
 - [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-parallel-gateway/)
 - [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
 - [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
-
-* content
-{:toc}
 
 将代理人配置活了, 就可以在程序里动态的指定了, 比如: 今天部门经理是user1, 明天这个部门经理离职了, 又来了个部门经理是 user11 , 那么流程图中的代理人就要更改了, 如果有配置成活的, 就没问题了
 

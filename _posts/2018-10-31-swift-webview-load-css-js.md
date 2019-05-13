@@ -7,6 +7,9 @@ tags: swift webview
 author: 朋也
 ---
 
+* content
+{:toc}
+
 - [swift4 uinavigation + uitable 整合使用创建列表视图](https://tomoya92.github.io/2018/06/08/swift-uinavigation-uitable/)
 - [swift4 自定义UITableCell](https://tomoya92.github.io/2018/06/09/swfit-uitableview-uitablecell/)
 - [swift4 在tableView渲染之前加上加载动画（菊花，UIActivityIndicatorView）](https://tomoya92.github.io/2018/06/11/swift-tableview-activity-indicator/)
@@ -22,9 +25,6 @@ author: 朋也
 - [swift4 WKWebView使用JS与Swift交互](https://tomoya92.github.io/2018/07/05/swift-webview-javascript/)
 - [swift使用webview加载本地html，html里引入本地的css，js](https://tomoya92.github.io/2018/10/31/swift-webview-load-css-js/)
 - [swift4 App切换主题的实现方法总结](https://tomoya92.github.io/2018/11/09/swift-theme/)
-
-* content
-{:toc}
 
 首先把静态页面写好，建议不要在xcode里写，着实难用，可以用sublime/vscode之类的编辑器来写html，css，js，写好之后，打开xcode，把静态页面文件夹直接拖动到项目里，弹出窗口上选择 `create group`，如下图
 

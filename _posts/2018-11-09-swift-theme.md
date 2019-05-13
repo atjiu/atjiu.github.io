@@ -7,6 +7,9 @@ tags: swift4 theme
 author: 朋也
 ---
 
+* content
+{:toc}
+
 - [swift4 uinavigation + uitable 整合使用创建列表视图](https://tomoya92.github.io/2018/06/08/swift-uinavigation-uitable/)
 - [swift4 自定义UITableCell](https://tomoya92.github.io/2018/06/09/swfit-uitableview-uitablecell/)
 - [swift4 在tableView渲染之前加上加载动画（菊花，UIActivityIndicatorView）](https://tomoya92.github.io/2018/06/11/swift-tableview-activity-indicator/)
@@ -22,9 +25,6 @@ author: 朋也
 - [swift4 WKWebView使用JS与Swift交互](https://tomoya92.github.io/2018/07/05/swift-webview-javascript/)
 - [swift使用webview加载本地html，html里引入本地的css，js](https://tomoya92.github.io/2018/10/31/swift-webview-load-css-js/)
 - [swift4 App切换主题的实现方法总结](https://tomoya92.github.io/2018/11/09/swift-theme/)
-
-* content
-{:toc}
 
 > 声明：本篇博客的代码来自 @Finb 开发的 [V2ex-Swift](https://github.com/Finb/V2ex-Swift) 里的 V2exColor.swift，感谢大大开源这么好用的app
 
