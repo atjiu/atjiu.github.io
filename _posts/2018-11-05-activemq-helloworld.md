@@ -35,11 +35,12 @@ brew install apache-activemq
 activemq console
 ```
 
+
+
+
+windows 平台可以到 http://activemq.apache.org/ 官网下载, 解压后, 运行 `bin/win64/activemq.bat`(如果是32位系统则运行 /bin/win32/activemq.bat文件) 文件即可
+
 浏览器访问 http://localhost:8161/admin/ 用户名密码都是 `admin`
-
-
-
-
 
 ## Java程序调用
 
