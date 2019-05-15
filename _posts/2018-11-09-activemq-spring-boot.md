@@ -37,6 +37,8 @@ author: 朋也
 spring:
   activemq:
     broker-url: tcp://localhost:61616
+    packages:
+      trust-all: true # 如果要传输对象消息, 这个必须要打开, 否则会报错
 ```
 
 spring-boot里也可以进行数据连接池的配置，这个之前几篇博客已经都配置好了，这里就不做配置了
@@ -52,6 +54,11 @@ public class Producer {
   // 发送消息，destination是发送到的队列，message是待发送的消息
   public void sendMessage(Destination destination, String message) {
     jmsTemplate.convertAndSend(destination, message);
+  }
+  
+  // 发送对象消息, 传输的对象一定要序列化
+  public void sendMessage(Destination destination, Serializable obj) {
+    jmsTemplate.convertAndSend(destination, obj);
   }
 
 }
@@ -86,11 +93,26 @@ public class Consumer2 {
 @Component
 public class Consumer3 {
 
+  // 消费对象消息
   @JmsListener(destination = "amq-demo2")
-  public void consumerMessage(String text) {
-    System.out.println("收到来自amq-demo2队列的消息: " + text);
+  public void consumerMessage(ObjectMessage obj) {
+    Item item = (Item) obj.getObject();
+    System.out.println("Consumer2: " + item.toString();
   }
 
+}
+```
+
+创建一个消息对象
+
+```java
+public class Item implements Serializable {
+    private static final long serialVersionUID = -2805516975103385225L;
+
+    private Integer id;
+    private String title;
+    
+    // setter getter
 }
 ```
 
@@ -108,7 +130,13 @@ public class DemoApplicationTests {
     Destination destination = new ActiveMQQueue("amq-demo");
 
     for (int i = 1; i <= 5; i++) {
+      // 发送字符串消息
       producer.sendMessage(destination, "Producer消息" + i);
+      // 发送对象消息
+      // Item item = new Item();
+      // item.setId(i);
+      // item.setTitle("商品 " + i);
+      // producer.sendMessage(destination, item);
     }
   }
 
