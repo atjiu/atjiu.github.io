@@ -60,6 +60,12 @@ author: 朋也
 
 将mysql-connector-java、commons-dbcp、commons-pool三个jar包拷贝到 ActiveMQ 文件夹下的 `lib` 文件夹内
 
+jar包下载地址:
+
+- [mysql-connector-java](https://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.47)
+- [commons-dbcp](https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp/1.4)
+- [commons-pool](https://mvnrepository.com/artifact/commons-pool/commons-pool/1.6)
+
 ![](/assets/QQ20181106-200540@2x.png)
 
 然后再次重启ActiveMQ，如果没有报错，一般就没问题了
