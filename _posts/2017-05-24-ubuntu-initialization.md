@@ -465,3 +465,27 @@ no-osd-bar
 打开设置 -> 详细信息 -> 默认应用程序
 
 把上面装好的网易云音乐，mpv选上默认吧
+
+---
+
+虚拟机安装 ubuntu 增强工具iso挂载不上解决办法
+
+```bash
+sudo apt-get update
+sudo apt-get install virtualbox-guest-additions-iso
+sudo apt-get install virtualbox-guest-utils
+```
+
+**失去菜单怎么找回来**
+
+按右边的 ctrl + c
+
+**不能共享粘贴板?**
+
+关闭虚拟机, 打开设置 -> 存储 -> 使用主机输入输出(I/O)缓存 勾上就可以了
+
+**安装openssh-server让其它机器可以通过ssh连接**
+
+```bash
+sudo apt install openssh-server
+```
