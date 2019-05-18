@@ -194,6 +194,6 @@ public class Message {
 
 ## 参考
 
-源码地址 [pybbs](https://github.com/tomoya92/pybbs)
+源码地址 [https://github.com/tomoya92/pybbs/tree/v3.0](https://github.com/tomoya92/pybbs/tree/v3.0)
 
 - [https://github.com/yidao620c/SpringBootBucket/tree/master/springboot-socketio](https://github.com/yidao620c/SpringBootBucket/tree/master/springboot-socketio)
