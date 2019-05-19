@@ -125,4 +125,14 @@ server {
 1. 如果服务器上80端口被占用了,必须停掉,否则证书生成会失败,强烈建议80端口交给nginx
 2. 在生成证书的时候要停掉nginx(原因就是nginx占用了80端口)
 
+## 删除证书
+
+```bash
+rm -rf /etc/letsencrypt/live/www.example.com/
+rm -rf /etc/letsencrypt/archive/www.example.com/
+rm /etc/letsencrypt/renewal/www.example.com.conf
+```
+
+如果碰到给证书续期失败的时候, 可以尝试删除生成的证书, 然后再次运行上面生成证书的命令获取证书, 就没有问题了
+
 [1]: https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
