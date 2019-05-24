@@ -303,6 +303,16 @@ schema_list:
 
 配置就是填上自己的shadowsocks帐号即可
 
+---
+
+今天又折腾了一个新的代理工具 openvpn， 安装方法如下
+
+```bash
+sudo apt install network-manager-openvpn-gnome openvpn-systemd-resolved
+```
+
+安装完成后， 导入服务端生成好的 xxx.ovpn 文件然后填上用户名密码就可以用了， 测试它是全局代理， 就连终端里都可以用
+
 ### 安装flash-player
 
 虽然firefox禁用了flash，但国内的网站大还都用的是flash，还是要装一下的
