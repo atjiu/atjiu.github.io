@@ -181,7 +181,7 @@ exports.subscription = async (ctx) => {
 
 首先在上面注册时写的`sw.js`文件里实现接收推送消息的代码
 
-原接文链: [https://tomoya92.github.io/2019/05/27/pwa-service-worker/](https://tomoya92.github.io/2019/05/27/pwa-service-worker/)
+原接链文: [https://tomoya92.github.io/2019/05/27/pwa-service-worker/](https://tomoya92.github.io/2019/05/27/pwa-service-worker/)
 
 ```js
 // 接收推送消息事件
