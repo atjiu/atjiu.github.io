@@ -124,7 +124,7 @@ async function send() {
 
 如果是Chrome浏览器，则长下面这个样
 
-```json
+```
 {
   endpoint:
     "https://fcm.googleapis.com/fcm/send/cZdEewi209A:APA91bGo9U4c9ycxJkeIGRlpR-sl0eKafNvtLSVJd_kW--IDe7LY-N-YCsVqC4oLBE1DEKD6JHvVMuNxFq3ANgw9orH1Eo3-JLTRodNyYYn-5Xzz0IM80cfBFuDXWby8gdVudLMb96_j",
@@ -139,7 +139,7 @@ async function send() {
 
 如果是firefox浏览器则长下面这个样
 
-```json
+```
 {
   endpoint:
     "https://updates.push.services.mozilla.com/wpush/v2/gAAAAABc57EZB3ZRqMvOUXfFkXY_CXowfxF45Kr76pyMPTeA6vCgEBWieKYC2dwoqsXRkibhavFh9xJwK1llZwnDfCzGIEiMJxFMgQcHp69meonmL1Wlu8ij_MTwlsf54Y-die8D9wIpMjkjnl9wiWVezcapOFBSRzbBA_nfwUtHpkTBG1w6iXs",
