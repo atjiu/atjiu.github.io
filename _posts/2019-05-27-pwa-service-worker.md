@@ -40,7 +40,7 @@ console.log(vapidKeys);
 
 结果如下
 
-```json
+```
 { publicKey:
    'BK_LXU7DEQ5rAfk8kCNsa-5E9ntYKUoBemBjO-ZaEjpK3PFKCzpUAfYqlk1p2wmbsNBnYSRALpyddMDhHuspPag',
   privateKey: 'bC665pacSeHbHv9iY4H0106oUTJWTTyUAsbwEnXX1Mg' }
