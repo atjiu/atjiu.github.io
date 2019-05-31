@@ -14,6 +14,10 @@ author: 朋也
 
 比如下面这个脚本就是启动pybbs的脚本，加载 prod 配置文件，启动后在后台运行，将日志写在jar包目录下的 log.file 里
 
+
+
+
+
 ```bash
 #!/bin/bash -e
 java -jar pybbs.jar --spring.profiles.active=prod > log.file 2>&1 &
