@@ -623,6 +623,52 @@ module.exports = new GraphQLSchema({
 });
 ```
 
+## 参数非空校验
+
+有些接口的参数是不能为空的，graphql里也可以做校验，用法如下
+
+在`schema/schema.js`里引入 `GraphQLNonNull` 然后在 addAuthor 方法的参数类型上加上这个判断，如下
+
+```js
+const Mutation = new GraphQLObjectType({
+  name: "Mutation",
+  fields: {
+    addAuthor: {
+      type: AuthorType,
+      args: {
+        name: { type: new GraphQLNonNull(GraphQLString) }, // 判断非空
+        age: { type: new GraphQLNonNull(GraphQLInt) } // 判断非空
+      },
+      resolve(parent, args) {
+        let author = new Author({
+          name: args.name,
+          age: args.age
+        });
+        return author.save();
+      }
+    },
+    addBook: {
+      type: AuthorType,
+      args: {
+        name: { type: new GraphQLNonNull(GraphQLString) }, // 判断非空
+        authorId: { type: new GraphQLNonNull(GraphQLString) } // 判断非空
+      },
+      resolve(parent, args) {
+        let book = new Book({
+          name: args.name,
+          authorId: args.authorId
+        });
+        return book.save();
+      }
+    }
+  }
+});
+```
+
+启动服务测试，如果有非空参数在调用的时候没有传，会报错
+
+![](/assets/QQ20190531-142809.png)
+
 ## 参考
 
 - [https://www.youtube.com/watch?v=DU77lbBPfBI&list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f](https://www.youtube.com/watch?v=DU77lbBPfBI&list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f)
