@@ -27,7 +27,7 @@ body {
     // font-family: Zpix;
     // font-family: $font-face;
     padding-bottom: 0.2em;
-    // border-bottom: 1px solid #eaecef;
+    border-bottom: 1px solid #eaecef;
   }
 }
 
@@ -127,7 +127,7 @@ section {
       margin-right: 5px;
 
       .label.label-black {
-        padding: .3em .4em;
+        padding: 0.3em 0.4em;
         background-color: #222;
         margin-right: 3px;
 
@@ -165,9 +165,12 @@ img,
 video {
   max-width: 100%;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
 
   &:before,
   &:after {
