@@ -1,7 +1,7 @@
-// @font-face {
-// font-family: Zpix;
-// src: url("Zpix.ttf");
-// }
+//@font-face {
+//  font-family: Zpix;
+//  src: url("../css/Zpix.ttf");
+//}
 
 // $font-face: Georgia, serif, Microsoft YaHei;
 
@@ -13,7 +13,21 @@
 body {
   font-size: 16px;
   background-color: #ddd;
-  // font-family: $font-face;
+  //font-family: Zpix;
+}
+
+pre {
+  border: 0;
+  padding: 0.3em 0.5em;
+  margin: 0 0 1rem 0;
+  font-size: 85%;
+}
+
+p > code {
+  color: inherit!important;
+  padding: 0.3em 0.5em;
+  margin: 0;
+  font-size: 85%;
 }
 
 // Georgia
@@ -33,6 +47,7 @@ body {
 
 .divide {
   position: relative;
+
   &:after {
     content: " ";
     position: absolute;
@@ -46,19 +61,6 @@ body {
 
 hr {
   margin: 10px 0;
-}
-
-pre {
-  border: 0;
-}
-
-code {
-  color: inherit !important;
-  padding: 0.2em 0.4em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(27, 31, 35, 0.05);
-  border-radius: 3px;
 }
 
 ::selection {
@@ -90,10 +92,12 @@ ol {
 a {
   text-decoration: none;
   color: #2288bb;
+
   &:hover {
     text-decoration: underline;
     color: #33aaff;
   }
+
   &:visited {
     text-decoration: none;
     color: #888888;
@@ -110,13 +114,13 @@ a {
   display: none;
 }
 
-// img,
-// video {
-//   border: 2px solid #dfe0e0;
-//   border-radius: 4px;
-//   max-width: 100%;
-//   cursor: pointer;
-// }
+img,
+video {
+  border: 2px solid #dfe0e0;
+  border-radius: 4px;
+  max-width: 100%;
+  cursor: pointer;
+}
 
 section {
   .post {
@@ -166,11 +170,11 @@ video {
   max-width: 100%;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  0 0 40px rgba(0, 0, 0, 0.1) inset;
   moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  0 0 40px rgba(0, 0, 0, 0.1) inset;
   o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  0 0 40px rgba(0, 0, 0, 0.1) inset;
 
   &:before,
   &:after {
@@ -212,7 +216,9 @@ footer {
   }
 }
 
-.panel.panel-default {
+.card {
+  margin-bottom: 20px;
+
   .table {
     tr {
       td {
@@ -227,17 +233,12 @@ footer {
 }
 
 .table-of-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 30px;
-  padding-right: 15px;
+  padding-right: 10px;
   line-height: 1.7em;
   margin-bottom: 0;
-
-  li:first-child {
-    padding-top: 15px;
-  }
-  li:last-child {
-    padding-bottom: 15px;
-  }
 
   ul {
     padding-left: 15px;
@@ -352,13 +353,13 @@ footer {
     padding-right: 0;
     padding-left: 0;
   }
-  .panel,
+  .card,
   footer,
   .alert {
     border: 0;
     border-radius: 0;
   }
-  .panel {
+  .card {
     margin: 0 0 1px 0;
   }
   .alert {
@@ -378,8 +379,12 @@ footer {
 }
 
 blockquote {
+  padding: 5px;
   border-left: 5px solid #ccc;
   background-color: #eee;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .prev-next {
@@ -389,6 +394,7 @@ blockquote {
 }
 
 .post-edit {
+  display: none;
   width: 100px;
   height: 25px;
   line-height: 25px;

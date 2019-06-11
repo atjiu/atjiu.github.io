@@ -3,7 +3,7 @@ layout: post
 title: Java使用HttpUrlConnection下载网络文件
 date: 2018-05-11 09:47:00
 categories: java学习笔记
-tags: 下载 http
+tags: java
 author: 朋也
 ---
 

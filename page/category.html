@@ -7,8 +7,8 @@ icon: fa fa-th-list
 ---
 <div class="row">
   <div class="col-md-9">
-    <div class="panel panel-default">
-      <div class="panel-body">
+    <div class="card">
+      <div class="card-body">
         <p>共计 {{site.categories.size}} 个分类</p>
         <hr>
         {% for category in site.categories %}
@@ -30,17 +30,17 @@ icon: fa fa-th-list
       </div>
     </div>
   </div>
-  <div class="col-md-3 hidden-sm hidden-xs">
+  <div class="col-md-3 hidden-sm d-none d-sm-block">
     <div class="post-right">
-      <div class="panel panel-default">
-        <div class="panel-heading"><i class="fa fa-th-list"></i> 分类目录</div>
-        <div class="panel-body">
+      <div class="card">
+        <div class="card-header"><i class="fa fa-th-list"></i> 分类目录</div>
+<!--        <div class="card-body">-->
           <ul class="table-of-content">
             {% for category in site.categories %}
               <li><a href="#{{category | first}}">{{category | first}}</a></li>
             {% endfor %}
           </ul>
-        </div>
+<!--        </div>-->
       </div>
     </div>
   </div>

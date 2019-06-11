@@ -4,26 +4,26 @@ layout: default
 <div class="row">
   <div class="col-md-9" style="overflow-x: hidden;">
     <!-- {% include tips.html %} -->
-    <div class="panel panel-default">
+    <div class="card">
       <div class="post-edit">
         <a href="https://github.com/tomoya92/tomoya92.github.io/edit/master/{{page.path}}" target="_blank">编辑</a>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <h3>{{ page.title }}</h3>
         <small>
           <span class="item">
             <i class="fa fa-calendar-check-o"></i> {{page.date | date: '%F'}}
           </span>
           {% if page.author %}
-          <span class="item">
-            <i class="fa fa-user"></i> {{page.author}}
-          </span>
+            <span class="item">
+              <i class="fa fa-user"></i> {{page.author}}
+            </span>
           {% endif %}
           {% if page.categories %}
-          {% include categories.html %}
+            {% include categories.html %}
           {% endif %}
           {% if page.tags %}
-          {% include tags.html %}
+            {% include tags.html %}
           {% endif %}
         </small>
         <hr>
@@ -33,7 +33,7 @@ layout: default
         </div>
       </div>
     </div>
-    <!-- <div class="panel panel-default">
+    <!-- <div class="card">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2721745535033061" data-ad-slot="4871754784"
         data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -55,11 +55,11 @@ layout: default
     </ul>
     {% include comments.html %}
   </div>
-  <div class="col-md-3 hidden-sm hidden-xs">
+  <div class="col-md-3 hidden-sm d-none d-sm-block">
     <div class="post-right">
-      <div class="panel panel-default">
-        <div class="panel-heading"><i class="fa fa-list-ul"></i> 文章目录</div>
-        <div class="panel-body toc">
+      <div class="card">
+        <div class="card-header"><i class="fa fa-list-ul"></i> 文章目录</div>
+        <div class="card-body toc">
         </div>
       </div>
       {% include advertisements.html %}

@@ -18,8 +18,8 @@ layout: default
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     {% for post in paginator.posts %}
-      <div class="panel panel-default">
-        <div class="panel-body">
+      <div class="card">
+        <div class="card-body">
           <h3><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h3>
           <small>
             <span class="item">
@@ -40,7 +40,7 @@ layout: default
           <hr>
           <div class="excerpt">{{ post.excerpt }}</div>
           <div class="text-center">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-default read-more">阅读更多</a>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-light read-more">阅读更多</a>
           </div>
           {% if forloop.last %}
           <hr>
@@ -77,26 +77,26 @@ layout: default
       </div>
     {% endfor %}
   </div>
-  <div class="col-md-3 hidden-sm hidden-xs">
+  <div class="col-md-3 hidden-sm d-none d-sm-block">
     {% include sidebar-search.html %}
-    <div class="panel panel-default">
-      <div class="panel-heading"><i class="fa fa-th-list"></i> 博客分类</div>
-      <table class="table">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-th-list"></i> 博客分类</div>
+      <table class="table" style="margin-bottom: 0;">
         {% for category in site.categories %}
         <tr>
           <td>
             <a href="/category/#{{category | first}}">
               {{category | first}}
-              <span class="badge">{{category | last | size}}</span>
+              <span class="badge badge-info">{{category | last | size}}</span>
             </a>
           </td>
         </tr>
         {% endfor %}
       </table>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading"><i class="fa fa-tags"></i> 博客标签</div>
-      <div class="panel-body tags">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-tags"></i> 博客标签</div>
+      <div class="tags" style="padding: .5rem;">
         {% assign first = site.tags.first %}
         {% assign max = first[1].size %}
         {% assign min = max %}

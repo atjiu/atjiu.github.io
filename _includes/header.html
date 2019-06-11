@@ -1,41 +1,22 @@
-<nav class="navbar navbar-inverse" style="border-radius: 0;" id="top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" style="color: #fff;" href="{{ site.url }}">{{ site.title }}
-        <small>{{ site.description }}</small>
-      </a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li {% if page.url == "/" %} class="active" {% endif %}>
-          <a href="{{site.url}}">
-            <i class="fa fa-home"></i>
-            首页
-          </a>
-        </li>
-        {% for my_page in site.pages %}
-          {% if my_page.type == 'menu' %}
-            <li {% if my_page.url == page.url %} class="active" {% endif %}>
-              <a href="{{ my_page.url | prepend: site.baseurl }}">
-                <span class="{{my_page.icon}}"></span>
-                {{my_page.title}}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-        <li>
-          <a href="https://github.com/tomoya92/tomoya92.github.io/new/master/_posts" target="_blank">
-            <i class="fa fa-pencil-square"></i>
-            创建博客
-          </a>
-        </li>
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 20px;">
+  <div class="container justify-content-between">
+  <a class="navbar-brand" href="{{ site.url }}">{{ site.title }} <small>{{ site.description }}</small></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      {% for my_page in site.pages %}
+        {% if my_page.type == 'menu' %}
+          <li class="nav-item {% if my_page.url == page.url %}active{% endif %}">
+            <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">
+              <!--<span class="{{my_page.icon}}"></span>-->
+              {{my_page.title}}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
   </div>
 </nav>

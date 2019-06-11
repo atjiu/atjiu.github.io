@@ -7,8 +7,8 @@ icon: fa fa-tags
 ---
 <div class="row">
   <div class="col-md-9">
-    <div class="panel panel-default">
-      <div class="panel-body">
+    <div class="card">
+      <div class="card-body">
         <p>共计 {{site.tags.size}} 个标签</p>
         <hr>
         {% for tag in site.tags %}
@@ -30,17 +30,17 @@ icon: fa fa-tags
       </div>
     </div>
   </div>
-  <div class="col-md-3 hidden-sm hidden-xs">
+  <div class="col-md-3 hidden-sm d-none d-sm-block">
     <div class="post-right">
-      <div class="panel panel-default">
-        <div class="panel-heading"><i class="fa fa-tags"></i> 标签目录</div>
-        <div class="panel-body">
+      <div class="card">
+        <div class="card-header"><i class="fa fa-tags"></i> 标签目录</div>
+<!--        <div class="card-body">-->
           <ul class="table-of-content">
             {% for tag in site.tags %}
               <li><a href="#{{tag | first}}">{{tag | first}}</a></li>
             {% endfor %}
           </ul>
-        </div>
+<!--        </div>-->
       </div>
     </div>
   </div>
