@@ -20,7 +20,7 @@ layout: default
     {% for post in paginator.posts %}
       <div class="card">
         <div class="card-body">
-          <h3><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h3>
+          <h4><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h4>
           <small>
             <span class="item">
               <i class="fa fa-calendar-check-o"></i> {{post.date | date: '%F'}}
@@ -40,7 +40,7 @@ layout: default
           <hr>
           <div class="excerpt">{{ post.excerpt }}</div>
           <div class="text-center">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-light read-more">阅读更多</a>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-outline-dark read-more">阅读更多</a>
           </div>
           {% if forloop.last %}
           <hr>
@@ -87,7 +87,7 @@ layout: default
           <td>
             <a href="/category/#{{category | first}}">
               {{category | first}}
-              <span class="badge badge-info">{{category | last | size}}</span>
+              <span class="badge badge-secondary">{{category | last | size}}</span>
             </a>
           </td>
         </tr>
