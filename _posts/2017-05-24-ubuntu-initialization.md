@@ -69,8 +69,6 @@ set wildmenu
 set wildmode=longest:list,full
 ```
 
-参考链接：http://www.ruanyifeng.com/blog/2018/09/vimrc.html
-
 有了这些简单的配置，vim用起来会舒服很多
 
 ### JDK安装
