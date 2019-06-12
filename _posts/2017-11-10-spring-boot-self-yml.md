@@ -1,7 +1,7 @@
 ---
-title: spring-boot开发项目加载自定义的YMAL配置文件
+title: spring-boot开发项目加载自定义的YAML配置文件
 categories: spring-boot学习笔记
-tags: spring-boot YMAL properties
+tags: spring-boot YAML properties
 author: 朋也
 ---
 
