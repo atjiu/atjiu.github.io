@@ -281,6 +281,10 @@ footer {
   }
 }
 
+.navbar {
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 1200px) and (min-width: 770px) {
   .back-to-top {
     left: 50%;
@@ -375,6 +379,9 @@ footer {
   .post-edit {
     display: none;
     // right: -28px!important;
+  }
+  .navbar {
+    margin-bottom: 1px;
   }
 }
 
