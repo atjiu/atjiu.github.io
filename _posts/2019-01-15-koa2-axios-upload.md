@@ -222,6 +222,34 @@ function uploadImage() {
 
 实测，一张8M+图片，压缩上传后，图片大小不到2M，还很清晰
 
+---
+
+2019-06-13 更新
+
+## 使用jquery上传图片
+
+```js
+$("#file").change(function() {
+  var fd = new FormData();
+  // 如果有多张图片一块上传，下面直接使用fd.append()继续追加即可
+  fd.append("file", document.getElementById("file").files[0]);
+  $.post({
+    url: "/uploadAvatar",
+    data: fd,
+    dataType: 'json',
+    processData: false,
+    contentType: false,
+    success: function(data) {
+      if(data.code === 200) {
+        console.log(data);
+      } else {
+        alert(data.description);
+      }
+    }
+  })
+});
+```
+
 ## 参考
 
 - [https://github.com/think2011/localResizeIMG](https://github.com/think2011/localResizeIMG)
