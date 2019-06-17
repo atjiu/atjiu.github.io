@@ -457,6 +457,12 @@ mpv.conf
 save-position-on-quit
 script-opts=osc-layout=topbar
 no-osd-bar
+# 不显示windows边框
+no-border
+# #视频硬件解码API选择（因系统环境、显卡、驱动等差异硬件解码API方式（阅读官方参考手册查询）各有不同，建议实际测试验证后再填入可用API），默认值为 no（使用软件解码），auto 为自动。
+hwdec=auto
+# 加载视频文件的外部字幕文件方式。（fuzzy 加载含有视频文件名的全部字幕文件）
+sub-auto=fuzzy
 ```
 
 安装mpv播放器的插件，我这里安装两个常用的，播放列表和播放缩略图，插件下载地址
