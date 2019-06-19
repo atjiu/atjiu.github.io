@@ -173,7 +173,7 @@ public class TopicController {
 
 ```java
 @SpringBootApplication
-@MapperScan("com.example.mybatisplusdemo..mapper")
+@MapperScan("com.example.mybatisplusdemo.mapper")
 public class MybatisPlusDemoApplication {
 
   public static void main(String[] args) {
