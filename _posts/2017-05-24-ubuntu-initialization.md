@@ -303,6 +303,29 @@ schema_list:
 
 ---
 
+2019-06-20更新，在ubuntu18.04上又装不上了，操作步骤如下
+
+- 安装ppa `sudo add-apt-repository ppa:hzwhuang/ss-qt5`
+- 安装过程会失败，这时候找到系统的软件与更新，点击其它软件，将`bionic`改成`artful`就可以了，下面图片中我已经修改好了
+  ![](/assets/ubuntu-software-update.png)
+- 更新软件源 `sudo apt update`
+- 安装 `sudo apt install shadowsocks-qt5` 会有些慢，如果失败了，重试几次就好
+
+参考：https://fengwenhua.top/2018/11/15/ubuntu18-04%E5%AE%89%E8%A3%85ss-qt5/
+
+另外记录一下ubuntu上安装 shadowsocks 启动失败的解决方案
+
+当使用 `pip install shadowsocks` 安装shadowsocks后，使用 ssserver 或者 sslocal 启动服务会出现 `undefined symbol: EVP_CIPHER_CTX_cleanup` 异常，解决办法如下
+
+- 用vim打开文件：`vim /usr/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py`
+- 跳转到52行（shadowsocks2.8.2版本，其他版本搜索一下cleanup）
+- 将第52行`libcrypto.EVP_CIPHER_CTX_cleanup.argtypes = (c_void_p,)`改为`libcrypto.EVP_CIPHER_CTX_reset.argtypes = (c_void_p,)`
+- 再次搜索cleanup（全文件共2处，此处位于111行），将`libcrypto.EVP_CIPHER_CTX_cleanup(self._ctx)`改为`libcrypto.EVP_CIPHER_CTX_reset(self._ctx)`
+
+参考：https://blog.lyz810.com/article/2016/09/shadowsocks-with-openssl-greater-than-110/
+
+---
+
 今天又折腾了一个新的代理工具 openvpn， 安装方法如下
 
 ```bash
