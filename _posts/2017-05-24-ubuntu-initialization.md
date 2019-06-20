@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ubuntu16.04安装和配置[备忘]
+title: ubuntu16.04/18.04安装和配置[备忘]
 date: 2017-05-24 10:44:11
 categories: 杂项
 tags: ubuntu
@@ -10,7 +10,7 @@ author: 朋也
 * content
 {:toc}
 
-> 本文配置基于ubuntu16.04
+> 本文配置基于ubuntu16.04/18.04
 >
 > 如果 `sudo apt update` 很慢的话，可以用国内的源，比如：[http://mirrors.aliyun.com/](http://mirrors.aliyun.com/)
 
