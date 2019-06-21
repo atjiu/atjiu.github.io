@@ -135,7 +135,14 @@ spring官方文档看了多少年, 不知道人家是怎么写出来的, 前一�
 :Email:     <py2qiuse@gmail.com>
 :Date:      2019
 :Revision:  1.0
-:toc:   left
+:doctype: book
+:revdate: {docdate}
+:sectanchors:
+:xrefstyle: full
+:anchor:
+:toc: left
+:toclevels: 3
+:sectnumlevels: 5
 
 == 简介
 
@@ -181,7 +188,7 @@ include::introduction.asciidoc[tags=main]
     <fileSets>
         <fileSet>
             <directory>target/generated-docs</directory>
-            <outputDirectory/>            
+            <outputDirectory/>
         </fileSet>
         <fileSet>
             <outputDirectory>images</outputDirectory>
