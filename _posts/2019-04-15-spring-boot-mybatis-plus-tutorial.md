@@ -439,6 +439,16 @@ public IPage<Map> selectMapWithPage(Integer pageNo, Integer pageSize) {
 2. 往xml文件里的查询方法里传参数要带上 `@Param("")` 注解，这样mybatis才认，否则会报错
 3. 分页中传的pageNo可以从0或者1开始，查询出的结果是一样的，这一点不像jpa里必须是从0开始才是第一页
 
+## 异常
+
+2019-06-21更新
+
+今天创建了个项目，使用了 mybatis-plus(v3.1.1) 查询数据的时候出了个异常 `Error evaluating expression 'ew.sqlSegment != null and ew.sqlSegment != '' and ew.nonEmptyOfWhere`
+
+原因好像是java的反射出的问题，devtools 也是利用java的反射来实现的热加载，mybatis-plus 里的 lambda 表达式也是用反射来找到属性的值进行sql拼接的，估计是这俩货冲突了，不过挺好奇，项目里还用到了 lombok，就没问题，这。。
+
+解决方法: 把`spring-boot-devtools`这个依赖去掉就可以了
+
 ## 参考
 
 - [https://mp.baomidou.com/](https://mp.baomidou.com/)
