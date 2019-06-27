@@ -344,13 +344,19 @@ sudo apt-get install flashplugin-installer
 
 装好了刷新一下网页就可以用了
 
-### 安装Wechat
+### 安装QQ,Wechat,迅雷
 
-微信没有linux平台下的版本，所以只能用Github上大神开源的了
+这三个软件都没有linux版本的，所以只能借助wine来安装，步骤如下
 
-开源地址：[https://github.com/geeeeeeeeek/electronic-wechat](https://github.com/geeeeeeeeek/electronic-wechat)
+1. 下载wine ubuntu版本然后安装 下载地址：https://github.com/wszqkzqk/deepin-wine-ubuntu/releases
+2. 安装wine，解压，进入wine目录，执行 `sudo sh install.sh`
+3. 下载QQ,Wechat,迅雷，下载地址：http://mirrors.aliyun.com/deepin/pool/non-free/d/
+4. 安装软件 `sudo dpkg -i xx.deb` 即可
 
-安装对着README.md里写的装就可以了
+- Tim: http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.office/
+- QQ: http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.qq.im/
+- 迅雷: http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.thunderspeed/
+- Wechat: http://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/
 
 ### 安装Telegram
 
