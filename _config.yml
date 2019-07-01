@@ -7,7 +7,7 @@ description: 喜欢编码，酷爱动漫
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tomoya92.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 weibo_username: liygheart
-github_username:  tomoya92
+github_username: tomoya92
 
 # 文章目录格式化
 permalink: /:year/:month/:day/:title/
@@ -45,25 +45,18 @@ paginate: 10
 
 # 搜索服务
 algolia:
-  application_id: '36883FPR2D'
-  index_name:     '36883FPR2D'
-  search_only_api_key: '2d40767987f704b3b04b9efce7ff49c8'
+  application_id: "36883FPR2D"
+  index_name: "36883FPR2D"
+  search_only_api_key: "2d40767987f704b3b04b9efce7ff49c8"
 
 # 友情链接
 links:
-  -
-    name: 朋也
+  - name: 朋也
     url: https://yiiu.co/
-  -
-    name: 朋也社区
+  - name: 朋也社区
     url: https://dev.yiiu.co/
-  -
-    name: 开发俱乐部
+  - name: 开发俱乐部
     url: https://17dev.club/
-  -
-    name: Beldon
-    url: http://blog.beldon.me/
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
