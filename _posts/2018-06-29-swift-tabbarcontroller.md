@@ -3,7 +3,7 @@ layout: post
 title: swift4 UITabBarController 简单使用
 date: 2018-06-29 11:30:00
 categories: swift学习笔记(纯代码)
-tags: swift4 tarbarcontroller
+tags: swift4
 author: 朋也
 ---
 

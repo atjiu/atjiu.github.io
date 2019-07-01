@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 在textarea里输入:弹出emoji并选择上屏
-tags: textarea at.js emoji
 categories: javascript学习笔记
+tags: at.js
 author: 朋也
 ---
 

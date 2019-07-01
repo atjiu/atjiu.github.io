@@ -3,7 +3,7 @@ layout: post
 title: mongoose的crud及populate的简单使用
 date: 2016-04-28 15:24:44
 categories: nodejs学习笔记
-tags: nodejs mongoose
+tags: nodejs
 author: 朋也
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: swift4 给项目添加tablayout布局，XLPagerTabStrip用法
 date: 2018-06-13 15:41:00
 categories: swift学习笔记(纯代码)
-tags: swift4 XLPagerTabStrip tablayout
+tags: swift4
 author: 朋也
 ---
 

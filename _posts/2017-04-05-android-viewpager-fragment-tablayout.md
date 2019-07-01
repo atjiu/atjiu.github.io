@@ -3,7 +3,7 @@ layout: post
 title: Android布局实现-ViewPager+Fragment+TabLayout整合
 date: 2017-04-05 14:36:20
 categories: Android学习笔记
-tags: Android ViewPager Fragment TabLayout
+tags: Android
 author: 朋也
 ---
 

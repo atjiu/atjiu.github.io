@@ -3,7 +3,7 @@ layout: post
 title: swift4 侧滑功能（使用DrawerController实现）
 date: 2018-06-29 10:47:00
 categories: swift学习笔记(纯代码)
-tags: swift4 drawercontroller
+tags: swift4
 author: 朋也
 ---
 

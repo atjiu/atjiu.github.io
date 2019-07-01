@@ -3,7 +3,7 @@ layout: post
 title: swift4 自定义UITableCell
 date: 2018-06-09 10:27:00
 categories: swift学习笔记(纯代码)
-tags: swift4 uitableview uitablecell
+tags: swift4
 author: 朋也
 ---
 

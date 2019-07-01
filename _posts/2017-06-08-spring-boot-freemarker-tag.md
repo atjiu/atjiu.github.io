@@ -2,7 +2,7 @@
 layout: post
 title: spring-boot里使用freemarker自定义标签
 categories: spring-boot学习笔记
-tags: spring-boot freemarker tag
+tags: spring-boot
 author: 朋也
 ---
 

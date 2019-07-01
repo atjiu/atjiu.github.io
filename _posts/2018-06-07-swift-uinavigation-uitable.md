@@ -3,7 +3,7 @@ layout: post
 title: swift4 uinavigation + uitable 整合使用创建列表视图
 date: 2018-06-08 09:46:00
 categories: swift学习笔记(纯代码)
-tags: swift4 uinavigation uitableview
+tags: swift4
 author: 朋也
 ---
 

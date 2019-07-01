@@ -3,7 +3,7 @@ layout: post
 title: swift4 App切换主题的实现方法总结
 date: 2018-11-09 10:10:00
 categories: swift学习笔记(纯代码)
-tags: swift4 theme
+tags: swift4
 author: 朋也
 ---
 

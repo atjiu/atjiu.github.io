@@ -2,7 +2,7 @@
 layout: post
 title: react-native ListView组件点击跳转
 categories: react-native学习笔记
-tags: react-native ListView
+tags: react-native
 date: 2017-08-02 10:09:30
 author: 朋也
 ---

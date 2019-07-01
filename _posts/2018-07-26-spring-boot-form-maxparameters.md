@@ -2,7 +2,7 @@
 layout: post
 title: 解决SpringBoot项目里提交表单字段超过1000个异常 The number of parameters exceeded the maximum of 1000
 categories: spring-boot学习笔记
-tags: form max-parameters
+tags: spring-boot
 author: 朋也
 ---
 

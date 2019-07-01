@@ -3,7 +3,7 @@ layout: post
 title: swift4 Moya简单使用，请求接口解析json
 date: 2018-06-14 22:43:00
 categories: swift学习笔记(纯代码)
-tags: swift4 Moya
+tags: swift4
 author: 朋也
 ---
 

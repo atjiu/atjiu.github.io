@@ -3,7 +3,7 @@ layout: post
 title: Ubuntu里开机自启动和定时任务
 date: 2018-10-08 15:01:00
 categories: 杂项
-tags: ubuntu rc.local crontab
+tags: ubuntu crontab
 author: 朋也
 ---
 
@@ -32,7 +32,7 @@ systemctl stop mongod.service
 
 ```sh
 # 比如设置 frp 服务在开机自启动
-# 假设 frp 目录位置在 /opt/frp 
+# 假设 frp 目录位置在 /opt/frp
 
 sudo vim /etc/rc.local
 

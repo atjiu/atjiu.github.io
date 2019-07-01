@@ -3,7 +3,7 @@ layout: post
 title: spring-boot 集成 shiro 自定义密码验证 自定义freemarker标签根据权限渲染不同页面
 date: 2018-12-05 19:11:00
 categories: spring-boot学习笔记
-tags: spring-boot shiro freemarker
+tags: spring-boot shiro
 author: 朋也
 ---
 

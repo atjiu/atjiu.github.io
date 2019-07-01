@@ -16,7 +16,7 @@ $li-a-color: #ff2e88;
 }
 
 ::selection {
-    background: #d3869b;
+  background: #d3869b;
 }
 
 body {
@@ -30,7 +30,7 @@ pre {
   border: 0;
   padding: 0.5em;
   margin: 0 0 1rem 0;
-  font-size: 85%;
+  font-size: 90%;
 }
 
 p > code {
@@ -59,7 +59,7 @@ p > code {
     // font-family: Zpix;
     // font-family: $font-face;
     padding-bottom: 0.2em;
-    border-bottom: 1px solid #eaecef;
+    border-bottom: 1px solid #444;
   }
 }
 
@@ -96,6 +96,7 @@ a {
 
 ul,
 ol {
+  list-style: square;
   padding-left: 30px;
 }
 
@@ -103,6 +104,13 @@ ol {
   display: none;
   margin-bottom: 0;
   border-radius: 0;
+}
+
+.tags {
+  padding: 1rem;
+  a {
+    word-break: break-word;
+  }
 }
 
 .tags-list {
@@ -142,7 +150,7 @@ ol {
 
 img,
 video {
-  border: 2px solid #dfe0e0;
+  // border: 2px solid #444;
   border-radius: 4px;
   max-width: 100%;
   cursor: pointer;
@@ -196,11 +204,11 @@ video {
   max-width: 100%;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-  0 0 40px rgba(0, 0, 0, 0.1) inset;
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
   moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-  0 0 40px rgba(0, 0, 0, 0.1) inset;
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
   o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-  0 0 40px rgba(0, 0, 0, 0.1) inset;
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
 
   &:before,
   &:after {
@@ -221,8 +229,8 @@ video {
 }
 
 footer {
-  border-top: 1px solid $border-color;
-  background-color: $background-color;
+  // border-top: 1px solid $border-color;
+  background-color: #303030;
   padding: 10px 0;
 
   a {
@@ -234,6 +242,9 @@ footer {
       font-size: 18px;
     }
   }
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .navbar {
@@ -243,7 +254,7 @@ footer {
 }
 
 .card {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 
   .table {
     tr {
@@ -261,7 +272,7 @@ footer {
 .table-of-content {
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 30px;
+  padding-left: 38px;
   padding-right: 10px;
   line-height: 1.7em;
   margin-bottom: 0;
@@ -308,8 +319,11 @@ footer {
 }
 
 .navbar {
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 1rem;
+  a:hover {
+    background-color: transparent;
+  }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 770px) {
@@ -416,6 +430,9 @@ blockquote {
   padding: 10px;
   border-left: 5px solid $border-color;
   background-color: $background-color;
+  p {
+    margin-bottom: 0;
+  }
   p:last-child {
     margin-bottom: 0;
   }
@@ -442,35 +459,11 @@ blockquote {
 
 // 搜索框
 #search_box {
-  background-color: transparent;
-  border: 1px solid $border-color;
+  // margin-bottom: 0;
+  background-color: $background-color;
+  border-color: #444;
 
   &:focus {
-    background-color: transparent;
+    background-color: $background-color;
   }
-}
-
-#site_search {
-  .table-bordered {
-    td {
-      border: 1px solid $border-color;
-      border-bottom: 1px solid #b0bec5;
-    }
-    td:last-child {
-      border-top: 0;
-      border-bottom: 1px solid $border-color;
-    }
-  }
-.content-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.content-ul>li {
-  padding: 5px 0;
-  border-bottom: 1px solid $border-color;
-}
-.content-ul>li:last-child {
-  border: 0;
-}
 }

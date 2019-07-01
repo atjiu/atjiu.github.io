@@ -2,7 +2,7 @@
 layout: post
 title: react-native TabNavigator用法
 categories: react-native学习笔记
-tags: react-native TabNavigator
+tags: react-native
 author: 朋也
 ---
 

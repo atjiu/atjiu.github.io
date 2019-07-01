@@ -74,12 +74,12 @@
   color: #fdf4c1;
 }
 .gruvbox-dark .card {
-  border-color: #98971a;
+  /* border-color: #98971a; */
 }
 .gruvbox-dark .card .card-header {
   background-color: transparent;
   color: #fdf4c1;
-  border-bottom: 1px solid #98971a;
+  /* border-bottom: 1px solid #98971a; */
 }
 .gruvbox-dark .btn.btn-ghost.btn-default {
   border-color: #607d8b;

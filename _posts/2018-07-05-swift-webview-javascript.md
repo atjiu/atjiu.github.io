@@ -3,7 +3,7 @@ layout: post
 title: swift4 WKWebView使用JS与Swift交互
 date: 2018-07-05 11:00:00
 categories: swift学习笔记(纯代码)
-tags: swift4 wkwebview javascript
+tags: swift4
 author: 朋也
 ---
 

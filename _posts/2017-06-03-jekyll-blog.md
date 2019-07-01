@@ -2,7 +2,7 @@
 layout: post
 title: 使用jekyll搭建个人博客，托管在github pages上
 categories: 杂项
-tags: jekyll blog github
+tags: jekyll
 author: 朋也
 ---
 

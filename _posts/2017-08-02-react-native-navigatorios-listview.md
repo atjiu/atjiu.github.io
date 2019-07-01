@@ -2,7 +2,7 @@
 layout: post
 title: react-native组件NavigatorIOS与ListView结合使用
 categories: react-native学习笔记
-tags: react-native NavigatorIOS ListView
+tags: react-native
 date: 2017-08-02 09:30:30
 author: 朋也
 ---

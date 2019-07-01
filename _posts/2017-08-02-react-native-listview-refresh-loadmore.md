@@ -2,7 +2,7 @@
 layout: post
 title: react-native ListView下拉刷新上拉加载实现
 categories: react-native学习笔记
-tags: react-native ListView
+tags: react-native
 date: 2017-08-02 14:12:30
 author: 朋也
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Java8里的stream使用总结
 categories: 杂项
-tags: java stream java8
+tags: java
 author: 朋也
 ---
 

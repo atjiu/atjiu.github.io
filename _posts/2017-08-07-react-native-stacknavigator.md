@@ -2,7 +2,7 @@
 layout: post
 title: react-native组件StackNavigator
 categories: react-native学习笔记
-tags: react-native StackNavigator
+tags: react-native
 author: 朋也
 ---
 

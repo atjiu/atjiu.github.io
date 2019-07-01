@@ -3,7 +3,7 @@ layout: post
 title: swift4 在tableView渲染之前加上加载动画（菊花，UIActivityIndicatorView）
 date: 2018-06-11 09:19:00
 categories: swift学习笔记(纯代码)
-tags: swift4 uitableview uiactivityindicatorview
+tags: swift4
 author: 朋也
 ---
 

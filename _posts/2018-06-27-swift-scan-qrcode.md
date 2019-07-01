@@ -3,7 +3,7 @@ layout: post
 title: swift4 扫描二维码（使用scanSwift实现）
 date: 2018-06-27 09:41:00
 categories: swift学习笔记(纯代码)
-tags: swift4 scan qrcode
+tags: swift4
 author: 朋也
 ---
 

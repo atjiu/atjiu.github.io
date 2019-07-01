@@ -81,22 +81,20 @@ layout: default
     {% include sidebar-search.html %}
     <div class="card">
       <div class="card-header"><i class="fa fa-th-list"></i> 博客分类</div>
-      <table class="table" style="margin-bottom: 0;">
+      <ul class="list-group list-group-flush">
         {% for category in site.categories %}
-        <tr>
-          <td>
+          <li class="list-group-item">
             <a href="/category/#{{category | first}}">
               {{category | first}}
-              <span class="badge badge-secondary">{{category | last | size}}</span>
-            </a>
-          </td>
-        </tr>
+            </a>&nbsp;
+            <span class="badge badge-secondary">{{category | last | size}}</span>
+          </li>
         {% endfor %}
-      </table>
+      </ul>
     </div>
     <div class="card">
       <div class="card-header"><i class="fa fa-tags"></i> 博客标签</div>
-      <div class="tags" style="padding: .5rem;">
+      <div class="tags">
         {% assign first = site.tags.first %}
         {% assign max = first[1].size %}
         {% assign min = max %}
@@ -113,11 +111,11 @@ layout: default
           {% assign base = temp | divided_by: 4 %}
           {% assign remain = temp | modulo: 4 %}
           {% if remain == 0 %}
-            {% assign size = base | plus: 10 %}
+            {% assign size = base | plus: 14 %}
           {% elsif remain == 1 or remain == 2 %}
-            {% assign size = base | plus: 10 | append: '.5' %}
+            {% assign size = base | plus: 14 | append: '.5' %}
           {% else %}
-            {% assign size = base | plus: 11 %}
+            {% assign size = base | plus: 14 %}
           {% endif %}
           {% if remain == 0 or remain == 1 %}
             {% assign color = 9 | minus: base %}

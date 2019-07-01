@@ -3,7 +3,7 @@ layout: post
 title: swift4 开发App，适配国际化，多语言支持
 date: 2018-06-20 14:37:00
 categories: swift学习笔记(纯代码)
-tags: swift4 localizable
+tags: swift4
 author: 朋也
 ---
 

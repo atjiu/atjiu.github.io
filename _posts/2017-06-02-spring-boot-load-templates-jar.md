@@ -3,7 +3,7 @@ layout: post
 title: spring-boot项目打jar包运行，加载jar包外部的页面以及静态资源文件
 date: 2017-06-02 08:04:04
 categories: spring-boot学习笔记
-tags: spring-boot templates jar
+tags: spring-boot
 author: 朋也
 ---
 

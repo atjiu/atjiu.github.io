@@ -3,7 +3,7 @@ layout: post
 title: Sequelizejs的CRUD及关联查询 简单操作
 date: 2016-05-04 07:03:33
 categories: nodejs学习笔记
-tags: nodejs sequelizejs
+tags: nodejs
 author: 朋也
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: 使用mock.js随机数据和使用express输出json接口
 categories: 杂项
-tags: express mock.js
+tags: mock.js
 author: 朋也
 ---
 

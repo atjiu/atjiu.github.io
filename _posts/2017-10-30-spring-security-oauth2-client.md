@@ -2,7 +2,7 @@
 layout: post
 title: spring-boot集成spring-security的oauth2实现github登录网站
 categories: spring-boot学习笔记
-tags: spring-boot spring-security oauth2
+tags: spring-boot spring-security
 author: 朋也
 ---
 
@@ -12,7 +12,7 @@ author: 朋也
 > spring-security 里自带了oauth2，正好YIIU里也用到了spring-security做权限部分，那为何不直接集成上第三方登录呢？
 >
 > 然后我开始了折腾
-> 
+>
 > 注意：本篇只折腾了spring-security oauth2的客户端部分，spring-security还可以搭建标准的oauth2服务端
 
 

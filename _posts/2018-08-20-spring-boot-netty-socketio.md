@@ -3,7 +3,7 @@ layout: post
 title: 在spring-boot项目里集成netty-socketio实现服务器给页面推送消息通知
 date: 2018-08-20 16:09:00
 categories: spring-boot学习笔记
-tags: spring-boot netty-socketio socket websocket
+tags: spring-boot
 author: 朋也
 ---
 

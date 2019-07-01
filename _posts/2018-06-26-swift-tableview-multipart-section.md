@@ -3,7 +3,7 @@ layout: post
 title: swift4 UITableView 多个部分(Section)用法，实现一个通讯录
 date: 2018-06-26 15:40:00
 categories: swift学习笔记(纯代码)
-tags: swift4 uitableview
+tags: swift4
 author: 朋也
 ---
 
