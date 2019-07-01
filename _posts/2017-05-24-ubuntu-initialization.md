@@ -473,6 +473,8 @@ UP add volume 5
 DOWN add volume -5
 CTRL+[ add audio-delay -0.100
 CTRL+] add audio-delay 0.100
+[ multiply speed 1/1.25         # 快退，每次0.25
+] multiply speed 1.25           # 快进，每次0.25
 # 回车键
 ENTER cycle fullscreen
 # 小键盘的回车
