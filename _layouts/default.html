@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if site.bing_meta %} <meta name="msvalidate.01" content="{{site.bing_meta}}" /> {% endif %}
   {% seo %}
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="https://bootswatch.com/4/darkly/bootstrap.css" rel="stylesheet">
   <link href="/css/font-awesome.min.css" rel="stylesheet">
   <link href="{{ '/css/main.css' | prepend: site.baseurl }}" rel="stylesheet">
   <script src="/js/jquery.min.js"></script>
@@ -49,7 +50,7 @@
   </script>
 </head>
 
-<body>
+<body class="gruvbox-dark">
   <div class="wrapper">
     <div class="alert alert-warning tip-alert">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

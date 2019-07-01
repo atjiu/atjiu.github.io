@@ -5,29 +5,47 @@
 
 // $font-face: Georgia, serif, Microsoft YaHei;
 
+$background-color: #282828;
+$color: #ebdbb2;
+$border-color: #98971a;
+$li-a-color: #ff2e88;
+
 * {
   word-break: break-word;
   word-wrap: break-word;
 }
 
+::selection {
+    background: #d3869b;
+}
+
 body {
   font-size: 16px;
-  background-color: #272B30;
+  background-color: $background-color;
+  color: $color;
   //font-family: Zpix;
 }
 
 pre {
   border: 0;
-  padding: 0.3em 0.5em;
+  padding: 0.5em;
   margin: 0 0 1rem 0;
   font-size: 85%;
 }
 
 p > code {
-  color: inherit!important;
+  color: $border-color;
   padding: 0.3em 0.5em;
   margin: 0;
   font-size: 85%;
+  &:before {
+    content: "`";
+    display: inline;
+  }
+  &:after {
+    content: "`";
+    display: inline;
+  }
 }
 
 // Georgia
@@ -63,9 +81,17 @@ hr {
   margin: 10px 0;
 }
 
-::selection {
-  background: #222;
-  color: #fff;
+//::selection {
+//  background: #222;
+//  color: #fff;
+//}
+
+a {
+  color: $li-a-color;
+  &:hover {
+    background-color: #ff2e88;
+    color: #fff;
+  }
 }
 
 ul,
@@ -89,20 +115,20 @@ ol {
   }
 }
 
-a {
-  text-decoration: none;
-  color: #2288bb;
+// a {
+//   text-decoration: none;
+//   color: #2288bb;
 
-  &:hover {
-    text-decoration: underline;
-    color: #33aaff;
-  }
+//   &:hover {
+//     text-decoration: underline;
+//     color: #33aaff;
+//   }
 
-  &:visited {
-    text-decoration: none;
-    color: #888888;
-  }
-}
+//   &:visited {
+//     text-decoration: none;
+//     color: #888888;
+//   }
+// }
 
 .excerpt {
   a {
@@ -135,9 +161,9 @@ section {
         background-color: #222;
         margin-right: 3px;
 
-        a {
-          color: #fff;
-        }
+        // a {
+        //   color: #fff;
+        // }
       }
     }
 
@@ -195,8 +221,8 @@ video {
 }
 
 footer {
-  border-top: 1px solid #ddd;
-  background-color: #fff;
+  border-top: 1px solid $border-color;
+  background-color: $background-color;
   padding: 10px 0;
 
   a {
@@ -279,6 +305,11 @@ footer {
   &:hover {
     opacity: 1;
   }
+}
+
+.navbar {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 770px) {
@@ -376,12 +407,15 @@ footer {
     display: none;
     // right: -28px!important;
   }
+  .navbar {
+    margin-bottom: 1px;
+  }
 }
 
 blockquote {
-  padding: 5px;
-  border-left: 5px solid #ccc;
-  background-color: #eee;
+  padding: 10px;
+  border-left: 5px solid $border-color;
+  background-color: $background-color;
   p:last-child {
     margin-bottom: 0;
   }
@@ -394,15 +428,49 @@ blockquote {
 }
 
 .post-edit {
-  display: none;
   width: 100px;
   height: 25px;
   line-height: 25px;
   text-align: center;
   position: absolute;
   top: 10px;
-  right: -20px;
+  right: -28px;
   background-color: #ddd;
   transform: rotate(45deg);
   cursor: pointer;
+}
+
+// 搜索框
+#search_box {
+  background-color: transparent;
+  border: 1px solid $border-color;
+
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+#site_search {
+  .table-bordered {
+    td {
+      border: 1px solid $border-color;
+      border-bottom: 1px solid #b0bec5;
+    }
+    td:last-child {
+      border-top: 0;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+.content-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.content-ul>li {
+  padding: 5px 0;
+  border-bottom: 1px solid $border-color;
+}
+.content-ul>li:last-child {
+  border: 0;
+}
 }
