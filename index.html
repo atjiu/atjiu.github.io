@@ -20,7 +20,7 @@ layout: default
     {% for post in paginator.posts %}
       <div class="card">
         <div class="card-body">
-          <h4><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h4>
+          <h2><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h2>
           <small>
             <span class="item">
               <i class="fa fa-calendar-check-o"></i> {{post.date | date: '%F'}}
