@@ -98,7 +98,7 @@ public class Demo {
 
 drools的文件后缀是 `drl`，在 `src/main/resources` 下创建一个文件夹 `rules` ，然后在这个文件夹里创建一个规则文件 `test-rule.drl`，内容如下
 
-```drl
+```java
 package com.example.demo
 
 import com.example.drools.Demo
@@ -222,7 +222,7 @@ public void test2() {
 
 上面excel里的规则生成的文件内容如下
 
-```drl
+```java
 package com.example.demo;
 //generated from Decision Table
 import com.example.drools.Demo;
