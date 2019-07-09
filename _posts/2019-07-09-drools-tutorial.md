@@ -231,18 +231,18 @@ function int count(Demo $demo) {
 }
 // rule values at A10, header at A5
 rule "条件计算1"
-	when
-		$demo:Demo(a>3,b>4)
-	then
-		$demo.setTotal(count($demo));
+    when
+        $demo:Demo(a>3,b>4)
+    then
+        $demo.setTotal(count($demo));
 end
 
 // rule values at A11, header at A5
 rule "条件计算2"
-	when
-		$demo:Demo(c<3)
-	then
-		$demo.setTotal($demo.getA() + $demo.getB());
+    when
+        $demo:Demo(c<3)
+    then
+        $demo.setTotal($demo.getA() + $demo.getB());
 end
 ```
 
