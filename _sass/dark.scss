@@ -457,6 +457,11 @@ blockquote {
   cursor: pointer;
 }
 
+.read-more {
+  color: $color;
+  border-color: $color;
+}
+
 // 搜索框
 #search_box {
   // margin-bottom: 0;
