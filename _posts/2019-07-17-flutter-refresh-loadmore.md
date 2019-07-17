@@ -248,3 +248,4 @@ class MyHomeWidget2 extends State<MyHomePage> {
 
 - [https://pub.dev/packages/http](https://pub.dev/packages/http)
 - [https://www.youtube.com/watch?v=umIztKrk-AY](https://www.youtube.com/watch?v=umIztKrk-AY)
+- [https://stackoverflow.com/questions/44031454/how-to-show-refreshindicator-intially-while-waiting-data-from-backend-api](https://stackoverflow.com/questions/44031454/how-to-show-refreshindicator-intially-while-waiting-data-from-backend-api)
