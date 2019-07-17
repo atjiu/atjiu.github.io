@@ -29,6 +29,8 @@ author: 朋也
 用法如下
 
 ```dart
+import 'package:flutter/scheduler.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
 
@@ -40,10 +42,16 @@ class MyHomeWidget2 extends State<MyHomePage> {
   int page = 1;
   List data = new List();
   var baseUrl = "https://cnodejs.org/api/v1";
+  GlobalKey<RefreshIndicatorState> _refreshIndicatorKey;
 
   @override
   void initState() {
     super.initState();
+
+    _refreshIndicatorKey = new GlobalKey<RefreshIndicatorState>();
+    // 进入页面立即显示刷新动画
+    SchedulerBinding.instance.addPostFrameCallback((_){  _refreshIndicatorKey.currentState?.show(); } );
+
     this._onRefresh();
   }
 
@@ -145,11 +153,18 @@ class MyHomeWidget2 extends State<MyHomePage> {
   List data = new List();
   var baseUrl = "https://cnodejs.org/api/v1";
 
-  ScrollController _scrollController = new ScrollController();
+  GlobalKey<RefreshIndicatorState> _refreshIndicatorKey;
+  ScrollController _scrollController;
 
   @override
   void initState() {
     super.initState();
+
+    _scrollController = new ScrollController();
+    _refreshIndicatorKey = new GlobalKey<RefreshIndicatorState>();
+    // 进入页面立即显示刷新动画
+    SchedulerBinding.instance.addPostFrameCallback((_){  _refreshIndicatorKey.currentState?.show(); } );
+
     this._onRefresh();
 
     _scrollController.addListener(() {
