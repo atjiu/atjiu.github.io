@@ -142,7 +142,6 @@ class MyHomePage extends StatefulWidget {
 
 class MyHomeWidget2 extends State<MyHomePage> {
   int page = 1;
-  bool isLoadmore = false;
   List data = new List();
   var baseUrl = "https://cnodejs.org/api/v1";
 
@@ -180,7 +179,6 @@ class MyHomeWidget2 extends State<MyHomePage> {
     return _fetchData().then((data) {
       setState((){
         this.data.addAll(data);
-        isLoadmore = false;
       });
     });
   }
