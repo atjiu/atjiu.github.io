@@ -203,12 +203,6 @@ img,
 video {
   max-width: 100%;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
-  moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
-  o-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
 
   &:before,
   &:after {
@@ -220,9 +214,6 @@ video {
     left: 10px;
     right: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-    o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     border-radius: 100px/10px;
     z-index: -1;
   }
