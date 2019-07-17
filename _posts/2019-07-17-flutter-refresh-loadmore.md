@@ -18,8 +18,6 @@ author: 朋也
 
 
 
-用上一
-
 ## 下拉刷新
 
 跟原生开发一样，下拉刷新在flutter里提供的有组件实现 `RefreshIndicator`
