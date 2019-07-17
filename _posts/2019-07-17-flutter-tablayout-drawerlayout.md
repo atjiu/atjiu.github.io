@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Flutter TabLayout 布局用法
+title: Flutter TabLayout 和 DrawerLayout(侧滑) 布局用法
 date: 2019-07-17 14:57:00
 categories: flutter学习笔记
 tags: flutter
@@ -71,6 +71,8 @@ class Third extends StatelessWidget {
 
 }
 ```
+
+文链接原: [https://tomoya92.github.io/2019/07/17/flutter-tablayout-drawerlayout/](https://tomoya92.github.io/2019/07/17/flutter-tablayout-drawerlayout/)
 
 修改 `main.dart` 文件内容，TabLayout布局是个有状态的组件，所以创建组件时要继承 `StatefulWidget` 类
 
@@ -180,6 +182,8 @@ class _MyHomePageState extends State<MyHomePage>
 }
 ```
 
+链接文原: [https://tomoya92.github.io/2019/07/17/flutter-tablayout-drawerlayout/](https://tomoya92.github.io/2019/07/17/flutter-tablayout-drawerlayout/)
+
 ## 底部TabBar
 
 上面定义的是顶部的tabbar，很多app的布局都是底部有见个tabbar，其实底部的定义方法就是将 `appBar` 属性中的 `bottom` 给注释掉，然后在跟 `appBar` 同级的位置定义一个 `bottomNavigationBar` 属性，其 `child` 就是 `TabBar` 组件，tabbar的视图跟上面定义方法是一样的，代码如下
@@ -223,6 +227,33 @@ Widget build(BuildContext context) {
 
 ![](/assets/flutter-tablayout1.gif)
 
+## 侧滑布局
+
+侧滑也是在 `Scaffold` 类中配置的，将 `bottomNavigationBar` 去掉，添加上 `drawer` 属性，这个属性配置的就是侧滑的界面，看下下面代码就明白了
+
+```dart
+drawer: new Drawer(
+  child: new ListView(
+    padding: EdgeInsets.all(0),
+    children: <Widget>[
+      DrawerHeader(
+        decoration: BoxDecoration(gradient: LinearGradient(colors: <Color>[Colors.deepPurple, Colors.purple])),
+        child: Text("hello drawer!", style: TextStyle(color: Colors.white, fontSize: 18.0))
+      ),
+      ListTile(title: Text("分享")),
+      ListTile(title: Text("问答")),
+      ListTile(title: Text("博客")),
+      ListTile(title: Text("招聘")),
+    ],
+  ),
+),
+```
+
+这个布局长这个样
+
+![](/assets/flutter-drawerlayout.gif)
+
 ## 参考
 
 - [https://www.youtube.com/watch?v=3N27mjoBK2k](https://www.youtube.com/watch?v=3N27mjoBK2k)
+- [https://www.youtube.com/watch?v=jDQQM1RfjNc](https://www.youtube.com/watch?v=jDQQM1RfjNc)
