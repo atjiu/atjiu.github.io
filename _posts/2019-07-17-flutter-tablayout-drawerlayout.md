@@ -232,21 +232,51 @@ Widget build(BuildContext context) {
 侧滑也是在 `Scaffold` 类中配置的，将 `bottomNavigationBar` 去掉，添加上 `drawer` 属性，这个属性配置的就是侧滑的界面，看下下面代码就明白了
 
 ```dart
-drawer: new Drawer(
-  child: new ListView(
-    padding: EdgeInsets.all(0),
-    children: <Widget>[
-      DrawerHeader(
-        decoration: BoxDecoration(gradient: LinearGradient(colors: <Color>[Colors.deepPurple, Colors.purple])),
-        child: Text("hello drawer!", style: TextStyle(color: Colors.white, fontSize: 18.0))
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
       ),
-      ListTile(title: Text("分享")),
-      ListTile(title: Text("问答")),
-      ListTile(title: Text("博客")),
-      ListTile(title: Text("招聘")),
-    ],
-  ),
-),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("Flutter Demo"),
+        ),
+        drawer: new Drawer(
+          child: new ListView(
+            padding: EdgeInsets.all(0),
+            children: <Widget>[
+              DrawerHeader(
+                  decoration: BoxDecoration(gradient: LinearGradient(colors: <Color>[Colors.deepPurple, Colors.purple])),
+                  child: Text("hello drawer!", style: TextStyle(color: Colors.white, fontSize: 18.0))
+              ),
+              ListTile(title: Text("分享")),
+              ListTile(title: Text("问答")),
+              ListTile(title: Text("博客")),
+              ListTile(title: Text("招聘")),
+            ],
+          ),
+        ),
+        body: Center(
+          child: Text("hello flutter"),
+        ));
+  }
+}
 ```
 
 这个布局长这个样
