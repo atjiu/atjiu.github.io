@@ -33,7 +33,7 @@ public UndertowEmbeddedServletContainerFactory undertowEmbeddedServletContainerF
 
 ---
 
-今天又碰到一个奇葩的问题，一个表单里提交的有字段，有数组(就是数据格式是一样的，对应到数据库里是多条数据)，当这个数组里有257条时就会出现 `index out of bounds` 这原因是springmvc在处理表单的时候对表单内的数组类型的数据有长度限制，默认是256，当form表单提交的数组长度超过了256，就会出现问题，解决办法是将下面代码拷贝到处理表单的controller里，然后问题就解决了
+今天又碰到一个奇葩的问题，一个表单里提交的有字段，有数组(就是数据格式是一样的，对应到数据库里是多条数据)，当这个数组里有257条时就会出现 `index out of bounds` 这原因是springmvc在处理表单的时候对表单内的数组类型的数据有长度限制，默认是256，当form表单提交的数组长度超过了256，就会出现问题，解决办法是将下面代码拷贝到处理表单的controller里，然后问题就解决了
 
 ```java
 @InitBinder
