@@ -58,13 +58,13 @@ author: 朋也
 
 一次请求的经过，最简单的流程
 
-用户请求(浏览器) -> 外网服务器ip -> 外网服务器上部署的frps -> 内网服务器上部署的frpc -> 内网服务器上部署的服务 
+用户请求(浏览器) -> 外网服务器ip -> 外网服务器上部署的frps -> 内网服务器上部署的frpc -> 内网服务器上部署的服务
 
 请求成功后，响应过程与请求过程相反
 
 这个过程中还可以加上 nginx 来做不同域名共用80端口的转发工作，那样就会变成
 
-用户请求(浏览器) -> 外网服务器ip -> 外网服务器nginx -> 外网服务器上部署的frps -> 内网服务器上部署的frpc -> 内网服务器nginx -> 内网服务器上部署的服务 
+用户请求(浏览器) -> 外网服务器ip -> 外网服务器nginx -> 外网服务器上部署的frps -> 内网服务器上部署的frpc -> 内网服务器nginx -> 内网服务器上部署的服务
 
 好了明白这些了，就可以来做配置了
 
@@ -74,7 +74,7 @@ author: 朋也
 
 我这假设放在 `/opt/frp/` 下，假设外网服务器ip是 `10.10.10.10`, 假设网站域名是 `example.com`
 
-修改 `frps.ini` 
+修改 `frps.ini`
 
 ```
 [common]
@@ -95,13 +95,13 @@ subdomain_host = example.com
 - vhost_http_port frps转发的内网服务的端口
 - subdomain_host 你的域名
 
-然后启动 frps 
+然后启动 frps
 
 ```
 # 给frps附上可执行权限
 sudo chmod +x frps
 # 在后台运行并将日志写入到当前目录下的 log.file 里
-./frps -c frps.ini > log.file 2>&1 & 
+./frps -c frps.ini > log.file 2>&1 &
 ```
 
 ## 配置frpc
@@ -146,7 +146,7 @@ subdomain = blog
 相关配置说明
 
 - server_addr 外网服务器的ip，也就是frps所在服务器的ip
-- server_port frps.ini 上配置的 bind_port 
+- server_port frps.ini 上配置的 bind_port
 - token 必须跟在 `frps.ini` 里配置的 token 一致，否则会导致连不上frps
 - use_encryption 是否使用加密，我这没用，因为我在外网通过nginx配置了https所以内网的服务都是http的
 - use_compression 是否使用压缩，使用了网站响应数据会小一些，网站速度也会更快一些
@@ -158,7 +158,7 @@ subdomain = blog
 # 给frps附上可执行权限
 sudo chmod +x frpc
 # 在后台运行并将日志写入到当前目录下的 log.file 里
-./frpc -c frpc.ini > log.file 2>&1 & 
+./frpc -c frpc.ini > log.file 2>&1 &
 ```
 
 注意：内网服务器上要启动三个web服务，分别端口对应 8080, 8081, 8082
@@ -185,18 +185,18 @@ remote_port = 7001
 
 同样的方法还可以映射游戏，同样的使用 `type = tcp` 把端口改成游戏的端口就可以了，比如Minecraft的端口是25565，是不是相当的方便，快跟小伙伴组队吧
 
-重启 frpc , 然后就可以使用命令 `ssh -p 7001 root@10.10.10.10` 来连接内网的终端了 
+重启 frpc , 然后就可以使用命令 `ssh -p 7001 root@10.10.10.10` 来连接内网的终端了
 
 ## 总结
 
 1. 你可以通过访问 `http://10.10.10.10:7500` 然后输入 `frps.ini` 里配置的 `dashboard_user` `dashboard_pwd` 来查看frp的运行情况
 2. 在启动frpc之前，你要在域名提供商那把域名解析到外网服务器上
 3. 如果ssh映射连接总是超时，要看一下外网服务器是否把7001端口开放了，有可能是外网服务器的防火墙拦住了
-4. 关于nginx配置https，参见：[https://tomoya92.github.io/2016/08/28/letsencrypt-nginx-https/][1]
+4. 关于nginx配置https，参见：[https://blog.yiiu.co/2016/08/28/letsencrypt-nginx-https/][1]
 
 ## 参考
 
 - [https://github.com/fatedier/frp/blob/master/README_zh.md][2]
 
-[1]: https://tomoya92.github.io/2016/08/28/letsencrypt-nginx-https/
+[1]: https://blog.yiiu.co/2016/08/28/letsencrypt-nginx-https/
 [2]: https://github.com/fatedier/frp/blob/master/README_zh.md

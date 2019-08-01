@@ -44,7 +44,7 @@ public class HelloWorldServer {
 
 稍微修改一下 `HttpHandler`
 
-原链接文：[https://tomoya92.github.io/2019/04/11/undertow-form-data-upload/](https://tomoya92.github.io/2019/04/11/undertow-form-data-upload/)
+原链接文：[https://blog.yiiu.co/2019/04/11/undertow-form-data-upload/](https://blog.yiiu.co/2019/04/11/undertow-form-data-upload/)
 
 ```java
 Undertow server = Undertow.builder()

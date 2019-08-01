@@ -70,7 +70,7 @@ xlsx.writeFile(workBook, "./aa.xlsx");
 
 ![](/assets/QQ20190611-112757.png)
 
-文原接链: [https://tomoya92.github.io/2019/06/11/nodejs-xlsx/](https://tomoya92.github.io/2019/06/11/nodejs-xlsx/)
+文原接链: [https://blog.yiiu.co/2019/06/11/nodejs-xlsx/](https://blog.yiiu.co/2019/06/11/nodejs-xlsx/)
 
 ## 读取excel（导入）
 

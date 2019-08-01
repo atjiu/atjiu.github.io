@@ -30,7 +30,7 @@ mongoose.Promise = require('bluebird');
 mongoose.connect("mongodb://localhost/blog");
 //如果数据库有用户名，密码，端口，使用下面方式连接
 //mongoose.connect('mongodb://user:pass@localhost:port/database');
-//对mongodb设置数据库认证的博客可以参照：https://tomoya92.github.io/2017/04/25/nodejs-mongodb-auth/
+//对mongodb设置数据库认证的博客可以参照：https://blog.yiiu.co/2017/04/25/nodejs-mongodb-auth/
 ```
 
 ## 编写schema并exports model

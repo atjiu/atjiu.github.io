@@ -134,7 +134,7 @@ void _showToast(BuildContext _context, String text) {
 }
 ```
 
-链接文原: [https://tomoya92.github.io/2019/07/18/flutter-dialogs/](https://tomoya92.github.io/2019/07/18/flutter-dialogs/)
+链接文原: [https://blog.yiiu.co/2019/07/18/flutter-dialogs/](https://blog.yiiu.co/2019/07/18/flutter-dialogs/)
 
 ## Confirm Dialog
 
@@ -223,7 +223,7 @@ void _showInputDialog(BuildContext _context) {
 
 ## 完整代码
 
-接链文原: [https://tomoya92.github.io/2019/07/18/flutter-dialogs/](https://tomoya92.github.io/2019/07/18/flutter-dialogs/)
+接链文原: [https://blog.yiiu.co/2019/07/18/flutter-dialogs/](https://blog.yiiu.co/2019/07/18/flutter-dialogs/)
 
 ```dart
 import 'package:flutter/material.dart';

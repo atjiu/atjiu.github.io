@@ -42,7 +42,7 @@ h2是一个内在数据库, 一般用来做测试的, 不过数据文件也可�
 </dependency>
 ```
 
-原接文链: [https://tomoya92.github.io/2019/05/16/spring-boot-h2/](https://tomoya92.github.io/2019/05/16/spring-boot-h2/)
+原接文链: [https://blog.yiiu.co/2019/05/16/spring-boot-h2/](https://blog.yiiu.co/2019/05/16/spring-boot-h2/)
 
 ---
 

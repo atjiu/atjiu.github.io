@@ -10,15 +10,15 @@ author: 朋也
 * content
 {:toc}
 
-- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://tomoya92.github.io/2019/04/24/activiti-env/)
-- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/)
-- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://tomoya92.github.io/2019/04/24/activiti-spring-boot/)
-- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/)
-- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://tomoya92.github.io/2019/04/24/activiti-assignee/)
-- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-exclusive-gateway/)
-- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-parallel-gateway/)
-- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
-- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
+- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://blog.yiiu.co/2019/04/24/activiti-env/)
+- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://blog.yiiu.co/2019/04/24/activiti-deploy-start-table/)
+- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://blog.yiiu.co/2019/04/24/activiti-spring-boot/)
+- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://blog.yiiu.co/2019/04/24/activiti-query-complete-task/)
+- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://blog.yiiu.co/2019/04/24/activiti-assignee/)
+- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://blog.yiiu.co/2019/04/25/activiti-exclusive-gateway/)
+- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://blog.yiiu.co/2019/04/25/activiti-parallel-gateway/)
+- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://blog.yiiu.co/2019/04/25/activiti-user-group-membership/)
+- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://blog.yiiu.co/2019/04/26/activiti-candidate-task/)
 
 假如现在有这么个需求: 一个电商平台, 每天订单量都很大, 在处理订单的时候分配了user1, user2, user3三个员工, 这时候就可以用上这个候选人功能了, 在一个任务里配置上可能会参与这个任务的候选人, 这样候选人员工就可以通过查询候选人任务知道自己可以领取哪些任务, 从而达到员工自动领取任务的功能
 
@@ -78,7 +78,7 @@ public void queryTaskByCandidateUser() {
 
 也可以是候选人自己领取任务, 就是给任务设置一个代理人
 
-原链接文：[https://tomoya92.github.io/2019/04/26/activiti-candidate-task/](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
+原链接文：[https://blog.yiiu.co/2019/04/26/activiti-candidate-task/](https://blog.yiiu.co/2019/04/26/activiti-candidate-task/)
 
 ```java
 @Test
@@ -143,7 +143,7 @@ public void claimTask() {
 
 ## 候选组
 
-先在流程图表里创建好用户, 组, 以及用户与组的关联, 可参见上一篇博客 [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
+先在流程图表里创建好用户, 组, 以及用户与组的关联, 可参见上一篇博客 [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://blog.yiiu.co/2019/04/25/activiti-user-group-membership/)
 
 然后修改流程图
 
@@ -187,7 +187,7 @@ public void claimTask() {
 }
 ```
 
-接原链文：[https://tomoya92.github.io/2019/04/26/activiti-candidate-task/](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
+接原链文：[https://blog.yiiu.co/2019/04/26/activiti-candidate-task/](https://blog.yiiu.co/2019/04/26/activiti-candidate-task/)
 
 **查询组任务**
 

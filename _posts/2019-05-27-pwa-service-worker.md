@@ -114,7 +114,7 @@ async function send() {
 }
 ```
 
-原接文链: [https://tomoya92.github.io/2019/05/27/pwa-service-worker/](https://tomoya92.github.io/2019/05/27/pwa-service-worker/)
+原接文链: [https://blog.yiiu.co/2019/05/27/pwa-service-worker/](https://blog.yiiu.co/2019/05/27/pwa-service-worker/)
 
 ## 服务端响应
 
@@ -181,7 +181,7 @@ exports.subscription = async (ctx) => {
 
 首先在上面注册时写的`sw.js`文件里实现接收推送消息的代码
 
-原接链文: [https://tomoya92.github.io/2019/05/27/pwa-service-worker/](https://tomoya92.github.io/2019/05/27/pwa-service-worker/)
+原接链文: [https://blog.yiiu.co/2019/05/27/pwa-service-worker/](https://blog.yiiu.co/2019/05/27/pwa-service-worker/)
 
 ```js
 // 接收推送消息事件
@@ -259,7 +259,7 @@ const payload = {
   title: "测试推送",
   body: "推送内容，一串链接，点击打开",
   icon: "https://yiiu.co/favicon.ico",
-  data: {url: "https://tomoya92.github.io/pybbs/", text: 'hello world'},
+  data: {url: "https://blog.yiiu.co/pybbs/", text: 'hello world'},
 };
 
 // 发送通知

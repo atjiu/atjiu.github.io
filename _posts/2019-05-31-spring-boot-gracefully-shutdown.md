@@ -38,7 +38,7 @@ ps -ef | grep pybbs.jar | grep -v grep | cut -c 9-15 | xargs kill -s 9
 
 **不过这货也有个不好的地方，当项目中用到了定时器，就有可能会出现杀不掉的现象，到时还是要用上-9参数**
 
-原接文链: [https://tomoya92.github.io/2019/05/31/spring-boot-gracefully-shutdown/](https://tomoya92.github.io/2019/05/31/spring-boot-gracefully-shutdown/)
+原接文链: [https://blog.yiiu.co/2019/05/31/spring-boot-gracefully-shutdown/](https://blog.yiiu.co/2019/05/31/spring-boot-gracefully-shutdown/)
 
 当然 spring-boot 框架也自带了一个监听服务，如果服务在启动状态，发送一个POST请求就可以优雅的停机，感觉还是没有脚本来的直接
 
@@ -58,6 +58,6 @@ else
 fi
 ```
 
-然后可以将这个脚本放在系统的定时任务里执行，关于定时任务的用法可以查看[Ubuntu里开机自启动和定时任务cron](https://tomoya92.github.io/2018/10/08/ubuntu-rclocal-crontab/)
+然后可以将这个脚本放在系统的定时任务里执行，关于定时任务的用法可以查看[Ubuntu里开机自启动和定时任务cron](https://blog.yiiu.co/2018/10/08/ubuntu-rclocal-crontab/)
 
 **注意：如果用定时任务时，在被执行的脚本里如果有通过export导入的命令的话，就要写上全路径，因为在系统启动的时候，定时任务不会去提前加载环境变量**

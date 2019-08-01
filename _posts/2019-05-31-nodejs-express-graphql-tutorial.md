@@ -10,7 +10,7 @@ author: 朋也
 * content
 {:toc}
 
-之间折腾过一篇使用springboot构建graphql接口项目的博客 [传送门](https://tomoya92.github.io/2019/04/03/spring-boot-graphql/)
+之间折腾过一篇使用springboot构建graphql接口项目的博客 [传送门](https://blog.yiiu.co/2019/04/03/spring-boot-graphql/)
 
 这篇博客来折腾一下nodejs中使用express构建graphql接口项目的用法
 
@@ -185,7 +185,7 @@ app.listen(4000);
 console.log("Running a GraphQL API server at http://localhost:4000/graphql");
 ```
 
-原接文链: [https://tomoya92.github.io/2019/05/31/nodejs-express-graphql-tutorial/](https://tomoya92.github.io/2019/05/31/nodejs-express-graphql-tutorial/)
+原接文链: [https://blog.yiiu.co/2019/05/31/nodejs-express-graphql-tutorial/](https://blog.yiiu.co/2019/05/31/nodejs-express-graphql-tutorial/)
 
 启动服务并查询结果如图
 
@@ -374,7 +374,7 @@ const AuthorType = new GraphQLObjectType({
 
 **TIP：如果在查询作者的时候，不指定查询作者的书的信息，那么定义在AuthorType里查询作者书本信息的逻辑就不会走，省服务器资源，好评**
 
-文原接链: [https://tomoya92.github.io/2019/05/31/nodejs-express-graphql-tutorial/](https://tomoya92.github.io/2019/05/31/nodejs-express-graphql-tutorial/)
+文原接链: [https://blog.yiiu.co/2019/05/31/nodejs-express-graphql-tutorial/](https://blog.yiiu.co/2019/05/31/nodejs-express-graphql-tutorial/)
 
 ## 连接数据库
 

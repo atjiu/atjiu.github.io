@@ -16,7 +16,7 @@ author: 朋也
 
 
 
-首先安装 [vim-plug](https://github.com/junegunn/vim-plug) 
+首先安装 [vim-plug](https://github.com/junegunn/vim-plug)
 
 在终端里贴上下面命令, 回车就会自动安装了
 
@@ -40,7 +40,7 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 windows安装完后, 要使用gvim打开输入 `:PlugInstall` 命令安装 vimplug 插件管理工具, 其它的终端都不行
 
-原链接文：[https://tomoya92.github.io/2019/05/05/vim-plugin/](https://tomoya92.github.io/2019/05/05/vim-plugin/)
+原链接文：[https://blog.yiiu.co/2019/05/05/vim-plugin/](https://blog.yiiu.co/2019/05/05/vim-plugin/)
 
 上面这两条命令都是readme里的, 请以github上的readme为主, **注意这只是安装了插件管理器, 还不是插件**
 
@@ -87,15 +87,15 @@ call plug#end()
 
 安装好之后, nerd tree插件不会自动启动, 还要在 `.vimrc` 里加一行代码 `autocmd vimenter * NERDTree`, 再次启动vim, 就可以看到上图样子的界面了
 
-装是装上了, 但怎么用呢? 
+装是装上了, 但怎么用呢?
 
 nerd tree 只需要记住一个命令就可以了, 光标在左边窗口中, 命令模式下按 m 即可调出菜单, 长下图这个样
 
-![](/assets/QQ20190505-135111@2x.png) 
+![](/assets/QQ20190505-135111@2x.png)
 
 然后就可以通过选择左边的 a,b,c,d,e...来进行相应的操作了
 
-原链接文：[https://tomoya92.github.io/2019/05/05/vim-plugin/](https://tomoya92.github.io/2019/05/05/vim-plugin/)
+原链接文：[https://blog.yiiu.co/2019/05/05/vim-plugin/](https://blog.yiiu.co/2019/05/05/vim-plugin/)
 
 ---
 
@@ -119,7 +119,7 @@ let vim_markdown_folding_disabled = 1
 
 [vim-colorschemes](https://vimawesome.com/plugin/vim-colorschemes-sweeter-than-fiction)
 
-这个插件将好之后, 在`.vimrc` 里加上下面这行代码就可以换主题了 
+这个插件将好之后, 在`.vimrc` 里加上下面这行代码就可以换主题了
 
 ```
 colorscheme molokai
@@ -127,6 +127,6 @@ colorscheme molokai
 
 它总共就两个主题, 这个比较遗憾, 还有一个是默认的 `wombat` 我觉得还是 `molokai` 好看
 
---- 
+---
 
 本来还想介绍一个自动完成的插件, 我在折腾的时候出了点问题, 后面再更新吧!

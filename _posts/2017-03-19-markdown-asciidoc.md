@@ -61,7 +61,7 @@ asciidoc
 markdown
 
 ```
-[tomoya's blog](https://tomoya92.github.io)
+[tomoya's blog](https://blog.yiiu.co)
 ```
 
 asciidoc
@@ -133,7 +133,7 @@ markdown & asciidoc 写法上一样
 - tomcat
 - jetty
 
-//有序列表 
+//有序列表
 1. tomcat
 2. jetty
 ```
@@ -164,9 +164,9 @@ asciidoc
 markdown
 
 ```
-| 表头1 | 表头2 | 表头3 |
-|-------|-------|-------|
-| first | second| third |
+| 表头1 | 表头2  | 表头3 |
+|-------|--------|-------|
+| first | second | third |
 ```
 
 asciidoc

@@ -11,7 +11,7 @@ author: 朋也
 {:toc}
 
 > 开发pybbs时，一直想加入插件功能，但没有比较好用的实现方法，突然有一天想起来spring里的切面了，这不正是写插件的好东西，然后就折腾了一下，总结一下
-> 
+>
 > 最可怕的是，在拿到参数和返回值之后，还可以进行修改，修改完后，再返回回去，神不知鬼不觉！！
 
 
@@ -44,7 +44,7 @@ author: 朋也
 
 ## 配置
 
-首先开启 `aspect` 功能 
+首先开启 `aspect` 功能
 
 ```java
 @SpringBootApplication
@@ -112,7 +112,7 @@ public class UserServicePointcut {
 }
 ```
 
-文原接链: [https://tomoya92.github.io/2019/07/02/spring-boot-plugin/](https://tomoya92.github.io/2019/07/02/spring-boot-plugin/)
+文原接链: [https://blog.yiiu.co/2019/07/02/spring-boot-plugin/](https://blog.yiiu.co/2019/07/02/spring-boot-plugin/)
 
 ## 切入
 
@@ -196,7 +196,7 @@ public class PluginDemoApplicationTests {
 }
 ```
 
-接文原链: [https://tomoya92.github.io/2019/07/02/spring-boot-plugin/](https://tomoya92.github.io/2019/07/02/spring-boot-plugin/)
+接文原链: [https://blog.yiiu.co/2019/07/02/spring-boot-plugin/](https://blog.yiiu.co/2019/07/02/spring-boot-plugin/)
 
 上面例子中对 `save()` 方法进行了两个切入，执行日志如下
 

@@ -107,7 +107,7 @@ VALUES
 	(13, 'title4', 'content4', 'tag4', '2019-04-15 09:33:35');
 ```
 
-原链接文：[https://tomoya92.github.io/2019/04/15/spring-boot-mybatis-plus-tutorial/](https://tomoya92.github.io/2019/04/15/spring-boot-mybatis-plus-tutorial/)
+原链接文：[https://blog.yiiu.co/2019/04/15/spring-boot-mybatis-plus-tutorial/](https://blog.yiiu.co/2019/04/15/spring-boot-mybatis-plus-tutorial/)
 
 ## 创建实体类
 
@@ -245,7 +245,7 @@ mybatis-plus里内置的crud都给封装好了，都在`BaseMapper`接口里，�
 </select>
 ```
 
-接原链文：[https://tomoya92.github.io/2019/04/15/spring-boot-mybatis-plus-tutorial/](https://tomoya92.github.io/2019/04/15/spring-boot-mybatis-plus-tutorial/)
+接原链文：[https://blog.yiiu.co/2019/04/15/spring-boot-mybatis-plus-tutorial/](https://blog.yiiu.co/2019/04/15/spring-boot-mybatis-plus-tutorial/)
 
 对应的，在 `TopicMapper.java` 里也要加上相应的接口
 
@@ -367,7 +367,7 @@ public class MybatisPlusConfig {
 
 分页分两种，一种是BaseMapper接口内置的分页接口，直接调用即可，使用如下
 
-文接原链：[https://tomoya92.github.io/2019/04/15/spring-boot-mybatis-plus-tutorial/](https://tomoya92.github.io/2019/04/15/spring-boot-mybatis-plus-tutorial/)
+文接原链：[https://blog.yiiu.co/2019/04/15/spring-boot-mybatis-plus-tutorial/](https://blog.yiiu.co/2019/04/15/spring-boot-mybatis-plus-tutorial/)
 
 在service里直接调用方法
 

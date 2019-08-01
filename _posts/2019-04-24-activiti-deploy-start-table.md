@@ -10,15 +10,15 @@ author: 朋也
 * content
 {:toc}
 
-- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://tomoya92.github.io/2019/04/24/activiti-env/)
-- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/)
-- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://tomoya92.github.io/2019/04/24/activiti-spring-boot/)
-- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/)
-- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://tomoya92.github.io/2019/04/24/activiti-assignee/)
-- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-exclusive-gateway/)
-- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-parallel-gateway/)
-- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
-- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
+- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://blog.yiiu.co/2019/04/24/activiti-env/)
+- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://blog.yiiu.co/2019/04/24/activiti-deploy-start-table/)
+- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://blog.yiiu.co/2019/04/24/activiti-spring-boot/)
+- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://blog.yiiu.co/2019/04/24/activiti-query-complete-task/)
+- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://blog.yiiu.co/2019/04/24/activiti-assignee/)
+- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://blog.yiiu.co/2019/04/25/activiti-exclusive-gateway/)
+- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://blog.yiiu.co/2019/04/25/activiti-parallel-gateway/)
+- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://blog.yiiu.co/2019/04/25/activiti-user-group-membership/)
+- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://blog.yiiu.co/2019/04/26/activiti-candidate-task/)
 
 上一篇博客介绍了怎么定义一个流程图, 这一篇来介绍一下项目中用的话, 怎么部署流程, 启动流程, 以及表的介绍
 
@@ -94,7 +94,7 @@ public void createTable() {
 }
 ```
 
-原链接文：[https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/](https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/)
+原链接文：[https://blog.yiiu.co/2019/04/24/activiti-deploy-start-table/](https://blog.yiiu.co/2019/04/24/activiti-deploy-start-table/)
 
 注释写的很清楚了, 在配置流程引擎的时候可以指定数据源, 这就要借助一些第三方的包了, 不过也可以在`ProcessEngineConfiguration`里自己配置连接信息, 就不用要数据源了, 效果是一样的
 
@@ -103,7 +103,7 @@ public void createTable() {
 数据库里生成的表有如下这些
 
 | 表名                  | 说明                         |
-| --------------------- | ---------------------------- |
+|-----------------------|-----------------------------|
 | ACT_EVT_LOG           | 事件日志表(实验性质)         |
 | ACT_GE_BYTEARRAY      | 通用的流程定义和流程资源     |
 | ACT_GE_PROPERTY       | 系统相关属性                 |
@@ -189,7 +189,7 @@ public void activitiApi() {
 ```
 
 | Service           | 管理的表                                                |
-| ----------------- | ------------------------------------------------------- |
+|-------------------|-----------------------------------------------------|
 | RepositoryService | 通用类的表                                              |
 | FormService       | 通过表单提交的任务的服务类                              |
 | HistoryService    | 历史记录表                                              |
@@ -199,7 +199,7 @@ public void activitiApi() {
 | TaskService       | 任务表, 可以查询 `ACT_RU_` `ACT_HI_`                    |
 {: .table.table-bordered}
 
-原接文链：[https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/](https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/)
+原接文链：[https://blog.yiiu.co/2019/04/24/activiti-deploy-start-table/](https://blog.yiiu.co/2019/04/24/activiti-deploy-start-table/)
 
 ## 部署流程
 

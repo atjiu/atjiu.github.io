@@ -72,7 +72,7 @@ class Third extends StatelessWidget {
 }
 ```
 
-文链接原: [https://tomoya92.github.io/2019/07/17/flutter-tablayout-drawerlayout/](https://tomoya92.github.io/2019/07/17/flutter-tablayout-drawerlayout/)
+文链接原: [https://blog.yiiu.co/2019/07/17/flutter-tablayout-drawerlayout/](https://blog.yiiu.co/2019/07/17/flutter-tablayout-drawerlayout/)
 
 修改 `main.dart` 文件内容，TabLayout布局是个有状态的组件，所以创建组件时要继承 `StatefulWidget` 类
 
@@ -182,7 +182,7 @@ class _MyHomePageState extends State<MyHomePage>
 }
 ```
 
-链接文原: [https://tomoya92.github.io/2019/07/17/flutter-tablayout-drawerlayout/](https://tomoya92.github.io/2019/07/17/flutter-tablayout-drawerlayout/)
+链接文原: [https://blog.yiiu.co/2019/07/17/flutter-tablayout-drawerlayout/](https://blog.yiiu.co/2019/07/17/flutter-tablayout-drawerlayout/)
 
 ## 底部TabBar
 

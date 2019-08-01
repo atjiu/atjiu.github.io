@@ -75,7 +75,7 @@ public interface Observer {
 }
 ```
 
-原链文接：[https://tomoya92.github.io/2019/04/08/java-subscribe-publish/](https://tomoya92.github.io/2019/04/08/java-subscribe-publish/)
+原链文接：[https://blog.yiiu.co/2019/04/08/java-subscribe-publish/](https://blog.yiiu.co/2019/04/08/java-subscribe-publish/)
 
 ## 实现主题
 
@@ -171,7 +171,7 @@ public class WeatherSubject implements Subject {
 }
 ```
 
-文原链接：[https://tomoya92.github.io/2019/04/08/java-subscribe-publish/](https://tomoya92.github.io/2019/04/08/java-subscribe-publish/)
+文原链接：[https://blog.yiiu.co/2019/04/08/java-subscribe-publish/](https://blog.yiiu.co/2019/04/08/java-subscribe-publish/)
 
 ## 实现观察者
 

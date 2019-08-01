@@ -93,7 +93,7 @@ public class Book implements Serializable {
 </dependencies>
 ```
 
-文原接链: [https://tomoya92.github.io/2019/05/31/spring-jdbc-template/](https://tomoya92.github.io/2019/05/31/spring-jdbc-template/)
+文原接链: [https://blog.yiiu.co/2019/05/31/spring-jdbc-template/](https://blog.yiiu.co/2019/05/31/spring-jdbc-template/)
 
 CRUD 用法
 

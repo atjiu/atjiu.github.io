@@ -9,13 +9,13 @@ author: 朋也
 * content
 {:toc}
 
-- [react-native组件NavigatorIOS与ListView结合使用](https://tomoya92.github.io/2017/08/02/react-native-navigatorios-listview/)
-- [react-native ListView组件点击跳转](https://tomoya92.github.io/2017/08/02/react-native-listview-forward/)
-- [react-native ListView下拉刷新上拉加载实现](https://tomoya92.github.io/2017/08/02/react-native-listview-refresh-loadmore/)
-- [react-native组件StackNavigator](https://tomoya92.github.io/2017/08/07/react-native-stacknavigator/)
-- [react-native TabNavigator用法](https://tomoya92.github.io/2017/09/06/react-native-tabnavigator/)
+- [react-native组件NavigatorIOS与ListView结合使用](https://blog.yiiu.co/2017/08/02/react-native-navigatorios-listview/)
+- [react-native ListView组件点击跳转](https://blog.yiiu.co/2017/08/02/react-native-listview-forward/)
+- [react-native ListView下拉刷新上拉加载实现](https://blog.yiiu.co/2017/08/02/react-native-listview-refresh-loadmore/)
+- [react-native组件StackNavigator](https://blog.yiiu.co/2017/08/07/react-native-stacknavigator/)
+- [react-native TabNavigator用法](https://blog.yiiu.co/2017/09/06/react-native-tabnavigator/)
 
-之前一篇文章介绍了[使用NavigatorIOS组件结合ListView的使用](https://tomoya92.github.io/2017/08/02/react-native-navigatorios-listview/)，但那个只能用在IOS系统上，在Android上就没法用了，所以找到了StackNavigator组件
+之前一篇文章介绍了[使用NavigatorIOS组件结合ListView的使用](https://blog.yiiu.co/2017/08/02/react-native-navigatorios-listview/)，但那个只能用在IOS系统上，在Android上就没法用了，所以找到了StackNavigator组件
 
 
 

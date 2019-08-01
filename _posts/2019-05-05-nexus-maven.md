@@ -54,7 +54,7 @@ Started Sonatype Nexus OSS 3.16.1-02
 
 ![](/assets/QQ20190505-150447.png)
 
---- 
+---
 
 如果你想修改端口, 可以修改 `nexus-3.16.1-02-unix/nexus-3.16.1-02/etc/nexus-default.properties` 文件里的端口
 
@@ -66,7 +66,7 @@ Started Sonatype Nexus OSS 3.16.1-02
 
 先创建一个maven项目, pom.xml文件配置如下
 
-接原链文: [https://tomoya92.github.io/2019/05/05/nexus-maven/](https://tomoya92.github.io/2019/05/05/nexus-maven/)
+接原链文: [https://blog.yiiu.co/2019/05/05/nexus-maven/](https://blog.yiiu.co/2019/05/05/nexus-maven/)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -197,7 +197,7 @@ public class Demo implements Serializable {
 }
 ```
 
-原链接文: [https://tomoya92.github.io/2019/05/05/nexus-maven/](https://tomoya92.github.io/2019/05/05/nexus-maven/)
+原链接文: [https://blog.yiiu.co/2019/05/05/nexus-maven/](https://blog.yiiu.co/2019/05/05/nexus-maven/)
 
 ## 使用
 
