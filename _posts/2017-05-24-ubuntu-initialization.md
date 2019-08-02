@@ -293,7 +293,7 @@ schema_list:
 
 下载还是下载`.deb`，然后直接安装即可
 
-### 配置shadowsocks
+<!-- ### 配置shadowsocks
 
 官网：[http://shadowsocks.org/](http://shadowsocks.org/)
 
@@ -332,7 +332,7 @@ schema_list:
 sudo apt install network-manager-openvpn-gnome openvpn-systemd-resolved
 ```
 
-安装完成后， 导入服务端生成好的 xxx.ovpn 文件然后填上用户名密码就可以用了， 测试它是全局代理， 就连终端里都可以用
+安装完成后， 导入服务端生成好的 xxx.ovpn 文件然后填上用户名密码就可以用了， 测试它是全局代理， 就连终端里都可以用 -->
 
 ### 安装flash-player
 
