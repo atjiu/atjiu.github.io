@@ -99,7 +99,7 @@ author: 朋也
 
 ## 请求接口遍历数据
 
-接口服务用的是mock.js生成的数据，可以看一下这篇博客 [使用mock.js随机数据和使用express输出json接口](https://blog.yiiu.co/2018/01/05/express-mockjs-json/)
+接口服务用的是mock.js生成的数据，可以看一下这篇博客 [使用mock.js随机数据和使用express输出json接口](https://tomoya92.github.io/2018/01/05/express-mockjs-json/)
 
 安装 axios
 

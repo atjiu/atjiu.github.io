@@ -76,7 +76,7 @@ public String index(Model model) {
 </div>
 ```
 
-链原文接: [https://blog.yiiu.co/2017/03/09/spring-boot-thymeleaf-attribute/](https://blog.yiiu.co/2017/03/09/spring-boot-thymeleaf-attribute/)
+链原文接: [https://tomoya92.github.io/2017/03/09/spring-boot-thymeleaf-attribute/](https://tomoya92.github.io/2017/03/09/spring-boot-thymeleaf-attribute/)
 
 istat里还可以取出下面这些属性
 
@@ -150,7 +150,7 @@ public String index(Model model) {
 
 **注意** 没有hasPermission()方法，在pom.xml里要引入
 
-文链原接: [https://blog.yiiu.co/2017/03/09/spring-boot-thymeleaf-attribute/](https://blog.yiiu.co/2017/03/09/spring-boot-thymeleaf-attribute/)
+文链原接: [https://tomoya92.github.io/2017/03/09/spring-boot-thymeleaf-attribute/](https://tomoya92.github.io/2017/03/09/spring-boot-thymeleaf-attribute/)
 
 ```xml
 <dependency>

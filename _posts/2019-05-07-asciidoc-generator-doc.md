@@ -95,7 +95,7 @@ spring官方文档看了多少年, 不知道人家是怎么写出来的, 前一�
 
 ## 编写文档
 
-不知道asciidoc文档怎么写的, 可以查看我另一篇博客 [markdown与asciidoc简单写法区别](https://blog.yiiu.co/2017/03/19/markdown-asciidoc/)
+不知道asciidoc文档怎么写的, 可以查看我另一篇博客 [markdown与asciidoc简单写法区别](https://tomoya92.github.io/2017/03/19/markdown-asciidoc/)
 
 在 `src/main/` 下创建一个文件夹 `asciidoc` 然后在这个文件夹里再创建一个文件 `index.asciidoc` 必须要是这个名字
 
@@ -119,7 +119,7 @@ spring官方文档看了多少年, 不知道人家是怎么写出来的, 前一�
 
 后面增加的文档里每一篇都要加上开头跟结尾这两句
 
-原链接文：[https://blog.yiiu.co/2019/05/07/asciidoc-generator-doc/](https://blog.yiiu.co/2019/05/07/asciidoc-generator-doc/)
+原链接文：[https://tomoya92.github.io/2019/05/07/asciidoc-generator-doc/](https://tomoya92.github.io/2019/05/07/asciidoc-generator-doc/)
 
 ---
 

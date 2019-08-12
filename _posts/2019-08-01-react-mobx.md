@@ -12,7 +12,7 @@ author: 朋也
 
 > 公司项目里出现了一个大量表单的页面，结果各种操作都卡的不行，然后在大佬的帮助下，发现mobx可以只针对对象中的某个属性进行监听，如果发生变化后，更新也只更新它观察的那个属性，不会是一整个大对象的更新，这就将性能一下提升上来了，为了性能只能折腾一下mobx了
 >
-> 关于redux的用法可以查阅我另一篇博客 [react 项目集成 react-redux 解决 state 存储与共享问题](https://blog.yiiu.co/2019/05/13/react-redux/)
+> 关于redux的用法可以查阅我另一篇博客 [react 项目集成 react-redux 解决 state 存储与共享问题](https://tomoya92.github.io/2019/05/13/react-redux/)
 
 下面来介绍一下mobx的`非装饰器用法`，`装饰器用法`，以及`拆分store`
 
@@ -121,7 +121,7 @@ class App extends React.Component {
 }
 ```
 
-链接文原: [https://blog.yiiu.co/2019/08/01/react-mobx/](https://blog.yiiu.co/2019/08/01/react-mobx/)
+链接文原: [https://tomoya92.github.io/2019/08/01/react-mobx/](https://tomoya92.github.io/2019/08/01/react-mobx/)
 
 现在点击button，会发现data length没有变化，这是因为react组件没有跟mobx关联进来，这时候就要用到 `mobx-react` 中的装饰器了 `observer`
 

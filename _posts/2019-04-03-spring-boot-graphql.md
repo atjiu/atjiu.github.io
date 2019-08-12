@@ -49,7 +49,7 @@ pom.xml
 
 另外引入两个graphql相关的依赖
 
-原链文接：[https://blog.yiiu.co/2019/04/03/spring-boot-graphql/](https://blog.yiiu.co/2019/04/03/spring-boot-graphql/)
+原链文接：[https://tomoya92.github.io/2019/04/03/spring-boot-graphql/](https://tomoya92.github.io/2019/04/03/spring-boot-graphql/)
 
 ```xml
 <dependency>
@@ -109,7 +109,7 @@ type Author {
 
 Book里有Author对象和Category两个关联对象
 
-链原文接：[https://blog.yiiu.co/2019/04/03/spring-boot-graphql/](https://blog.yiiu.co/2019/04/03/spring-boot-graphql/)
+链原文接：[https://tomoya92.github.io/2019/04/03/spring-boot-graphql/](https://tomoya92.github.io/2019/04/03/spring-boot-graphql/)
 
 ## 初始化schema
 
@@ -237,7 +237,7 @@ public class GraphQLDataFetchers {
 
 ## 构建schema
 
-原链文接：[https://blog.yiiu.co/2019/04/03/spring-boot-graphql/](https://blog.yiiu.co/2019/04/03/spring-boot-graphql/)
+原链文接：[https://tomoya92.github.io/2019/04/03/spring-boot-graphql/](https://tomoya92.github.io/2019/04/03/spring-boot-graphql/)
 
 上面初始化了schema，这一步来构建schema，通过在 `schema.graphqls` 里定义的 `Query` 里的方法来构建，代码如下
 

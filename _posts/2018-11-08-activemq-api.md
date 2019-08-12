@@ -10,11 +10,11 @@ author: 朋也
 * content
 {:toc}
 
-- [ActiveMQ学习-HelloWorld (1)](https://blog.yiiu.co/2018/11/05/activemq-helloworld/)
-- [ActiveMQ学习-安全认证-连接AMQ用户密码配置 (2)](https://blog.yiiu.co/2018/11/06/activemq-security/)
-- [ActiveMQ学习-持久化队列数据，将队列中的消息存入MySQL (3)](https://blog.yiiu.co/2018/11/06/activemq-persistence/)
-- [ActiveMQ学习-Api介绍 (4)](https://blog.yiiu.co/2018/11/08/activemq-api/)
-- [ActiveMQ学习-与spring整合，在spring-boot中使用 (5)](https://blog.yiiu.co/2018/11/09/activemq-spring-boot/)
+- [ActiveMQ学习-HelloWorld (1)](https://tomoya92.github.io/2018/11/05/activemq-helloworld/)
+- [ActiveMQ学习-安全认证-连接AMQ用户密码配置 (2)](https://tomoya92.github.io/2018/11/06/activemq-security/)
+- [ActiveMQ学习-持久化队列数据，将队列中的消息存入MySQL (3)](https://tomoya92.github.io/2018/11/06/activemq-persistence/)
+- [ActiveMQ学习-Api介绍 (4)](https://tomoya92.github.io/2018/11/08/activemq-api/)
+- [ActiveMQ学习-与spring整合，在spring-boot中使用 (5)](https://tomoya92.github.io/2018/11/09/activemq-spring-boot/)
 
 ## Session
 

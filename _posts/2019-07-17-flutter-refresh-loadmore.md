@@ -96,7 +96,7 @@ class MyHomeWidget2 extends State<MyHomePage> {
 }
 ```
 
-链接文原: [https://blog.yiiu.co/2019/07/17/flutter-refresh-loadmore/](https://blog.yiiu.co/2019/07/17/flutter-refresh-loadmore/)
+链接文原: [https://tomoya92.github.io/2019/07/17/flutter-refresh-loadmore/](https://tomoya92.github.io/2019/07/17/flutter-refresh-loadmore/)
 
 ## 上拉加载
 

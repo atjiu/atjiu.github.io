@@ -124,4 +124,4 @@ const {id} = this.props.params;
 
 当从List点击去到Detail里之后，再点击浏览器的返回按钮，List组件的状态就没有了，还不知道是什么原因
 
-补充：这个问题可以通过React-Router(v2,v3)+React-Router-Scroll来解决，详见博客：[https://blog.yiiu.co/2017/09/06/reactjs-router-scroll/](https://blog.yiiu.co/2017/09/06/reactjs-router-scroll/)
+补充：这个问题可以通过React-Router(v2,v3)+React-Router-Scroll来解决，详见博客：[https://tomoya92.github.io/2017/09/06/reactjs-router-scroll/](https://tomoya92.github.io/2017/09/06/reactjs-router-scroll/)

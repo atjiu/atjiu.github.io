@@ -18,7 +18,7 @@ author: 朋也
 
 地址：[https://github.com/settings/developers](https://github.com/settings/developers)
 
-具体操作可以参见pybbs的文档：[https://blog.yiiu.co/pybbs/#/zh-cn/oauth](https://blog.yiiu.co/pybbs/#/zh-cn/oauth)
+具体操作可以参见pybbs的文档：[https://tomoya92.github.io/pybbs/#/zh-cn/oauth](https://tomoya92.github.io/pybbs/#/zh-cn/oauth)
 
 
 
@@ -58,7 +58,7 @@ exports.github = async (ctx) => {
 };
 ```
 
-原链文接：[https://blog.yiiu.co/2019/03/14/login-with-github-koa/](https://blog.yiiu.co/2019/03/14/login-with-github-koa/)
+原链文接：[https://tomoya92.github.io/2019/03/14/login-with-github-koa/](https://tomoya92.github.io/2019/03/14/login-with-github-koa/)
 
 ### scope参数
 
@@ -120,7 +120,7 @@ exports.callback = async (ctx) => {
 
 github_user_info_resp.data 数据格式
 
-链原文接：[https://blog.yiiu.co/2019/03/14/login-with-github-koa/](https://blog.yiiu.co/2019/03/14/login-with-github-koa/)
+链原文接：[https://tomoya92.github.io/2019/03/14/login-with-github-koa/](https://tomoya92.github.io/2019/03/14/login-with-github-koa/)
 
 ```json
 {
@@ -144,7 +144,7 @@ github_user_info_resp.data 数据格式
   "site_admin": false,
   "name": "朋也",
   "company": null,
-  "blog": "https://blog.yiiu.co",
+  "blog": "https://tomoya92.github.io",
   "location": "Shanghai",
   "email": "py2qiuse@gmail.com",
   "hireable": null,
@@ -183,7 +183,7 @@ brew install ngrok
 ngrok http 3000
 ```
 
-frp用法可以参见我另一篇博客 [利用frp内网穿透实现用自家电脑发布网站(不用买服务器了)](https://blog.yiiu.co/2018/10/18/frp-tutorial/)
+frp用法可以参见我另一篇博客 [利用frp内网穿透实现用自家电脑发布网站(不用买服务器了)](https://tomoya92.github.io/2018/10/18/frp-tutorial/)
 
 # 总结
 

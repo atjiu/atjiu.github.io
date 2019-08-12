@@ -72,7 +72,7 @@ pom.xml
 </dependencies>
 ```
 
-接文原链: [https://blog.yiiu.co/2019/07/09/drools-tutorial/](https://blog.yiiu.co/2019/07/09/drools-tutorial/)
+接文原链: [https://tomoya92.github.io/2019/07/09/drools-tutorial/](https://tomoya92.github.io/2019/07/09/drools-tutorial/)
 
 ## 创建规则文件
 
@@ -200,7 +200,7 @@ Demo{a=6, b=4, c=4, total=14, errorMsg=[a + b 与 c 不相等]}
 
 代码如下
 
-文原接链: [https://blog.yiiu.co/2019/07/09/drools-tutorial/](https://blog.yiiu.co/2019/07/09/drools-tutorial/)
+文原接链: [https://tomoya92.github.io/2019/07/09/drools-tutorial/](https://tomoya92.github.io/2019/07/09/drools-tutorial/)
 
 ```java
 //把excel翻译成drl文件

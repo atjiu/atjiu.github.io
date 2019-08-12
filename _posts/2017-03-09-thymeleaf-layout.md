@@ -58,7 +58,7 @@ thymeleaf的layout常用的有两种方式用法
 
 上面例子里用到的是`th:include`, 也就是把定义好的`fragment`引入的意思, 还有一个是`th:replace`, 意思是替换当前页面里的这部分代码, 下面例子说明一下
 
-原链接文：[https://blog.yiiu.co/2017/03/09/thymeleaf-layout/](https://blog.yiiu.co/2017/03/09/thymeleaf-layout/)
+原链接文：[https://tomoya92.github.io/2017/03/09/thymeleaf-layout/](https://tomoya92.github.io/2017/03/09/thymeleaf-layout/)
 
 ```html
 <html>
@@ -132,7 +132,7 @@ thymeleaf的layout常用的有两种方式用法
 }
 ```
 
-接原链文：[https://blog.yiiu.co/2017/03/09/thymeleaf-layout/](https://blog.yiiu.co/2017/03/09/thymeleaf-layout/)
+接原链文：[https://tomoya92.github.io/2017/03/09/thymeleaf-layout/](https://tomoya92.github.io/2017/03/09/thymeleaf-layout/)
 
 
 ```html

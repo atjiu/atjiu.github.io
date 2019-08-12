@@ -35,7 +35,7 @@ yiiu.co 我用的是 `create-react-app` 脚手架开发的，很简单的一个�
 
 然后将开发好的项目push到github上
 
-原链文接：[https://blog.yiiu.co/2019/04/04/deploy-create-react-app-github-pages/](https://blog.yiiu.co/2019/04/04/deploy-create-react-app-github-pages/)
+原链文接：[https://tomoya92.github.io/2019/04/04/deploy-create-react-app-github-pages/](https://tomoya92.github.io/2019/04/04/deploy-create-react-app-github-pages/)
 
 ## 安装deploy到github pages的依赖
 
@@ -76,7 +76,7 @@ deploy命令里执行的 `-b` 表示发布到哪个分支下，`-d` 表示将哪
 
 这也就是上一步为啥要在 `dev` 分支下的`public`文件夹下创建CNAME文件的原因了，因为每次`yarn build`都会把`public`文件夹下的所有文件复制到`build`文件夹下，这样就不用手动添加了
 
-链原文接：[https://blog.yiiu.co/2019/04/04/deploy-create-react-app-github-pages/](https://blog.yiiu.co/2019/04/04/deploy-create-react-app-github-pages/)
+链原文接：[https://tomoya92.github.io/2019/04/04/deploy-create-react-app-github-pages/](https://tomoya92.github.io/2019/04/04/deploy-create-react-app-github-pages/)
 
 ## 开启github pages
 

@@ -147,7 +147,7 @@ function Example() {
 
 相同的 useReducer 最后一个参数也是默认值, 通过dispatch方法传入类型然后修改state
 
-链接文原: [https://blog.yiiu.co/2019/07/23/react-hooks/](https://blog.yiiu.co/2019/07/23/react-hooks/)
+链接文原: [https://tomoya92.github.io/2019/07/23/react-hooks/](https://tomoya92.github.io/2019/07/23/react-hooks/)
 
 那么如何在 useReducer 里声明多个变量呢？
 

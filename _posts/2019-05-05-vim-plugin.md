@@ -40,7 +40,7 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 windows安装完后, 要使用gvim打开输入 `:PlugInstall` 命令安装 vimplug 插件管理工具, 其它的终端都不行
 
-原链接文：[https://blog.yiiu.co/2019/05/05/vim-plugin/](https://blog.yiiu.co/2019/05/05/vim-plugin/)
+原链接文：[https://tomoya92.github.io/2019/05/05/vim-plugin/](https://tomoya92.github.io/2019/05/05/vim-plugin/)
 
 上面这两条命令都是readme里的, 请以github上的readme为主, **注意这只是安装了插件管理器, 还不是插件**
 
@@ -95,7 +95,7 @@ nerd tree 只需要记住一个命令就可以了, 光标在左边窗口中, 命
 
 然后就可以通过选择左边的 a,b,c,d,e...来进行相应的操作了
 
-原链接文：[https://blog.yiiu.co/2019/05/05/vim-plugin/](https://blog.yiiu.co/2019/05/05/vim-plugin/)
+原链接文：[https://tomoya92.github.io/2019/05/05/vim-plugin/](https://tomoya92.github.io/2019/05/05/vim-plugin/)
 
 ---
 

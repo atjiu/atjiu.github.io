@@ -10,7 +10,7 @@ author: 朋也
 * content
 {:toc}
 
-> 之前写过golang里比较好用的爬虫工具是 goquery [[传送门]](https://blog.yiiu.co/2017/06/21/golang-goquery/)
+> 之前写过golang里比较好用的爬虫工具是 goquery [[传送门]](https://tomoya92.github.io/2017/06/21/golang-goquery/)
 >
 > 今天来介绍一下nodejs里的爬虫
 

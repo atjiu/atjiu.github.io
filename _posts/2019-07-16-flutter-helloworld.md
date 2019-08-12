@@ -37,7 +37,7 @@ author: 朋也
 flutter create hello_world
 ```
 
-文原接链: [https://blog.yiiu.co/2019/07/16/flutter-helloworld/](https://blog.yiiu.co/2019/07/16/flutter-helloworld/)
+文原接链: [https://tomoya92.github.io/2019/07/16/flutter-helloworld/](https://tomoya92.github.io/2019/07/16/flutter-helloworld/)
 
 这里的项目名不能以 `-` 相连，因为项目名在创建的时候会作为项目的包名
 

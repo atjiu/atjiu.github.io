@@ -10,15 +10,15 @@ author: 朋也
 * content
 {:toc}
 
-- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://blog.yiiu.co/2019/04/24/activiti-env/)
-- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://blog.yiiu.co/2019/04/24/activiti-deploy-start-table/)
-- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://blog.yiiu.co/2019/04/24/activiti-spring-boot/)
-- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://blog.yiiu.co/2019/04/24/activiti-query-complete-task/)
-- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://blog.yiiu.co/2019/04/24/activiti-assignee/)
-- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://blog.yiiu.co/2019/04/25/activiti-exclusive-gateway/)
-- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://blog.yiiu.co/2019/04/25/activiti-parallel-gateway/)
-- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://blog.yiiu.co/2019/04/25/activiti-user-group-membership/)
-- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://blog.yiiu.co/2019/04/26/activiti-candidate-task/)
+- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://tomoya92.github.io/2019/04/24/activiti-env/)
+- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/)
+- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://tomoya92.github.io/2019/04/24/activiti-spring-boot/)
+- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/)
+- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://tomoya92.github.io/2019/04/24/activiti-assignee/)
+- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-exclusive-gateway/)
+- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-parallel-gateway/)
+- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
+- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
 
 > **前言: 前面定义的那个流程图的请假代理人是 `user1` 部门经理审批代理人是 `user2` 总经理审批代理人是 `user3`**
 
@@ -50,7 +50,7 @@ public void init() {
 
 启动流程
 
-链原接文：[https://blog.yiiu.co/2019/04/24/activiti-query-complete-task/](https://blog.yiiu.co/2019/04/24/activiti-query-complete-task/)
+链原接文：[https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/](https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/)
 
 ```java
 // spring自动将这些Service都初始化好了,直接使用 `@Autowired` 注解注入即可使用
@@ -112,7 +112,7 @@ user2查询任务 -> user2完成任务 -> user3查询任务 -> user3完成任务
 
 当代理人在处理任务的时候, 可以增加一些批注, 添加批注的方法如下
 
-原链接文：[https://blog.yiiu.co/2019/04/24/activiti-query-complete-task/](https://blog.yiiu.co/2019/04/24/activiti-query-complete-task/)
+原链接文：[https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/](https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/)
 
 ```java
 @Test

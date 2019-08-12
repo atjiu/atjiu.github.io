@@ -84,7 +84,7 @@ export default class App extends Component {
 }
 ```
 
-原链文接: [https://blog.yiiu.co/2019/05/13/react-redux/](https://blog.yiiu.co/2019/05/13/react-redux/)
+原链文接: [https://tomoya92.github.io/2019/05/13/react-redux/](https://tomoya92.github.io/2019/05/13/react-redux/)
 
 css
 
@@ -207,7 +207,7 @@ ReactDOM.render(
 serviceWorker.unregister();
 ```
 
-文原链接: [https://blog.yiiu.co/2019/05/13/react-redux/](https://blog.yiiu.co/2019/05/13/react-redux/)
+文原链接: [https://tomoya92.github.io/2019/05/13/react-redux/](https://tomoya92.github.io/2019/05/13/react-redux/)
 
 最后在组件中使用, 修改 `App.js` 的代码, 先让组件跟 redux 连接起来
 

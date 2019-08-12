@@ -61,7 +61,7 @@ asciidoc
 markdown
 
 ```
-[tomoya's blog](https://blog.yiiu.co)
+[tomoya's blog](https://tomoya92.github.io)
 ```
 
 asciidoc

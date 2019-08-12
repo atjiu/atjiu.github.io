@@ -190,7 +190,7 @@ author: 朋也
 }
 ```
 
-原链文接：[https://blog.yiiu.co/2019/04/04/loading-css/](https://blog.yiiu.co/2019/04/04/loading-css/)
+原链文接：[https://tomoya92.github.io/2019/04/04/loading-css/](https://tomoya92.github.io/2019/04/04/loading-css/)
 
 ---
 
@@ -303,7 +303,7 @@ author: 朋也
 }
 ```
 
-链文原接：[https://blog.yiiu.co/2019/04/04/loading-css/](https://blog.yiiu.co/2019/04/04/loading-css/)
+链文原接：[https://tomoya92.github.io/2019/04/04/loading-css/](https://tomoya92.github.io/2019/04/04/loading-css/)
 
 ---
 
@@ -431,7 +431,7 @@ author: 朋也
 }
 ```
 
-链文接原：[https://blog.yiiu.co/2019/04/04/loading-css/](https://blog.yiiu.co/2019/04/04/loading-css/)
+链文接原：[https://tomoya92.github.io/2019/04/04/loading-css/](https://tomoya92.github.io/2019/04/04/loading-css/)
 
 ---
 
@@ -668,7 +668,7 @@ author: 朋也
 }
 ```
 
-接链文原：[https://blog.yiiu.co/2019/04/04/loading-css/](https://blog.yiiu.co/2019/04/04/loading-css/)
+接链文原：[https://tomoya92.github.io/2019/04/04/loading-css/](https://tomoya92.github.io/2019/04/04/loading-css/)
 
 ---
 
