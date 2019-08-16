@@ -46,7 +46,7 @@ author: 朋也
 
 <bean id="mysql-datasource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
     <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-    <property name="url" value="jdbc:mysql://localhost:3306/test?relaxAutoCommit=true"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/test?useSSL=false"/>
     <property name="username" value="root"/>
     <property name="password" value=""/>
     <property name="maxActive" value="200"/>
