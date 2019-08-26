@@ -43,12 +43,22 @@ B上的ftp用户名是 `ftpuser` 所以B上ftp用户的根目录就是 `/home/ft
 
 要将A上的 `/home/origin_dir` 同步到 B上的 `/home/ftpuser/sync_dir`，命令如下
 
-**一定要用B服务器上提供的ftp用户来执行下面这个命令**
+执行命令有两种选择
+
+1. 用B服务器上提供的ftp用户来执行下面这个命令
+2. 在命令中添加uid, gid参数来指定同步的目录所属用户和组
 
 PS: 这里用了一个技巧，既然没法将A服务器上的目录挂载到B服务器上ftp用户的根目录上，那就挂载到根目录中的某一个目录上，就没有问题了
 
 ```bash
+# 1. 直接在B服务器上的ftp用户下执行不需要添加参数
 sshfs root@192.168.1.100:/home/origin_dir/ /home/ftpuser/sync_dir/
+
+# 2. 可以在其它用户下执行这个命令比如root登录的用户下执行，添加上 ftp 用户的uid和gid也是一样的效果
+# 这个uid,gid可以通过 `cat /etc/passwd` 命令查看到， 我这查到的结果如下
+# vsftpd:x:510:511::/home/vsftpd:/sbin/nologin
+# 这里的uid就是510，gid就是511了
+sshfs -o uid=510,gid=511 root@192.168.1.100:/home/origin_dir/ /home/ftpuser/sync_dir/
 ```
 
 链接文原: [https://tomoya92.github.io/2019/08/23/sftp-sync-ftp/](https://tomoya92.github.io/2019/08/23/sftp-sync-ftp/)
@@ -57,7 +67,7 @@ sshfs root@192.168.1.100:/home/origin_dir/ /home/ftpuser/sync_dir/
 
 同样的使用 filezilla 工具通过ftp服务也可以读取到B上的目录结构
 
-取消挂载
+取消挂载（一定要先cd出这个挂载的目录才行，否则它会说当前目录处理忙碌状态）
 
 ```bash
 fusermount -u /home/ftpuser/sync_dir/
@@ -67,6 +77,5 @@ fusermount -u /home/ftpuser/sync_dir/
 
 注意：
 
-1. 先启动B上的ftp服务
-2. 在B上运行同步命令要用ftp用户执行
-3. 取消挂载要用 fusermount 命令，**千万不要直接kill掉进程**
+1. 先启动B上的ftp服务，然后再挂载同步
+2. 取消挂载要用 fusermount 命令，**千万不要直接kill掉进程**
