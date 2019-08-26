@@ -52,13 +52,13 @@ PS: 这里用了一个技巧，既然没法将A服务器上的目录挂载到B�
 
 ```bash
 # 1. 直接在B服务器上的ftp用户下执行不需要添加参数
-sshfs root@192.168.1.100:/home/origin_dir/ /home/ftpuser/sync_dir/
+sshfs -o reconnect root@192.168.1.100:/home/origin_dir/ /home/ftpuser/sync_dir/
 
 # 2. 可以在其它用户下执行这个命令比如root登录的用户下执行，添加上 ftp 用户的uid和gid也是一样的效果
 # 这个uid,gid可以通过 `cat /etc/passwd` 命令查看到， 我这查到的结果如下
 # vsftpd:x:510:511::/home/vsftpd:/sbin/nologin
 # 这里的uid就是510，gid就是511了
-sshfs -o uid=510,gid=511 root@192.168.1.100:/home/origin_dir/ /home/ftpuser/sync_dir/
+sshfs -o uid=510,gid=511,reconnect root@192.168.1.100:/home/origin_dir/ /home/ftpuser/sync_dir/
 ```
 
 链接文原: [https://tomoya92.github.io/2019/08/23/sftp-sync-ftp/](https://tomoya92.github.io/2019/08/23/sftp-sync-ftp/)
