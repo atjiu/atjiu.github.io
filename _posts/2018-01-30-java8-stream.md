@@ -11,6 +11,146 @@ author: 朋也
 
 > java8里新特性之一 stream，非常的好用，就是容易忘了怎么写了，下面来总结一下
 
+
+
+
+## 案例
+
+在项目中的一些需求的实现总结一下
+
+#### Q：一个书籍的列表，按照类型分组
+
+```java
+@Data
+@ToString
+@AllArgsConstructor
+class Book {
+    int id;
+    String name;
+    String catetory;
+}
+
+@Test
+public void test1() {
+    List<Book> books = Arrays.asList(new Book(1, "Java入门", "编程"),
+            new Book(2, "NodeJS入门", "编程"),
+            new Book(3, "红楼梦", "名著"),
+            new Book(4, "斗罗大陆", "修仙"),
+            new Book(5, "十万个为什么", "科普"),
+            new Book(6, "西游记", "名著"),
+            new Book(7, "名人名言", "鸡汤"));
+    Map<String, List<Book>> bookGroupByCategories = books.stream().collect(Collectors.groupingBy(Book::getCatetory));
+    System.out.println(bookGroupByCategories);
+}
+```
+
+打印结果
+
+```log
+{鸡汤=[DemoTest.Book(id=7, name=名人名言, catetory=鸡汤)], 名著=[DemoTest.Book(id=3, name=红楼梦, catetory=名著), DemoTest.Book(id=6, name=西游记, catetory=名著)], 科普=[DemoTest.Book(id=5, name=十万个为什么, catetory=科普)], 修仙=[DemoTest.Book(id=4, name=斗罗大陆, catetory=修仙)], 编程=[DemoTest.Book(id=1, name=Java入门, catetory=编程), DemoTest.Book(id=2, name=NodeJS入门, catetory=编程)]}
+```
+
+### Q：将集合中的集合收集在一起，`用户 —> 角色 -> 权限` 一个用户有多个角色，一个角色有多个权限
+
+```java
+@Data
+@ToString
+@AllArgsConstructor
+class User {
+    int id;
+    String name;
+    List<Role> roles;
+}
+
+@Data
+@ToString
+@AllArgsConstructor
+class Role {
+    int id;
+    String name;
+    List<Permission> permissions;
+}
+
+@Data
+@ToString
+@AllArgsConstructor
+class Permission {
+    int id;
+    String name;
+}
+
+@Test
+public void test2() {
+    Permission permission1 = new Permission(1, "用户列表");
+    Permission permission2 = new Permission(2, "话题列表");
+    Permission permission3 = new Permission(3, "评论列表");
+    Permission permission4 = new Permission(4, "收藏列表");
+    Permission permission5 = new Permission(5, "日志列表");
+
+    Role role1 = new Role(1, "普通用户", Arrays.asList(permission1, permission2));
+    Role role2 = new Role(2, "付费用户", Arrays.asList(permission3, permission4, permission5));
+    Role role3 = new Role(3, "管理员", Arrays.asList(permission1, permission2, permission3, permission4, permission5));
+
+    User adminUser = new User(1, "admin", Arrays.asList(role1, role2, role3));
+    User vipUser = new User(2, "vip", Arrays.asList(role1, role2));
+    User normalUser = new User(3, "normal", Arrays.asList(role1));
+
+    // 统计adminUser的所有权限
+    List<List<Permission>> allPermissions = adminUser.getRoles().stream().map(Role::getPermissions).collect(Collectors.toList());
+    System.out.println(allPermissions);
+}
+```
+
+打印结果
+
+```log
+[[DemoTest.Permission(id=1, name=用户列表), DemoTest.Permission(id=2, name=话题列表)], [DemoTest.Permission(id=3, name=评论列表), DemoTest.Permission(id=4, name=收藏列表), DemoTest.Permission(id=5, name=日志列表)], [DemoTest.Permission(id=1, name=用户列表), DemoTest.Permission(id=2, name=话题列表), DemoTest.Permission(id=3, name=评论列表), DemoTest.Permission(id=4, name=收藏列表), DemoTest.Permission(id=5, name=日志列表)]]
+```
+
+可以看到打印出来的结果是role1 + role2 + role3，里面有重复的，要想不重复，在收集的时候用set来接收就可以了 `collect(Collectors.toSet())`
+
+#### Q: 对集合中对象按照日期排序, 比如一个用户的列表，按照创建时间排序
+
+```java
+@Data
+@ToString
+@AllArgsConstructor
+class User {
+    int id;
+    String name;
+    Date createDate;
+}
+
+@Test
+public void test3() throws ParseException {
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+    User user1 = new User(1, "user1", simpleDateFormat.parse("2019-01-01"));
+    User user2 = new User(2, "user2", simpleDateFormat.parse("2019-04-20"));
+    User user3 = new User(3, "user3", simpleDateFormat.parse("2019-02-27"));
+    User user4 = new User(4, "user4", simpleDateFormat.parse("2019-08-15"));
+    User user5 = new User(5, "user5", simpleDateFormat.parse("2019-06-30"));
+
+    List<User> users = Arrays.asList(user1, user5, user2, user4, user3);
+    // 正序
+    List<User> users1 = users.stream().sorted(Comparator.comparing(User::getCreateDate)).collect(Collectors.toList());
+    System.out.println(users1);
+    // 倒序
+    List<User> users2 = users.stream().sorted((u1, u2) -> u2.getCreateDate().compareTo(u1.getCreateDate())).collect(Collectors.toList());
+    System.out.println(users2);
+}
+```
+
+打印结果
+
+```log
+[DemoTest.User(id=1, name=user1, createDate=Tue Jan 01 00:00:00 CST 2019), DemoTest.User(id=3, name=user3, createDate=Wed Feb 27 00:00:00 CST 2019), DemoTest.User(id=2, name=user2, createDate=Sat Apr 20 00:00:00 CST 2019), DemoTest.User(id=5, name=user5, createDate=Sun Jun 30 00:00:00 CST 2019), DemoTest.User(id=4, name=user4, createDate=Thu Aug 15 00:00:00 CST 2019)]
+[DemoTest.User(id=4, name=user4, createDate=Thu Aug 15 00:00:00 CST 2019), DemoTest.User(id=5, name=user5, createDate=Sun Jun 30 00:00:00 CST 2019), DemoTest.User(id=2, name=user2, createDate=Sat Apr 20 00:00:00 CST 2019), DemoTest.User(id=3, name=user3, createDate=Wed Feb 27 00:00:00 CST 2019), DemoTest.User(id=1, name=user1, createDate=Tue Jan 01 00:00:00 CST 2019)]
+```
+
+----
+
+
 **声明：代码来自尚硅谷官网上下载的java8视频教程**
 
 ## 创建Stream
@@ -40,9 +180,6 @@ public void test1() {
   stream4.forEach(System.out::println);
 }
 ```
-
-
-
 
 ## 对Stream进行中间操作
 
