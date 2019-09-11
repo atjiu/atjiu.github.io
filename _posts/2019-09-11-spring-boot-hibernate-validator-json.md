@@ -1,6 +1,6 @@
 ---
 layout: post
-title: springboot项目中使用hibernate-validator校验请求参数
+title: springboot前后端分离项目中使用hibernate-validator校验请求参数返回自定义异常信息的json数据
 date: 2019-09-11 16:02:00
 categories: spring-boot学习笔记
 tags: java
