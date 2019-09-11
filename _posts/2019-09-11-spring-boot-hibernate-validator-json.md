@@ -10,7 +10,7 @@ author: 朋也
 * content
 {:toc}
 
-之间整理过一篇 springboot 项目里使用 hibernate-validator 校验参数，然后在freemarker模板里取异常信息展示的博客
+之间整理过一篇 [springboot 项目里使用 hibernate-validator 校验参数，然后在freemarker模板里取异常信息展示](https://tomoya92.github.io/2018/01/11/spring-boot-hibernate-validator-freemarker/) 的博客
 
 现在都流行前后端分离了，服务端大都直接返json，又稍微折腾了一下，结合统一异常处理，**优雅的实现请求参数的校验**
 
