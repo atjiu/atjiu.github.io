@@ -137,6 +137,8 @@ end while;
 
 例：
 
+链接文原: [https://tomoya92.github.io/2019/09/27/mysql-procedure/](https://tomoya92.github.io/2019/09/27/mysql-procedure/)
+
 ```sql
 DELIMITER //
 create procedure my_first_procedure()
@@ -263,6 +265,8 @@ call my_first_procedure(@age);
 out是在存储过程中处理的结果返回出来用的, 使用中要配合着 `into` 关键字使用
 
 用法
+
+文链接原: [https://tomoya92.github.io/2019/09/27/mysql-procedure/](https://tomoya92.github.io/2019/09/27/mysql-procedure/)
 
 ```sql
 drop procedure my_first_procedure;
