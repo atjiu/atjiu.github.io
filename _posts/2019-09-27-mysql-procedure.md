@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL存储过程学习总结
+title: MySQL存储过程学习, java调用存储过程总结
 date: 2019-09-27 14:14:00
 categories: java学习笔记
 tags: mysql
@@ -284,3 +284,115 @@ set @name = "";
 call my_first_procedure(@age, @name);
 select @name;
 ```
+
+## 应用
+
+在java程序中调用存储过程之间，要先将存储过程在mysql中创建好，我这里以下面这个存储过程为例
+
+```sql
+DELIMITER //
+create procedure myFirstProcedure()
+begin
+	select * from user;
+end
+//
+```
+
+创建maven项目，引入依赖
+
+```xml
+<dependencies>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.48</version>
+	</dependency>
+</dependencies>
+
+<build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.8.1</version>
+			<configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+				<encoding>UTF-8</encoding>
+				<showWarnings>true</showWarnings>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
+```
+
+创建测试类，代码如下
+
+```java
+import java.sql.*;
+
+/**
+ * Created by tomoya at 2019/9/30
+ */
+public class Main {
+
+  public Main() throws SQLException {
+    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pybbs", "root", "");
+    CallableStatement cs = connection.prepareCall("{call mySecondProcedure()}");
+    cs.execute();
+    ResultSet resultSet = cs.getResultSet();
+    while (resultSet.next()) {
+      Integer id = resultSet.getInt("id");
+      String username = resultSet.getString("username");
+      System.out.println("id: " + id + " username: " + username);
+    }
+  }
+
+  public static void main(String[] args) throws SQLException {
+    new Main();
+  }
+}
+```
+
+看起来跟java连接jdbc调用查询是一样的，最后都是从ResultSet里取数据
+
+参数也是一样的传法，看下面这个存储过程
+
+```sql
+DELIMITER //
+create procedure mySecondProcedure(in myId int)
+begin
+	select * from user where id = myId;
+end
+//
+```
+
+调用程序
+
+```java
+import java.sql.*;
+
+/**
+ * Created by tomoya at 2019/9/30
+ */
+public class Main {
+
+  public Main() throws SQLException {
+    Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pybbs", "root", "");
+    CallableStatement cs = connection.prepareCall("{call mySecondProcedure(?)}"); // 存储过程中有多少参数这里就有几个 ?
+    cs.setInt(1, 10);// 查询id为10的用户信息, 参数下标是从1开始的
+    cs.execute();
+    ResultSet resultSet = cs.getResultSet();
+    while (resultSet.next()) {
+      Integer id = resultSet.getInt("id");
+      String username = resultSet.getString("username");
+      System.out.println("id: " + id + " username: " + username);
+    }
+  }
+
+  public static void main(String[] args) throws SQLException {
+    new Main();
+  }
+}
+```
+
