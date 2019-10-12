@@ -90,6 +90,34 @@ brew services reload nginx
 
 浏览器访问 `http://demo.com/0.png` 即可打开图片
 
+---
+
+既然nginx可以映射静态资源文件，那前端框架写的项目打包后可不可以用它映射成服务呢？
+
+是可以的，但如果有框架里用到了前端路由，就会有问题（没记错的话要么是404，要么是返回报错），这时候稍微加一些配置就可以解决了
+
+```conf
+server {
+    listen 80;
+    server_name demo.com;
+    location / {
+        root /Users/hh/Desktop/react-demo/build;
+        index index.html;
+        autoindex on;
+        set $fallback_file /index.html;
+        if ($http_accept !~ text/html) {
+            set $fallback_file /null;
+        }
+        if ($uri ~ /$) {
+            set $fallback_file $uri;
+        }
+        try_files $uri $fallback_file;
+    }
+}
+```
+
+重启nginx服务，再次访问就没有什么问题了
+
 ## 代理网站（http代理）
 
 使用nodejs中的 serve 模块启动一个http服务
