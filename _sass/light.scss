@@ -79,6 +79,13 @@ ol {
   border-radius: 0;
 }
 
+.tags {
+  padding: 1rem;
+  a {
+    word-break: break-word;
+  }
+}
+
 .tags-list {
   li {
     line-height: 1.7em;
