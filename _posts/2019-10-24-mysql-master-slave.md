@@ -44,7 +44,7 @@ log_bin = /var/log/mysql/mysql-bin.log
 
 重启mysql服务，登录mysql后运行
 
-```mysql
+```sql
 show variables like '%log_bin%';
 ```
 
@@ -78,7 +78,7 @@ relay-log-index = /var/log/mysql/relay-bin.index
 
 创建用户并赋予权限，用户名`sync_db`
 
-```mysql
+```sql
 > create user 'sync_db'@'%' identified by '123123';
 > grant replication slave on *.* to 'sync_db'@'%' identified by '123123';
 ```
@@ -89,20 +89,20 @@ relay-log-index = /var/log/mysql/relay-bin.index
 
 登录mysql，运行下面命令开启同步功能
 
-```mysql
+```sql
 > change master to master_host = '192.168.16.87', master_port=3306, master_user='sync_db', master_password='123123', master_log_file='mysql-bin.000001', master_log_pos=0;
 > start slave;
 ```
 
 关闭同步
 
-```mysql
+```sql
 > stop slave;
 ```
 
 查看同步开启状态
 
-```mysql
+```sql
 > show slave status;
 ```
 
