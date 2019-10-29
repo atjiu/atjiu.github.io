@@ -122,6 +122,49 @@ sudo service mysql start/stop/restart
 sudo apt install -y mysql-workbench
 ```
 
+---
+
+**2019-10-29 更新**
+
+ubuntu18.04安装好mysql后，没有在安装过程中提示输入密码了，安装完成后，会生成一个临时的用户名和密码存放在 `/etc/mysql/debian.cnf` 中，如下
+
+```
+# Automatically generated for Debian scripts. DO NOT TOUCH!
+[client]
+host     = localhost
+user     = debian-sys-maint
+password = WOfUQaZnldV76N3m
+socket   = /var/run/mysqld/mysqld.sock
+[mysql_upgrade]
+host     = localhost
+user     = debian-sys-maint
+password = WOfUQaZnldV76N3m
+socket   = /var/run/mysqld/mysqld.sock
+```
+
+然后使用这个文件中的user和password登录一下mysql
+
+```mysql
+mysql -udebian-sys-maint -pWOfUQaZnldV76N3m
+```
+
+修改root用户密码和开启远程访问
+
+```mysql
+> use mysql;
+> update user set authentication_string = password('123123'), host = '%' where user = 'root' and host = 'localhost';
+> update user set plugin='mysql_native_password';
+> flush privileges;
+```
+
+另外还要编辑配置文件 `/etc/mysql/mysql.conf.d/mysqld.cnf`
+
+将 `bind 127.0.0.1` 注释掉
+
+重启mysql服务
+
+---
+
 ### 安装Redis
 
 ```sh
