@@ -10,13 +10,14 @@ author: 朋也
 * content
 {:toc}
 
-
-
-
-
 mysql自带的就有主从复制功能，原理是通过主节点的bin-log日志来实现的数据同步
 
 master开启bin-log日志 -> slave开启同步日志 -> slave读取master的bin-log中的sql语句达到同步数据的功能
+
+
+
+
+
 
 ## 安装mysql
 
