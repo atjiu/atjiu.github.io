@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL主从复制，Java实现读写分离
+title: MySQL主从复制配置
 date: 2019-10-24 10:21:00
 categories: java学习笔记
 tags: java
