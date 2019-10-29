@@ -52,6 +52,8 @@ show variables like '%log_bin%';
 
 ![](/assets/QQ20191029-112253@2x.png)
 
+链接文原: [https://tomoya92.github.io/2019/10/24/mysql-master-slave/](https://tomoya92.github.io/2019/10/24/mysql-master-slave/)
+
 **slave**
 
 然后配置从节点
