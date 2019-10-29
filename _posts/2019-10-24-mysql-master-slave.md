@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL主从复制配置
+title: MySQL主从复制（主主复制）配置
 date: 2019-10-24 10:21:00
 categories: java学习笔记
 tags: java
@@ -112,4 +112,8 @@ relay-log-index = /var/log/mysql/relay-bin.index
 
 这时候在主节点上创建数据库，添加数据，创建表等操作都会被自动的同步到从节点上的mysql数据库中
 
+## 主主复制
 
+主主复制就是将主从复制返过来，在上面配置的从节点中开启bin-log日志，然后在主节点同步从库的bin-log达到同步数据的目的
+
+与主从复制的区别：主从复制中当从库数据有变动时，主库里数据不会变，主主复制不管哪一个库发生了变动，数据始终都会保持一致
