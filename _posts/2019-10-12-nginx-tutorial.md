@@ -1,6 +1,6 @@
 ---
 layout: post
-title: nginx用法总结，映射静态资源，代理http，负载均衡，tcp服务
+title: nginx用法总结，映射静态资源，代理http，负载均衡，tcp服务，附带 haproxy 简单配置
 date: 2019-10-12 16:59:00
 categories: 杂项
 tags: nginx
@@ -244,3 +244,26 @@ stream {
 
 tcp也能代理，这就好玩了，各种联机游戏都可以通过nginx来转发了，简直爽歪歪
 
+## haproxy负载均衡
+
+haproxy天生就自带负载均衡
+
+ubuntu安装
+
+```bash
+sudo apt install haproxy
+```
+
+编辑haproxy的配置文件 `/etc/haproxy/haproxy.cfg`
+
+```
+listen
+  mode tcp
+  bind 0.0.0.0:3307  # 这端口换一下，为了测试
+  server s1 192.168.16.87:3306
+  server s2 192.168.16.109:3306
+```
+
+改好后保存，然后重启haproxy服务 `service haproxy restart`
+
+连接mysql，重复连接几次会发现连接的服务是在 `192.168.16.87`和`192.168.16.109`之间来回的换
