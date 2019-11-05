@@ -40,6 +40,8 @@ author: 朋也
 
 ![](/assets/QQ20191105-143457@2x.png)
 
+原接文链: [https://tomoya92.github.io/2019/11/05/eclipse-settings/](https://tomoya92.github.io/2019/11/05/eclipse-settings/)
+
 ## 自动提示
 
 idea里非常好用的一个功能是自动提示功能，eclipse里默认只有当写 `@` `.` 的时候才会有提示，加上 `abcdefghijklmnopqrtuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`
