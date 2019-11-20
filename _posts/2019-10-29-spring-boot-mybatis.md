@@ -129,11 +129,23 @@ public interface UserMapper {
   @Select("select * from user;")
   List<User> selectAll();
 
+  // 注解带参数方式 通过 ${} 接收参数
+  @Delete("delete from user where username = '${username}'")
+  void deleteByUsername(@Param("username") String username);
+
+  // 使用 #{} 接收参数，如果是单一的参数可以不用加 @Param 注解，如果是对象或者多个参数，就需要加上 @Param 注解
+  @Select("select * from user where id = #{user.id}")
+  void selectById(@Param("user") User user);
+  @Select("select * from user where id = #{user.id} and username = #{username}")
+  void selectByIdAndUsername(@Param("id") Integer id, @Param("username") String username);
+
   // xml方式查询
   List<User> selectAllWithXml();
 
 }
 ```
+
+> **如果使用 ${} 接收字符串参数，还需要在外面加上引号 '${xxx}' 如果是 #{} 接收字符串参数则可以不用加引号**
 
 UserMapper.xml **注意：这个xml文件我放在了 src/resources/mapper/UserMapper.xml**
 
