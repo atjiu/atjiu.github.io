@@ -325,6 +325,39 @@ public void test2() {
 }
 ```
 
+日期排序
+
+```java
+private Date parse(String text) throws ParseException {
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+    return simpleDateFormat.parse(text);
+}
+
+private String formatDate(Date date) {
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+    return simpleDateFormat.format(date);
+}
+
+@Test
+public void sortDate() throws ParseException {
+    List<Date> dates = Arrays.asList(
+            parse("2018-11-12 19:33:20"),
+            parse("2019-01-12 09:33:20"),
+            parse("2017-09-11 19:34:20"),
+            parse("2016-08-29 20:33:20"),
+            parse("2018-02-12 05:33:20"),
+            parse("2019-07-12 08:33:20"),
+            parse("2016-03-12 14:33:20")
+    );
+
+    // 按照日期正序排列
+    dates.stream().sorted((o1, o2) -> o1.compareTo(o2)).forEach(item -> System.out.println(formatDate(item)));
+
+    // 按照日期倒序排列
+    dates.stream().sorted((o1, o2) -> o2.compareTo(o1)).forEach(item -> System.out.println(formatDate(item)));
+}
+```
+
 ## 查找与匹配
 
 ```java
