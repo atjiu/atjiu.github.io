@@ -110,7 +110,7 @@ sudo chmod +x frps
 
 我这假设放在 `/opt/frp/` 下, 假设要配置的网站域名是 `example.com` `bbs.example.com` `blog.example.com` 三个域名
 
-修改 `frps.ini`
+修改 `frpc.ini`
 
 ```
 [common]
@@ -124,7 +124,7 @@ local_ip = localhost
 local_port = 8080
 use_encryption = false
 use_compression = true
-custom_domains = example.com
+subdomain = example.com
 
 [bbs]
 type = http
