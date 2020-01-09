@@ -18,6 +18,73 @@ author: 朋也
 
 在项目中的一些需求的实现总结一下
 
+#### Q：查询出一个列表，根据其中某个字段去重
+
+stream里自带了一个`distinct()`方法，不过它只去重两个一模一样的对象，开发中会碰到由于表设计的缺陷，导致查询出来的数据会有重复的，但它的id是不一样的，这时候要根据其中某个字段去重就没法用 `distinct()` 方法了，所以有了这个例子
+
+```java
+class User {
+    private int id;
+    private String name;
+
+    public User(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
+
+@Test
+public void contextLoads() {
+    // 构建id不同，但name可能会重复的user对象
+    List<User> users = Arrays.asList(
+            new User(1, "tomcat"),
+            new User(2, "jetty"),
+            new User(3, "tomcat"),
+            new User(4, "spring"),
+            new User(5, "java"),
+            new User(6, "spring")
+    );
+    // 根据name去重
+    users = users.stream().filter(distinctByKey(User::getName)).collect(Collectors.toList());
+    System.out.println(users.toString());
+}
+
+public static <T> Predicate<T> distinctByKey(Function<? super T, Object> keyExtractor) {
+    Map<Object, Boolean> seen = new ConcurrentHashMap<>();
+    return object -> seen.putIfAbsent(keyExtractor.apply(object), Boolean.TRUE) == null;
+}
+```
+
+执行结果：
+
+```log
+[User{id=1, name='tomcat'}, User{id=2, name='jetty'}, User{id=4, name='spring'}, User{id=5, name='java'}]
+```
+
 #### Q：一个书籍的列表，按照类型分组
 
 ```java
