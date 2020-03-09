@@ -194,6 +194,14 @@ remote_port = 7001
 3. 如果ssh映射连接总是超时，要看一下外网服务器是否把7001端口开放了，有可能是外网服务器的防火墙拦住了
 4. 关于nginx配置https，参见：[https://tomoya92.github.io/2016/08/28/letsencrypt-nginx-https/][1]
 
+## 问题
+
+如果使用nginx反代frp的话，有时候会碰到这样的错误 `[W] [http.go:95] do http proxy request error: no such domain: 127.0.0.1` 
+
+这个问题我在issues里找到了解决办法，在nginx代理的时候，加上一个配置 `proxy_set_header Host $host;` 写在 `proxy_pass` 这一层就可以了
+
+参见：[https://github.com/fatedier/frp/issues/1521](https://github.com/fatedier/frp/issues/1521)
+
 ## 参考
 
 - [https://github.com/fatedier/frp/blob/master/README_zh.md][2]
