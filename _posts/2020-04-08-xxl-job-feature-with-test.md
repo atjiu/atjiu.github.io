@@ -44,6 +44,45 @@ xxl-job：一个分布式的定时器管理平台(这东西类似于zookeeper)
 </dependency>
 ```
 
+配置文件
+
+```yml
+xxl:
+  job:
+    admin:
+      address: http://192.168.1.100:8085/   # xxl-job-admin 的服务端口
+    accessToken: 123123  # 连接xxl-job-admin时加密通讯
+    executor:
+      appname: pybbs  # 当前项目的名字
+      address:
+      ip:
+      port: 30001  # 当前项目的xxl-job的端口，类似于dubbo.protocol.port
+      logpath: ./log/xxl-job/jobhandler
+      logretentiondays: 30 # xxl-job executor log-retention-days
+```
+
+如果是properties格式的配置文件，格式如下
+
+```properties
+### xxl-job admin address list, such as "http://address" or "http://address01,http://address02"
+xxl.job.admin.addresses=http://127.0.0.1:8080/xxl-job-admin
+
+### xxl-job, access token
+xxl.job.accessToken=
+
+### xxl-job executor appname
+xxl.job.executor.appname=xxl-job-executor-sample
+### xxl-job executor registry-address: default use address to registry , otherwise use ip:port if address is null
+xxl.job.executor.address=
+### xxl-job executor server-info
+xxl.job.executor.ip=
+xxl.job.executor.port=9999
+### xxl-job executor log-path
+xxl.job.executor.logpath=/data/applogs/xxl-job/jobhandler
+### xxl-job executor log-retention-days
+xxl.job.executor.logretentiondays=30
+```
+
 加入配置类
 
 ```java
