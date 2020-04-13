@@ -47,8 +47,6 @@ xxl-job：一个分布式的定时器管理平台(这东西类似于zookeeper)
 加入配置类
 
 ```java
-package ai.puying.insuredata.config;
-
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,7 +56,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * xxl-job config
- * 文链接原: [https://tomoya92.github.io/2020/04/08/xxl-job-feature-with-test/](https://tomoya92.github.io/2020/04/08/xxl-job-feature-with-test/)
+ * 文链接原: https://tomoya92.github.io/2020/04/08/xxl-job-feature-with-test/
  * @author xuxueli 2017-04-28
  */
 @Configuration
