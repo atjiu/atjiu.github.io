@@ -76,6 +76,22 @@ console.log("hello world");
   },
 ```
 
+最后添加babel的配置，在项目根目录里创建文件 `.babelrc`，添加上下面内容
+
+```json
+{
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "corejs": 2,
+          "regenerator": true
+        }
+      ]
+    ]
+  }
+```
+
 运行项目 `npm run dev` 浏览器访问 http://localhost:3000
 
 ## 添加组件
