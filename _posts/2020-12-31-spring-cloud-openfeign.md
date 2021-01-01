@@ -66,7 +66,6 @@ public interface IOrderService {
 ```java
 package com.example.springcloudtutorial;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -74,6 +73,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -89,7 +90,7 @@ public class UserApplication {
 //        return new RestTemplate();
 //    }
 
-    @Autowired
+    @Resource // 这里如果用Autowired会有报错提示，用Resource就不会
     private IOrderService orderService;
 
     @GetMapping("/createOrder")
@@ -104,9 +105,67 @@ public class UserApplication {
         SpringApplication.run(UserApplication.class, args);
     }
 }
+
 ```
 
 最后别忘了在启动类上添加上 `@EnableFeignClients` 注解
 
 浏览器访问：localhost:18081/createOrder?userId=123
 
+---
+
+openfeign调用服务的超时时间默认为1s，如果超过了1s没有连通或者连通了没有响应，就会报错，这里可以修改配置文件将超时时间改的长一些来解决
+
+```properties
+# 连接服务提供方的超时时间
+feign.client.config.default.connect-timeout=5000  # 5s
+# 连接上服务后，到响应完成之前所等待的时间
+feign.client.config.default.read-timeout=5000  # 5s
+```
+
+---
+
+openfeign调用服务接口的日志配置
+
+> openfeign的日志只需要在调用方，比如User模块要调用Order模块的服务，那么就只需要配置在User模块里就可以了
+
+日志级别有以下四种
+
+- NONE 默认的，不显示任何日志
+- BASIC 仅记录请求方法，URL，响应状态码及执行时间
+- HEADERS 除了BASIC中定义的信息之外，还显示请求和响应的头信息
+- FULL 除了HEADERS中定义的信息之外，还有请求和响应的正文数据
+
+创建日志级别的Bean
+
+文链接原: [https://tomoya92.github.io/2021/01/01/spring-cloud-openfeign/](https://tomoya92.github.io/2021/01/01/spring-cloud-openfeign/)
+
+```java
+package com.example.springcloudtutorial;
+
+import feign.Logger;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class FeignLoggerConfig {
+
+    @Bean
+    public Logger.Level feignLoggerLevel() {
+        return Logger.Level.FULL;
+    }
+
+}
+
+```
+
+配置文件添加下面配置
+
+```properties
+# 开启openfeign的访问日志
+logging.level.com.example.springcloudtutorial.IOrderService=debug
+```
+
+再次访问 localhost:18081/createOrder?userId=123 后会看到控制台里显示的日志如下
+
+![](/assets/2021-01-01-20-46-43.png)
