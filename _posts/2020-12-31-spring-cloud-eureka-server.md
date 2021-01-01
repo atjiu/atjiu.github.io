@@ -272,6 +272,13 @@ eureka.client.register-with-eureka=false
 eureka.client.service-url.defaultZone=http://eureka-server:18080/eureka/
 ```
 
+然后修改系统的hosts文件，添加下面两行配置
+
+```
+127.0.0.1 eureka-server
+127.0.0.1 eureka-server1
+```
+
 重启 eureka-server 和 eureka-server1
 
 访问 http://localhost:18080/ `DS Replicas` 标签下显示如下图
@@ -280,4 +287,4 @@ eureka.client.service-url.defaultZone=http://eureka-server:18080/eureka/
 
 访问 http://localhost:28080/ `DS Replicas` 标签下显示如下图
 
-![](/assets/2021-01-01-21-23-33.png)
+![](/assets/2021-01-01-22-17-00.png)
