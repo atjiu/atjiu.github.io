@@ -228,3 +228,56 @@ public class UserApplication {
 ```log
 userId: 123 create an order! server: order2
 ```
+
+---
+
+DS Replicas：我的理解就是数据备份(同步)，不见得正确，仅供参考 DS:database Replicas：备份
+
+为什么需要它：实例服务如果只有一个的话，会不安全，万一服务挂掉了，没有可替代的服务接管被调用，所以需要多份实例。那么注册中心也是一样的，如果只有一个注册中心，当这个注册中心挂了，整个微服务就完了，如果有多个注册中心的话，一个挂掉了，还可以使用另一个，它们之间的数据也可以互相的同步，这对整个微服务架构就会相对的安全的多
+
+接原链文: [https://tomoya92.github.io/2021/01/01/spring-cloud-eureka-server/](https://tomoya92.github.io/2021/01/01/spring-cloud-eureka-server/)
+
+具体配置方法如下
+
+同样的eureka-server再复制一份，修改端口号为 28080
+
+18080端口的配置文件修改如下
+
+```properties
+server.port=18080
+
+spring.application.name=eureka-server
+
+eureka.instance.appname=eureka-server
+eureka.instance.hostname=eureka-server
+
+eureka.client.fetch-registry=false
+eureka.client.register-with-eureka=false
+eureka.client.service-url.defaultZone=http://eureka-server1:28080/eureka/
+
+```
+
+28080端口的配置文件修改如下
+
+```properties
+server.port=28080
+
+spring.application.name=eureka-server
+
+eureka.instance.instance-id=eureka-server-${server.port}
+eureka.instance.hostname=eureka-server1
+
+eureka.client.fetch-registry=false
+eureka.client.register-with-eureka=false
+eureka.client.service-url.defaultZone=http://eureka-server:18080/eureka/
+```
+
+重启 eureka-server 和 eureka-server1
+
+访问 http://localhost:18080/ `DS Replicas` 标签下显示如下图
+
+![](/assets/2021-01-01-21-07-44.png)
+
+访问 http://localhost:28080/ `DS Replicas` 标签下显示如下图
+
+![](/assets/2021-01-01-21-23-33.png)
