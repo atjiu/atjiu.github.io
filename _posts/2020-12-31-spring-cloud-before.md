@@ -78,3 +78,9 @@ userId: 123 create an order. from order.
 好处：简单，好理解，没有什么规范可言，只要是http服务就行
 
 坏处：做集群麻烦
+
+---
+
+## spring-cloud学习顺序
+
+// TODO 整个合集更新完后再整理
