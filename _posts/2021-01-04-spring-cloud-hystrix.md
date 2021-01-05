@@ -211,10 +211,10 @@ public Object getOrder(String id) {
 @HystrixCommand(
         fallbackMethod = "defaultFallback",
         commandProperties = {
-                @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),// 是否开启断路器
-                @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "5"),// 请求次数
-                @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"), // 时间窗口期
-                @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60"),// 失败率达到多少后跳闸
+                @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),// 开启断路器
+                @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "5"),// 请求阈值（默认是5）
+                @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"), // 触发降级后要等待的时间
+                @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60"),// 失败率达到多少后触发降级
         },
         threadPoolKey = "order",
         threadPoolProperties = {
