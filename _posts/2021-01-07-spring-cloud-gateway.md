@@ -74,7 +74,7 @@ public class GatewayApplication {
 
 链文接原: [https://tomoya92.github.io/2021/01/07/spring-cloud-gateway/](https://tomoya92.github.io/2021/01/07/spring-cloud-gateway/)
 
-## 配置文件
+## Predicates
 
 > 之前的模块一直用的是properties来配置的，但网关这块如果还用properties来配置，那就不是人看的了，所以这个模块的配置文件采用yaml来配置
 
@@ -101,6 +101,55 @@ eureka:
     instance-id: gateway-${server.port}
 
 ```
+
+配置中的断言规则可以参见：https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#gateway-request-predicates-factories
+
+里面在针对Path,Header,Cookie,Host,Method,Query等等进行判断
+
+## Filters
+
+```yaml
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: add_request_header_route
+        uri: https://example.org
+        filters:
+        - AddRequestHeader=X-Request-red, blue
+```
+
+上面配置意思是请求经过断言成功后，再走过滤器(filter)，要请求头中有X-Request-red参数的请求才行，具体过滤器配置参见：https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#gatewayfilter-factories
+
+## 全局过滤器
+
+添加下面配置启用全局过滤器
+
+```java
+@Bean
+public GlobalFilter customFilter() {
+    return new CustomGlobalFilter();
+}
+
+public class CustomGlobalFilter implements GlobalFilter, Ordered {
+
+    @Override
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+        log.info("custom global filter");
+        // 从exchange里可以取出request, response
+        ServerHttpRequest request = exchange.getRequest();
+        ServerHttpResponse response = exchange.getResponse();
+        return chain.filter(exchange);
+    }
+
+    @Override
+    public int getOrder() {
+        return -1;
+    }
+}
+```
+
+每次请求都会走一下这个filter方法，然后就可以在里面做些小动作了
 
 ## 测试
 
