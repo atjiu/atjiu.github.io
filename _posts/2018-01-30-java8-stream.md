@@ -685,6 +685,72 @@ public void test9() {
 }
 ```
 
+## 四个内置函数式接口
 
+- Consumer<T>      消费型接口，只管接收，不管输出
+- Function<T, R>   函数式接口，接收参数，处理完并返回
+- Predicate<T>     断言式接口，接收参数，进行判断，返回 true, false 相当于过滤器
+- Supplier<T>      供给型接口，不管收，只管输出
 
+例子：
 
+消费
+
+```java
+@Test
+public void test2() {
+    testConsumer(10, price -> System.out.println("this book is $" + price)); // 实现接口，并制定怎么处置接收到的数据
+}
+
+public void testConsumer(Integer price, Consumer<Integer> consumer) {
+    consumer.accept(price); // 只管收，收来干啥由实现接口处来定
+}
+```
+
+函数式
+
+```java
+@Test
+public void test3() {
+    String s = testFunction("hello world", str -> str.substring(2, 6)); // 实现Function接口，并制定处理规则
+    System.out.println(s);
+}
+
+public String testFunction(String str, Function<String, String> function) {
+    return function.apply(str); // 输出处理后的数据，处理规则在实现部分制定
+}
+```
+
+断言式
+
+```java
+@Test
+public void test4() {
+    List<Integer> newNums = testPredicate(Arrays.asList(12, 2, 1, 5, 200, 21), num -> num > 10); // 实现Predicate接口，并给出断言规则
+    System.out.println(newNums);
+}
+
+public List<Integer> testPredicate(List<Integer> nums, Predicate<Integer> predicate) {
+    List<Integer> newNums = new ArrayList<>();
+    for (Integer num : nums) {
+        if (predicate.test(num)) { // 这里直接做判断，至于怎么判断是在实现的地方写的
+            newNums.add(num);
+        }
+    }
+    return newNums;
+}
+```
+
+供给型
+
+```java
+@Test
+public void test5() {
+    Double newNums = testSupplier(() -> Math.random() * 100);  // 实现接口，并定义供给的数据类型
+    System.out.println(newNums);
+}
+
+public Double testSupplier(Supplier<Double> supplier) {
+    return supplier.get();  // 只管给，给的数据是啥，由实现处定义
+}
+```
