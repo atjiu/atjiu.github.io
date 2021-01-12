@@ -1,5 +1,10 @@
 $logo_size: 102.4px;
 
+* {
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
 body {
     font-size: 1rem;
 }
@@ -25,12 +30,6 @@ p {
     line-height: 1.6;
     margin-bottom: 1.25em;
     text-rendering: optimizeLegibility;
-}
-
-ul {
-    li {
-        line-height: 1.5rem;
-    }
 }
 
 header {
@@ -116,6 +115,7 @@ header {
                         a {
                             font-size: 0.8rem;
                             color: #222;
+                            text-decoration: none;
                         }
                         &:last-child {
                             border-bottom: 0;
@@ -145,6 +145,11 @@ header {
     #markdown-toc {
         display: none;
     }
+    @media screen {
+        ul {
+            padding: 0 20px;
+        }
+    }
     p,
     li {
         code {
@@ -156,8 +161,13 @@ header {
             font-family: Monaco, Menlo, Consolas, courier new, monospace;
         }
     }
+    @media screen {
+        pre {
+            padding: 0 0.3rem !important;
+        }
+    }
     pre {
-        padding: 1em 1.5rem;
+        padding: 1rem 1.5rem;
         overflow-x: scroll;
         color: #222;
         background: #fff;
@@ -171,6 +181,14 @@ header {
             font-weight: 400;
             text-rendering: optimizeSpeed;
             word-break: normal;
+        }
+    }
+    @media screen {
+        blockquote {
+            padding: 0rem 0.3rem !important;
+            p {
+                margin: 0.3rem !important;
+            }
         }
     }
     blockquote {
