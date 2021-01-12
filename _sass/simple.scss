@@ -91,7 +91,7 @@ header {
                     height: 24px;
                     width: 250px;
                 }
-                @media screen {
+                @media screen and (max-width: 768px) {
                     input {
                         width: 200px;
                     }
@@ -127,25 +127,25 @@ header {
 
         .recent-posts {
             list-style: none;
+            padding: 0 20px;
             li {
                 color: rgb(134, 134, 134);
                 line-height: 1.7rem;
             }
         }
-        @media screen {
+        @media screen and (max-width: 768px) {
             .recent-posts-head {
                 margin-left: 0px;
             }
             .recent-posts {
-                margin-left: 0px;
-                padding-left: 0px;
+                padding: 0px;
             }
         }
     }
     #markdown-toc {
         display: none;
     }
-    @media screen {
+    @media screen and (max-width: 768px) {
         ul {
             padding: 0 20px;
         }
@@ -161,9 +161,9 @@ header {
             font-family: Monaco, Menlo, Consolas, courier new, monospace;
         }
     }
-    @media screen {
+    @media screen and (max-width: 768px) {
         pre {
-            padding: 0 0.3rem !important;
+            padding: 0 0.3rem;
         }
     }
     pre {
@@ -183,11 +183,11 @@ header {
             word-break: normal;
         }
     }
-    @media screen {
+    @media screen and (max-width: 768px) {
         blockquote {
-            padding: 0rem 0.3rem !important;
+            padding: 0rem 0.3rem;
             p {
-                margin: 0.3rem !important;
+                margin: 0.3rem;
             }
         }
     }
