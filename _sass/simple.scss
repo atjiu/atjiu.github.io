@@ -33,14 +33,14 @@ ul {
     }
 }
 
-.logo-py {
-    background-image: url("https://avatars0.githubusercontent.com/u/6915570");
-    background-repeat: no-repeat;
-    background-size: cover;
+header {
     margin: 30px auto;
-    width: $logo_size;
-    height: $logo_size;
-    border-radius: $logo_size;
+    text-align: center;
+    .logo-py {
+        width: $logo_size;
+        height: $logo_size;
+        border-radius: $logo_size;
+    }
 }
 
 @media screen and (min-width: 1445px) {
@@ -92,6 +92,11 @@ ul {
                     height: 24px;
                     width: 250px;
                 }
+                @media screen {
+                    input {
+                        width: 200px;
+                    }
+                }
                 .search-result {
                     background-color: #fff;
                     width: 100%;
@@ -125,6 +130,15 @@ ul {
             li {
                 color: rgb(134, 134, 134);
                 line-height: 1.7rem;
+            }
+        }
+        @media screen {
+            .recent-posts-head {
+                margin-left: 0px;
+            }
+            .recent-posts {
+                margin-left: 0px;
+                padding-left: 0px;
             }
         }
     }
