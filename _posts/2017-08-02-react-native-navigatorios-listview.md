@@ -40,11 +40,11 @@ export default class ITNews extends Component {
   render() {
     return (
       <NavigatorIOS
-        style={{flex: 1}}
-        initialRoute={{
+        style={%raw%}{{flex: 1}}{%endraw%}
+        initialRoute={%raw%}{{
           component: NewsList,
           title: 'IT资讯'
-        }}
+        }}{%endraw%}
       />
     );
   }
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
 
 **说明**
 
-- NavigationIOS必须要加上style={{flex: 1}}这个样式，否则它里面装载的组件不会显示
+- NavigationIOS必须要加上style={%raw%}{{flex: 1}}{%endraw%}这个样式，否则它里面装载的组件不会显示
 
 ## 参考
 

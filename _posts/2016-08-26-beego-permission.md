@@ -58,7 +58,7 @@ type Permission struct {
 }
 ```
 
-使用beego的orm框架自动生成了5张表,分别是 `user` `role` `user_roles` `permission` `role_permissions` 
+使用beego的orm框架自动生成了5张表,分别是 `user` `role` `user_roles` `permission` `role_permissions`
 
 本来想用orm自动来维护多对多的关联关系, 结果发现不行, 貌似没实现, 只好自己写sql
 
@@ -182,9 +182,9 @@ func HasPermission(userId int, name string) bool {
 ```
 
 ```html
-{{if haspermission .UserInfo.Id "user:list"}}<li><a href="/user/list">用户管理</a></li>{{end}}
-{{if haspermission .UserInfo.Id "role:list"}}<li><a href="/role/list">角色管理</a></li>{{end}}
-{{if haspermission .UserInfo.Id "permission:list"}}<li><a href="/permission/list">权限管理</a></li>{{end}}
+{%raw%}{{if haspermission .UserInfo.Id "user:list"}}<li><a href="/user/list">用户管理</a></li>{{end}}{%endraw%}
+{%raw%}{{if haspermission .UserInfo.Id "role:list"}}<li><a href="/role/list">角色管理</a></li>{{end}}{%endraw%}
+{%raw%}{{if haspermission .UserInfo.Id "permission:list"}}<li><a href="/permission/list">权限管理</a></li>{{end}}{%endraw%}
 ```
 
 具体代码点击 [pybbs-go](https://github.com/tomoya92/pybbs-go/)

@@ -189,9 +189,9 @@ Hello, {{ title }}! <br>
 
 <ul>
   <!-- 使用自定义的过滤器 -->
-  {% for book in books|split(',') %}
+  {%raw%}{% for book in books|split(',') %}
     <li>{{ book }}</li>
-  {% endfor %}
+  {% endfor %}{%endraw%}
 </ul>
 
 </body>

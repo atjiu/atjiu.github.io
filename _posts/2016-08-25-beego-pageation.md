@@ -48,6 +48,7 @@ func PageUtil(count int, pageNo int, pageSize int, list interface{}) Page {
 ```html
 <script type="text/javascript" src="/static/js/bootstrap-paginator.min.js"></script>
 <script type="text/javascript">
+{%raw%}
   $(function () {
     $("#tab_{{.S}}").addClass("active");
     $("#page").bootstrapPaginator({
@@ -65,6 +66,7 @@ func PageUtil(count int, pageNo int, pageSize int, list interface{}) Page {
       }
     });
   });
+{%endraw%}
 </script>
 ```
 

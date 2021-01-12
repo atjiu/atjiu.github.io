@@ -119,8 +119,8 @@ class HomeScreen extends Component {
           style={styles.rowStyle}
           underlayColor='#008b8b'
           onPress={() => this._onPress(rowData.name)}>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <Image style={{width: 40, height: 40, borderRadius: 4}} source={rowData.logo}/>
+          <View style={%raw%}{{flexDirection: 'row', alignItems: 'center'}}{%endraw%}>
+            <Image style={%raw%}{{width: 40, height: 40, borderRadius: 4}}{%endraw%} source={rowData.logo}/>
             <Text style={styles.rowText}>{rowData.name}</Text>
           </View>
         </TouchableHighlight>}
@@ -204,7 +204,7 @@ static navigationOptions = ({navigation}) => ({
       name="share-alt"
       size={18}
       color="#000"
-      style={{paddingRight: 20}}
+      style={%raw%}{{paddingRight: 20}}{%endraw%}
       onPress={() => {
         Share.share({
           message: navigation.state.params.title + ' \r\n' + navigation.state.params.href + ' \r\n' + '分享来自ITNews'

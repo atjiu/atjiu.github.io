@@ -54,7 +54,7 @@ React Native提供了一个组件可以实现下拉刷新方法`RefreshControl`
 render() {
     const FooterView = this.state.loadMore ?
       <View style={styles.footer}>
-        <Text style={{fontSize: 16, color: '#777'}}>加载更多...</Text>
+        <Text style={%raw%}{{fontSize: 16, color: '#777'}}{%endraw%}>加载更多...</Text>
       </View> : null;
     return <ListView
       refreshControl={

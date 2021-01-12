@@ -34,7 +34,7 @@ func (c *IndexController) LoginPage() {
 在模板里取值方法：
 
 ```html
-{{.PageTitle}}
+{%raw%}{{.PageTitle}}{%endraw%}
 ```
 
 **前面要带上 . 很奇怪的取值方式，具体啥原因，我也不知道，会用就好 ：）**
@@ -59,6 +59,7 @@ func (c *IndexController) LoginPage() {
 下面就是在views文件夹里创建layout文件夹，并创建layout.tpl文件
 
 ```html
+{%raw%}
 <!doctype html>
 <html lang="en">
 <head>
@@ -78,11 +79,13 @@ func (c *IndexController) LoginPage() {
   </div>
 </body>
 </html>
+{%endraw%}
 ```
 
 然后在views文件夹里创建login.tpl文件
 
 ```html
+{%raw%}
 <div class="row">
   <div class="col-md-6">
     <div class="panel panel-default">
@@ -104,6 +107,7 @@ func (c *IndexController) LoginPage() {
     </div>
   </div>
 </div>
+{%endraw%}
 ```
 
 **注意：layout.tpl里的`LayoutContent`是固定写法，目的是将tplName设置的页面渲染的位置**
@@ -128,7 +132,7 @@ func (c *IndexController) LoginPage() {
 然后在首页页面里引入
 
 ```html
-  {{template "components/welcome.tpl" .}}
+{%raw%}{{template "components/welcome.tpl" .}}{%endraw%}
 ```
 
 效果
@@ -144,6 +148,7 @@ func (c *IndexController) LoginPage() {
 if用法
 
 ```html
+{%raw%}
 <div class="col-md-3 hidden-sm hidden-xs">
   {{if .IsLogin}}
     {{template "components/user_info.tpl" .}}
@@ -152,16 +157,19 @@ if用法
     {{template "components/welcome.tpl" .}}
   {{end}}
 </div>
+{%endraw%}
 ```
 
 range (也就是for循环) 用法
 
 ```html
+{%raw%}
 <select name="sid" id="sid" class="form-control">
   {{range .Sections}}
     <option value="{{.Id}}">{{.Name}}</option>
   {{end}}
 </select>
+{%endraw%}
 ```
 
 ## 自定义模板函数
@@ -189,5 +197,7 @@ func init() {
 页面使用方法
 
 ```html
+{%raw%}
 <span>{{.InTime | timeago}}</span>
+{%endraw%}
 ```
