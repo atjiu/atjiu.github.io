@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if site.bing_meta %} <meta name="msvalidate.01" content="{{site.bing_meta}}" /> {% endif %}
+  {% seo %}
+  <!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link href="/css/font-awesome.min.css" rel="stylesheet"> -->
+  <link href="{{ '/css/main.css' | prepend: site.baseurl }}" rel="stylesheet">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="/js/main.js"></script>
+
+  {% if site.baidu_tongji_id %}
+  <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?{{site.baidu_tongji_id}}";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  {% endif %}
+  {% if site.google_analytics_id %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics_id}}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{site.google_analytics_id}}');
+  </script>
+  {% endif %}
+
+  <!-- google adsense -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2721745535033061",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+
+<body class="gruvbox-dark">
+  <div class="wrapper">
+    <div class="alert alert-warning tip-alert">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <strong>你貌似开启了广告屏蔽插件...</strong> 写博客不容易，希望能将广告过滤去掉，谢谢！
+    </div>
+    <header>
+      {% include header.html %}
+    </header>
+
+    <section class="container">
+      {{ content }}
+    </section>
+    <footer>
+      {% include footer.html %}
+    </footer>
+  </div>
+  <div class="back-to-top">
+    <a href="javascript:;">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+  </div>
+</body>
+
+</html>

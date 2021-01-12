@@ -1,131 +1,33 @@
 ---
 layout: default
 ---
-<div class="row">
-  <!-- <div class="col-md-12">
-    {% include tips.html %}
-  </div> -->
-  <div class="col-md-9">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- 首页广告 -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2721745535033061"
-         data-ad-slot="4316973591"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    {% for post in paginator.posts %}
-      <div class="card">
-        <div class="card-body">
-          <h4><a href="{{ post.url | prepend: site.baseurl }}" class="title">{{ post.title }}</a></h4>
-          <small>
-            <span class="item">
-              <i class="fa fa-calendar-check-o"></i> {{post.date | date: '%F'}}
-            </span>&nbsp;
-            {% if post.author %}
-              <span class="item">
-                <i class="fa fa-user"></i> {{post.author}}
-              </span>&nbsp;
-            {% endif %}
-            {% if post.categories %}
-              {% include categories.html %}&nbsp;
-            {% endif %}
-            {% if post.tags %}
-              {% include tags.html %}&nbsp;
-            {% endif %}
-          </small>
-          <hr>
-          <div class="excerpt">{{ post.excerpt }}</div>
-          <div class="text-center">
-            <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-light read-more">阅读更多</a>
-          </div>
-          {% if forloop.last %}
-          <hr>
-          <div class="paginate" style="display: flex; justify-content: space-between;">
-            <div style="flex: 1"  class="text-left">
-              {% if paginator.previous_page %}
-                <a href="{{ paginator.previous_page_path }}">较新的博客</a>
-              {% endif %}
-            </div>
-            <div style="flex: 1" class="text-center">{{ paginator.page }} / {{ paginator.total_pages }}</div>
-            <div style="flex: 1;" class="text-right">
-              {% if paginator.next_page %}
-                <a href="{{ paginator.next_page_path }}">较旧的博客</a>
-              {% endif %}
-            </div>
-            <!-- {% if paginator.previous_page %}
-              <a href="/"><i class="fa fa-angle-double-left">&nbsp;</i>&nbsp;</a>
-              <a href="{{ paginator.previous_page_path }}">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</a>
-            {% else %}
-              <span class="disable">&nbsp;<i class="fa fa-angle-double-left">&nbsp;</i></span>
-              <span class="disable">&nbsp;<i class="fa fa-angle-left"></i>&nbsp;</span>
-            {% endif %}
-            &nbsp;<span>{{ paginator.page }} / {{ paginator.total_pages }}&nbsp;</span>
-            {% if paginator.next_page %}
-              <a href="{{ paginator.next_page_path }}">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</a>
-              <a href="/page{{ paginator.total_pages }}">&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</a>
-            {% else %}
-              <span class="disable">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
-              <span class="disable">&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</span>
-            {% endif %} -->
-          </div>
-          {% endif %}
+{% include header.html %}
+<div class="recent">
+    <div class="recent-posts-head">
+        <p>最新文章</p>
+        <div class="search-box">
+            <input type="text" id="search_box" placeholder="Search">
+            <ul class="search-result" id="search_results"></ul>
         </div>
-      </div>
-    {% endfor %}
-  </div>
-  <div class="col-md-3 hidden-sm d-none d-sm-block">
-    {% include sidebar-search.html %}
-    <div class="card">
-      <div class="card-header"><i class="fa fa-th-list"></i> 博客分类</div>
-      <ul class="list-group list-group-flush">
-        {% for category in site.categories %}
-          <li class="list-group-item">
-            <a href="/category/#{{category | first}}">
-              {{category | first}}
-            </a>&nbsp;
-            <span class="badge badge-secondary">{{category | last | size}}</span>
-          </li>
-        {% endfor %}
-      </ul>
     </div>
-    <div class="card">
-      <div class="card-header"><i class="fa fa-tags"></i> 博客标签</div>
-      <div class="tags">
-        {% assign first = site.tags.first %}
-        {% assign max = first[1].size %}
-        {% assign min = max %}
-        {% for tag in site.tags offset:1 %}
-          {% if tag[0].size > max %}
-            {% assign max = tag[0].size %}
-          {% elsif tag[0].size < min %}
-            {% assign min = tag[0].size %}
-          {% endif %}
+    <ul class="recent-posts">
+        {% for post in paginator.posts %}
+        <li>
+            {{post.date | date: '%F'}} -
+            <a href="{{ post.url | prepend: site.baseurl }}" class="title">{{post.title}}</a>
+        </li>
         {% endfor %}
-        {% assign diff = max | minus: min %}
-        {% for tag in site.tags %}
-          {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
-          {% assign base = temp | divided_by: 4 %}
-          {% assign remain = temp | modulo: 4 %}
-          {% if remain == 0 %}
-            {% assign size = base | plus: 14 %}
-          {% elsif remain == 1 or remain == 2 %}
-            {% assign size = base | plus: 14 | append: '.5' %}
-          {% else %}
-            {% assign size = base | plus: 14 %}
-          {% endif %}
-          {% if remain == 0 or remain == 1 %}
-            {% assign color = 9 | minus: base %}
-          {% else %}
-            {% assign color = 8 | minus: base %}
-          {% endif %}
-          <!-- <a href="/tag/#{{ tag | first | slugify }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a> -->
-          <a href="/tag/#{{ tag | first | slugify }}" style="font-size: {{ size }}pt;">{{ tag[0] }}</a>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
+    </ul>
 </div>
+<script src="{{ site.url }}/js/jekyll-search.min.js"></script>
+<script type="text/javascript">
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search_box'),
+        resultsContainer: document.getElementById('search_results'),
+        json: '{{ site.baseurl }}/search_data.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: '<li>No results found</li>',
+        limit: 7,
+        fuzzy: false,
+    });
+</script>
