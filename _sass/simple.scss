@@ -1,4 +1,5 @@
 $logo_size: 102.4px;
+$screen_size: 768px;
 
 * {
     word-break: break-word;
@@ -91,7 +92,7 @@ header {
                     height: 24px;
                     width: 250px;
                 }
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: $screen_size) {
                     input {
                         width: 200px;
                     }
@@ -133,7 +134,7 @@ header {
                 line-height: 1.7rem;
             }
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: $screen_size) {
             .recent-posts-head {
                 margin-left: 0px;
             }
@@ -145,9 +146,17 @@ header {
     #markdown-toc {
         display: none;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $screen_size) {
         ul {
             padding: 0 20px;
+            li {
+                line-height: 1.3rem !important;
+            }
+        }
+    }
+    ul {
+        li {
+            line-height: 1.7rem;
         }
     }
     p,
@@ -161,9 +170,9 @@ header {
             font-family: Monaco, Menlo, Consolas, courier new, monospace;
         }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $screen_size) {
         pre {
-            padding: 0 0.3rem;
+            padding: 0 0.3rem !important;
         }
     }
     pre {
@@ -183,9 +192,9 @@ header {
             word-break: normal;
         }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $screen_size) {
         blockquote {
-            padding: 0rem 0.3rem;
+            padding: 0rem 0.3rem !important;
             p {
                 margin: 0.3rem;
             }
