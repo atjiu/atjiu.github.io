@@ -53,6 +53,8 @@ Config分服务端和客户端，服务端连接一个获取所有配置文件�
 
 启动类 要多加一个注解 `@EnableConfigServer`
 
+链接原文: [https://tomoya92.github.io/2021/01/11/spring-cloud-config/](https://tomoya92.github.io/2021/01/11/spring-cloud-config/)
+
 ```java
 package com.example.springcloudtutorial;
 
@@ -174,6 +176,8 @@ public class ConfigClientApplication {
 
 ```
 
+链接文原: [https://tomoya92.github.io/2021/01/11/spring-cloud-config/](https://tomoya92.github.io/2021/01/11/spring-cloud-config/)
+
 配置文件: 配置文件要配置两个，一个是 `application.properties` 一个是 `bootstrap.properties`
 
 bootstrap.properties是系统级的，优先级要高于 application.properties，但，如果只用一个bootstrap.properties配置文件启动能成功，但配置的服务端口不会生效，所以还是要两个
@@ -199,3 +203,57 @@ spring.application.name=config-client
 ```
 
 启动客户端，访问：http://localhost:18086/getConfig 就能拿到对应配置文件里的内容了
+
+## Eureka服务发现配置
+
+上面的实现方式是通过url来直连的，config也支持通过注册中心的服务发现来共享配置
+
+服务端添加依赖
+
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+```
+
+配置文件 application.properties
+
+```properties
+spring.application.name=config
+
+eureka.instance.instance-id=config-${server.port}
+eureka.client.service-url.defaultZone=http://localhost:18080/eureka/
+```
+
+客户端添加依赖
+
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+```
+
+配置文件修改 bootstrap.properties
+
+```properties
+spring.cloud.config.label=master
+spring.cloud.config.name=config
+spring.cloud.config.profile=dev
+# 注释掉这个通过url直连的
+#spring.cloud.config.uri=http://localhost:18085
+
+# 配置上注册中心的实例名
+spring.cloud.config.uri=http://CONFIG
+# 开启服务发现支持
+spring.cloud.config.discovery.enabled=true
+# service-id默认值是 configserver 这个值取自 config服务端的 spring.application.name
+spring.cloud.config.discovery.service-id=config
+
+# 注册中心
+eureka.instance.instance-id=config-client-${server.port}
+eureka.client.service-url.defaultZone=http://localhost:18080/eureka/
+```
+
+启动服务测试，同样是可以拿到config服务端里的配置
