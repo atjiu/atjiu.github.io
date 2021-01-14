@@ -244,8 +244,6 @@ spring.cloud.config.profile=dev
 # 注释掉这个通过url直连的
 #spring.cloud.config.uri=http://localhost:18085
 
-# 配置上注册中心的实例名
-spring.cloud.config.uri=http://CONFIG
 # 开启服务发现支持
 spring.cloud.config.discovery.enabled=true
 # service-id默认值是 configserver 这个值取自 config服务端的 spring.application.name
@@ -255,5 +253,7 @@ spring.cloud.config.discovery.service-id=config
 eureka.instance.instance-id=config-client-${server.port}
 eureka.client.service-url.defaultZone=http://localhost:18080/eureka/
 ```
+
+**最后别忘了在服务端和客户端的启动类上添加上@EnableEurekaClient注解**
 
 启动服务测试，同样是可以拿到config服务端里的配置
