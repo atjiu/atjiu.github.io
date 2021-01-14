@@ -169,6 +169,24 @@ postman发一个post请求（这个请求消息通知到客户端时，更新的
 
 既然支持了两种队列，上面用rabbitmq实现了刷新配置缓存功能，顺便来测试一下kafka
 
+下载地址：https://kafka.apache.org/downloads
+
+> kafka依赖zookeeper，不过我现在下载的版本（2.7.0）里已经附带上zookeeper了，不用再单独下载一个zookeeper了
+
+修改配置文件 `conf/zookeeper.properties` 里的 `dataDir`
+
+```properties
+dataDir=D:/soft/kafka_2.13-2.7.0/data/tmp/zookeeper # 改成绝对路径
+```
+
+和 `conf/server.properties` 里的`log.dirs`
+
+```properties
+log.dirs=D:/soft/kafka_2.13-2.7.0/data/tmp/kafka-logs
+```
+
+启动：进入bin目录，先启动zookeeper `./zookeeper-server-start.sh ../config/zookeeper.properties` 再启动kafka `./kafka-server-start.sh ../config/server.properties`
+
 修改依赖
 
 ```xml
