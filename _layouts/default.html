@@ -44,6 +44,9 @@
         });
     </script>
     <script type="text/javascript">
+        if (document.domain.indexOf('github.io') == -1 && document.domain != 'tomoya92.github.io') {
+            window.location.href = 'https://tomoya92.github.io/';
+        }
         window.onload = function () {
             let tocDom = document.querySelector("#markdown-toc");
             if (tocDom) {
