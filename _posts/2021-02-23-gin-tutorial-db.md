@@ -78,7 +78,7 @@ func TestDB(t *testing.T) {
 }
 ```
 
-原文链接: [https://tomoya92.github.io/2021/02/22/gin-tutorial-db/](https://tomoya92.github.io/2021/02/22/gin-tutorial-db/)
+原文链接: [https://tomoya92.github.io/2021/02/23/gin-tutorial-db/](https://tomoya92.github.io/2021/02/23/gin-tutorial-db/)
 
 使用ORM框架来实现数据库的CRUD，这里选择的是GORM
 
