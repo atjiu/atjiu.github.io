@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gin学习笔记 - Middleware
+title: Gin学习笔记 - Middleware(中间件)
 date: 2021-02-24 15:59:00
 categories: gin学习笔记
 tags: golang

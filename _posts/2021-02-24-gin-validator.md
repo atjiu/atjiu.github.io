@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gin学习笔记 - Validator
+title: Gin学习笔记 - Validator(验证器)
 date: 2021-02-24 13:24:00
 categories: gin学习笔记
 tags: golang

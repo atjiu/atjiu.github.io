@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gin学习笔记 - DB
+title: Gin学习笔记 - DB(连接数据库)
 date: 2021-02-23 14:42:00
 categories: gin学习笔记
 tags: golang

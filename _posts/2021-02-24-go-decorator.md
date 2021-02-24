@@ -21,13 +21,16 @@ func Foo(stuff Stuff) stuff Stuff {}
 装饰器的用法如下
 
 ```go
+// 构造一个与被代理函数一毛一样的方法
 type Decorator func(a int, b int) int
 
+// 原方法（将要被代理的方法）
 func Foo(a int, b int) int {
     fmt.Println("Foo Running...")
     return a + b
 }
 
+// 构造一个高阶方法来入侵原方法
 func MyDecorator(decorator Decorator) Decorator {
     return func(a int, b int) int {
         fmt.Println("Foo Run Before...")
@@ -38,7 +41,7 @@ func MyDecorator(decorator Decorator) Decorator {
 }
 
 func TestDecorator(t *testing.T) {
-    result := MyDecorator(Foo) // 通过装饰器拿到被装饰（代理）的对象
+    result := MyDecorator(Foo)                       // 通过装饰器拿到被装饰（代理）的对象
     fmt.Printf("Foo Run Result: %d\n", result(1, 2)) // 通过执行装饰（代理）对象来实现对被装饰（代理）对象的"增强"
 }
 ```
