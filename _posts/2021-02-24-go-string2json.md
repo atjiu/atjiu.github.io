@@ -53,3 +53,17 @@ func TestSliceToJson(t *testing.T) {
     fmt.Printf("jsonstr: %s\n", string(b))
 }
 ```
+
+-----------------
+
+扩展：string to []byte 和 []byte to string
+
+```go
+// string to []byte
+str := "hello world"
+var data []byte
+data = []byte(str)
+
+// []byte to string
+str1 := string(data)
+```
