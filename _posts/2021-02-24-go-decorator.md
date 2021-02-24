@@ -39,6 +39,16 @@ func MyDecorator(decorator Decorator) Decorator {
         return result
     }
 }
+// 如果不想构造装饰器也可以写成下面这种
+// 这样的话，就不需要定义 type Decorator func(a int, b int) int
+// func MyDecorator(decorator func(a int, b int) int) func(int, int) int {
+//     return func(a int, b int) int {
+//         fmt.Println("Foo Run Before...")
+//         result := decorator(a, b)
+//         fmt.Println("Foo Run After...")
+//         return result
+//     }
+// }
 
 func TestDecorator(t *testing.T) {
     result := MyDecorator(Foo)                       // 通过装饰器拿到被装饰（代理）的对象
