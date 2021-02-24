@@ -166,6 +166,9 @@ func (controller UserController) DeleteUser(c *gin.Context) {
 - ?name=123&pwd=abc  这种是Query参数，使用 c.Query("name") 来取
 - /users/:name  这是Param参数，使用 c.Param("name") 来取
 - POST请求且Content-Type为application/x-www-form-urlencoded 时，使用 c.PostForm("name") 来取
+- 请求类型为 application/json 且参数是一段json字符串时（如下图），可以使用 c.BindJson()方法来取
+
+![](/assets/2021-02-24-14-43-03.png)
 
 最后修改main.go里的路由配置
 

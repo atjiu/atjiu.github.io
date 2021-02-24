@@ -135,6 +135,20 @@ func init() {
 }
 ```
 
+实体类
+
+gorm会自动按照驼峰标识来映射字段到数据库里，如果想更改某一个字段在数据库表中的名字，可以使用 `gorm:"column:xxx"`
+
+```go
+type User struct {
+    Id       int      `json:"id" gorm:"primaryKey"` // 指定表主键
+    Name     string   `json:"name"`
+    Password string   `json:"password"`
+    Age      int      `json:"age"`
+    Token    string   `json:"token" gorm:"-"` // gorm:"-" 表示当前字段不映射到数据库表中
+}
+```
+
 CREATE
 
 ```go
