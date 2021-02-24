@@ -68,3 +68,43 @@ func SaveUser(c *gin.Context) {
 相应的还有如下一些方法来绑定不同类型的请求参数
 
 ![](/assets/2021-02-24-14-43-52.png)
+
+-----
+
+自定义一个验证器
+
+在util文件夹里创建一个验证器
+
+```go
+package util
+
+import (
+    "github.com/gin-gonic/gin/binding"
+    "github.com/go-playground/validator/v10"
+)
+
+// 初始化时注册验证器
+func init() {
+    if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
+        v.RegisterValidation("myValidator", myValidator)
+    }
+}
+
+var myValidator validator.Func = func(fl validator.FieldLevel) bool {
+    data := fl.Field().(string)
+    return data == "ok"
+}
+```
+
+这样就可以在结构里使用了，跟用 required, email 等验证器是一样的
+
+```go
+type User struct {
+    Id       int    `json:"id" gorm:"primaryKey"`
+    Name     string `json:"name" binding:"required,myValidator"` // 添加一个自定义的验证器，验证传的name值是否为ok，不为ok时就报错
+    Password string `json:"password" binding:"required,min=6,max=32"`
+    Age      int    `json:"age" binding:"gte=1,lte=120"`
+}
+```
+
+![](/assets/2021-02-24-14-57-55.png)
