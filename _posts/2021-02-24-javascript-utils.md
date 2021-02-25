@@ -285,3 +285,52 @@ document.getElementById("child-box").addEventListener("click", function (e) {
 > 当只传一个参数时，不管传啥，true, false, 1, 2, undefined, null... 统统都是捕获事件
 >
 > 如果想传多个参数时，可以这样写：注：当addEventListener("click", function(){}, {capture: true, once: ture, passive: true});
+
+## 事件委托
+
+后端程序员写js的时候，基本上都碰到过这种问题：页面上有些输入框是通过点击某个按钮添加到页面上的，然后在js里定义的给这种元素添加事件的事件方法就不生效了。
+
+这种情况可以用事件委托的方式来解决，原理是通过对父元素添加事件来管理子元素的事件
+
+封装方法如下：
+
+```js
+/**
+ * el:       父元素选择器
+ * type:     事件类型
+ * cb:       事件回调
+ * targetEl: 子元素选择器
+ */
+function addEventDelegate(el, type, cb, targetEl) {
+    if (typeof el === 'string') {
+        el = document.querySelector(el);
+    }
+    if (!targetEl) {// 如果被代理的事件元素没传，则给父级绑上相应的事件
+        el.addEventListener(type, cb);
+    } else {
+        el.addEventListener(type, function (e) {
+            const target = e.target;
+            if (target.matches(targetEl)) {
+                cb.call(target, e);
+            }
+        });
+    }
+}
+```
+
+用法：
+
+```html
+<div id="parent-box">
+    <p class="item">java</p>
+    <p class="item">javascript</p>
+    <p>nodejs</p>
+</div>
+<script type="text/javascript">
+    addEventDelegate("#parent-box", "click", function (e) {
+        console.log(this.innerHTML);
+    }, ".item");
+</script>
+```
+
+当点击有 class="item" 类样式的元素时，会在控制台里打印出元素的内容
