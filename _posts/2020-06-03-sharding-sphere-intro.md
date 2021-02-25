@@ -3,7 +3,7 @@ layout: post
 title: 分库分表原理介绍
 date: 2020-06-03 15:42:00
 categories: sharding-sphere学习笔记
-tags: javascript
+tags: sharding-sphere
 author: 朋也
 ---
 

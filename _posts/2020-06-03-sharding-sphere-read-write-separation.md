@@ -3,7 +3,7 @@ layout: post
 title: Sharding-Sphere-JDBC读写分离例子
 date: 2020-06-03 16:01:00
 categories: sharding-sphere学习笔记
-tags: javascript
+tags: sharding-sphere
 author: 朋也
 ---
 

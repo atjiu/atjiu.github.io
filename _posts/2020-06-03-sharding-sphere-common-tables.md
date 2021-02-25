@@ -3,7 +3,7 @@ layout: post
 title: Sharding-Sphere-JDBC公共表例子
 date: 2020-06-03 15:57:00
 categories: sharding-sphere学习笔记
-tags: javascript
+tags: sharding-sphere
 author: 朋也
 ---
 
