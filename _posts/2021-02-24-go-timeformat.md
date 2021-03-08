@@ -2,7 +2,7 @@
 layout: post
 title: Golang time 日期（时间）格式化
 date: 2021-02-24 17:39:00
-categories: Golang学习笔记
+categories: golang学习笔记
 tags: golang
 author: 朋也
 ---

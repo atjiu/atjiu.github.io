@@ -2,7 +2,7 @@
 layout: post
 title: Golang 代理（装饰器）Decorator
 date: 2021-02-24 16:27:00
-categories: Golang学习笔记
+categories: golang学习笔记
 tags: golang
 author: 朋也
 ---

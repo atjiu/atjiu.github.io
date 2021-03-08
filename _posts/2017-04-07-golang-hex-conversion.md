@@ -2,8 +2,8 @@
 layout: post
 title: Golang实现10进制转换62进制方法
 date: 2017-04-07 10:38:20
-categories: Golang学习笔记
-tags: Golang
+categories: golang学习笔记
+tags: golang
 author: 朋也
 ---
 

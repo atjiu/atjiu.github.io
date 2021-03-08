@@ -2,7 +2,7 @@
 layout: post
 title: Golang json字符串与结构互转（json to struct || struct to json）
 date: 2021-02-24 17:20:00
-categories: Golang学习笔记
+categories: golang学习笔记
 tags: golang
 author: 朋也
 ---

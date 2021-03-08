@@ -2,8 +2,8 @@
 layout: post
 title: beego建站之上传文件
 date: 2016-08-26 21:57:47
-categories: Golang学习笔记
-tags: Golang beego
+categories: golang学习笔记
+tags: golang beego
 author: 朋也
 ---
 
@@ -29,8 +29,8 @@ func (c *FormController) Post() {
 
 
 
-保存路径是 `"/www/"+h.Filename` 这上传到哪地方也不知道, 相对于项目文件夹的路径就让人容易明白的多了, 
-我在[pybbs-go](https://github.com/tomoya92/pybbs-go/)里配置的上传文件夹是 `views/upload/avatar` 
+保存路径是 `"/www/"+h.Filename` 这上传到哪地方也不知道, 相对于项目文件夹的路径就让人容易明白的多了,
+我在[pybbs-go](https://github.com/tomoya92/pybbs-go/)里配置的上传文件夹是 `views/upload/avatar`
 
 具体代码
 

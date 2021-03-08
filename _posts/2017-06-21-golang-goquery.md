@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  go语言解析网页利器goquery简单使用
-categories: Golang学习笔记
-tags: Golang goquery
+categories: golang学习笔记
+tags: golang goquery
 author: 朋也
 ---
 
