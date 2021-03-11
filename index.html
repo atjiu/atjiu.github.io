@@ -6,8 +6,8 @@ layout: default
     <div class="recent-posts-head">
         <p>最新文章</p>
         <div class="search-box">
-            <input type="text" id="search_box" placeholder="Search">
-            <ul class="search-result" id="search_results"></ul>
+            <input type="text" id="search_box" placeholder="Enter to search">
+            <!-- <ul class="search-result" id="search_results"></ul> -->
         </div>
     </div>
     <ul class="recent-posts">
@@ -19,7 +19,7 @@ layout: default
         {% endfor %}
     </ul>
 </div>
-<script src="{{ site.url }}/js/jekyll-search.min.js"></script>
+<!-- <script src="{{ site.url }}/js/jekyll-search.min.js"></script>
 <script type="text/javascript">
     SimpleJekyllSearch({
         searchInput: document.getElementById('search_box'),
@@ -30,4 +30,11 @@ layout: default
         limit: 7,
         fuzzy: false,
     });
+</script> -->
+<script type="text/javascript">
+    document.getElementById("search_box").onkeypress = function (e) {
+        if (e.keyCode === 13 && e.target.value) {
+            window.open("https://google.com/search?q=site:tomoya92.github.io " + e.target.value, "_blank");
+        }
+    }
 </script>
