@@ -6,7 +6,7 @@ layout: default
 <p>
     作者：{{page.author}}<br />
     日期：{{page.date | date: '%F'}}<br />
-    类别：{% for category in post.categories %}<a href="/category/#{{category}}">{{category}}</a>&nbsp;{% endfor %}
+    类别：{% for category in page.categories %}<a href="/category/#{{category}}">{{category}}</a>&nbsp;{% endfor %}
 </p>
 <hr>
 <blockquote>
