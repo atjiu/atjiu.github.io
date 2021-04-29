@@ -3,11 +3,14 @@ layout: default
 ---
 {% include nav.html %}
 <h4>{{ page.title }}</h4>
-<p>作者：{{page.author}}<br />日期：{{page.date | date: '%F'}}</p>
+<p>
+    作者：{{page.author}}<br />
+    日期：{{page.date | date: '%F'}}<br />
+    类别：{% for category in post.categories %}<a href="/category/#{{category}}">{{category}}</a>&nbsp;{% endfor %}
+</p>
 <hr>
 <blockquote>
-    <p>版权声明：自由转载-非商用-非衍生-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh"
-            target="_blank">创意共享3.0许可证</a>）</p>
+    <p>版权声明：自由转载-非商用-非衍生-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank">创意共享3.0许可证</a>）</p>
 </blockquote>
 {{page.content}}
 {% include related_posts.html %}
