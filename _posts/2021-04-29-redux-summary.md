@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Redux用法总结
+title: Redux(React)用法总结
 date: 2021-04-29 09:54:00
 categories: react.js学习笔记
-tags: redux
+tags: redux react-redux
 author: 朋也
 ---
 

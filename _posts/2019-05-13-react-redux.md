@@ -2,8 +2,8 @@
 layout: post
 title: react 项目集成 react-redux 解决 state 存储与共享问题
 date: 2019-05-13 21:17:00
-categories: nodejs学习笔记
-tags: react-redux
+categories: react.js学习笔记
+tags: redux react-redux
 author: 朋也
 ---
 
