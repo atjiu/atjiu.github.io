@@ -3,7 +3,7 @@ layout: post
 title: 在create-react-app项目里集成mobx
 date: 2019-08-01 11:26:00
 categories: react.js学习笔记
-tags: react.js
+tags: mobx
 author: 朋也
 ---
 
