@@ -71,12 +71,20 @@ exports.upload = async ctx => {
 function uploadFile(ctx) {
     console.log("开始上传图片。。。");
     // 创建文件夹
-    const uploadPath = "C:\\Users\\h\\Desktop\\nodejs\\upload"; // 这是我测试的路径
+    const uploadPath = config.uploadPath; // 这是我测试的路径
+    console.log(uploadPath)
     const flag = fs.existsSync(uploadPath); // 判断文件夹是否存在
     // 同步创建多级文件夹
     if (!flag) mkdirp.sync(uploadPath);
 
-    const files = ctx.request.files.file;
+    const _files = ctx.request.files.file;
+    let files = [];
+    console.log(111, _files)
+    if (_files.length == undefined) {
+        files.push(_files);
+    } else {
+        files = _files;
+    }
     let pall = [];
     for (let i = 0; i < files.length; i++) {
         let file = files[i];
@@ -183,7 +191,7 @@ function uploadImage() {
 
 > fetch是高版本浏览器自带的api，不需要引入外部js就能直接使用
 
-```js
+```html
 <input type="file" id="file" multiple="true">
 
 <script>
