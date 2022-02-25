@@ -69,43 +69,48 @@ exports.upload = async ctx => {
 // 然后上网查资料，群里跟大伙讨论后找到了解决办法，就是通过Promise封装一个上传方法来解决，代码就是下面这些
 // 趟了这个坑，后面再碰到要等逻辑执行完才能处理的任务，就可以套用了，爽歪歪
 function uploadFile(ctx) {
-  console.log("开始上传图片。。。");
-  const filename = ctx.request.body.filename || uuid.v4();
-  const file = ctx.request.files.file;
-  const ext = file.name.split('.').pop();        // 获取上传文件扩展名
-  // 创建文件夹
-  const uploadPath = "/Users/hh/Desktop/upload"; // 这是我测试的路径
-  const flag = fs.existsSync(uploadPath); // 判断文件夹是否存在
-  // 同步创建多级文件夹
-  if (!flag) mkdirp.sync(uploadPath);
-  // 文件全路径
-  const filePath = `${uploadPath}/${filename}.${ext}`;
-  return new Promise((resolve, reject) => {
-    const reader = fs.createReadStream(file.path);
-    const upStream = fs.createWriteStream(filePath); // 创建可写流
-    // 对写入流进行事件监听
-    // upStream.on('open', function () {
-    //   console.log("open");
-    // });
-    // 流写入成功后调用的事件，在这里处理返回结果
-    upStream.on('finish', function () {
-      console.log("finish");
-      // 对图片计算md5值的，你也可以处理自己的逻辑，然后通过 resolve() 函数将处理的结果返回即可
-      const buf = fs.readFileSync(filePath);
-      const hash = md5(buf);
-      resolve({md5: hash});
-    });
-    // upStream.on('close', function () {
-    //   console.log("close");
-    // });
-    upStream.on('error', function (err) {
-      // 有错误的话，在这个里面处理
-      console.log("error", err);
-      reject(err)
-    });
-    // 可读流通过管道写入可写流
-    reader.pipe(upStream);
-  });
+    console.log("开始上传图片。。。");
+    // 创建文件夹
+    const uploadPath = "C:\\Users\\h\\Desktop\\nodejs\\upload"; // 这是我测试的路径
+    const flag = fs.existsSync(uploadPath); // 判断文件夹是否存在
+    // 同步创建多级文件夹
+    if (!flag) mkdirp.sync(uploadPath);
+
+    const files = ctx.request.files.file;
+    let pall = [];
+    for (let i = 0; i < files.length; i++) {
+        let file = files[i];
+        const ext = file.name.split('.').pop();        // 获取上传文件扩展名
+        // 文件全路径
+        const filename = uuid.v4();
+        const filePath = `${uploadPath}/${filename}.${ext}`;
+        pall.push( new Promise((resolve, reject) => {
+            const reader = fs.createReadStream(file.path);
+            const upStream = fs.createWriteStream(filePath); // 创建可写流
+            // 对写入流进行事件监听
+            // upStream.on('open', function () {
+            //   console.log("open");
+            // });
+            // 流写入成功后调用的事件，在这里处理返回结果
+            upStream.on('finish', function () {
+                // 对图片计算md5值的，你也可以处理自己的逻辑，然后通过 resolve() 函数将处理的结果返回即可
+                const buf = fs.readFileSync(filePath);
+                const hash = md5(buf);
+                resolve({ md5: hash });
+            });
+            // upStream.on('close', function () {
+            //   console.log("close");
+            // });
+            upStream.on('error', function (err) {
+                // 有错误的话，在这个里面处理
+                console.log("error", err);
+                reject(err)
+            });
+            // 可读流通过管道写入可写流
+            reader.pipe(upStream);
+        }));
+    }
+    return Promise.all(pall);
 }
 ```
 
@@ -144,8 +149,12 @@ app.use(cors({
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 <script>
 function uploadImage() {
+  var files = document.getElementById("imageFile").files;
   var fd = new FormData();
-  fd.append("image", document.getElementById("imageFile").files[0]);
+  // 上传多张
+  // for (let i = 0; i < files.length; i++) {
+  //   fd.append("file", files[i]);
+  // }
   // 如果还想传一些参数，可以继续使用fd.append("filename", "自定义文件名");
   axios({
     method: 'POST',
@@ -165,6 +174,35 @@ function uploadImage() {
       console.log(resp.data);
   }).catch(err => console.log(err));
 }
+</script>
+```
+
+## 使用fetch上传图片
+
+跟上面axios一样，获取表单里选中的图片，封装成formdata，调用上传接口即可
+
+> fetch是高版本浏览器自带的api，不需要引入外部js就能直接使用
+
+```js
+<input type="file" id="file" multiple="true">
+
+<script>
+    let fileDom = document.getElementById('file');
+    fileDom.addEventListener("change", function (e) {
+        let fd = new FormData();
+        let files = e.target.files;
+        for(let i = 0; i< files.length; i++) {
+            fd.append(`file`, files[i]);
+        }
+        fetch("/upload", {
+            method: "post",
+            body: fd,
+        })
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data);
+        })
+    })
 </script>
 ```
 
