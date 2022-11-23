@@ -92,4 +92,4 @@ contentE.atwho({
 
 - [At.js](https://github.com/ichord/At.js)
 - [Caret.js](https://github.com/ichord/Caret.js)
-- [pybbs](https://github.com/tomoya92/pybbs)
+- [pybbs](https://github.com/atjiu/pybbs)

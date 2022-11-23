@@ -68,7 +68,7 @@ public class HelloController implements IController {
 }
 ```
 
-原链文接：[https://tomoya92.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/](https://tomoya92.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/)
+原链文接：[https://atjiu.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/](https://atjiu.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/)
 
 ## 创建代理类
 
@@ -178,7 +178,7 @@ public class HelloServer {
 
 ## 获取请求参数
 
-原链接文：[https://tomoya92.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/](https://tomoya92.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/)
+原链接文：[https://atjiu.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/](https://atjiu.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/)
 
 请求参数分为三种，query, params, body
 

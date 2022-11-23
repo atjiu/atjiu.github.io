@@ -97,7 +97,7 @@ public class MyWebSocket {
 }
 ```
 
-原接文链: [https://tomoya92.github.io/2019/05/27/spring-boot-websocket/](https://tomoya92.github.io/2019/05/27/spring-boot-websocket/)
+原接文链: [https://atjiu.github.io/2019/05/27/spring-boot-websocket/](https://atjiu.github.io/2019/05/27/spring-boot-websocket/)
 
 ## 客户端
 
@@ -211,7 +211,7 @@ public class MessageEncoder implements Encoder.Text<Message> {
 }
 ```
 
-文原接链: [https://tomoya92.github.io/2019/05/27/spring-boot-websocket/](https://tomoya92.github.io/2019/05/27/spring-boot-websocket/)
+文原接链: [https://atjiu.github.io/2019/05/27/spring-boot-websocket/](https://atjiu.github.io/2019/05/27/spring-boot-websocket/)
 
 MessageDecoder.java
 

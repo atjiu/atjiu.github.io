@@ -12,7 +12,7 @@ author: 朋也
 
 [beego官网](http://beego.me)
 
-[pybbs-go](https://github.com/tomoya92/pybbs-go/) 里的权限设计异常的简单
+[pybbs-go](https://github.com/atjiu/pybbs-go/) 里的权限设计异常的简单
 
 共设计3张表, 两两都是多对多关联, 会产生2张中间表, 一共是5张表
 
@@ -187,4 +187,4 @@ func HasPermission(userId int, name string) bool {
 {%raw%}{{if haspermission .UserInfo.Id "permission:list"}}<li><a href="/permission/list">权限管理</a></li>{{end}}{%endraw%}
 ```
 
-具体代码点击 [pybbs-go](https://github.com/tomoya92/pybbs-go/)
+具体代码点击 [pybbs-go](https://github.com/atjiu/pybbs-go/)

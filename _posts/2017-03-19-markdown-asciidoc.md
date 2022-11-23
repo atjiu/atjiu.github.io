@@ -61,13 +61,13 @@ asciidoc
 markdown
 
 ```
-[tomoya's blog](https://tomoya92.github.io)
+[tomoya's blog](https://atjiu.github.io)
 ```
 
 asciidoc
 
 ```
-https:tomoya92.github.io[tomoya's blog]
+https:atjiu.github.io[tomoya's blog]
 ```
 
 ## 图片

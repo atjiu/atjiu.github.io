@@ -30,7 +30,7 @@ func (c *FormController) Post() {
 
 
 保存路径是 `"/www/"+h.Filename` 这上传到哪地方也不知道, 相对于项目文件夹的路径就让人容易明白的多了,
-我在[pybbs-go](https://github.com/tomoya92/pybbs-go/)里配置的上传文件夹是 `views/upload/avatar`
+我在[pybbs-go](https://github.com/atjiu/pybbs-go/)里配置的上传文件夹是 `views/upload/avatar`
 
 具体代码
 

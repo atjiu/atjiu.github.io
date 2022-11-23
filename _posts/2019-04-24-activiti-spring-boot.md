@@ -10,15 +10,15 @@ author: 朋也
 * content
 {:toc}
 
-- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://tomoya92.github.io/2019/04/24/activiti-env/)
-- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/)
-- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://tomoya92.github.io/2019/04/24/activiti-spring-boot/)
-- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/)
-- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://tomoya92.github.io/2019/04/24/activiti-assignee/)
-- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-exclusive-gateway/)
-- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-parallel-gateway/)
-- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
-- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
+- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://atjiu.github.io/2019/04/24/activiti-env/)
+- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://atjiu.github.io/2019/04/24/activiti-deploy-start-table/)
+- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://atjiu.github.io/2019/04/24/activiti-spring-boot/)
+- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://atjiu.github.io/2019/04/24/activiti-query-complete-task/)
+- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://atjiu.github.io/2019/04/24/activiti-assignee/)
+- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://atjiu.github.io/2019/04/25/activiti-exclusive-gateway/)
+- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://atjiu.github.io/2019/04/25/activiti-parallel-gateway/)
+- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://atjiu.github.io/2019/04/25/activiti-user-group-membership/)
+- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://atjiu.github.io/2019/04/26/activiti-candidate-task/)
 
 springboot集成非常的简单,基本上不需要做配置, 而且项目启动时自动会部署流程
 
@@ -62,7 +62,7 @@ springboot集成非常的简单,基本上不需要做配置, 而且项目启动�
 
 **注意这里要用6.0, 如果不写这个版本号的话, springboot会自动下载7.0的activiti, 我在启动的时候报了一个错, jdk1.8没法用, 至少要将jdk升级到9才能用activiti7.0**
 
-原链接文：[https://tomoya92.github.io/2019/04/24/activiti-spring-boot/](https://tomoya92.github.io/2019/04/24/activiti-spring-boot/)
+原链接文：[https://atjiu.github.io/2019/04/24/activiti-spring-boot/](https://atjiu.github.io/2019/04/24/activiti-spring-boot/)
 
 ## 修改配置文件
 

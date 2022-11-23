@@ -126,7 +126,7 @@ server {
 serve -l 3000 /Users/hh/Desktop/nginx-demo/demo
 ```
 
-文链接原: [https://tomoya92.github.io/2019/10/12/nginx-tutorial/](https://tomoya92.github.io/2019/10/12/nginx-tutorial/)
+文链接原: [https://atjiu.github.io/2019/10/12/nginx-tutorial/](https://atjiu.github.io/2019/10/12/nginx-tutorial/)
 
 
 在 `/Users/hh/Desktop/nginx-demo/demo` 目录下我创建了一个 `index.html` 文件，内容
@@ -240,7 +240,7 @@ stream {
 
 通过mysql客户端工具，可以直接使用域名连接mysql了
 
-![](https://tomoya92.github.io/assets/QQ20191012-174927@2x.png)
+![](https://atjiu.github.io/assets/QQ20191012-174927@2x.png)
 
 tcp也能代理，这就好玩了，各种联机游戏都可以通过nginx来转发了，简直爽歪歪
 

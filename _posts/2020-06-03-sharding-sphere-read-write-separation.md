@@ -10,14 +10,14 @@ author: 朋也
 * content
 {:toc}
 
-目的：读写分离的例子【也可参见这篇博客：[springboot集成mybatis配置主从复制双库实现读写分离](https://tomoya92.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/)】当然Sharding-Sphere里也可以实现
+目的：读写分离的例子【也可参见这篇博客：[springboot集成mybatis配置主从复制双库实现读写分离](https://atjiu.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/)】当然Sharding-Sphere里也可以实现
 
 
 
 
 
 
-> 注意：读写分离的环境还是要自己准备的，创造主从复制的环境可参见这篇博客[MySQL主从复制（主主复制）配置](https://tomoya92.github.io/2019/10/24/mysql-master-slave/)
+> 注意：读写分离的环境还是要自己准备的，创造主从复制的环境可参见这篇博客[MySQL主从复制（主主复制）配置](https://atjiu.github.io/2019/10/24/mysql-master-slave/)
 
 配置文件
 

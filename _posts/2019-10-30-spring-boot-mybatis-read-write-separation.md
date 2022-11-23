@@ -106,7 +106,7 @@ spring:
 
 使用java代码来创建两个数据源, 创建类 `MyDataSource.java`
 
-文链接原: [https://tomoya92.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/](https://tomoya92.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/)
+文链接原: [https://atjiu.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/](https://atjiu.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/)
 
 ```java
 @Configuration
@@ -260,7 +260,7 @@ public class User {
 }
 ```
 
-接文链原: [https://tomoya92.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/](https://tomoya92.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/)
+接文链原: [https://atjiu.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/](https://atjiu.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/)
 
 UserMapper.java
 

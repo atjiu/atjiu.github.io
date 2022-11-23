@@ -10,15 +10,15 @@ author: 朋也
 * content
 {:toc}
 
-- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://tomoya92.github.io/2019/04/24/activiti-env/)
-- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://tomoya92.github.io/2019/04/24/activiti-deploy-start-table/)
-- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://tomoya92.github.io/2019/04/24/activiti-spring-boot/)
-- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://tomoya92.github.io/2019/04/24/activiti-query-complete-task/)
-- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://tomoya92.github.io/2019/04/24/activiti-assignee/)
-- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-exclusive-gateway/)
-- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://tomoya92.github.io/2019/04/25/activiti-parallel-gateway/)
-- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
-- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://tomoya92.github.io/2019/04/26/activiti-candidate-task/)
+- [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://atjiu.github.io/2019/04/24/activiti-env/)
+- [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://atjiu.github.io/2019/04/24/activiti-deploy-start-table/)
+- [Activiti6.0教程(3) - springboot项目中使用activiti6.0配置及启动](https://atjiu.github.io/2019/04/24/activiti-spring-boot/)
+- [Activiti6.0教程(4) - 任务的查询以及完成任务(对任务批注,以及对批注的查询)](https://atjiu.github.io/2019/04/24/activiti-query-complete-task/)
+- [Activiti6.0教程(5) - 将任务的代理人配活(变量法, 监听法)](https://atjiu.github.io/2019/04/24/activiti-assignee/)
+- [Activiti6.0教程(6) - 排它网关/异或网关(ExclusiveGateway)用法](https://atjiu.github.io/2019/04/25/activiti-exclusive-gateway/)
+- [Activiti6.0教程(7) - 并行网关(ParallelGateway)用法](https://atjiu.github.io/2019/04/25/activiti-parallel-gateway/)
+- [Activiti6.0教程(8) - 用户, 组, 用户与组关系用法](https://atjiu.github.io/2019/04/25/activiti-user-group-membership/)
+- [Activiti6.0教程(9) - 候选任务, 在一个任务上设置多个候选人或候选组(根据实际业务指派给其中一个候选人执行)](https://atjiu.github.io/2019/04/26/activiti-candidate-task/)
 
 activiti 自带了一套用户, 组, 以及用户与组的关系表, 共四张表
 
@@ -106,7 +106,7 @@ public void createUser() {
 }
 ```
 
-原链接文：[https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/](https://tomoya92.github.io/2019/04/25/activiti-user-group-membership/)
+原链接文：[https://atjiu.github.io/2019/04/25/activiti-user-group-membership/](https://atjiu.github.io/2019/04/25/activiti-user-group-membership/)
 
 
 ## 删除用户/组

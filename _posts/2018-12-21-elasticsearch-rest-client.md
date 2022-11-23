@@ -68,7 +68,7 @@ public void createIndex() throws IOException {
 }
 ```
 
-自定义映射的索引 , 下面自定映射的field名的意思，移步我另一篇博客 [https://tomoya92.github.io/2018/08/24/elasticsearch/](https://tomoya92.github.io/2018/08/24/elasticsearch/) 里面有详细的解释
+自定义映射的索引 , 下面自定映射的field名的意思，移步我另一篇博客 [https://atjiu.github.io/2018/08/24/elasticsearch/](https://atjiu.github.io/2018/08/24/elasticsearch/) 里面有详细的解释
 
 ```java
 @Test

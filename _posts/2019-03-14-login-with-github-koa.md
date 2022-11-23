@@ -18,7 +18,7 @@ author: 朋也
 
 地址：[https://github.com/settings/developers](https://github.com/settings/developers)
 
-具体操作可以参见pybbs的文档：[https://tomoya92.github.io/pybbs/#/zh-cn/oauth](https://tomoya92.github.io/pybbs/#/zh-cn/oauth)
+具体操作可以参见pybbs的文档：[https://atjiu.github.io/pybbs/#/zh-cn/oauth](https://atjiu.github.io/pybbs/#/zh-cn/oauth)
 
 
 
@@ -58,7 +58,7 @@ exports.github = async (ctx) => {
 };
 ```
 
-原链文接：[https://tomoya92.github.io/2019/03/14/login-with-github-koa/](https://tomoya92.github.io/2019/03/14/login-with-github-koa/)
+原链文接：[https://atjiu.github.io/2019/03/14/login-with-github-koa/](https://atjiu.github.io/2019/03/14/login-with-github-koa/)
 
 ### scope参数
 
@@ -103,7 +103,7 @@ exports.callback = async (ctx) => {
       }
     );
     // fetch_access_token_resp.data 对象里的数据长下面这个样
-    // {"access_token":"e72e16c7e42f292c6912e7710c838347ae178b4a", "scope":"repo,gist", "token_type":"bearer"}
+    // {"access_token":"172e16c7e42f292c6912e7710c838347ae178b4a", "scope":"repo,gist", "token_type":"bearer"}
     const access_token = fetch_access_token_resp.data.access_token;
     // 使用access_token请求个人信息接口，获取用户信息
     const github_user_info_resp = await axios.get(
@@ -120,31 +120,31 @@ exports.callback = async (ctx) => {
 
 github_user_info_resp.data 数据格式
 
-链原文接：[https://tomoya92.github.io/2019/03/14/login-with-github-koa/](https://tomoya92.github.io/2019/03/14/login-with-github-koa/)
+链原文接：[https://atjiu.github.io/2019/03/14/login-with-github-koa/](https://atjiu.github.io/2019/03/14/login-with-github-koa/)
 
 ```json
 {
-  "login": "tomoya92",
+  "login": "atjiu",
   "id": 9217170,
   "node_id": "MDQ6VXNlsjY1MTU1NzA=",
   "avatar_url": "https://avatars2.githubusercontent.com/u/6915570?v=4",
   "gravatar_id": "",
-  "url": "https://api.github.com/users/tomoya92",
-  "html_url": "https://github.com/tomoya92",
-  "followers_url": "https://api.github.com/users/tomoya92/followers",
-  "following_url": "https://api.github.com/users/tomoya92/following{/other_user}",
-  "gists_url": "https://api.github.com/users/tomoya92/gists{/gist_id}",
-  "starred_url": "https://api.github.com/users/tomoya92/starred{/owner}{/repo}",
-  "subscriptions_url": "https://api.github.com/users/tomoya92/subscriptions",
-  "organizations_url": "https://api.github.com/users/tomoya92/orgs",
-  "repos_url": "https://api.github.com/users/tomoya92/repos",
-  "events_url": "https://api.github.com/users/tomoya92/events{/privacy}",
-  "received_events_url": "https://api.github.com/users/tomoya92/received_events",
+  "url": "https://api.github.com/users/atjiu",
+  "html_url": "https://github.com/atjiu",
+  "followers_url": "https://api.github.com/users/atjiu/followers",
+  "following_url": "https://api.github.com/users/atjiu/following{/other_user}",
+  "gists_url": "https://api.github.com/users/atjiu/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/atjiu/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/atjiu/subscriptions",
+  "organizations_url": "https://api.github.com/users/atjiu/orgs",
+  "repos_url": "https://api.github.com/users/atjiu/repos",
+  "events_url": "https://api.github.com/users/atjiu/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/atjiu/received_events",
   "type": "User",
   "site_admin": false,
   "name": "朋也",
   "company": null,
-  "blog": "https://tomoya92.github.io",
+  "blog": "https://atjiu.github.io",
   "location": "Shanghai",
   "email": "py2qiuse@gmail.com",
   "hireable": null,
@@ -183,7 +183,7 @@ brew install ngrok
 ngrok http 3000
 ```
 
-frp用法可以参见我另一篇博客 [利用frp内网穿透实现用自家电脑发布网站(不用买服务器了)](https://tomoya92.github.io/2018/10/18/frp-tutorial/)
+frp用法可以参见我另一篇博客 [利用frp内网穿透实现用自家电脑发布网站(不用买服务器了)](https://atjiu.github.io/2018/10/18/frp-tutorial/)
 
 # 总结
 

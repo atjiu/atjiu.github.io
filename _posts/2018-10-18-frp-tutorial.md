@@ -192,7 +192,7 @@ remote_port = 7001
 1. 你可以通过访问 `http://10.10.10.10:7500` 然后输入 `frps.ini` 里配置的 `dashboard_user` `dashboard_pwd` 来查看frp的运行情况
 2. 在启动frpc之前，你要在域名提供商那把域名解析到外网服务器上
 3. 如果ssh映射连接总是超时，要看一下外网服务器是否把7001端口开放了，有可能是外网服务器的防火墙拦住了
-4. 关于nginx配置https，参见：[https://tomoya92.github.io/2016/08/28/letsencrypt-nginx-https/][1]
+4. 关于nginx配置https，参见：[https://atjiu.github.io/2016/08/28/letsencrypt-nginx-https/][1]
 
 ## 问题
 
@@ -206,5 +206,5 @@ remote_port = 7001
 
 - [https://github.com/fatedier/frp/blob/master/README_zh.md][2]
 
-[1]: https://tomoya92.github.io/2016/08/28/letsencrypt-nginx-https/
+[1]: https://atjiu.github.io/2016/08/28/letsencrypt-nginx-https/
 [2]: https://github.com/fatedier/frp/blob/master/README_zh.md

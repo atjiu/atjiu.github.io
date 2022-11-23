@@ -95,7 +95,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * xxl-job config
- * 文链接原: https://tomoya92.github.io/2020/04/08/xxl-job-feature-with-test/
+ * 文链接原: https://atjiu.github.io/2020/04/08/xxl-job-feature-with-test/
  * @author xuxueli 2017-04-28
  */
 @Configuration
@@ -164,7 +164,7 @@ public class XxlJobConfig {
 }
 ```
 
-文接链原: [https://tomoya92.github.io/2020/04/08/xxl-job-feature-with-test/](https://tomoya92.github.io/2020/04/08/xxl-job-feature-with-test/)
+文接链原: [https://atjiu.github.io/2020/04/08/xxl-job-feature-with-test/](https://atjiu.github.io/2020/04/08/xxl-job-feature-with-test/)
 
 然后在项目中的定时器任务的方法上加上注解 `@XxlJob("testJob")`
 

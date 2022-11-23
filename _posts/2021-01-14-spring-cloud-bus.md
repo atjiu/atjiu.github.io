@@ -83,7 +83,7 @@ rabbitmq依赖于erlang，先下载erlang安装并配置环境变量
 
 ## 配置
 
-链接文原: [https://tomoya92.github.io/2021/01/14/spring-cloud-bus/](https://tomoya92.github.io/2021/01/14/spring-cloud-bus/)
+链接文原: [https://atjiu.github.io/2021/01/14/spring-cloud-bus/](https://atjiu.github.io/2021/01/14/spring-cloud-bus/)
 
 添加下面配置
 
@@ -163,7 +163,7 @@ postman发一个post请求（这个请求消息通知到客户端时，更新的
 
 再次访问 http://localhost:18086/getConfig 就会发现配置已经更新了
 
-接链文原: [https://tomoya92.github.io/2021/01/14/spring-cloud-bus/](https://tomoya92.github.io/2021/01/14/spring-cloud-bus/)
+接链文原: [https://atjiu.github.io/2021/01/14/spring-cloud-bus/](https://atjiu.github.io/2021/01/14/spring-cloud-bus/)
 
 ## kafka
 

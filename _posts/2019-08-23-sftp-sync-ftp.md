@@ -61,7 +61,7 @@ sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 root@192.168.1.1
 sshfs -o uid=510,gid=511,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 root@192.168.1.100:/home/origin_dir/ /home/ftpuser/sync_dir/
 ```
 
-链接文原: [https://tomoya92.github.io/2019/08/23/sftp-sync-ftp/](https://tomoya92.github.io/2019/08/23/sftp-sync-ftp/)
+链接文原: [https://atjiu.github.io/2019/08/23/sftp-sync-ftp/](https://atjiu.github.io/2019/08/23/sftp-sync-ftp/)
 
 这样在A上 `origin_dir` 里CRUD文件，实时的就同步到 B上的 `sync_dir` 里了
 

@@ -22,7 +22,7 @@ go里格式化时间比较奇葩，没有java里的 `YYYY-MM-dd HH:mm:ss`，看 
 time.Now().Format("2006-01-02") 输出的格式就是 2021-02-24 (我测试时间就是2021-02-24)
 ```
 
-原文链接: [https://tomoya92.github.io/2021/02/24/go-timeformat/](https://tomoya92.github.io/2021/02/24/go-timeformat/)
+原文链接: [https://atjiu.github.io/2021/02/24/go-timeformat/](https://atjiu.github.io/2021/02/24/go-timeformat/)
 
 下面整理了一些日期相关的工具类
 

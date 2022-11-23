@@ -58,7 +58,7 @@ selenium里获取元素的方法有很多个，如下
 
 为啥要用这两个方法呢？`find_element_by_id`不用说，可以根据id获取唯一的元素，很准确，至于`find_element_by_xpath`是因为chrome浏览器里在审查元素里可以`copy Xpath` 也很方便
 
-原链文接：[https://tomoya92.github.io/2019/01/21/python-selenium/](https://tomoya92.github.io/2019/01/21/python-selenium/)
+原链文接：[https://atjiu.github.io/2019/01/21/python-selenium/](https://atjiu.github.io/2019/01/21/python-selenium/)
 
 获取到元素肯定要点击了，点击方法也很好实现，如下
 
@@ -135,7 +135,7 @@ if __name__ == "__main__":
         .until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
 
     # 设置登录用户名
-    browser.find_element_by_id('username').send_keys("tomoya92")
+    browser.find_element_by_id('username').send_keys("atjiu")
     time.sleep(.5)
     # 设置登录密码
     browser.find_element_by_id('password').send_keys("aa123123")
@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
 导入依赖
 
-链原接文：[https://tomoya92.github.io/2019/01/21/python-selenium/](https://tomoya92.github.io/2019/01/21/python-selenium/)
+链原接文：[https://atjiu.github.io/2019/01/21/python-selenium/](https://atjiu.github.io/2019/01/21/python-selenium/)
 
 ```py
 from selenium.webdriver.support.wait import WebDriverWait

@@ -121,4 +121,4 @@ public void setSharedVariable() throws TemplateModelException {
 
 ## 参考
 
-本文代码来自：[https://github.com/tomoya92/pybbs](https://github.com/tomoya92/pybbs)
+本文代码来自：[https://github.com/atjiu/pybbs](https://github.com/atjiu/pybbs)

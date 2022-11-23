@@ -48,7 +48,7 @@ processObj.on("exit", function(code) {
 
 在测试的时候发现windows上输出内容中文乱码, 就找到了这个东西来转码
 
-原接文链: [https://tomoya92.github.io/2019/05/22/nodejs-java-shell/](https://tomoya92.github.io/2019/05/22/nodejs-java-shell/)
+原接文链: [https://atjiu.github.io/2019/05/22/nodejs-java-shell/](https://atjiu.github.io/2019/05/22/nodejs-java-shell/)
 
 ---
 

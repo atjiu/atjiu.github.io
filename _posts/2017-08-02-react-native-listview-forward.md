@@ -10,13 +10,13 @@ author: 朋也
 * content
 {:toc}
 
-- [react-native组件NavigatorIOS与ListView结合使用](https://tomoya92.github.io/2017/08/02/react-native-navigatorios-listview/)
-- [react-native ListView组件点击跳转](https://tomoya92.github.io/2017/08/02/react-native-listview-forward/)
-- [react-native ListView下拉刷新上拉加载实现](https://tomoya92.github.io/2017/08/02/react-native-listview-refresh-loadmore/)
-- [react-native组件StackNavigator](https://tomoya92.github.io/2017/08/07/react-native-stacknavigator/)
-- [react-native TabNavigator用法](https://tomoya92.github.io/2017/09/06/react-native-tabnavigator/)
+- [react-native组件NavigatorIOS与ListView结合使用](https://atjiu.github.io/2017/08/02/react-native-navigatorios-listview/)
+- [react-native ListView组件点击跳转](https://atjiu.github.io/2017/08/02/react-native-listview-forward/)
+- [react-native ListView下拉刷新上拉加载实现](https://atjiu.github.io/2017/08/02/react-native-listview-refresh-loadmore/)
+- [react-native组件StackNavigator](https://atjiu.github.io/2017/08/07/react-native-stacknavigator/)
+- [react-native TabNavigator用法](https://atjiu.github.io/2017/09/06/react-native-tabnavigator/)
 
-[上一篇](https://tomoya92.github.io/2017/08/02/react-native-navigatorios-listview/) 实现了NavigatorIOS与ListView结合使用的方法
+[上一篇](https://atjiu.github.io/2017/08/02/react-native-navigatorios-listview/) 实现了NavigatorIOS与ListView结合使用的方法
 
 这篇文章介绍一下ListView里点击跳转到新视图的方法
 
@@ -53,4 +53,4 @@ _onPress(rowData) {
 
 - [ListView列表点击跳转](http://bbs.reactnative.cn/topic/2964/listview%E5%88%97%E8%A1%A8%E7%82%B9%E5%87%BB%E8%B7%B3%E8%BD%AC/3)
 
-源码：[https://github.com/tomoya92/ITNews-React-Native](https://github.com/tomoya92/ITNews-React-Native)
+源码：[https://github.com/atjiu/ITNews-React-Native](https://github.com/atjiu/ITNews-React-Native)

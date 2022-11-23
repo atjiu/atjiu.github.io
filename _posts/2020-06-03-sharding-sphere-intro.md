@@ -54,7 +54,7 @@ id % 2 == 1 -> user2
 id % 3 == 2 -> user3
 ```
 
-文接链原: [https://tomoya92.github.io/2020/06/03/sharding-sphere-intro](https://tomoya92.github.io/2020/06/03/sharding-sphere-intro/)
+文接链原: [https://atjiu.github.io/2020/06/03/sharding-sphere-intro](https://atjiu.github.io/2020/06/03/sharding-sphere-intro/)
 
 优劣：
 

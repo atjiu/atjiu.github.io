@@ -34,7 +34,7 @@ author: 朋也
 </dependency>
 ```
 
-原链文接: [https://tomoya92.github.io/2019/05/07/dubbo-spring-boot-nacos/](https://tomoya92.github.io/2019/05/07/dubbo-spring-boot-nacos/)
+原链文接: [https://atjiu.github.io/2019/05/07/dubbo-spring-boot-nacos/](https://atjiu.github.io/2019/05/07/dubbo-spring-boot-nacos/)
 
 然后修改配置文件
 

@@ -62,4 +62,4 @@ public class InitDB {
 
 **再配合一个变量记录系统是否初始化过**，如果初始化了，就不再初始化了，这样就可以做到启动系统之后再自动将默认数据插入，很是方便
 
-相关代码参见：https://github.com/tomoya92/pybbs
+相关代码参见：https://github.com/atjiu/pybbs

@@ -99,7 +99,7 @@ public String create(@PathVariable("userId") String userId) throws InterruptedEx
 }
 ```
 
-链文接原: [https://tomoya92.github.io/2021/01/04/spring-cloud-hystrix/](https://tomoya92.github.io/2021/01/04/spring-cloud-hystrix/)
+链文接原: [https://atjiu.github.io/2021/01/04/spring-cloud-hystrix/](https://atjiu.github.io/2021/01/04/spring-cloud-hystrix/)
 
 因为Order1Application里的create接口设置了等待时间2s才响应，所以User调到Order1的服务上时熔断器肯定会报超时异常，这时候服务降级就会起作用，将OrderService里的实现方法里的 `return "create order error";` 给返回，测试如下
 

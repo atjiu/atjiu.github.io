@@ -45,7 +45,7 @@ npm install --save koa koa-body koa-logger koa-json-error koa-router koa-static 
 - koa-static 映射静态资源文件
 - koa-njk nunjucks模板解析
 
-原链文接：[https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/](https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/)
+原链文接：[https://atjiu.github.io/2019/03/11/creat-web-with-koa2/](https://atjiu.github.io/2019/03/11/creat-web-with-koa2/)
 
 ## 配置
 
@@ -157,7 +157,7 @@ router.get('/test_error', index.test_error);
 module.exports = router
 ```
 
-链原文接：[https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/](https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/)
+链原文接：[https://atjiu.github.io/2019/03/11/creat-web-with-koa2/](https://atjiu.github.io/2019/03/11/creat-web-with-koa2/)
 
 ## 静态文件
 

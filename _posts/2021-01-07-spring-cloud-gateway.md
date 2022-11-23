@@ -72,7 +72,7 @@ public class GatewayApplication {
 
 ```
 
-链文接原: [https://tomoya92.github.io/2021/01/07/spring-cloud-gateway/](https://tomoya92.github.io/2021/01/07/spring-cloud-gateway/)
+链文接原: [https://atjiu.github.io/2021/01/07/spring-cloud-gateway/](https://atjiu.github.io/2021/01/07/spring-cloud-gateway/)
 
 ## Predicates
 

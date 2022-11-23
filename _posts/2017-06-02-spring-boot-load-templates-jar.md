@@ -63,4 +63,4 @@ spring:
 
 这个classpath如果不配置的话，项目就加载不到打到jar包里的templates里的页面了，如果还想加载打到jar包里的页面，这个必须要配置上
 
-好了，有兴趣的朋友可以自己试试了，本篇文章的测试代码：[https://github.com/tomoya92/pybbs](https://github.com/tomoya92/pybbs)
+好了，有兴趣的朋友可以自己试试了，本篇文章的测试代码：[https://github.com/atjiu/pybbs](https://github.com/atjiu/pybbs)

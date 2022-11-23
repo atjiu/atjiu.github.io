@@ -10,7 +10,7 @@ author: 朋也
 * content
 {:toc}
 
-之间写过一篇 [最全的Spring-Boot集成Mybatis-Plus教程](https://tomoya92.github.io/2019/04/15/spring-boot-mybatis-plus-tutorial/)
+之间写过一篇 [最全的Spring-Boot集成Mybatis-Plus教程](https://atjiu.github.io/2019/04/15/spring-boot-mybatis-plus-tutorial/)
 
 突然发现不会配置单纯的mybatis了，稍微折腾了一下
 
@@ -117,7 +117,7 @@ public class User {
 }
 ```
 
-文链接原: [https://tomoya92.github.io/2019/10/29/spring-boot-mybatis/](https://tomoya92.github.io/2019/10/29/spring-boot-mybatis/)
+文链接原: [https://atjiu.github.io/2019/10/29/spring-boot-mybatis/](https://atjiu.github.io/2019/10/29/spring-boot-mybatis/)
 
 UserMapper.java
 

@@ -83,4 +83,4 @@ public void foo() {
 }
 ```
 
-参考代码：http://github.com/tomoya92/pybbs 里i18n相关代码
+参考代码：http://github.com/atjiu/pybbs 里i18n相关代码

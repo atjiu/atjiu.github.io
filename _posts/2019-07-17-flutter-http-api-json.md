@@ -136,7 +136,7 @@ class User {
 }
 ```
 
-链接文原: [https://tomoya92.github.io/2019/07/17/flutter-http-api-json/](https://tomoya92.github.io/2019/07/17/flutter-http-api-json/)
+链接文原: [https://atjiu.github.io/2019/07/17/flutter-http-api-json/](https://atjiu.github.io/2019/07/17/flutter-http-api-json/)
 
 好在ide有插件，vscode，android studio都有相应的插件，我这用的是 android studio 的插件生成的，插件名是 `FlutterJsonBeanFactory`
 
