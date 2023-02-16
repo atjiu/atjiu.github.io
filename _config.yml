@@ -8,7 +8,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://atjiu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 weibo_username:
 github_username: atjiu
-timezone: Asia/Shanghai
 
 # 文章目录格式化
 permalink: /:year/:month/:day/:title/
