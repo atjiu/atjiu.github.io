@@ -49,7 +49,7 @@ npm i -D parcel-bundler sass @babel/core @babel/plugin-transform-runtime @babel/
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My App</title>
-    
+
 </head>
 <body>
     <h1>Hello world</h1>
@@ -67,7 +67,7 @@ console.log("hello world");
 
 修改 `package.json` 文件里的命令
 
-文接链原: [https://tomoya92.github.io/2020/04/17/parcel-tutorial/](https://tomoya92.github.io/2020/04/17/parcel-tutorial/)
+文接链原: [https://atjiu.github.io/2020/04/17/parcel-tutorial/](https://atjiu.github.io/2020/04/17/parcel-tutorial/)
 
 ```
   "scripts": {
@@ -173,7 +173,7 @@ header {
 
 修改 app.js
 
-链文接原: [https://tomoya92.github.io/2020/04/17/parcel-tutorial/](https://tomoya92.github.io/2020/04/17/parcel-tutorial/)
+链文接原: [https://atjiu.github.io/2020/04/17/parcel-tutorial/](https://atjiu.github.io/2020/04/17/parcel-tutorial/)
 
 ```js
 import './scss/app.scss';
@@ -187,7 +187,7 @@ const app = async () => {
 app();
 ```
 
-刷新页面可以看到 
+刷新页面可以看到
 
 ![](/assets/20200417113955.png)
 
@@ -276,7 +276,7 @@ app();
             line-height: 2;
             border-bottom: #ccc solid 1px;
         }
-        
+
         li:last-child {
             border: 0;
         }

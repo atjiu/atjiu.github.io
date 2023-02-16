@@ -21,7 +21,7 @@ author: 朋也
 
 ## 创建koa项目
 
-可以参考我以前发的一篇博客：[使用koa2创建web项目](https://tomoya92.github.io/2019/03/11/creat-web-with-koa2/)
+可以参考我以前发的一篇博客：[使用koa2创建web项目](https://atjiu.github.io/2019/03/11/creat-web-with-koa2/)
 
 ## 添加依赖
 
@@ -92,7 +92,7 @@ server.listen(port);
 console.log("Listening on " + port);
 ```
 
-接文链原: [https://tomoya92.github.io/2020/04/23/socketio-koa-integrate/](https://tomoya92.github.io/2020/04/23/socketio-koa-integrate/)
+接文链原: [https://atjiu.github.io/2020/04/23/socketio-koa-integrate/](https://atjiu.github.io/2020/04/23/socketio-koa-integrate/)
 
 ## 页面
 

@@ -46,7 +46,7 @@ jekyll build
 
 jekyll 默认启动加载 `_config.yml` 文件，在页面里获取配置在 `_config.yml` 里的值用的是 `site.xxx`
 
-比如，在 `_config.yml` 文件里加入一个变量 `github_username:  tomoya92` 那么在页面上就可以用 `{{site.github_username}}` 来获取它的值
+比如，在 `_config.yml` 文件里加入一个变量 `github_username:  atjiu` 那么在页面上就可以用 `{{site.github_username}}` 来获取它的值
 
 `permalink: /:year/:month/:day/:title/` 表示访问博客的路径地址格式，比如 `_posts/2017-06-03-hello.md` 构建后的访问地址就是 `/2017/06/03/hello/` 如果定成 `permalink: /:title/` 那么访问地址就是 `/hello/` 这里就有个问题，万一两个文件名字是一样的，就是前面的日期不同，那就会出现访问路径一样的现象，会不会报错，我没试过，不过如果带上日期，这样的概率就小多了，还是建议带上，这样在搜索引擎抓到页面后，路径上也有个时间，对需要的人也是一种帮助
 

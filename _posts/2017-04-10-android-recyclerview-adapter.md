@@ -10,13 +10,13 @@ author: 朋也
 * content
 {:toc}
 
-- [Android组件SwiperRefreshLayout的上拉加载更多实现](https://tomoya92.github.io/2017/03/31/android-swiperrefreshlayout-loadmore/)
-- [Android双击TitleBar回顶部功能实现](https://tomoya92.github.io/2017/03/31/android-doubleclick-backtotop/)
-- [Android万能ListView的BaseAdapter实现](https://tomoya92.github.io/2017/03/31/android-listview-adapter/)
-- [Android-Studio自带小图标Vector用法](https://tomoya92.github.io/2017/04/05/android-vector/)
-- [Android布局实现-ViewPager+Fragment+TabLayout整合](https://tomoya92.github.io/2017/04/05/android-viewpager-fragment-tablayout/)
-- [Android布局实现-BottomNavigationView+ViewPager+Fragment+整合](https://tomoya92.github.io/2017/04/05/android-bottomnavigationview-viewpager-fragment/)
-- [Android万能RecyclerView的Adapter实现（通用类实现，包括分割线，点击事件，点击波纹，上拉加载更多）](https://tomoya92.github.io/2017/04/10/android-recyclerview-adapter/)
+- [Android组件SwiperRefreshLayout的上拉加载更多实现](https://atjiu.github.io/2017/03/31/android-swiperrefreshlayout-loadmore/)
+- [Android双击TitleBar回顶部功能实现](https://atjiu.github.io/2017/03/31/android-doubleclick-backtotop/)
+- [Android万能ListView的BaseAdapter实现](https://atjiu.github.io/2017/03/31/android-listview-adapter/)
+- [Android-Studio自带小图标Vector用法](https://atjiu.github.io/2017/04/05/android-vector/)
+- [Android布局实现-ViewPager+Fragment+TabLayout整合](https://atjiu.github.io/2017/04/05/android-viewpager-fragment-tablayout/)
+- [Android布局实现-BottomNavigationView+ViewPager+Fragment+整合](https://atjiu.github.io/2017/04/05/android-bottomnavigationview-viewpager-fragment/)
+- [Android万能RecyclerView的Adapter实现（通用类实现，包括分割线，点击事件，点击波纹，上拉加载更多）](https://atjiu.github.io/2017/04/10/android-recyclerview-adapter/)
 
 学Android的时候，找视频在慕课网上看到了个优雅使用RecyclerView实现复杂布局的视频，然后封装了一个通用的Adapter
 

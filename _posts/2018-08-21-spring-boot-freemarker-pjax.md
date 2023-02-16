@@ -14,7 +14,7 @@ author: 朋也
 
 ![](/assets/freemarker-pjax.gif)
 
-> pjax是啥，自行百度，关于它的兼容性可以看一下我另一篇博客：[https://tomoya92.github.io/2017/04/25/nodejs-pjax/](https://tomoya92.github.io/2017/04/25/nodejs-pjax/)
+> pjax是啥，自行百度，关于它的兼容性可以看一下我另一篇博客：[https://atjiu.github.io/2017/04/25/nodejs-pjax/](https://atjiu.github.io/2017/04/25/nodejs-pjax/)
 
 
 
@@ -214,4 +214,4 @@ phone.ftl
 </@html>
 ```
 
-jquery.pjax 和 websocket 绝配呀，关于spring-boot里集成websocket的教程可以查看我另一篇博客 [https://tomoya92.github.io/2018/08/20/spring-boot-netty-socketio/](https://tomoya92.github.io/2018/08/20/spring-boot-netty-socketio/)
+jquery.pjax 和 websocket 绝配呀，关于spring-boot里集成websocket的教程可以查看我另一篇博客 [https://atjiu.github.io/2018/08/20/spring-boot-netty-socketio/](https://atjiu.github.io/2018/08/20/spring-boot-netty-socketio/)

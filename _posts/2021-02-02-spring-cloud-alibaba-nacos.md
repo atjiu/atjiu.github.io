@@ -695,7 +695,7 @@ public class ProviderServiceImpl implements ProviderService {
 
 另外因为集成了sentinel，还可以在sentinel控制台里配置限流规则，用于测试限流时的fallback默认实现
 
-> 说一下这里面的坑，之前学 spring-cloud 配置中心的时候，因为spring-cloud版本问题将 spring-boot版本从 `2.2.2.RELEASE` 升级到 `2.4.1` spring-cloud的版本从 `Hoxton.SR9` 升级到 `2020.0.0` 才解决报错问题，详情可以参见：https://tomoya92.github.io/2021/01/11/spring-cloud-config/
+> 说一下这里面的坑，之前学 spring-cloud 配置中心的时候，因为spring-cloud版本问题将 spring-boot版本从 `2.2.2.RELEASE` 升级到 `2.4.1` spring-cloud的版本从 `Hoxton.SR9` 升级到 `2020.0.0` 才解决报错问题，详情可以参见：https://atjiu.github.io/2021/01/11/spring-cloud-config/
 >
 > 当我继续使用升级后的spring-cloud与spring-boot版本配置spring-cloud-alibaba里的openfeign与sentinel时，一直报 `Caused by: java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?` 这个异常，一直没找到解决办法，直到我把版本号又降回去后，它神奇的好使了。。
 

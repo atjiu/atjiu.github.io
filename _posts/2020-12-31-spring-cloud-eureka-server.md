@@ -80,7 +80,7 @@ public class EurekaServer {
 
 ```
 
-链文接原: [https://tomoya92.github.io/2021/01/01/spring-cloud-eureka-server/](https://tomoya92.github.io/2021/01/01/spring-cloud-eureka-server/)
+链文接原: [https://atjiu.github.io/2021/01/01/spring-cloud-eureka-server/](https://atjiu.github.io/2021/01/01/spring-cloud-eureka-server/)
 
 ## 创建Order服务
 
@@ -159,7 +159,7 @@ public class Order1Application {
 
 配置
 
-接链文原: [https://tomoya92.github.io/2021/01/01/spring-cloud-eureka-server/](https://tomoya92.github.io/2021/01/01/spring-cloud-eureka-server/)
+接链文原: [https://atjiu.github.io/2021/01/01/spring-cloud-eureka-server/](https://atjiu.github.io/2021/01/01/spring-cloud-eureka-server/)
 
 ```properties
 server.port=18081
@@ -235,7 +235,7 @@ DS Replicas：我的理解就是数据备份(同步)，不见得正确，仅供�
 
 为什么需要它：实例服务如果只有一个的话，会不安全，万一服务挂掉了，没有可替代的服务接管被调用，所以需要多份实例。那么注册中心也是一样的，如果只有一个注册中心，当这个注册中心挂了，整个微服务就完了，如果有多个注册中心的话，一个挂掉了，还可以使用另一个，它们之间的数据也可以互相的同步，这对整个微服务架构就会相对的安全的多
 
-接原链文: [https://tomoya92.github.io/2021/01/01/spring-cloud-eureka-server/](https://tomoya92.github.io/2021/01/01/spring-cloud-eureka-server/)
+接原链文: [https://atjiu.github.io/2021/01/01/spring-cloud-eureka-server/](https://atjiu.github.io/2021/01/01/spring-cloud-eureka-server/)
 
 具体配置方法如下
 

@@ -138,7 +138,7 @@ class MyHomeWidget extends StatelessWidget {
 }
 ```
 
-接文原链: [https://tomoya92.github.io/2019/07/16/flutter-listview/](https://tomoya92.github.io/2019/07/16/flutter-listview/)
+接文原链: [https://atjiu.github.io/2019/07/16/flutter-listview/](https://atjiu.github.io/2019/07/16/flutter-listview/)
 
 ---
 

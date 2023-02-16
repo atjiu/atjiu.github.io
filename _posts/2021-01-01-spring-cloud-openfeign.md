@@ -61,7 +61,7 @@ public interface IOrderService {
 
 使用
 
-链文接原: [https://tomoya92.github.io/2021/01/01/spring-cloud-openfeign/](https://tomoya92.github.io/2021/01/01/spring-cloud-openfeign/)
+链文接原: [https://atjiu.github.io/2021/01/01/spring-cloud-openfeign/](https://atjiu.github.io/2021/01/01/spring-cloud-openfeign/)
 
 ```java
 package com.example.springcloudtutorial;
@@ -138,7 +138,7 @@ openfeign调用服务接口的日志配置
 
 创建日志级别的Bean
 
-文链接原: [https://tomoya92.github.io/2021/01/01/spring-cloud-openfeign/](https://tomoya92.github.io/2021/01/01/spring-cloud-openfeign/)
+文链接原: [https://atjiu.github.io/2021/01/01/spring-cloud-openfeign/](https://atjiu.github.io/2021/01/01/spring-cloud-openfeign/)
 
 ```java
 package com.example.springcloudtutorial;

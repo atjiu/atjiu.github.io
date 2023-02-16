@@ -20,7 +20,7 @@ author: 朋也
 - 创建springboot项目
 - 引入依赖
 
-链文接原: [https://tomoya92.github.io/2020/06/03/sharding-sphere-horizontal-split](https://tomoya92.github.io/2020/06/03/sharding-sphere-horizontal-split/)
+链文接原: [https://atjiu.github.io/2020/06/03/sharding-sphere-horizontal-split](https://atjiu.github.io/2020/06/03/sharding-sphere-horizontal-split/)
 
 ```xml
 <dependencies>
@@ -111,7 +111,7 @@ CREATE TABLE `user_0` (
 
 - 配置mybatisplus
 
-链文接原: [https://tomoya92.github.io/2020/06/03/sharding-sphere-horizontal-split](https://tomoya92.github.io/2020/06/03/sharding-sphere-horizontal-split/)
+链文接原: [https://atjiu.github.io/2020/06/03/sharding-sphere-horizontal-split](https://atjiu.github.io/2020/06/03/sharding-sphere-horizontal-split/)
 
 ```java
 import lombok.Data;

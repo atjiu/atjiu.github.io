@@ -9,11 +9,11 @@ author: 朋也
 * content
 {:toc}
 
-- [react-native组件NavigatorIOS与ListView结合使用](https://tomoya92.github.io/2017/08/02/react-native-navigatorios-listview/)
-- [react-native ListView组件点击跳转](https://tomoya92.github.io/2017/08/02/react-native-listview-forward/)
-- [react-native ListView下拉刷新上拉加载实现](https://tomoya92.github.io/2017/08/02/react-native-listview-refresh-loadmore/)
-- [react-native组件StackNavigator](https://tomoya92.github.io/2017/08/07/react-native-stacknavigator/)
-- [react-native TabNavigator用法](https://tomoya92.github.io/2017/09/06/react-native-tabnavigator/)
+- [react-native组件NavigatorIOS与ListView结合使用](https://atjiu.github.io/2017/08/02/react-native-navigatorios-listview/)
+- [react-native ListView组件点击跳转](https://atjiu.github.io/2017/08/02/react-native-listview-forward/)
+- [react-native ListView下拉刷新上拉加载实现](https://atjiu.github.io/2017/08/02/react-native-listview-refresh-loadmore/)
+- [react-native组件StackNavigator](https://atjiu.github.io/2017/08/07/react-native-stacknavigator/)
+- [react-native TabNavigator用法](https://atjiu.github.io/2017/09/06/react-native-tabnavigator/)
 
 TabNavigator 也是`react-navigation`包下的，用法也相当简单
 
@@ -62,7 +62,7 @@ const ITNewsTabNavigator = TabNavigator({
 })
 ```
 
-这样就可以得到一个底部有两栏的一个布局，效果图可见 https://github.com/tomoya92/ITNews-React-Native
+这样就可以得到一个底部有两栏的一个布局，效果图可见 https://github.com/atjiu/ITNews-React-Native
 
 **说明：**
 
@@ -70,4 +70,4 @@ const ITNewsTabNavigator = TabNavigator({
 - `swipeEnabled: false,` 允许左右滑动切换视图，iOS上可以，Android不行
 - `animationEnabled: false,` 滑动的时候动画，iOS上可以，Android不行
 
-代码： https://github.com/tomoya92/ITNews-React-Native
+代码： https://github.com/atjiu/ITNews-React-Native

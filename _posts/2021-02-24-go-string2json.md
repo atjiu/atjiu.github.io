@@ -12,7 +12,7 @@ author: 朋也
 
 go原生支持json与struct互转 ~~java哭了~~
 
-原文链接: [https://tomoya92.github.io/2021/02/24/go-string2json/](https://tomoya92.github.io/2021/02/24/go-string2json/)
+原文链接: [https://atjiu.github.io/2021/02/24/go-string2json/](https://atjiu.github.io/2021/02/24/go-string2json/)
 
 ```go
 type User struct {

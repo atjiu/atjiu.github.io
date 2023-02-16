@@ -53,7 +53,7 @@ Config分服务端和客户端，服务端连接一个获取所有配置文件�
 
 启动类 要多加一个注解 `@EnableConfigServer`
 
-链接原文: [https://tomoya92.github.io/2021/01/11/spring-cloud-config/](https://tomoya92.github.io/2021/01/11/spring-cloud-config/)
+链接原文: [https://atjiu.github.io/2021/01/11/spring-cloud-config/](https://atjiu.github.io/2021/01/11/spring-cloud-config/)
 
 ```java
 package com.example.springcloudtutorial;
@@ -176,7 +176,7 @@ public class ConfigClientApplication {
 
 ```
 
-链接文原: [https://tomoya92.github.io/2021/01/11/spring-cloud-config/](https://tomoya92.github.io/2021/01/11/spring-cloud-config/)
+链接文原: [https://atjiu.github.io/2021/01/11/spring-cloud-config/](https://atjiu.github.io/2021/01/11/spring-cloud-config/)
 
 配置文件: 配置文件要配置两个，一个是 `application.properties` 一个是 `bootstrap.properties`
 

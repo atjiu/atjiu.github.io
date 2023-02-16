@@ -10,11 +10,11 @@ author: 朋也
 * content
 {:toc}
 
-> [上一篇](https://tomoya92.github.io/2019/04/03/spring-boot-graphql/) 博客最后留下了几个问题，其中有一个是graphql风格接口怎么发送post请求保存数据，这一篇来介绍一下方法
+> [上一篇](https://atjiu.github.io/2019/04/03/spring-boot-graphql/) 博客最后留下了几个问题，其中有一个是graphql风格接口怎么发送post请求保存数据，这一篇来介绍一下方法
 
 ## 准备环境
 
-graphql风格接口的搭建可以看 [上一篇](https://tomoya92.github.io/2019/04/03/spring-boot-graphql/) 博客，这里不多说
+graphql风格接口的搭建可以看 [上一篇](https://atjiu.github.io/2019/04/03/spring-boot-graphql/) 博客，这里不多说
 
 既然要保存数据，这篇博客是在上一篇博客的基础了将数据源改成了jpa从数据库里查询的了，这一块不多说
 
@@ -68,7 +68,7 @@ private RuntimeWiring buildWiring() {
 }
 ```
 
-原链文接：[https://tomoya92.github.io/2019/04/06/graphql-get-post/](https://tomoya92.github.io/2019/04/06/graphql-get-post/)
+原链文接：[https://atjiu.github.io/2019/04/06/graphql-get-post/](https://atjiu.github.io/2019/04/06/graphql-get-post/)
 
 另外在类 `GraphQLDataFetchers` 中添加 `bookSave()` 方法的实现，就是将请求参数里的内容持久化到数据库
 

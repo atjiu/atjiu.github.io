@@ -65,7 +65,7 @@ public class MyRuleConfig {
 
 在UserApplication.java上配置上调用这个自定义的rule
 
-链文接原: [https://tomoya92.github.io/2021/01/01/spring-cloud-ribbon/](https://tomoya92.github.io/2021/01/01/spring-cloud-ribbon/)
+链文接原: [https://atjiu.github.io/2021/01/01/spring-cloud-ribbon/](https://atjiu.github.io/2021/01/01/spring-cloud-ribbon/)
 
 ```java
 @RibbonClient(name = "ORDER", configuration = MyRuleConfig.class)

@@ -10,7 +10,7 @@ author: 朋也
 * content
 {:toc}
 
-> [上一篇](https://tomoya92.github.io/2019/04/04/loading-css/) 文章整理了11个开源的加载动画，这一篇来学习一下动画属性的意思跟用法
+> [上一篇](https://atjiu.github.io/2019/04/04/loading-css/) 文章整理了11个开源的加载动画，这一篇来学习一下动画属性的意思跟用法
 >
 > 知其然知其所以然
 
@@ -69,7 +69,7 @@ animation-iteration-count 表示动画执行次数，可填1,2,3,4...这些数�
 
 ---
 
-原链文接：[https://tomoya92.github.io/2019/04/04/css-animation/](https://tomoya92.github.io/2019/04/04/css-animation/)
+原链文接：[https://atjiu.github.io/2019/04/04/css-animation/](https://atjiu.github.io/2019/04/04/css-animation/)
 
 `animation-timing-function` 取值
 

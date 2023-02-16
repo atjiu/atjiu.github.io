@@ -163,4 +163,4 @@ public class ShiroConfig {
 
 - [https://github.com/baomidou/mybatis-plus/issues/459](https://github.com/baomidou/mybatis-plus/issues/459)
 
-相关代码见：[https://github.com/tomoya92/pybbs/tree/master/src/main/java/co/yiiu/pybbs/config](https://github.com/tomoya92/pybbs/tree/master/src/main/java/co/yiiu/pybbs/config)
+相关代码见：[https://github.com/atjiu/pybbs/tree/master/src/main/java/co/yiiu/pybbs/config](https://github.com/atjiu/pybbs/tree/master/src/main/java/co/yiiu/pybbs/config)

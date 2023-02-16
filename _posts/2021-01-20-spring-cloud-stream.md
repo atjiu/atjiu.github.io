@@ -123,7 +123,7 @@ spring.cloud.stream.bindings.input.binder=myMQ
 spring.cloud.stream.bindings.input.group=consumer-group-test
 ```
 
-原链文接: [https://tomoya92.github.io/2021/01/20/spring-cloud-stream/](https://tomoya92.github.io/2021/01/20/spring-cloud-stream/)
+原链文接: [https://atjiu.github.io/2021/01/20/spring-cloud-stream/](https://atjiu.github.io/2021/01/20/spring-cloud-stream/)
 
 ## 提供者
 

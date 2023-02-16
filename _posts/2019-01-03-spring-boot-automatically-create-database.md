@@ -137,4 +137,4 @@ public class DataSourceConfig {
 
 - [在Spring项目中实现动态创建数据库](https://cgs1999.iteye.com/blog/2327637)
 
-相关代码见：[https://github.com/tomoya92/pybbs/tree/master/src/main/java/co/yiiu/pybbs/config](https://github.com/tomoya92/pybbs/tree/master/src/main/java/co/yiiu/pybbs/config)
+相关代码见：[https://github.com/atjiu/pybbs/tree/master/src/main/java/co/yiiu/pybbs/config](https://github.com/atjiu/pybbs/tree/master/src/main/java/co/yiiu/pybbs/config)

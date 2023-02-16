@@ -426,7 +426,7 @@ public PersistentTokenBasedRememberMeServices persistentTokenBasedRememberMeServ
 }
 ```
 
-至此，标题中列出的功能都实现了，具体代码见项目：[https://github.com/tomoya92/spring-boot-security-demo](https://github.com/tomoya92/spring-boot-security-demo)
+至此，标题中列出的功能都实现了，具体代码见项目：[https://github.com/atjiu/spring-boot-security-demo](https://github.com/atjiu/spring-boot-security-demo)
 
 ## 参考
 

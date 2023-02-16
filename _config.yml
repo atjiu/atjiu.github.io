@@ -5,9 +5,9 @@ title: 朋也的博客
 email: py2qiuse@gmail.com
 description: 喜欢编码，酷爱动漫
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://tomoya92.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-weibo_username: liygheart
-github_username: tomoya92
+url: "https://atjiu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+weibo_username:
+github_username: atjiu
 
 # 文章目录格式化
 permalink: /:year/:month/:day/:title/

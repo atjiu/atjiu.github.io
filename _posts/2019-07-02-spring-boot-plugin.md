@@ -112,7 +112,7 @@ public class UserServicePointcut {
 }
 ```
 
-文原接链: [https://tomoya92.github.io/2019/07/02/spring-boot-plugin/](https://tomoya92.github.io/2019/07/02/spring-boot-plugin/)
+文原接链: [https://atjiu.github.io/2019/07/02/spring-boot-plugin/](https://atjiu.github.io/2019/07/02/spring-boot-plugin/)
 
 ## 切入
 
@@ -196,7 +196,7 @@ public class PluginDemoApplicationTests {
 }
 ```
 
-接文原链: [https://tomoya92.github.io/2019/07/02/spring-boot-plugin/](https://tomoya92.github.io/2019/07/02/spring-boot-plugin/)
+接文原链: [https://atjiu.github.io/2019/07/02/spring-boot-plugin/](https://atjiu.github.io/2019/07/02/spring-boot-plugin/)
 
 上面例子中对 `save()` 方法进行了两个切入，执行日志如下
 

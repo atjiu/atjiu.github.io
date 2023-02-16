@@ -137,7 +137,7 @@ end while;
 
 例：
 
-链接文原: [https://tomoya92.github.io/2019/09/27/mysql-procedure/](https://tomoya92.github.io/2019/09/27/mysql-procedure/)
+链接文原: [https://atjiu.github.io/2019/09/27/mysql-procedure/](https://atjiu.github.io/2019/09/27/mysql-procedure/)
 
 ```sql
 DELIMITER //
@@ -266,7 +266,7 @@ out是在存储过程中处理的结果返回出来用的, 使用中要配合着
 
 用法
 
-文链接原: [https://tomoya92.github.io/2019/09/27/mysql-procedure/](https://tomoya92.github.io/2019/09/27/mysql-procedure/)
+文链接原: [https://atjiu.github.io/2019/09/27/mysql-procedure/](https://atjiu.github.io/2019/09/27/mysql-procedure/)
 
 ```sql
 drop procedure my_first_procedure;

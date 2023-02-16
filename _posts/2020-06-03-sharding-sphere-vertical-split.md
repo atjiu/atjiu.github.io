@@ -19,9 +19,9 @@ author: 朋也
 
 垂直分表没必要用sharding-sphere，根据分库分表的原理来看，垂直分表就是将一个表细分，且在同一个库里，正常操作即可，下面介绍一下分库的垂直拆分
 
-一个论坛业务，拆分成用户信息一个库，帖子相关的一个库的话，一般做法是配置两个数据源【可参见这篇博客：[springboot集成mybatis配置主从复制双库实现读写分离](https://tomoya92.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/)】，通过给mybatis的mapper配置不同的数据源来实现业务，使用sharding-sphere逻辑也是大同小异，看配置
+一个论坛业务，拆分成用户信息一个库，帖子相关的一个库的话，一般做法是配置两个数据源【可参见这篇博客：[springboot集成mybatis配置主从复制双库实现读写分离](https://atjiu.github.io/2019/10/30/spring-boot-mybatis-read-write-separation/)】，通过给mybatis的mapper配置不同的数据源来实现业务，使用sharding-sphere逻辑也是大同小异，看配置
 
-链文接原: [https://tomoya92.github.io/2020/06/03/sharding-sphere-vertical-split](https://tomoya92.github.io/2020/06/03/sharding-sphere-vertical-split/)
+链文接原: [https://atjiu.github.io/2020/06/03/sharding-sphere-vertical-split](https://atjiu.github.io/2020/06/03/sharding-sphere-vertical-split/)
 
 ```prop
 # 指定数据源名，如果有两个，用逗号隔开 如：ds0,ds1，相应的下面也要配置上ds1的连接地址
