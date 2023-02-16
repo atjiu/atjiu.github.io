@@ -2,7 +2,7 @@
 layout: post
 title: Python numpy 数组降维，二进制转十进制
 date: 2023-02-16 13:52:00
-categories: Python
+categories: Python学习笔记
 tags: numpy 进制转换
 author: 朋也
 ---
