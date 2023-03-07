@@ -20,9 +20,7 @@ hr {
 }
 
 a {
-    color: #086dc3;
     line-height: inherit;
-    text-decoration: underline;
 }
 p {
     font-family: inherit;
@@ -162,10 +160,11 @@ header {
     p,
     li {
         code {
-            background-color: #fff;
+            background-color: #f5f5f5;
             border: 1px solid #e1e1e8;
-            color: #009;
-            padding: 2px 6px;
+            border-radius: 4px;
+            color: #333;
+            padding: 4px 6px;
             font-size: 0.875rem;
             font-family: Monaco, Menlo, Consolas, courier new, monospace;
         }
@@ -280,4 +279,60 @@ footer {
     // transform: translate(-50%, 0);
     text-align: center;
     // height: 100px;
+}
+
+/* 应用于深色主题 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: #eee;
+    }
+    .container .recent {
+        background-color: #303030;
+        color: #eee;
+    }
+    .container p code, .container li code {
+        background-color: #575757;
+        color: #fff;
+        border: 0;
+    }
+    hr {
+        border-top: 1px solid #555;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+    input,
+    textarea,
+    select {
+        background-color: #333;
+        color: #eee;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        padding: 0 5px;
+    }
+    blockquote {
+        background-color: #3f3f3f !important;
+    }
+    iframe {
+        background-color: #fff;
+    }
+}
+
+/* 应用于浅色主题 */
+@media (prefers-color-scheme: light) {
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    input,
+    textarea,
+    select {
+        background-color: #f5f5f5;
+        color: #333;
+        border-radius: 4px;
+        padding: 0 5px;
+    }
 }
