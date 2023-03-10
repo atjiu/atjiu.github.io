@@ -28,7 +28,7 @@ author: 朋也
 如果自己是站长的话，当网站里有评论或者留言，想第一时间收到，就可以利用这个api，让tg来收，及时通知，非常方便
 
 - API文档地址：https://core.telegram.org/bots/api#sendmessage
-- API地址：https://api.telegram.org/bot<token>/sendMessage
+- API地址：https://api.telegram.org/bot\<token\>/sendMessage
 
 如下在postman里的请求示例
 
@@ -53,7 +53,7 @@ author: 朋也
 **先告诉tg回调地址是啥**
 
 - API文档地址：https://core.telegram.org/bots/api#setwebhook
-- API接口地址：https://api.telegram.org/bot<bot>/setWebhook
+- API接口地址：https://api.telegram.org/bot\<token\>/setWebhook
 
 ![](/assets/20230309142342.png)
 
