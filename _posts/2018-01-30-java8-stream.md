@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java8里的stream使用总结
-categories: 杂项
+categories: java学习笔记
 tags: java
 author: 朋也
 ---
