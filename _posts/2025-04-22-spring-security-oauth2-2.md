@@ -16,6 +16,8 @@ author: 朋也
 
 
 
+
+
 上一篇跑通了springsecurity oauth2的授权中心授权流程，这篇来将内置的登录页和授权确认页自定义一下
 
 ## 引入Thymeleaf
