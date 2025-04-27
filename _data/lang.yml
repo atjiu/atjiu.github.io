@@ -1,6 +1,7 @@
 en:
   menu_index: "Index"
   menu_category: "Categories"
+  menu_tag: "Tag"
   menu_about: "About"
   paginator_previous: "Previous"
   paginator_pages: "Page: "
@@ -13,10 +14,12 @@ en:
   post_previous: "Previous: "
   post_next: "Next: "
   categories_title: "Categories"
+  tags_title: "分类"
 
 de:
   menu_index: "Index"
   menu_category: "Kategorien"
+  menu_tag: "Tag"
   menu_about: "Über"
   paginator_previous: "Bisherige"
   paginator_pages: "Seite: "
@@ -29,10 +32,12 @@ de:
   post_previous: "Bisherige: "
   post_next: "Nächster: "
   categories_title: "Kategorien"
+  tags_title: "分类"
 
 es:
   menu_index: "Índice"
   menu_category: "Categorías"
+  menu_tag: "Tag"
   menu_about: "Sobre"
   paginator_previous: "Anterior"
   paginator_pages: "Página: "
@@ -45,10 +50,12 @@ es:
   post_previous: "Anterior: "
   post_next: "Siguiente: "
   categories_title: "Categorías"
+  tags_title: "分类"
 
 fr:
   menu_index: "Indice"
   menu_category: "Catégories"
+  menu_tag: "Tag"
   menu_about: "Sur"
   paginator_previous: "Précédent"
   paginator_pages: "Page: "
@@ -61,10 +68,12 @@ fr:
   post_previous: "Précédent: "
   post_next: "Prochain: "
   categories_title: "Catégories"
+  tags_title: "分类"
 
 ja:
   menu_index: "ホーム"
   menu_category: "分類"
+  menu_tag: "Tag"
   menu_about: "私について"
   paginator_previous: "前のページ"
   paginator_pages: "ページ数："
@@ -77,10 +86,12 @@ ja:
   post_previous: "前の記事："
   post_next: "次の記事："
   categories_title: "分類"
+  tags_title: "分类"
 
 pt:
   menu_index: "Índice"
   menu_category: "Categorias"
+  menu_tag: "Tag"
   menu_about: "Sobre"
   paginator_previous: "Anterior"
   paginator_pages: "Página: "
@@ -93,26 +104,31 @@ pt:
   post_previous: "Anterior: "
   post_next: "Próximo: "
   categories_title: "Categorias"
+  tags_title: "分类"
 
 zh-cn:
   menu_index: "首页"
   menu_category: "分类"
-  menu_about: "关于我"
+  menu_tag: "标签"
+  menu_about: "关于"
+  menu_clock: "时钟"
   paginator_previous: "前一页"
   paginator_pages: "页数："
   paginator_next: "后一页"
   notification_404: "找不到此页：（"
   post_write_date: "发表于"
   post_update_date: "更新于"
-  post_categories: "分类："
-  post_tags: "标签："
+  post_categories: "分&#12288;类："
+  post_tags: "标&#12288;签："
   post_previous: "前一篇："
   post_next: "后一篇："
   categories_title: "分类"
+  tags_title: "标签"
 
 zh-tw:
   menu_index: "首頁"
   menu_category: "分類"
+  menu_tag: "Tag"
   menu_about: "關於我"
   paginator_previous: "前一頁"
   paginator_pages: "頁數："
@@ -125,10 +141,12 @@ zh-tw:
   post_previous: "前一篇："
   post_next: "後一篇："
   categories_title: "分類"
+  tags_title: "分类"
 
 ko:
   menu_index: "색인"
   menu_category: "카테고리"
+  menu_tag: "Tag"
   menu_about: "나의소개"
   paginator_previous: "이전"
   paginator_pages: "페이지: "
@@ -141,4 +159,5 @@ ko:
   post_previous: "이전: "
   post_next: "다음: "
   category_title: "카테고리"
+  tags_title: "分类"
 

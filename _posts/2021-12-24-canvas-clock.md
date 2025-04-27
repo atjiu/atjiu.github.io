@@ -17,7 +17,7 @@ author: 朋也
 
 惯例先上效果
 
-<iframe src="https://atjiu.github.io/canvas-clock.html" width="850" height="850"></iframe>
+<iframe src="https://atjiu.github.io/clock/" width="750" height="750"></iframe>
 
 ## 绘制线条
 

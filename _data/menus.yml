@@ -4,6 +4,12 @@
 - default: menu_category
   url:   "category"
 
+- default: menu_tag
+  url:   "tag"
+
+- default: menu_clock
+  url:   "clock"
+
 # - title: "Jekyll Paper"
 #   absoluteUrl: true
 #   url: "https://github.com/ghosind/Jekyll-Paper"

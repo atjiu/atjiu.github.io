@@ -60,23 +60,23 @@ oauth2:
 
 //修改后
 @Bean
-    public OAuth2TokenCustomizer<OAuth2TokenClaimsContext> tokenCustomizer() {
-        return context -> {
-            if (context.getTokenType().getValue().equals("access_token")) {
-                // 从用户详情中提取权限
-                Collection<? extends GrantedAuthority> authorities =
-                        context.getPrincipal().getAuthorities();
+public OAuth2TokenCustomizer<OAuth2TokenClaimsContext> tokenCustomizer() {
+    return context -> {
+        if (context.getTokenType().getValue().equals("access_token")) {
+            // 从用户详情中提取权限
+            Collection<? extends GrantedAuthority> authorities =
+                    context.getPrincipal().getAuthorities();
 
-                // 将权限列表放入令牌声明
-                context.getClaims().claim(
-                        "authorities",
-                        authorities.stream()
-                                .map(GrantedAuthority::getAuthority)
-                                .collect(Collectors.toList())
-                );
-            }
-        };
-    }
+            // 将权限列表放入令牌声明
+            context.getClaims().claim(
+                    "authorities",
+                    authorities.stream()
+                            .map(GrantedAuthority::getAuthority)
+                            .collect(Collectors.toList())
+            );
+        }
+    };
+}
 ```
 
 ## 资源服务器
@@ -85,11 +85,11 @@ oauth2:
 
 ```xml
 <dependency>
-            <groupId>com.nimbusds</groupId>
-            <artifactId>oauth2-oidc-sdk</artifactId>
-            <version>11.23.1</version>
-            <scope>runtime</scope>
-        </dependency>
+    <groupId>com.nimbusds</groupId>
+    <artifactId>oauth2-oidc-sdk</artifactId>
+    <version>11.23.1</version>
+    <scope>runtime</scope>
+</dependency>
 ```
 
 创建一个自省令牌解析器 CustomAuthoritiesOpaqueTokenIntrospector
@@ -168,21 +168,21 @@ public class CustomAuthoritiesOpaqueTokenIntrospector implements OpaqueTokenIntr
 //    }
 ```
 
-配置授权服务器的请求 /oauth2/introspect 是内置的，不要修改
+配置授权服务器的请求 `/oauth2/introspect` 是内置的，不要修改
 
 ```java
-    @Bean
-    public OpaqueTokenIntrospector customOpaqueTokenIntrospector() {
-        // 1. 创建默认的 Introspector（连接授权服务器）
-        OpaqueTokenIntrospector delegate = new NimbusOpaqueTokenIntrospector(
-                "http://localhost:9000/oauth2/introspect",
-                "client", // client_id
-                "secret"  // client_secret 与授权服务器保持一致
-        );
+@Bean
+public OpaqueTokenIntrospector customOpaqueTokenIntrospector() {
+    // 1. 创建默认的 Introspector（连接授权服务器）
+    OpaqueTokenIntrospector delegate = new NimbusOpaqueTokenIntrospector(
+            "http://localhost:9000/oauth2/introspect",
+            "client", // client_id
+            "secret"  // client_secret 与授权服务器保持一致
+    );
 
-        // 2. 包装成自定义实现
-        return new CustomAuthoritiesOpaqueTokenIntrospector(delegate);
-    }
+    // 2. 包装成自定义实现
+    return new CustomAuthoritiesOpaqueTokenIntrospector(delegate);
+}
 ```
 
 ## 测试

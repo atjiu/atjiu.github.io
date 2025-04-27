@@ -2,15 +2,16 @@
 
 .post-title {
   // text-align: center;
+  margin-bottom: 1rem;
 }
 
 .post-author {
   display: none;
 }
 
-.post-content p {
-  line-height: 20px;
-}
+// .post-content p {
+//   line-height: 20px;
+// }
 
 .post-content img {
   display: block;
@@ -20,8 +21,10 @@
 .post-info {
   line-height: 24px;
   margin: 10px 0;
+  padding: 10px 0;
+  border-top: 1px solid #aaa;
 }
 
-.post-category, .post-tag {
-  margin: 0 5px;
-}
+// .post-category, .post-tag {
+//   margin: 0 10px 0 0;
+// }

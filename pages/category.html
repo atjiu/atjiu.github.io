@@ -10,7 +10,7 @@ permalink: /category/
   </div>
   <ul class="categories-list">
     {% for category in site.categories %}
-      <li><a href="{{ base.url }}/category/{{ category | first | slugify }}">{{ category | first }}</a></li>
+      <li><span class="list-item"><a href="{{ base.url }}/category/{{ category | first | slugify }}">{{ category | first }}</a></span></li>
     {% endfor %}
   </ul>
 </article>

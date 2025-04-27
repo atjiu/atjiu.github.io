@@ -8,9 +8,3 @@ const loadMermaid = () => {
   );
 };
 
-document.onload = function () {
-  var markdownToc = document.querySelector(".markdown-toc");
-  if (markdownToc) {
-    markdownToc.style.display = "none";
-  }
-}
