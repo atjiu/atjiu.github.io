@@ -1,0 +1,16 @@
+---
+layout: default
+title: Tags
+permalink: /tag/
+---
+
+<article class="page-container">
+  <div class="categories-title">
+    <h1>{{ site.data.lang[site.language].tags_title }}</h1>
+  </div>
+  <ul class="categories-list">
+    {% for tag in site.tags %}
+      <li><span class="list-item"><a href="{{ base.url }}/tag/{{ tag | first | slugify }}">{{ tag | first }}</a></span></li>
+    {% endfor %}
+  </ul>
+</article>
