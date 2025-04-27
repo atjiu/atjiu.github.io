@@ -1,37 +1,70 @@
-title: 朋也的博客 # name of the site
-author: 朋也 # name of site's author
-email: py2qiuse@gmail.com # email of site's author
-url: https://atjiu.github.io # root address of the site
-baseurl: "/no-style-please" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
-description: > # description of the site (multiple lines allowed)
-  不定时日常记录
+# Welcome to Jekyll!
+#
+# 基本信息
+title: 朋也的博客
+email: py2qiuse@gmail.com
+description: 喜欢编码，酷爱动漫
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://atjiu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+weibo_username:
+github_username: atjiu
 
-permalink: /:slug.html
+# 文章目录格式化
+permalink: /:year/:month/:day/:title/
+# 文章摘要分隔符
+excerpt_separator: "\n\n\n\n"
 
-favicon: "favicon.ico" # name+extension of favicon (which must be put on the root folder)
-# goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
+# 评论组件
+disqus_shortname: tomoya
 
-remote_theme: riggraz/no-style-please # if you are using GitHub Pages, change it to remote_theme: riggraz/no-style-please
+# statistic analysis 统计代码
+baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
+google_analytics_id: UA-98133026-1
 
-theme_config:
-  appearance: "auto" # can be "light", "dark" or "auto"
-  back_home_text: ".." # customize text for homepage link in post layout
-  date_format: "%Y-%m-%d" # customize how date is formatted
-  show_description: false # show blog description in home page
-  lowercase_titles: true # show titles in lowercase in lists
+# webmaster meta
+bing_meta: 8D00F36D8929A335207FBCE7F13C50B3
 
-sass:
-  style: compressed
+# 格式化文档
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
+# 开启相关文章功能，可惜github pages不支持
+# lsi: true
+
+# 插件
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
-  - jektex
+  - jekyll-paginate
 
-jektex:
-  cache_dir: ".jektex-cache"
-  ignore: ["*.xml"]
-  silent: false
-  macros:
-    - ["\\Q", "\\mathbb{Q}"]
-    - ["\\C", "\\mathbb{C}"]
+# 分页
+paginate: 7
+
+# 搜索服务
+algolia:
+  application_id: "36883FPR2D"
+  index_name: "36883FPR2D"
+  search_only_api_key: "2d40767987f704b3b04b9efce7ff49c8"
+
+# 友情链接
+links:
+  - name: 朋也
+    url: https://yiiu.co/
+  - name: 朋也社区
+    url: https://dev.yiiu.co/
+  - name: 开发俱乐部
+    url: https://17dev.club/
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
