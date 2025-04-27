@@ -98,7 +98,7 @@ console.log(obj, obj1);
 
 执行结果如下
 
-![](/assets/2021-02-25-09-52-56.png)
+![](/assets/images/2021-02-25-09-52-56.png)
 
 深拷贝
 
@@ -136,7 +136,7 @@ console.log(obj, obj1);
 
 运行结果如下
 
-![](/assets/2021-02-25-10-06-44.png)
+![](/assets/images/2021-02-25-10-06-44.png)
 
 上面方法有个问题，当对象里有循环引用时，它就傻了，一个劲的循环直到内存溢出，比如
 
@@ -158,7 +158,7 @@ console.log(obj, obj1);
 
 用浅拷贝是没有问题的，但深拷贝就报错了
 
-![](/assets/2021-02-25-10-11-44.png)
+![](/assets/images/2021-02-25-10-11-44.png)
 
 解决办法是在 deepClone() 方法里加一个缓存，用于存放一下递归到引用类型的属性，这样在下一次递归到这个引用的时候，直接取就是了，而不是重新创建一个
 
@@ -205,7 +205,7 @@ obj1.c[1] = 'a';
 console.log(obj, obj1);
 ```
 
-![](/assets/2021-02-25-10-21-18.png)
+![](/assets/images/2021-02-25-10-21-18.png)
 
 ## 事件
 
@@ -222,7 +222,7 @@ js里事件的执行顺序为 捕获事件1 -> 捕获事件2 -> 冒泡事件2 ->
 
 比如下图中，外面的大圆是 parent-box , 里面的小圆是 child-box
 
-![](/assets/2021-02-25-11-00-23.png)
+![](/assets/images/2021-02-25-11-00-23.png)
 
 代码：
 
@@ -274,11 +274,11 @@ document.getElementById("child-box").addEventListener("click", function (e) {
 
 点击大圆执行结果如下
 
-![](/assets/2021-02-25-11-08-45.png)
+![](/assets/images/2021-02-25-11-08-45.png)
 
 点击小圆执行结果如下
 
-![](/assets/2021-02-25-11-01-39.png)
+![](/assets/images/2021-02-25-11-01-39.png)
 
 > 注：当addEventListener() 方法的第三个参数不传时，默认为冒泡事件
 >

@@ -30,7 +30,7 @@ author: 朋也
 
 先上图
 
-![](/assets/swift-theme.gif)
+![](/assets/images/swift-theme.gif)
 
 
 

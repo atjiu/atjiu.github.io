@@ -58,7 +58,7 @@ eclipse里安装activiti插件网上教程一堆, 这里不多说, 两种方式
 
 创建好之后界面长这个样
 
-![](/assets/QQ20190424-101859.png)
+![](/assets/images/QQ20190424-101859.png)
 
 ## 常用组件介绍
 
@@ -85,7 +85,7 @@ eclipse里安装activiti插件网上教程一堆, 这里不多说, 两种方式
 
 ## 画一张请假流程图
 
-![](/assets/QQ20190424-104038.png)
+![](/assets/images/QQ20190424-104038.png)
 
 **注意**
 
@@ -98,13 +98,13 @@ eclipse里安装activiti插件网上教程一堆, 这里不多说, 两种方式
 
 具体设置地方如下
 
-![](/assets/QQ20190424-104510.png)
+![](/assets/images/QQ20190424-104510.png)
 
-![](/assets/QQ20190424-104640.png)
+![](/assets/images/QQ20190424-104640.png)
 
-![](/assets/QQ20190424-104803.png)
+![](/assets/images/QQ20190424-104803.png)
 
-![](/assets/QQ20190424-104910.png)
+![](/assets/images/QQ20190424-104910.png)
 
 ## 总结
 

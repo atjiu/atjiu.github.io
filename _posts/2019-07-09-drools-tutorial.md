@@ -181,7 +181,7 @@ Demo{a=6, b=4, c=4, total=14, errorMsg=[a + b 与 c 不相等]}
 
 先给一张图
 
-![](/assets/QQ20190709-162341.png)
+![](/assets/images/QQ20190709-162341.png)
 
 下面来解释一下每一行都什么意思
 

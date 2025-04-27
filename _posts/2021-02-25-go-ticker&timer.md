@@ -42,7 +42,7 @@ func TestTicker(t *testing.T) {
 
 运行结果
 
-![](/assets/2021-02-25-16-33-13.png)
+![](/assets/images/2021-02-25-16-33-13.png)
 
 NewTimer() 方式
 
@@ -67,7 +67,7 @@ func TestTimer(t *testing.T) {
 
 运行结果
 
-![](/assets/2021-02-25-16-34-54.png)
+![](/assets/images/2021-02-25-16-34-54.png)
 
 可以看到，就执行了两次就不动了
 

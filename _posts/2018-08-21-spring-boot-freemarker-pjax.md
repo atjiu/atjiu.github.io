@@ -8,18 +8,13 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 先看效果图
 
-![](/assets/freemarker-pjax.gif)
+![](/assets/images/freemarker-pjax.gif)
 
 > pjax是啥，自行百度，关于它的兼容性可以看一下我另一篇博客：[https://atjiu.github.io/2017/04/25/nodejs-pjax/](https://atjiu.github.io/2017/04/25/nodejs-pjax/)
-
-
-
-
-
 
 ## 创建项目，引入文件
 

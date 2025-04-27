@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 [上一篇](https://atjiu.github.io/2019/04/09/mvc-by-dynamic-proxy-and-undertow/)博客介绍了使用java动态代理来根据请求的url路径动态的转发到不同的controller来执行不同的逻辑的方法
 
@@ -16,13 +16,7 @@ author: 朋也
 
 先看下效果图
 
-![](/assets/mvc-enhancer.gif)
-
-
-
-
-
-
+![](/assets/images/mvc-enhancer.gif)
 
 ## 思路
 

@@ -80,7 +80,7 @@ func MyHandler() gin.HandlerFunc {
 
 看一下 router.GET() 的源码
 
-![](/assets/2021-02-24-15-53-40.png)
+![](/assets/images/2021-02-24-15-53-40.png)
 
 会发现这个函数最后一个参数是个可变参数，也就是说可以传多个 gin.HandlerFunc 对象，然后就可以将路由改造成下面这样
 
@@ -104,8 +104,8 @@ func main() {
 
 请求 http://localhost:8080/users 就可以看到自己定义的日志信息了
 
-![](/assets/2021-02-24-15-56-31.png)
+![](/assets/images/2021-02-24-15-56-31.png)
 
 当请求下面需要token的接口而没有传token时，就会被拦住
 
-![](/assets/2021-02-24-15-58-16.png)
+![](/assets/images/2021-02-24-15-58-16.png)

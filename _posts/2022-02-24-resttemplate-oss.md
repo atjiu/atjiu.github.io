@@ -16,7 +16,7 @@ author: 朋也
 
 当aliyun oss对某个文件设置过期时间访问时，在浏览器里能正常打开，但使用resttemplate下载就一直403，如下图
 
-![](/assets/1645668018136.png)
+![](/assets/images/1645668018136.png)
 
 解决办法非常简单，给请求头设置上 `User-Agent` 就行了。
 

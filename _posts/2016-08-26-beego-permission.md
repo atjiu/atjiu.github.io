@@ -85,7 +85,7 @@ func (c *UserController) Update() {
 }
 ```
 
-![qq20160826-1 2x](https://cloud.githubusercontent.com/assets/6915570/18008074/4e87322a-6bd9-11e6-9bd5-bab182846204.png)
+![](/assets/images/6915570/18008074/4e87322a-6bd9-11e6-9bd5-bab182846204.png)
 
 创建/编辑角色,可以为角色勾选上应有的权限
 
@@ -110,13 +110,13 @@ func (c *RoleController) Save() {
 }
 ```
 
-![qq20160826-3 2x](https://cloud.githubusercontent.com/assets/6915570/18008073/4e86cae2-6bd9-11e6-9208-bdcb371424d8.png)
+![](/assets/images/6915570/18008073/4e86cae2-6bd9-11e6-9208-bdcb371424d8.png)
 
 **当删除角色/权限的时候,要将role_permissions里的对应关系也删除掉, 同理删除用户/角色的时候也要删除user_roles里的对应关系**
 
 在权限里配置授权地址, 然后通过过滤器来拦截请求进行判断是否具备访问权限
 
-![qq20160826-4 2x](https://cloud.githubusercontent.com/assets/6915570/18008075/4e917046-6bd9-11e6-9c43-322c85751d67.png)
+![](/assets/images/6915570/18008075/4e917046-6bd9-11e6-9c43-322c85751d67.png)
 
 ## 访问验证
 

@@ -28,7 +28,7 @@ author: 朋也
 
 直接上图
 
-![](/assets/swift-tablayout-xlpagertabstrip.gif)
+![](/assets/images/swift-tablayout-xlpagertabstrip.gif)
 
 
 

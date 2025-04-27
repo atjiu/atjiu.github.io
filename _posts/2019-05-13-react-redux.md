@@ -101,7 +101,7 @@ css
 
 运行结果
 
-![](/assets/react-redux-demo.png)
+![](/assets/images/react-redux-demo.png)
 
 ## 添加redux
 

@@ -25,7 +25,7 @@ author: 朋也
 
 springsecurity的`formLogin`配置里有两个`handler`
 
-![](/assets/1745311919153.png)
+![](/assets/images/1745311919153.png)
 
 可以在这两个handler上做文章，如果不配置的话，默认成功会跳转到`defaultSuccessUrl`映射的页面上，失败的话，会跳转到`failureUrl`映射的页面上，如果配置了这两个`handler`的话，就都交给代码来控制了。
 
@@ -217,11 +217,11 @@ class MyAuthenticationSuccessHandler(private val siteConfig: SiteConfig) : Authe
 
 ## 登录测试一下
 
-![](/assets/1745311935115.png)
+![](/assets/images/1745311935115.png)
 
 将响应的jwt值解密看看
 
-![](/assets/1745311943112.png)
+![](/assets/images/1745311943112.png)
 
 可以看到username, token值都在jwt里，这样就可以通过解密前端放在header里的jwt拿到token，再去查询用户和对应的权限就能进行后续的鉴权了
 
@@ -409,17 +409,17 @@ class MyAccessDeniedHandler : AccessDeniedHandler {
 
 postman在Authorization那项，选择 `Bearer Token` 然后将登录返回的 jwt 设置进去，前面不需要手动拼 `bearer ` 的
 
-![](/assets/1745311958681.png)
+![](/assets/images/1745311958681.png)
 
-![](/assets/1745311963585.png)
+![](/assets/images/1745311963585.png)
 
 前面用的`zhangsan`登录的，是有首页的权限的，所以返回的值是正常的
 
-![](/assets/1745311971130.png)
+![](/assets/images/1745311971130.png)
 
 访问 `/user/list`
 
-![](/assets/1745311979904.png)
+![](/assets/images/1745311979904.png)
 
 ## 总结
 

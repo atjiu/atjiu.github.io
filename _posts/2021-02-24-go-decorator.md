@@ -58,4 +58,4 @@ func TestDecorator(t *testing.T) {
 
 执行结果：
 
-![](/assets/2021-02-24-16-32-05.png)
+![](/assets/images/2021-02-24-16-32-05.png)

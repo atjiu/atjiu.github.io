@@ -83,7 +83,7 @@ fun generateCaptcha(length: Int): String {
 
 效果如下
 
-![](/assets/1745310517314.png)
+![](/assets/images/1745310517314.png)
 
 ## 自定义过滤器
 
@@ -194,15 +194,15 @@ open fun filterChain(http: HttpSecurity): SecurityFilterChain {
 
 启动服务，打开浏览器，什么都不输入，点击登录，效果如下
 
-![](/assets/1745310531770.png)
+![](/assets/images/1745310531770.png)
 
 输入正确的用户名和密码但验证码输入错误，效果如下
 
-![](/assets/1745310539994.png)
+![](/assets/images/1745310539994.png)
 
 对`MyCheckParamsFilter`和`UsernamePasswordAuthenticationFilter`分别断点，点击登录，当表单校验失败的话，`UsernamePasswordAuthenticationFilter`里的 `attemptAuthentication`方法是不会进入的，确实被彻底阻断了
 
-![](/assets/1745310549713.png)
+![](/assets/images/1745310549713.png)
 
 ## 总结
 

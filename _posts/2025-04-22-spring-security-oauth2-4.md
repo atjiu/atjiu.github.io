@@ -191,15 +191,15 @@ public class CustomAuthoritiesOpaqueTokenIntrospector implements OpaqueTokenIntr
 
 /api/hello 接口因为有权限请求成功
 
-![](/assets/1745313156578.png)
+![](/assets/images/1745313156578.png)
 
 请求 /api/hello 接口时，资源服务器日志
 
-![](/assets/1745313164580.png)
+![](/assets/images/1745313164580.png)
 
 授权服务器日志
 
-![](/assets/1745313171550.png)
+![](/assets/images/1745313171550.png)
 
 ## 总结
 

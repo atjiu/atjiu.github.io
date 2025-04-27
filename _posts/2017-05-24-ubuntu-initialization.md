@@ -350,7 +350,7 @@ schema_list:
 
 - 安装ppa `sudo add-apt-repository ppa:hzwhuang/ss-qt5`
 - 安装过程会失败，这时候找到系统的软件与更新，点击其它软件，将`bionic`改成`artful`就可以了，下面图片中我已经修改好了
-  ![](/assets/ubuntu-software-update.png)
+![](/assets/images/ubuntu-software-update.png)
 - 更新软件源 `sudo apt update`
 - 安装 `sudo apt install shadowsocks-qt5` 会有些慢，如果失败了，重试几次就好
 

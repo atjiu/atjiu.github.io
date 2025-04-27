@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 [undertow.io](undertow.io)官网上有一个helloworld版的server demo 代码，相当的简单
 
@@ -17,12 +17,6 @@ author: 朋也
 下面来折腾一下
 
 首先要实现一下动态代理
-
-
-
-
-
-
 
 ## 创建接口
 
@@ -199,7 +193,7 @@ public void index(HttpServerExchange exchange) {
 
 ## 测试
 
-![](/assets/mvc-by-undertow-dynamic-proxy.gif)
+![](/assets/images/mvc-by-undertow-dynamic-proxy.gif)
 
 ## 总结
 

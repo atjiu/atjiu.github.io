@@ -33,7 +33,7 @@ author: 朋也
 
 其中用户与角色为多对多关系（其实也可以设计成一对多），角色与权限也为多对多关系
 
-![](/assets/1745310064713.png)
+![](/assets/images/1745310064713.png)
 
 ## 表SQL
 
@@ -140,16 +140,16 @@ INSERT INTO `springsecurity-demo`.`role_auth` (`role_id`, `auth_id`) VALUES (2, 
 
 **如果IDEA有这个功能，可以直接点击进行添加，没有的话就往下翻，直接拷贝代码吧**
 
-![](/assets/1745310084602.png)
+![](/assets/images/1745310084602.png)
 
 将MySQL的依赖添加进来，MyBatis-Plus需要去官网找一下
 **注意，这里还需要将MyBatis的依赖添加进来，否则会有个莫名其妙的报错（Invalid value type for attribute 'factoryBeanObjectType': java.lang.String）**
 
-![](/assets/1745310094627.png)
+![](/assets/images/1745310094627.png)
 
 [MyBatis-Plus官网](https://baomidou.com/getting-started/)
 
-![](/assets/1745310105552.png)
+![](/assets/images/1745310105552.png)
 
 将这段代码拷贝到项目中
 
@@ -290,7 +290,7 @@ class AuthService : ServiceImpl<AuthMapper, Auth>() {
 
 前面用的是内存中用户，也就是 `InMemoryUserDetailsManager` 这个类。可以看到这个类也是UserDetailsService接口的其中一个实现类
 
-![](/assets/1745310123913.png)
+![](/assets/images/1745310123913.png)
 
 下面来写我们自己的实现
 MyUserDetailsService.kt
@@ -357,7 +357,7 @@ class SecurityConfig(private val myUserDetailsService: MyUserDetailsService) {}
 
 将模拟用户这个bean注释掉
 
-![](/assets/1745310137560.png)
+![](/assets/images/1745310137560.png)
 
 将 `authenticationManager()` 里的用到的 `UserDetailsService` 换成自己的
 
@@ -379,7 +379,7 @@ open fun authenticationManager(): AuthenticationManager {
 
 使用用户 `zhangsan` 登录
 
-![](/assets/1745310151503.png)
+![](/assets/images/1745310151503.png)
 
 `zhangsan`是没有`user:delete`权限的。将`/home` 地址所需权限修改成 `user:delete`
 
@@ -395,7 +395,7 @@ http {
 ```
 重启服务使用zhangsan再次登录并打开 `/home` 地址可以看到是没有权限的
 
-![](/assets/1745310164465.png)
+![](/assets/images/1745310164465.png)
 
 ## 总结
 

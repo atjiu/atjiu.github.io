@@ -77,7 +77,7 @@ rabbitmq依赖于erlang，先下载erlang安装并配置环境变量
 
 启动成功后界面长这样
 
-![](/assets/2021-01-14-13-07-42.png)
+![](/assets/images/2021-01-14-13-07-42.png)
 
 浏览器里运行：http://localhost:15672/  用户名密码都是 guest
 

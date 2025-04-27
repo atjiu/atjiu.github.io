@@ -28,7 +28,7 @@ author: 朋也
 
 直接上图
 
-![](/assets/swift-refresh-loadmore.gif)
+![](/assets/images/swift-refresh-loadmore.gif)
 
 > 自定义部分代码来自项目 [https://github.com/Finb/V2ex-Swift](https://github.com/Finb/V2ex-Swift) 感谢 @Finb 大大开源的这么好的swift项目
 

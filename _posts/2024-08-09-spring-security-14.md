@@ -8,17 +8,11 @@ author: 朋也
 ---
 
 * content
-{:toc}
-
-
-
-
-
-
+  {:toc}
 
 创建 `components/header.html` `components/footer.html` 两个片段文件和 `css/app.css` 样式文件
 
-![](/assets/1745311633315.png)
+![](/assets/images/1745311633315.png)
 
 header.html
 
@@ -39,6 +33,7 @@ header.html
 </body>
 </html>
 ```
+
 footer.html
 
 ```html
@@ -65,7 +60,6 @@ footer {
 }
 ```
 
-
 修改index.html
 
 ```html
@@ -88,6 +82,7 @@ footer {
 </body>
 </html>
 ```
+
 修改home.html
 
 ```html
@@ -123,11 +118,11 @@ authorizeHttpRequests {
 
 效果：首页
 
-![](/assets/1745311647596.png)
+![](/assets/images/1745311647596.png)
 
 用户页
 
-![](/assets/1745311655529.png)
+![](/assets/images/1745311655529.png)
 
 每个页面都有上面的导航和下面的登出了
 

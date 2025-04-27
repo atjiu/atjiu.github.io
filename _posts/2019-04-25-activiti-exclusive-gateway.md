@@ -53,11 +53,11 @@ author: 朋也
 
 首先它长这个样
 
-![](/assets/bpmn.exclusive.gateway.notation.png)
+![](/assets/images/bpmn.exclusive.gateway.notation.png)
 
 我这画了个流程图, 大致流程就是 `用户提交请假, 如果小于等于3天的由部门经理审批, 多于3天的要总经理审批`
 
-![](/assets/QQ20190425-133533.png)
+![](/assets/images/QQ20190425-133533.png)
 
 流程图里对应的代理人分别是
 
@@ -117,7 +117,7 @@ public void completeTask() {
 
 我这测试设置的是4天, 数据库里任务的代理人就到user3了
 
-![](/assets/QQ20190425-134220.png)
+![](/assets/images/QQ20190425-134220.png)
 
 后面处理流程就跟正常流程一样了
 

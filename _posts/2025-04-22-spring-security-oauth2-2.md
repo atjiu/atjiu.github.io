@@ -185,14 +185,14 @@ public class AuthorizationController {
 
 跳转到登录页
 
-![](/assets/1745313026835.png)
+![](/assets/images/1745313026835.png)
 
 输入用户名和密码登录成功跳转到授权确认页
 
-![](/assets/1745313035572.png)
+![](/assets/images/1745313035572.png)
 
 点击同意，带着code回调到客户端应用提供的回调地址上
 
-![](/assets/1745313042476.png)
+![](/assets/images/1745313042476.png)
 
 

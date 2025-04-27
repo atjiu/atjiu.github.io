@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 - [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://atjiu.github.io/2019/04/24/activiti-env/)
 - [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://atjiu.github.io/2019/04/24/activiti-deploy-start-table/)
@@ -32,14 +32,9 @@ author: 朋也
 
 说白了就是流程有分支了, 就叫并行, 其实我觉得这个应该叫分支网关比较好, 不容易误导人, 举个例子
 
-
-
-
-
-
 下面这个是官网上的图
 
-![](/assets/bpmn.parallel.gateway.png)
+![](/assets/images/bpmn.parallel.gateway.png)
 
 大致意思就是: 启动订单流程 -> 分成两个分支(发货, 收款) -> 两个分支任务都完成了 -> 合并分支 -> 订单归档 -> 流程结束
 
@@ -47,7 +42,7 @@ author: 朋也
 
 ## 流程图
 
-![](/assets/QQ20190425-143036.png)
+![](/assets/images/QQ20190425-143036.png)
 
 **说明**
 
@@ -72,7 +67,7 @@ public void startProcess() {
 
 流程启动后, 数据库里执行实例有三条
 
-![](/assets/QQ20190425-144043.png)
+![](/assets/images/QQ20190425-144043.png)
 
 可以看到流程实例ID都是一样的, 说明它们是一个流程的任务实例, 只不过下面两条实例有一个 PARENT_ID 就是第一个实例的id, 可以这样理解, 第一条实例就是网关的实例, 下面两条是两条分支的实例
 

@@ -20,7 +20,7 @@ author: 朋也
 
 先上图
 
-![](/assets/bottomnavigationview-viewpager.gif)
+![](/assets/images/bottomnavigationview-viewpager.gif)
 
 
 
@@ -29,7 +29,7 @@ author: 朋也
 
 使用Android-Studio创建一个BottomNavigationView项目
 
-![](/assets/QQ20170405-160204@2x.png)
+![](/assets/images/QQ20170405-160204@2x.png)
 
 ## 创建布局
 

@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 - [react-native组件NavigatorIOS与ListView结合使用](https://atjiu.github.io/2017/08/02/react-native-navigatorios-listview/)
 - [react-native ListView组件点击跳转](https://atjiu.github.io/2017/08/02/react-native-listview-forward/)
@@ -18,11 +18,7 @@ author: 朋也
 
 先看效果图
 
-![20170802142318](/assets/20170802142318.gif)
-
-
-
-
+![](/assets/images/20170802142318.gif)
 
 ## 下拉刷新
 

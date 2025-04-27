@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 > 本篇博客内容来自视频 https://www.youtube.com/watch?v=8rD9amRSOQY
 
@@ -17,10 +17,6 @@ Parcel官网：https://parceljs.org/
 在官网上描述上写到：`Blazing fast, zero configuration web application bundler`
 
 其它的单词我不认识，这个 `zero configuration` 引起了我的注意
-
-
-
-
 
 ## 写在前面
 
@@ -189,7 +185,7 @@ app();
 
 刷新页面可以看到
 
-![](/assets/20200417113955.png)
+![](/assets/images/20200417113955.png)
 
 -------
 
@@ -292,7 +288,7 @@ app();
 
 再次刷新页面
 
-![](/assets/20200417114405.png)
+![](/assets/images/20200417114405.png)
 
 ## 打包
 

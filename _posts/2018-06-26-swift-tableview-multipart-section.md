@@ -28,7 +28,7 @@ author: 朋也
 
 直接上图
 
-![](/assets/tableview-multipart-section.gif)
+![](/assets/images/tableview-multipart-section.gif)
 
 
 

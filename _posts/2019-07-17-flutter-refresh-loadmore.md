@@ -12,7 +12,7 @@ author: 朋也
 
 先上图
 
-![](/assets/flutter-listview-refresh-loadmore.gif)
+![](/assets/images/flutter-listview-refresh-loadmore.gif)
 
 
 

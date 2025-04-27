@@ -28,7 +28,7 @@ author: 朋也
 
 直接上图
 
-<video src="/assets/ScreenRecording_06-27-2018 09-54-06.mp4" controls="controls" autoplay="autoplay" width="375"></video>
+![](/assets/images/ScreenRecording_06-27-2018 09-54-06.mp4" controls="controls" autoplay="autoplay" width="375"></video>
 
 
 

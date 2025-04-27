@@ -22,18 +22,18 @@ author: 朋也
 
 ## 对drawable文件夹右键选择Vector Asset
 
-![](/assets/1D14C332-10D9-41BD-A9EB-61BA2E894A7C.png)
+![](/assets/images/1D14C332-10D9-41BD-A9EB-61BA2E894A7C.png)
 
 
 
 
 ## 点击Icon，进入选择图标
 
-![](/assets/QQ20170405-141720@2x.png)
+![](/assets/images/QQ20170405-141720@2x.png)
 
 ## 进行搜索
 
-![](/assets/QQ20170405-141808@2x.png)
+![](/assets/images/QQ20170405-141808@2x.png)
 
 ## 确定
 
@@ -41,6 +41,6 @@ author: 朋也
 
 默认生成的图标是黑色的，大小是24dp x 24dp的，如果想改变，可以打开文件，进行修改
 
-![](/assets/QQ20170405-142151@2x.png)
+![](/assets/images/QQ20170405-142151@2x.png)
 
 **用xml文件定义的小图标好处就不用说了，as里内置了很多的这样的小图标，大赞！**

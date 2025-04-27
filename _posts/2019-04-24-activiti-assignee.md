@@ -69,7 +69,7 @@ public class Task3Listener implements TaskListener {
 
 将 assignee 里的固定值去掉, 然后在Listeners里配置监听类, 三个都要配置上
 
-![](/assets/QQ20190424-155049.png)
+![](/assets/images/QQ20190424-155049.png)
 
 这样配置好之后, 代码都不用变的, 流程继续执行, 但代理人已经配活了, 我这写了三个监听类来设置代理人, 实际业务中员工一般都有直接领导, 领导也会有上级, 所以这里就不用这样写了, 可以从登录的用户对象里拿到他的上级领导, 然后将上级领导的用户名设置成下一个代理人即可
 
@@ -83,7 +83,7 @@ activiti里支持表达式 `${}` 来传入一些变量, 先把所有的 `UserTas
 
 原链接文：[https://atjiu.github.io/2019/04/24/activiti-assignee/](https://atjiu.github.io/2019/04/24/activiti-assignee/)
 
-![](/assets/QQ20190424-152554.png)
+![](/assets/images/QQ20190424-152554.png)
 
 **修改代理人处理任务的代码**
 

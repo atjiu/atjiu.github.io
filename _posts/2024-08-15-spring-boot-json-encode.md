@@ -32,17 +32,17 @@ class HomeController(@Autowired private val jdbcClient: JdbcClient) {
 ```
 数据库编码是`UTF-8`，且中文显示正常
 
-![](/assets/1745312211236.png)
+![](/assets/images/1745312211236.png)
 
 页面上效果
 
-![](/assets/1745312218325.png)
+![](/assets/images/1745312218325.png)
 
 ## 原因
 
 出现这问题的原因是springboot web默认输出不会在 `application/json` 后添加上 `charset=utf-8`了
 
-![](/assets/1745312225955.png)
+![](/assets/images/1745312225955.png)
 
 ## 解决办法
 
@@ -65,5 +65,5 @@ fun index(response: HttpServletResponse): Any? {
 
 然后再访问就能正常显示了
 
-![](/assets/1745312236397.png)
+![](/assets/images/1745312236397.png)
 

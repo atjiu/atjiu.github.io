@@ -14,7 +14,7 @@ author: 朋也
 
 先上图
 
-![](/assets/pwa-service-worker.gif)
+![](/assets/images/pwa-service-worker.gif)
 
 
 

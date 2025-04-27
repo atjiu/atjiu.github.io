@@ -24,7 +24,7 @@ author: 朋也
 
 先上图
 
-![](/assets/recyclerview-clickevent-loadmore.gif)
+![](/assets/images/recyclerview-clickevent-loadmore.gif)
 
 
 

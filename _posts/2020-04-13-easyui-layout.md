@@ -14,7 +14,7 @@ author: 朋也
 
 先上图
 
-![](/assets/20200413114739.png)
+![](/assets/images/20200413114739.png)
 
 
 

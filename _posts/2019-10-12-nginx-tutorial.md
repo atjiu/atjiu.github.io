@@ -240,7 +240,7 @@ stream {
 
 通过mysql客户端工具，可以直接使用域名连接mysql了
 
-![](https://atjiu.github.io/assets/QQ20191012-174927@2x.png)
+![](/assets/images/QQ20191012-174927@2x.png)
 
 tcp也能代理，这就好玩了，各种联机游戏都可以通过nginx来转发了，简直爽歪歪
 

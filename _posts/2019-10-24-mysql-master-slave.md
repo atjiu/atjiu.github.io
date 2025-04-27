@@ -50,7 +50,7 @@ show variables like '%log_bin%';
 
 可以看到bin-log的开启是否成功
 
-![](/assets/QQ20191029-112253@2x.png)
+![](/assets/images/QQ20191029-112253@2x.png)
 
 链接文原: [https://atjiu.github.io/2019/10/24/mysql-master-slave/](https://atjiu.github.io/2019/10/24/mysql-master-slave/)
 
@@ -108,7 +108,7 @@ relay-log-index = /var/log/mysql/relay-bin.index
 
 如果看到下图中两个字段都是`YES`了，就说明开启成功了
 
-![](/assets/QQ20191029-114220@2x.png)
+![](/assets/images/QQ20191029-114220@2x.png)
 
 这时候在主节点上创建数据库，添加数据，创建表等操作都会被自动的同步到从节点上的mysql数据库中
 

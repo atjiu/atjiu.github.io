@@ -87,7 +87,7 @@ node server.js
 }
 ```
 
-![](/assets/QQ20190531-104631.png)
+![](/assets/images/QQ20190531-104631.png)
 
 代码来自官网 [https://graphql.org/graphql-js/running-an-express-graphql-server/](https://graphql.org/graphql-js/running-an-express-graphql-server/)
 
@@ -189,7 +189,7 @@ console.log("Running a GraphQL API server at http://localhost:4000/graphql");
 
 启动服务并查询结果如图
 
-![](/assets/QQ20190531-105702.png)
+![](/assets/images/QQ20190531-105702.png)
 
 ## 添加关联
 
@@ -329,7 +329,7 @@ module.exports = new GraphQLSchema({
 
 启动服务查询结果如图
 
-![](/assets/QQ20190531-110303.png)
+![](/assets/images/QQ20190531-110303.png)
 
 ## 关联查询
 
@@ -370,7 +370,7 @@ const AuthorType = new GraphQLObjectType({
 
 启动服务查询结果
 
-![](/assets/QQ20190531-110903.png)
+![](/assets/images/QQ20190531-110903.png)
 
 **TIP：如果在查询作者的时候，不指定查询作者的书的信息，那么定义在AuthorType里查询作者书本信息的逻辑就不会走，省服务器资源，好评**
 
@@ -498,7 +498,7 @@ module.exports = new GraphQLSchema({
 
 启动服务调用 `addAuthor` `addBook` 两个方法保存数据
 
-![](/assets/QQ20190531-141838.png)
+![](/assets/images/QQ20190531-141838.png)
 
 ---
 
@@ -667,7 +667,7 @@ const Mutation = new GraphQLObjectType({
 
 启动服务测试，如果有非空参数在调用的时候没有传，会报错
 
-![](/assets/QQ20190531-142809.png)
+![](/assets/images/QQ20190531-142809.png)
 
 ## 参考
 

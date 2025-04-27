@@ -28,7 +28,7 @@ author: 朋也
 
 ## 保存自动格式化
 
-![](/assets/QQ20191105-143124@2x.png)
+![](/assets/images/QQ20191105-143124@2x.png)
 
 然后再编辑java类的时候直接保存就会自动格式化了
 
@@ -36,9 +36,9 @@ author: 朋也
 
 在设置中搜索 `formatter` -> new一个新的配置 -> 找到comments，勾掉`Enable Javadoc comment formatting`
 
-![](/assets/QQ20191105-143325@2x.png)
+![](/assets/images/QQ20191105-143325@2x.png)
 
-![](/assets/QQ20191105-143457@2x.png)
+![](/assets/images/QQ20191105-143457@2x.png)
 
 原接文链: [https://atjiu.github.io/2019/11/05/eclipse-settings/](https://atjiu.github.io/2019/11/05/eclipse-settings/)
 
@@ -46,7 +46,7 @@ author: 朋也
 
 idea里非常好用的一个功能是自动提示功能，eclipse里默认只有当写 `@` `.` 的时候才会有提示，加上 `abcdefghijklmnopqrtuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`
 
-![](/assets/QQ20191105-143758@2x.png)
+![](/assets/images/QQ20191105-143758@2x.png)
 
 为啥没有小写的`s`呢？因为保存是 `cmd/ctrl+s` 如果加上s的话，每次保存它都会有提示，所以这就直接给去掉了
 
@@ -60,7 +60,7 @@ idea里非常好用的一个功能是自动提示功能，eclipse里默认只有
 <defaultGoal>package</defaultGoal>
 ```
 
-![](/assets/QQ20191105-145200@2x.png)
+![](/assets/images/QQ20191105-145200@2x.png)
 
 ## 插件
 

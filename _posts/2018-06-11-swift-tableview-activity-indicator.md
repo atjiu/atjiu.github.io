@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 - [swift4 uinavigation + uitable 整合使用创建列表视图](https://atjiu.github.io/2018/06/08/swift-uinavigation-uitable/)
 - [swift4 自定义UITableCell](https://atjiu.github.io/2018/06/09/swfit-uitableview-uitablecell/)
@@ -28,10 +28,7 @@ author: 朋也
 
 直接上图
 
-![](/assets/swift-uitableview-uiactivityindicatorview.gif)
-
-
-
+![](/assets/images/swift-uitableview-uiactivityindicatorview.gif)
 
 用法很简单，直接上代码
 

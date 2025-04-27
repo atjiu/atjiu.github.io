@@ -106,9 +106,9 @@ study = Spring安全框架
 
 thymeleaf页面里就可以通过 `th:text="#{study}"`获取到对应语言的值
 
-![](/assets/1745311541187.png)
+![](/assets/images/1745311541187.png)
 
-![](/assets/1745311546898.png)
+![](/assets/images/1745311546898.png)
 
 ## `*{}`
 

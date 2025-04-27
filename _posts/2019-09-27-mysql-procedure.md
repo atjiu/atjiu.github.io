@@ -78,7 +78,7 @@ call my_first_procedure();
 
 再执行调用语句结果如下
 
-![](/assets/QQ20190927-143109@2x.png)
+![](/assets/images/QQ20190927-143109@2x.png)
 
 ## 逻辑循环
 

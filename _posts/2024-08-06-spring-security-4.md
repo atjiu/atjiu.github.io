@@ -151,7 +151,7 @@ class SecurityConfig {
 ## CSRF防护
 目前springsecurity会自动给form表单添加`_csrf` 所以不用自己再添加了
 
-![](/assets/1745309422658.png)
+![](/assets/images/1745309422658.png)
 
 ## 测试
 

@@ -28,7 +28,7 @@ author: 朋也
 
 直接上图
 
-![](/assets/swift-tabbarcontroller.gif)
+![](/assets/images/swift-tabbarcontroller.gif)
 
 
 

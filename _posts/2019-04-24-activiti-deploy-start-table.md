@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 - [Activiti6.0教程(1) - 环境搭建, 画一个流程图](https://atjiu.github.io/2019/04/24/activiti-env/)
 - [Activiti6.0教程(2) - 初始化表, 部署流程, 启动流程, 创建的表介绍](https://atjiu.github.io/2019/04/24/activiti-deploy-start-table/)
@@ -25,10 +25,6 @@ author: 朋也
 ## 创建项目
 
 创建一个maven项目即可, 目前只先做测试, 引入以下依赖
-
-
-
-
 
 ```xml
 <dependency>
@@ -102,47 +98,48 @@ public void createTable() {
 
 数据库里生成的表有如下这些
 
-| 表名                  | 说明                         |
-|-----------------------|-----------------------------|
-| ACT_EVT_LOG           | 事件日志表(实验性质)         |
-| ACT_GE_BYTEARRAY      | 通用的流程定义和流程资源     |
-| ACT_GE_PROPERTY       | 系统相关属性                 |
-| ACT_HI_ACTINST        | 历史的流程实例               |
-| ACT_HI_ATTACHMENT     | 历史的流程附件               |
-| ACT_HI_COMMENT        | 历史的批注信息               |
-| ACT_HI_DETAIL         | 历史的流程运行中的细节信息   |
+| 表名                    | 说明             |
+|-----------------------|----------------|
+| ACT_EVT_LOG           | 事件日志表(实验性质)    |
+| ACT_GE_BYTEARRAY      | 通用的流程定义和流程资源   |
+| ACT_GE_PROPERTY       | 系统相关属性         |
+| ACT_HI_ACTINST        | 历史的流程实例        |
+| ACT_HI_ATTACHMENT     | 历史的流程附件        |
+| ACT_HI_COMMENT        | 历史的批注信息        |
+| ACT_HI_DETAIL         | 历史的流程运行中的细节信息  |
 | ACT_HI_IDENTITYLINK   | 历史的流程运行过程中用户关系 |
-| ACT_HI_PROCINST       | 历史的流程实例               |
-| ACT_HI_TASKINST       | 历史的任务实例               |
-| ACT_HI_VARINST        | 历史的流程运行中的变量信息   |
-| ACT_ID_GROUP          | 组                           |
-| ACT_ID_INFO           | 用户详细信息                 |
-| ACT_ID_MEMBERSHIP     | 用户和组关系的中间表         |
-| ACT_ID_USER           | 用户表                       |
-| ACT_RE_DEPLOYMENT     | 部署的流程信息               |
-| ACT_RE_MODEL          | 流程模型信息                 |
-| ACT_RE_PROCDEF        | 流程定义信息                 |
-| ACT_RU_DEADLETTER_JOB | 存储执行失败的任务表(异步)   |
-| ACT_RU_EVENT_SUBSCR   | 运行时事件                   |
-| ACT_RU_EXECUTION      | 运行时流程执行实例           |
-| ACT_RU_IDENTITYLINK   | 运行时用户关系信息           |
-| ACT_RU_JOB            | 运行时作业(异步)             |
-| ACT_RU_SUSPENDED_JOB  | 暂停运行的任务(异步)         |
-| ACT_RU_TASK           | 运行时任务                   |
-| ACT_RU_TIMER_JOB      | 任务定时器表(异步)           |
-| ACT_RU_VARIABLE       | 运行时变量表                 |
-| ACT_PROCDEF_INFO      | 流程定义信息表               |
+| ACT_HI_PROCINST       | 历史的流程实例        |
+| ACT_HI_TASKINST       | 历史的任务实例        |
+| ACT_HI_VARINST        | 历史的流程运行中的变量信息  |
+| ACT_ID_GROUP          | 组              |
+| ACT_ID_INFO           | 用户详细信息         |
+| ACT_ID_MEMBERSHIP     | 用户和组关系的中间表     |
+| ACT_ID_USER           | 用户表            |
+| ACT_RE_DEPLOYMENT     | 部署的流程信息        |
+| ACT_RE_MODEL          | 流程模型信息         |
+| ACT_RE_PROCDEF        | 流程定义信息         |
+| ACT_RU_DEADLETTER_JOB | 存储执行失败的任务表(异步) |
+| ACT_RU_EVENT_SUBSCR   | 运行时事件          |
+| ACT_RU_EXECUTION      | 运行时流程执行实例      |
+| ACT_RU_IDENTITYLINK   | 运行时用户关系信息      |
+| ACT_RU_JOB            | 运行时作业(异步)      |
+| ACT_RU_SUSPENDED_JOB  | 暂停运行的任务(异步)    |
+| ACT_RU_TASK           | 运行时任务          |
+| ACT_RU_TIMER_JOB      | 任务定时器表(异步)     |
+| ACT_RU_VARIABLE       | 运行时变量表         |
+| ACT_PROCDEF_INFO      | 流程定义信息表        |
+
 {: .table.table-bordered}
 
 关于上面异步的设计描述可以查看官方文档 [https://www.activiti.org/userguide/#async_executor_design](https://www.activiti.org/userguide/#async_executor_design)
 
 从上面表名的前缀应该可以看出来
 
-- ACT_GE   通用类
-- ACT_HI   历史记录类
-- ACT_ID   用户信息类
-- ACT_RE   流程实例类
-- ACT_RU   运行时类
+- ACT_GE 通用类
+- ACT_HI 历史记录类
+- ACT_ID 用户信息类
+- ACT_RE 流程实例类
+- ACT_RU 运行时类
 
 ## Activiti API
 
@@ -188,15 +185,16 @@ public void activitiApi() {
 }
 ```
 
-| Service           | 管理的表                                                |
-|-------------------|-----------------------------------------------------|
-| RepositoryService | 通用类的表                                              |
-| FormService       | 通过表单提交的任务的服务类                              |
-| HistoryService    | 历史记录表                                              |
-| IdentityService   | 用户信息表                                              |
+| Service           | 管理的表                                           |
+|-------------------|------------------------------------------------|
+| RepositoryService | 通用类的表                                          |
+| FormService       | 通过表单提交的任务的服务类                                  |
+| HistoryService    | 历史记录表                                          |
+| IdentityService   | 用户信息表                                          |
 | ManagementService | 自定义查询的服务类 `managementService.executeCustomSql` |
-| RuntimeService    | 运行时相关表                                            |
-| TaskService       | 任务表, 可以查询 `ACT_RU_` `ACT_HI_`                    |
+| RuntimeService    | 运行时相关表                                         |
+| TaskService       | 任务表, 可以查询 `ACT_RU_` `ACT_HI_`                  |
+
 {: .table.table-bordered}
 
 原接文链：[https://atjiu.github.io/2019/04/24/activiti-deploy-start-table/](https://atjiu.github.io/2019/04/24/activiti-deploy-start-table/)
@@ -205,15 +203,15 @@ public void activitiApi() {
 
 这篇博客的流程图用一个简单的, 如下图
 
-![](/assets/QQ20190424-135346.png)
+![](/assets/images/QQ20190424-135346.png)
 
 每个 UserTask 的代理人都写的死的, 项目中肯定不建议这样用, 后面还会介绍灵活配置代理人的方法
 
-![](/assets/QQ20190424-135439.png)
+![](/assets/images/QQ20190424-135439.png)
 
-![](/assets/QQ20190424-135552.png)
+![](/assets/images/QQ20190424-135552.png)
 
-![](/assets/QQ20190424-135618.png)
+![](/assets/images/QQ20190424-135618.png)
 
 ```java
 @Test

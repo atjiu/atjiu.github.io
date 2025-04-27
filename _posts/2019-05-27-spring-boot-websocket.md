@@ -8,15 +8,11 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 先上图
 
-![](/assets/spring-boot-websocket.gif)
-
-
-
-
+![](/assets/images/spring-boot-websocket.gif)
 
 基于spring-boot项目开发的
 

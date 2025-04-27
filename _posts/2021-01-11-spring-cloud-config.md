@@ -37,7 +37,7 @@ Config分服务端和客户端，服务端连接一个获取所有配置文件�
 >
 > 然后我没有配置它，也是可行的
 
-![](/assets/2021-01-13-10-33-16.png)
+![](/assets/images/2021-01-13-10-33-16.png)
 
 
 ## 服务端
@@ -90,7 +90,7 @@ spring.cloud.config.server.git.uri=https://gitee.com/tomoya/spring-cloud-config-
 
 上面这个地址 `https://gitee.com/tomoya/spring-cloud-config-test.git` 里的文件如下图
 
-![](/assets/2021-01-13-10-38-58.png)
+![](/assets/images/2021-01-13-10-38-58.png)
 
 config-dev.properties
 

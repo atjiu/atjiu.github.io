@@ -147,7 +147,7 @@ public class DemoApplicationTests {
 
 运行结果
 
-![](/assets/QQ20181109-092723@2x.png)
+![](/assets/images/QQ20181109-092723@2x.png)
 
 ## 说明
 

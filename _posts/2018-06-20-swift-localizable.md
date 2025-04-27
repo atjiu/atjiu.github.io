@@ -30,22 +30,22 @@ author: 朋也
 
 Localizable.strings 文件
 
-![](/assets/QQ20180620-144009@2x.png)
+![](/assets/images/QQ20180620-144009@2x.png)
 
 
 
 
 #### 选中新建的文件，在xcode右边工具栏，点击一下 `Localize...` 按钮
 
-![](/assets/QQ20180620-144150@2x.png)
+![](/assets/images/QQ20180620-144150@2x.png)
 
 #### 选中项目，在info里添加语言
 
-![](/assets/QQ20180620-144327@2x.png)
+![](/assets/images/QQ20180620-144327@2x.png)
 
-![](/assets/097848C4-8B93-4898-8323-5C68C51FF378.png)
+![](/assets/images/097848C4-8B93-4898-8323-5C68C51FF378.png)
 
-![](/assets/QQ20180620-144441@2x.png)
+![](/assets/images/QQ20180620-144441@2x.png)
 
 #### 然后会发现上面新建的 `Localizable.strings` 下面多了两个文件
 
@@ -74,7 +74,7 @@ NSLocalizedString("comment", comment: "")
 
 #### 运行项目查看效果
 
-![](/assets/QQ20180620-145008.png)
+![](/assets/images/QQ20180620-145008.png)
 
 #### 修改模拟器默认语言
 

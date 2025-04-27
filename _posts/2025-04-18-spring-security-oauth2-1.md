@@ -27,7 +27,7 @@ author: 朋也
 
 创建好结构如下图
 
-![](/assets/1745312771190.png)
+![](/assets/images/1745312771190.png)
 
 根目录下的pom.xml内容
 
@@ -471,37 +471,37 @@ public class ResourceServerConfig {
 
 回车后会打开登录页面
 
-![](/assets/1745312792323.png)
+![](/assets/images/1745312792323.png)
 
 输入授权服务器配置类里配置的用户名和密码进行登录
 
-![](/assets/1745312799684.png)
+![](/assets/images/1745312799684.png)
 
 用户名和密码验证成功后会跳转到下一个确认授权页面，勾上需要授权的用户信息点击确定
 
-![](/assets/1745312806973.png)
+![](/assets/images/1745312806973.png)
 
 确定后授权服务器会生成一个code，并通过回调地址传给请求方（我这用的是浏览器，可以在浏览器地址栏里看到）
 
-![](/assets/1745312814047.png)
+![](/assets/images/1745312814047.png)
 
 拿到code后，打开postman，请求授权服务器的 `/oauth2/token` 接口用code换access_token
 
-![](/assets/1745312821764.png)
+![](/assets/images/1745312821764.png)
 
-![](/assets/1745312829030.png)
+![](/assets/images/1745312829030.png)
 
 前面在资源服务器的配置类里将用户登录后的权限信息一块打包进jwt里，所以access_token里现在就有权限信息，可以打开 [jwt.io](https://jwt.io/) 进行查看
 
-![](/assets/1745312836453.png)
+![](/assets/images/1745312836453.png)
 
 在postman里请求一个资源服务器的接口 `/api/hello`
 
-![](/assets/1745312845043.png)
+![](/assets/images/1745312845043.png)
 
 再请求接口 `/api/user` 因为用户只有 `user`权限而没有 `user` 角色，但`/api/user` 接口配置的是必须要有 `user` 角色才能访问，所以响应结果就是403了
 
-![](/assets/1745312853597.png)
+![](/assets/images/1745312853597.png)
 
 ## 总结
 

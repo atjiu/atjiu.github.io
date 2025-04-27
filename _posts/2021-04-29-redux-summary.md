@@ -18,7 +18,7 @@ author: 朋也
 
 ## Redux原理图
 
-![](/assets/2021-04-29-09-56-16.png)
+![](/assets/images/2021-04-29-09-56-16.png)
 
 ## 简化版Redux使用案件
 
@@ -178,7 +178,7 @@ export default createStore(countReducer, applyMiddleware(thunk))
 
 ## react-redux原理图
 
-![](/assets/2021-04-29-10-02-01.png)
+![](/assets/images/2021-04-29-10-02-01.png)
 
 react-redux又将组件分为UI组件与容器组件（概念是真多。。）
 

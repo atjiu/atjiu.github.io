@@ -142,7 +142,7 @@ class User {
 
 如果你想将一段json转成bean，先将json复制一下，然后新建文件，选择 `dart bean class file from JSON` 如下图
 
-![](/assets/QQ20190717-170304@2x.png)
+![](/assets/images/QQ20190717-170304@2x.png)
 
 然后将json贴进去，填好 `Class Name` 然后将最下面的 `RefreshBeanFactory` 勾掉，点击`Make`即可生成结构对应的实体类文件了
 

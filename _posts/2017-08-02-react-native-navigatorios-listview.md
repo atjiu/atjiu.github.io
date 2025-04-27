@@ -18,7 +18,7 @@ author: 朋也
 
 先看效果
 
-![Simulator Screen Shot 2017年8月2日 09.47.12](/assets/Simulator Screen Shot 2017年8月2日 09.47.12.png)
+![](/assets/images/Simulator Screen Shot 2017年8月2日 09.47.12.png)
 
 
 

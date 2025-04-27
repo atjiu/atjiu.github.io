@@ -28,7 +28,7 @@ author: 朋也
 
 直接上图
 
-![](/assets/swift-tablecell.png)
+![](/assets/images/swift-tablecell.png)
 
 
 

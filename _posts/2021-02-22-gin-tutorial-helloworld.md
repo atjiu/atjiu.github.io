@@ -8,14 +8,9 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 好几年前用beego写了个pybbs-go，然后就把go扔了，现在想重新捡起来，试试看挺火的gin框架
-
-
-
-
-
 
 首先创建一个文件夹 `gin-tutorial` 这就是项目了
 
@@ -79,4 +74,4 @@ require github.com/gin-gonic/gin v1.6.3
 
 同时配置一下Environment里的GoProxy的话，以后再下载依赖应该会更快
 
-![](/assets/2021-02-22-11-53-22.png)
+![](/assets/images/2021-02-22-11-53-22.png)

@@ -52,7 +52,7 @@ Started Sonatype Nexus OSS 3.16.1-02
 
 登录帐号后, 可以点击设置, 就可以添加用户和配置角色以及权限了
 
-![](/assets/QQ20190505-150447.png)
+![](/assets/images/QQ20190505-150447.png)
 
 ---
 
@@ -145,7 +145,7 @@ Started Sonatype Nexus OSS 3.16.1-02
 
 地址怎么来的? 看下图
 
-![](/assets/QQ20190505-151826.png)
+![](/assets/images/QQ20190505-151826.png)
 
 再开发一个测试类
 

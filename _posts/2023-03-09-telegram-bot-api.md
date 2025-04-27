@@ -8,10 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
-
-
-
+  {:toc}
 
 > telegram的bot api非常好用，就一点不好，被墙了。。
 
@@ -19,7 +16,7 @@ author: 朋也
 
 在tg里搜`Botfather`，跟着里面的步骤来操作就可以了
 
-![](/assets/20230309104409.png)
+![](/assets/images/20230309104409.png)
 
 创建好后，会给一个`token` 这个要保存好，后续调用api都是要用到的
 
@@ -32,7 +29,7 @@ author: 朋也
 
 如下在postman里的请求示例
 
-![](/assets/20230309104924.png)
+![](/assets/images/20230309104924.png)
 
 **注意，参数里的chat_id有个坑，文档里说可以是username,或者user_id，我用自己的tg名死活就不行，还是要用自己的user_id才能发送成功**
 
@@ -40,11 +37,11 @@ author: 朋也
 
 可以关注一个 `@userinfobot` 机器人，就能拿到了
 
-![](/assets/20230309105202.png)
+![](/assets/images/20230309105202.png)
 
 接口调成功后，在tg里就能收到消息了
 
-![](/assets/20230309105304.png)
+![](/assets/images/20230309105304.png)
 
 ## 接收bot消息
 
@@ -55,7 +52,7 @@ author: 朋也
 - API文档地址：https://core.telegram.org/bots/api#setwebhook
 - API接口地址：https://api.telegram.org/bot\<token\>/setWebhook
 
-![](/assets/20230309142342.png)
+![](/assets/images/20230309142342.png)
 
 设置webhook地址后，就可以在自己系统上接收tg里的消息了
 
@@ -76,9 +73,9 @@ System.out.println(sb.toString());
 
 给tg发消息可通过传 `reply_markup.inline_keyboard` 对象来给消息添加按钮
 
-![](/assets/20230310101844.png)
+![](/assets/images/20230310101844.png)
 
-![](/assets/20230310102024.png)
+![](/assets/images/20230310102024.png)
 
 当点击这两个按钮时，tg就会给webhook设置的url发起请求，将消息接收下来看一下长什么样就知道怎么对接了，可以做出更多有意思的东东
 

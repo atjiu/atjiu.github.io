@@ -200,7 +200,7 @@ asciidoc
 
 上面内容在asciidoc渲染出来后, 如下图所示
 
-![](/assets/QQ20190507-104546.png)
+![](/assets/images/QQ20190507-104546.png)
 
 这种提示的图标共有 `TIP` `NOTE` `IMPORTANT` `WARNING` `CAUTION` 这么几种
 

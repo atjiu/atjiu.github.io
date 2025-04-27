@@ -8,15 +8,11 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 先上图
 
-![](/assets/flutter-tablayout.gif)
-
-
-
-
+![](/assets/images/flutter-tablayout.gif)
 
 ## 顶部TabBar
 
@@ -225,7 +221,7 @@ Widget build(BuildContext context) {
 
 这样的布局长下面这个样
 
-![](/assets/flutter-tablayout1.gif)
+![](/assets/images/flutter-tablayout1.gif)
 
 ## 侧滑布局
 
@@ -281,7 +277,7 @@ class MyHomePage extends StatelessWidget {
 
 这个布局长这个样
 
-![](/assets/flutter-drawerlayout.gif)
+![](/assets/images/flutter-drawerlayout.gif)
 
 ## 参考
 

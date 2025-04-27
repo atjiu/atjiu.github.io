@@ -66,13 +66,13 @@ jar包下载地址:
 - [commons-dbcp](https://mvnrepository.com/artifact/commons-dbcp/commons-dbcp/1.4)
 - [commons-pool](https://mvnrepository.com/artifact/commons-pool/commons-pool/1.6)
 
-![](/assets/QQ20181106-200540@2x.png)
+![](/assets/images/QQ20181106-200540@2x.png)
 
 然后再次重启ActiveMQ，如果没有报错，一般就没问题了
 
 打开 mysql 数据库客户端 找到 `test` 库，会发现多了三张表
 
-![](/assets/QQ20181106-200859@2x.png)
+![](/assets/images/QQ20181106-200859@2x.png)
 
 ## 测试
 
@@ -80,6 +80,6 @@ jar包下载地址:
 
 打开表 `ACTIVEMQ_MSGS` 可以看到已经有100条数据了
 
-![](/assets/QQ20181106-201307@2x.png)
+![](/assets/images/QQ20181106-201307@2x.png)
 
 再次运行 `Consumer` 消费这100条消息，然后再打开表 `ACTIVEMQ_MSGS` 则没有数据了

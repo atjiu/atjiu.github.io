@@ -67,7 +67,7 @@ func SaveUser(c *gin.Context) {
 
 相应的还有如下一些方法来绑定不同类型的请求参数
 
-![](/assets/2021-02-24-14-43-52.png)
+![](/assets/images/2021-02-24-14-43-52.png)
 
 -----
 
@@ -107,4 +107,4 @@ type User struct {
 }
 ```
 
-![](/assets/2021-02-24-14-57-55.png)
+![](/assets/images/2021-02-24-14-57-55.png)

@@ -79,7 +79,7 @@ author: 朋也
 
 ## 运行结果
 
-![](/assets/html-use-vue.png)
+![](/assets/images/html-use-vue.png)
 
 ## 参考
 

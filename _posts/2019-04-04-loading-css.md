@@ -8,24 +8,19 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 > 声明：本篇博客源码来自 [SpinKit](https://github.com/tobiasahlin/SpinKit)
 
 效果图
 
-![](/assets/loading1.gif)
+![](/assets/images/loading1.gif)
 
 源码
 
 ```html
 <div class="spinner"></div>
 ```
-
-
-
-
-
 
 ```css
 .spinner {
@@ -62,7 +57,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading2.gif)
+![](/assets/images/loading2.gif)
 
 源码
 
@@ -121,7 +116,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading3.gif)
+![](/assets/images/loading3.gif)
 
 源码
 
@@ -196,7 +191,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading4.gif)
+![](/assets/images/loading4.gif)
 
 源码
 
@@ -263,7 +258,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading5.gif)
+![](/assets/images/loading5.gif)
 
 源码
 
@@ -309,7 +304,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading6.gif)
+![](/assets/images/loading6.gif)
 
 源码
 
@@ -375,7 +370,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading7.gif)
+![](/assets/images/loading7.gif)
 
 源码
 
@@ -437,7 +432,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading8.gif)
+![](/assets/images/loading8.gif)
 
 源码
 
@@ -586,7 +581,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading9.gif)
+![](/assets/images/loading9.gif)
 
 源码
 
@@ -674,7 +669,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading10.gif)
+![](/assets/images/loading10.gif)
 
 源码
 
@@ -837,7 +832,7 @@ author: 朋也
 
 效果图
 
-![](/assets/loading11.gif)
+![](/assets/images/loading11.gif)
 
 源码
 

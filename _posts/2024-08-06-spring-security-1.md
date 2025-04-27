@@ -19,9 +19,9 @@ author: 朋也
 java版本：21
 kotlin：2.0.0
 
-![](/assets/1745308290869.png)
+![](/assets/images/1745308290869.png)
 
-![](/assets/1745308332026.png)
+![](/assets/images/1745308332026.png)
 
 项目创建好之后打开根目录下的 `build.gradle`文件，将kotlin插件版本改成`2.0.0`
 
@@ -51,4 +51,4 @@ repositories {
 剩下就是等待gradle构建项目完成了
 项目中各框架的版本号
 
-![](/assets/1745308345780.png)
+![](/assets/images/1745308345780.png)

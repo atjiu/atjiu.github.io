@@ -8,13 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
-
-
-
-
-
-
+  {:toc}
 
 上篇创建的权限表`auth`中有个字段`url`，对应权限名`name`，目前只在`SecurityConfig.kt`里使用代码写死了一个配置
 
@@ -30,6 +24,7 @@ authorizeRequests {
 这篇来将 `auth` 表里的 `url` 字段利用起来，实现权限动态控制，即数据库里对权限做更新而无需修改代码
 
 ## 准备Controller
+
 将前面写的 `/home`的controller修改一下地址，改成 `/user/list`
 
 ```kotlin
@@ -39,6 +34,7 @@ fun home(model: Model): Any? {
     return "home"
 }
 ```
+
 ## 配置authorizeHttpRequests
 
 通过构造方法将 `AuthService注入进来`
@@ -103,15 +99,16 @@ http {
 }
 return http.build()
 ```
+
 ## 测试
 
 启动服务，直接访问 `/user/list` 地址，会跳转到登录，说明匿名用户会首先跳转登录的逻辑是正常的
 
 然后登录成功后回到 `/user/list` 页面，因为 `zhangsan` 只有首页权限而没有这个页面的权限。所以跳转到403报错页面，说明从数据库中读取权限进行决策的逻辑也是正常的。
 
-![](/assets/1745310418945.png)
+![](/assets/images/1745310418945.png)
 
-![](/assets/1745310425033.png)
+![](/assets/images/1745310425033.png)
 
 ## 总结
 

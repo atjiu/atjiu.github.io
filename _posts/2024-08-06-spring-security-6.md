@@ -85,11 +85,11 @@ open fun filterChain(
 
 启动服务登录进入首页
 
-![](/assets/1745309925745.png)
+![](/assets/images/1745309925745.png)
 
 点击左下角的`登出`链接
 
-![](/assets/1745309936950.png)
+![](/assets/images/1745309936950.png)
 
 啊哦~~ 404了，报错的原因是CSRF防护，开启CSRF防护的情况下，登出功能只能是post请求，所以登出按钮可以被表单包着
 
@@ -103,7 +103,7 @@ index.html
 </footer>
 ```
 
-![](/assets/1745309948670.png)
+![](/assets/images/1745309948670.png)
 
 可以看到csrf又被自动添加上了，这时再点击登出按钮就能正常登出了
 

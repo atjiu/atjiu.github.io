@@ -8,11 +8,11 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 目录结构
 
-![](/assets/2021-03-08-17-27-34.png)
+![](/assets/images/2021-03-08-17-27-34.png)
 
 pom.xml
 
@@ -260,4 +260,4 @@ com.alibaba.boot.dubbo.context.event.AwaitingNonWebApplicationListener
 
 打包时要把idea一个配置打开，是为了生成 spring-configuration-metadata.json 文件的，这样在使用这个starter的项目中写配置文件时就有提示了，如下图
 
-![](/assets/2021-03-08-17-30-07.png)
+![](/assets/images/2021-03-08-17-30-07.png)

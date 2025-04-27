@@ -68,7 +68,7 @@ public class IndexController {
 
 然后启动项目，浏览器访问 `http://localhost:8080/index` 可以看到出现了下面这个错误页面
 
-![](https://atjiu.github.io/assets/QQ20190911-161016@2x.png)
+![](/assets/images/QQ20190911-161016@2x.png)
 
 这个页面是springboot内置的错误页面
 
@@ -139,7 +139,7 @@ public class GlobalExceptionHandler {
 
 这时候再用浏览器访问就可以看到返回的是一段json字符串了
 
-![](https://atjiu.github.io/assets/QQ20190911-162622@2x.png)
+![](/assets/images/QQ20190911-162622@2x.png)
 
 ## 常用校验注解
 
@@ -199,7 +199,7 @@ public class IndexController {
 
 解决办法就是根据异常类来进行区分，通过断点可以发现 hibernate-validator 校验的异常类是 `javax.validation.ConstraintViolationException`
 
-![](https://atjiu.github.io/assets/QQ20190911-165853@2x.png)
+![](/assets/images/QQ20190911-165853@2x.png)
 
 这样就可以做文章了，代码如下
 
@@ -294,7 +294,7 @@ public Object index1(@Valid User user) {
 
 这一看就不对，不是上面封装的异常处理信息，断点查看原来对对象进行校验异常类变成了 `org.springframework.validation.BindException`
 
-![](https://atjiu.github.io/assets/QQ20190911-171229@2x.png)
+![](/assets/images/QQ20190911-171229@2x.png)
 
 知道是哪个异常类就好办了，另外对这个异常类也做一下处理即可
 

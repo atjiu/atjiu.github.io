@@ -12,7 +12,7 @@ author: 朋也
 
 先上图
 
-![](/assets/socket.io-koa-integrate.gif)
+![](/assets/images/socket.io-koa-integrate.gif)
 
 
 

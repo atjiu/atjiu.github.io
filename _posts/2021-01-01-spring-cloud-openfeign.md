@@ -168,4 +168,4 @@ logging.level.com.example.springcloudtutorial.IOrderService=debug
 
 再次访问 localhost:18081/createOrder?userId=123 后会看到控制台里显示的日志如下
 
-![](/assets/2021-01-01-20-46-43.png)
+![](/assets/images/2021-01-01-20-46-43.png)

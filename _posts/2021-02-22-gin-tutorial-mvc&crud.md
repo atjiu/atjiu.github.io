@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 上古的分包模型，M模型，V视图，C控制器
 
@@ -163,12 +163,12 @@ func (controller UserController) DeleteUser(c *gin.Context) {
 
 几种取值的方式
 
-- ?name=123&pwd=abc  这种是Query参数，使用 c.Query("name") 来取
-- /users/:name  这是Param参数，使用 c.Param("name") 来取
+- ?name=123&pwd=abc 这种是Query参数，使用 c.Query("name") 来取
+- /users/:name 这是Param参数，使用 c.Param("name") 来取
 - POST请求且Content-Type为application/x-www-form-urlencoded 时，使用 c.PostForm("name") 来取
 - 请求类型为 application/json 且参数是一段json字符串时（如下图），可以使用 c.BindJson()方法来取
 
-![](/assets/2021-02-24-14-43-03.png)
+![](/assets/images/2021-02-24-14-43-03.png)
 
 最后修改main.go里的路由配置
 
@@ -206,4 +206,4 @@ func main() {
 
 string 转 int/int32/int64 或者 int 转 string 的方法
 
-![](/assets/2021-02-22-15-40-48.png)
+![](/assets/images/2021-02-22-15-40-48.png)

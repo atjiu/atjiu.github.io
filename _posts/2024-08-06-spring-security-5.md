@@ -8,15 +8,10 @@ author: 朋也
 ---
 
 * content
-{:toc}
-
-
-
-
-
-
+  {:toc}
 
 目前配置的认证仅有一个，即所有链接都需要登录认证才能访问
+
 ```java
 http {
 authorizeRequests {
@@ -24,6 +19,7 @@ authorizeRequests {
     authorize("/**", authenticated)
 }
 ```
+
 下面来配置一下不同url需要不同权限
 
 ## 准备工作
@@ -39,6 +35,7 @@ fun home(model:Model) : Any? {
 ```
 
 home.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -66,7 +63,9 @@ fun index(model: Model): Any? {
     return "index"
 }
 ```
+
 index.html
+
 ```html
 <!doctype html>
 <html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
@@ -85,6 +84,7 @@ index.html
 ```
 
 ## 代码配置
+
 首先在模拟内存用户处给`user`用户添加`USER`角色。另外再创建一个用户`admin`并设置上`ADMIN`权限
 
 ```java
@@ -143,15 +143,16 @@ open fun filterChain(
 
 在构建内存用户时，调用了一个 `roles()` 方法，看一下这个方法将传的参数扔哪了
 
-![](/assets/1745309539168.png)
+![](/assets/images/1745309539168.png)
 
 从源码中可以看到springsecurity将传进来的roles给遍历出来并在前面又拼上了 `ROLE_` 作为权限放进了`authorities`中。断点看看
 
-![](/assets/1745309550688.png)
+![](/assets/images/1745309550688.png)
 
 在内存用户校验的方法 `loadUserByUsername()` 中，UserDetails对象user中确实是有 `ROLE_ADMIN` 权限的
 
 所以上面配置 `/home` 路径所需权限处用的是 `hasRole("ADMIN")` 这里也可以换成 `hasAuthority("ROLE_ADMIN")` 如下
+
 ```java
 http {
     authorizeRequests {
@@ -165,29 +166,31 @@ http {
 
 而 `hasRole()` 这个方法为什么能不写 `ROLE_` 也能校验呢？继续查源码
 
-![](/assets/1745309563178.png)
+![](/assets/images/1745309563178.png)
 
 在`AuthorizeHttpRequestsConfigurer`类中的`hasRole()`方法中调用了`AuthorityAuthorizationManager`类中的 `hasAnyRole()`方法 且将`this.rolePrefix`参数带过!去了，下面看看
 
-![](/assets/1745309575619.png)
+![](/assets/images/1745309575619.png)
 
 方法中，它又调用了 `hasAnyAuthority()` 并将这个前缀继续往下传给了 `toNamedRolesArray()` 方法，在 `toNamedRolesArray()` 方法中，又将前缀和角色名拼在一块作为权限来验证了
 
 所以`hasRole()`底层还是调用的 `hasAuthority()` 来验证的。
+
 ## 测试
+
 使用 `user` 用户登录，然后访问 `/` 页面
 
-![](/assets/1745309585232.png)
+![](/assets/images/1745309585232.png)
 
 保持登录状态访问 `/home` 页面
 
-![](/assets/1745309593721.png)
+![](/assets/images/1745309593721.png)
 
 可以看到403了，`user`用户没有权限访问 `/home`页面
 
 重新使用`admin`登录，访问 `/home`页面。如下就能正常显示了
 
-![](/assets/1745309621055.png)
+![](/assets/images/1745309621055.png)
 
 ## 总结
 

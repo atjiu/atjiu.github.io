@@ -8,7 +8,7 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 上一篇在User模块里调用Order的时候用到了一个注解 @LoadBanlance 这货就是Ribbon里的
 
@@ -24,7 +24,7 @@ Ribbon是什么东西？
 
 负载均衡的规则有哪些？
 
-![](/assets/2021-01-01-17-27-05.png)
+![](/assets/images/2021-01-01-17-27-05.png)
 
 - AvailabilityFilteringRule
 - BestAvailableRule 会过滤掉由于多次访问故障而处于断路器跳闸状态的服务，然后选择一个并发量最小的服务
@@ -39,7 +39,7 @@ Ribbon是什么东西？
 
 > 自定义的规则类不能被@ComponentScan扫描到，否则自定义的规则会被所有Ribbon客户端共享 见：https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-ribbon.html#_customizing_the_ribbon_client
 
-![](/assets/2021-01-01-17-49-42.png)
+![](/assets/images/2021-01-01-17-49-42.png)
 
 自定义一个rule配置类，注意这个类的包名为 com.example.myrule 而UserApplication的包名为 com.example.springcloud
 

@@ -219,7 +219,7 @@ public class UserApplication {
 
 启动成功后，访问 http://localhost:18080 会看到下面界面 其中ORDER实例有两个服务
 
-![](/assets/2021-01-01-14-28-28.png)
+![](/assets/images/2021-01-01-14-28-28.png)
 
 然后访问 http://localhost:18081/createOrder?userId=123
 
@@ -283,8 +283,8 @@ eureka.client.service-url.defaultZone=http://eureka-server:18080/eureka/
 
 访问 http://localhost:18080/ `DS Replicas` 标签下显示如下图
 
-![](/assets/2021-01-01-21-07-44.png)
+![](/assets/images/2021-01-01-21-07-44.png)
 
 访问 http://localhost:28080/ `DS Replicas` 标签下显示如下图
 
-![](/assets/2021-01-01-22-17-00.png)
+![](/assets/images/2021-01-01-22-17-00.png)

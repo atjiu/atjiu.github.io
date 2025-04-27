@@ -8,15 +8,11 @@ author: 朋也
 ---
 
 * content
-{:toc}
+  {:toc}
 
 先上图
 
-![](/assets/SimulatorScreenShot-iPhone7-2019-07-16at15.47.54.png)
-
-
-
-
+![](/assets/images/SimulatorScreenShot-iPhone7-2019-07-16at15.47.54.png)
 
 ## 静态数据
 
@@ -88,7 +84,7 @@ class MyHomeWidget extends StatelessWidget {
 
 渲染出来长下面这个样
 
-![](/assets/flutter-listview-00.png)
+![](/assets/images/flutter-listview-00.png)
 
 可以看到它没有分割线，那怎么加上分割线呢？
 
@@ -179,7 +175,7 @@ class MyHomeWidget extends StatelessWidget {
 
 效果图
 
-![](/assets/flutter-listview-01.png)
+![](/assets/images/flutter-listview-01.png)
 
 ## 动态数据
 

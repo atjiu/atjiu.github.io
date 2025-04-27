@@ -68,7 +68,7 @@ xlsx.writeFile(workBook, "./aa.xlsx");
 
 生成的文件长下面这个样
 
-![](/assets/QQ20190611-112757.png)
+![](/assets/images/QQ20190611-112757.png)
 
 文原接链: [https://atjiu.github.io/2019/06/11/nodejs-xlsx/](https://atjiu.github.io/2019/06/11/nodejs-xlsx/)
 

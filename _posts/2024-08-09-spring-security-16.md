@@ -114,6 +114,6 @@ class IndexController {
 
 使用 zhangsan登录，打开 http://localhost:8080/user/list 提示没权限
 
-![](/assets/1745311818122.png)
+![](/assets/images/1745311818122.png)
 
 

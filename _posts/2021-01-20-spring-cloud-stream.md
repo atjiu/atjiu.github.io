@@ -261,4 +261,4 @@ public class StreamConsumer2Application {
 
 `org.springframework.cloud.stream.annotation` 这个包下的几个注解都标注了不推荐使用了，但官方文档上又没说明用哪个来代替
 
-![](/assets/2021-01-20-15-30-05.png)
+![](/assets/images/2021-01-20-15-30-05.png)

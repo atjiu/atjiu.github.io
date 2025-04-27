@@ -62,12 +62,12 @@ formLogin {
 
 效果
 
-![](/assets/1745311142062.png)
+![](/assets/images/1745311142062.png)
 
 ## 自定义权限验证异常处理
 默认的没权限页面如下这样
 
-![](/assets/1745311151002.png)
+![](/assets/images/1745311151002.png)
 
 可以看到非常的不好看，在配置httpSecurity时，还有一个 `exceptionHandling` 属性，可以给它配置一个403的页面
 
@@ -104,7 +104,7 @@ authorizeHttpRequests {
 
 使用 zhangsan 帐号登录，访问 `/user/list`
 
-![](/assets/1745311162284.png)
+![](/assets/images/1745311162284.png)
 
 服务端渲染的页面这样就够了，但现在都喜欢前后端分离，所以自定义异常处理还是有必要的
 
@@ -153,7 +153,7 @@ exceptionHandling {
 
 测试效果如下
 
-![](/assets/1745311173753.png)
+![](/assets/images/1745311173753.png)
 
 ## 总结
 

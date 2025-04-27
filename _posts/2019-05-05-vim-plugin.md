@@ -63,7 +63,7 @@ set mouse=a  "鼠标支持
 
 首先肯定是 [nerd tree](https://vimawesome.com/plugin/nerdtree-red) 了, 这个插件装上之后可以像ide一样, 多一个sidebar, 大致就长这个样
 
-![](/assets/QQ20190505-134426@2x.png)
+![](/assets/images/QQ20190505-134426@2x.png)
 
 安装插件方法
 
@@ -91,7 +91,7 @@ call plug#end()
 
 nerd tree 只需要记住一个命令就可以了, 光标在左边窗口中, 命令模式下按 m 即可调出菜单, 长下图这个样
 
-![](/assets/QQ20190505-135111@2x.png)
+![](/assets/images/QQ20190505-135111@2x.png)
 
 然后就可以通过选择左边的 a,b,c,d,e...来进行相应的操作了
 

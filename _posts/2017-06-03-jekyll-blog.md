@@ -76,7 +76,7 @@ paginate: 6
 
 这样在页面里遍历就可以用 `paginator.posts` 来获取分页列表，如下
 
-![](/assets/QQ图片20170603152948.png)
+![](/assets/images/QQ图片20170603152948.png)
 
 | 变量                             | 说明       |
 |--------------------------------|----------|
@@ -96,15 +96,15 @@ paginate: 6
 
 if用法
 
-![](/assets/QQ截图20170603153032.png)
+![](/assets/images/QQ截图20170603153032.png)
 
 for用法
 
-![](/assets/QQ图片20170603152948.png)
+![](/assets/images/QQ图片20170603152948.png)
 
 另外 for 里还可以设置偏移量，类似分页功能
 
-![](/assets/QQ截图20170603153010.png)
+![](/assets/images/QQ截图20170603153010.png)
 
 ## Github Pages托管
 

@@ -28,7 +28,7 @@ author: 朋也
 
 直接上图
 
-![](/assets/QQ20180614-224012.png)
+![](/assets/images/QQ20180614-224012.png)
 
 
 

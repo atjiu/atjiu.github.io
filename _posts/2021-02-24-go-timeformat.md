@@ -12,7 +12,7 @@ author: 朋也
 
 go里格式化时间比较奇葩，没有java里的 `YYYY-MM-dd HH:mm:ss`，看 `time.Format()` 源码会发现
 
-![](/assets/2021-02-24-17-41-48.png)
+![](/assets/images/2021-02-24-17-41-48.png)
 
 它格式化时间是按照一个时间来的，这个时间是 `Mon Jan 2 15:04:05 -0700 MST 2006` 听说这个时间是go第一次发布的时间
 

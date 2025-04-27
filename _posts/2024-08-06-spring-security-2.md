@@ -18,18 +18,18 @@ gradle构建好之后什么都不用修改，直接启动`SpringsecurityDemoAppl
 在启动日志中可以看到一串密码
 `Using generated security password: e4cec2e0-b868-44dc-81cb-3add5bc79112`
 
-![](/assets/1745308949696.png)
+![](/assets/images/1745308949696.png)
 
 打开浏览器输入网址：[http://localhost:8080](http://localhost:8080) 会打开一个springsecurity提供的默认登录页
 
-![](/assets/1745308961790.png)
+![](/assets/images/1745308961790.png)
 
 默认用户名是：user
 默认密码就是控制台中日志里输出的那串密码
 
 输入后点击登录，成功后会跳到一个新页面
 
-![](/assets/1745308971346.png)
+![](/assets/images/1745308971346.png)
 
 可以看到链接已经变成了 localhost:8080?continue 了。错误信息404是因为没有首页的控制器，在项目中添加一个
 
@@ -67,4 +67,4 @@ class IndexController {
 ```
 重启服务，重新登录，就会看到正常页面了
 
-![](/assets/1745308988161.png)
+![](/assets/images/1745308988161.png)

@@ -35,7 +35,7 @@ implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 
 要想在开发过程中IDEA有提示，还需要添加sec的namespace，在扩展项目的readme最下面提到了，所有版本的命名空间都统一了
 
-![](/assets/1745311731714.png)
+![](/assets/images/1745311731714.png)
 
 所以只需要引入这一个地址就行了
 
@@ -67,10 +67,10 @@ implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 
 使用admin登录，页面如下
 
-![](/assets/1745311742315.png)
+![](/assets/images/1745311742315.png)
 
 使用zhangsan登录，页面如下
 
-![](/assets/1745311749268.png)
+![](/assets/images/1745311749268.png)
 
 
