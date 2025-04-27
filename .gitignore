@@ -1,9 +1,15 @@
-# Created by .ignore support plugin (hsz.mobi)
-.idea
-*.iml
-.DS_Store
+# output
 _site
+
+# cache
 .sass-cache
+.jekyll-metadata
+
+# gem lock file
 Gemfile.lock
-.vscode
-.jekyll-cache
+
+# Mac OSX
+.DS_Store
+
+.idea/
+*.iml

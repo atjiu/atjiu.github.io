@@ -1,86 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="{{ site.language }}">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if site.bing_meta %}
-    <meta name="msvalidate.01" content="{{site.bing_meta}}" /> {% endif %}
-    {% seo %}
-    <link href="{{ '/css/simple.css' | prepend: site.baseurl }}" rel="stylesheet">
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-    {% if site.baidu_tongji_id %}
-    <script>
-        // 百度统计代码
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?{{site.baidu_tongji_id}}";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    {% endif %}
-    {% if site.google_analytics_id %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics_id}}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', '{{site.google_analytics_id}}');
-    </script>
-    {% endif %}
-
-    <!-- google adsense -->
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-2721745535033061",
-            enable_page_level_ads: true
-        });
-    </script>
-    <script type="text/javascript">
-        if (document.domain.indexOf("localhost") == -1 && document.domain.indexOf('github.io') == -1 && document.domain != 'atjiu.github.io') {
-            window.location.href = 'https://atjiu.github.io/';
-        }
-        window.onload = function () {
-            let tocDom = document.querySelector("#markdown-toc");
-            if (tocDom) {
-                let tocDiv = document.createElement("div");
-                let clondUl = tocDom.cloneNode(true);
-                clondUl.removeAttribute("id");
-                clondUl.style.paddingLeft = "20px";
-
-                // 添加相关文章导航
-                let related_post_li = document.createElement('li');
-                let related_post_a = document.createElement('a');
-                related_post_a.href = "#相关文章";
-                related_post_a.innerText = "相关文章";
-                related_post_li.appendChild(related_post_a);
-
-                clondUl.appendChild(related_post_li);
-                tocDiv.appendChild(clondUl);
-                tocDiv.setAttribute("class", "post-toc");
-                tocDiv.style.position = "fixed";
-                tocDiv.style.left = "20px";
-                tocDiv.style.top = "0px";
-                tocDiv.style.width = "180px";
-                document.body.appendChild(tocDiv);
-                tocDom.remove();
-            }
-        }
-    </script>
+  {% include head.html %}
 </head>
-
 <body>
-    <section class="container">
-        {{ content }}
-    </section>
-    <!-- {% include footer.html %} -->
+  <div class="container-wrapper">
+    <header class="container-header">
+      {% include header.html %}
+    </header>
+    <main class="container-main">
+      {{content}}
+    </main>
+    <footer class="container-footer">
+      {% include footer.html %}
+    </footer>
+  </div>
 </body>
-
 </html>

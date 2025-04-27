@@ -1,62 +1,75 @@
-# Welcome to Jekyll!
+# Welcome to Jekyll-Paper!
 #
-# 基本信息
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 title: 朋也的博客
 email: py2qiuse@gmail.com
-description: 喜欢编码，酷爱动漫
+name: 朋也
+description: >- # this means to ignore newlines until "baseurl:"
+  不定时日常记录
+# keywords: [Your keywords]
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://atjiu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-weibo_username:
-github_username: atjiu
+# domain: "example.com" # the domain name for your site, e.g. example.com
+language: zh-cn
+# Supported languages list:
+# en: English
+# de: Deutsche (German)
+# es: Español (Spanish)
+# fr: Français (French)
+# ja: 日本語 (Japanese)
+# pt: Português (Portuguese)
+# zh-cn: 简体中文 (Simplified Chinese)
+# zh-tw: 繁體中文 (Traditional Chinese)
+# ko : 한국어(Korean)
 
-# 文章目录格式化
-permalink: /:year/:month/:day/:title/
-# 文章摘要分隔符
-excerpt_separator: "\n\n\n\n"
+analytics: UA-98133026-1  # the Google Analytics property ID, e.g. UA-XXXXX-Y
 
-# 评论组件
-disqus_shortname: tomoya
+paginate: 25
+paginate_path: "/page:num/"
 
-# statistic analysis 统计代码
-baidu_tongji_id: ebcdac2d132aa663e3ee4c53656bad25
-google_analytics_id: UA-98133026-1
+comments: false  # enable comments
+disqus: tomoya         # disqus account
 
-# webmaster meta
-bing_meta: 8D00F36D8929A335207FBCE7F13C50B3
+mathjax: true # Mathematics
+mermaid: true # Diagrams
 
-# 格式化文档
+permalink: /:year/:month/:day/:title
+
+sass:
+  sass_dir: _sass
+  style: expanded # compressed, compact, expanded or compressed
+
+# Category settings
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    category: /category/:name/
+    tag: /tag/:name/
+
+# Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# 开启相关文章功能，可惜github pages不支持
-# lsi: true
-
-# 插件
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-seo-tag
 
-# 分页
-paginate: 7
-
-# 搜索服务
-algolia:
-  application_id: "36883FPR2D"
-  index_name: "36883FPR2D"
-  search_only_api_key: "2d40767987f704b3b04b9efce7ff49c8"
-
-# 友情链接
-links:
-  - name: 朋也
-    url: https://yiiu.co/
-  - name: 朋也社区
-    url: https://dev.yiiu.co/
-  - name: 开发俱乐部
-    url: https://17dev.club/
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
