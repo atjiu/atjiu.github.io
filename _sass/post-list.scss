@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 .posts-list-item {
+  border-bottom-color: #c3c3c3;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
   display: block;
   position: relative;
   line-height: 24px;
