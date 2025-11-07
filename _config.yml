@@ -40,7 +40,7 @@ paginate: 25
 paginate_path: "/page:num/"
 
 comments: false  # enable comments
-disqus: tomoya         # disqus account
+disqus: hxyq         # disqus account
 
 mathjax: true # Mathematics
 mermaid: true # Diagrams
