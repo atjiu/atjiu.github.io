@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenGL学习 - VAO
-date: 2025-11-07 09:47:23
+date: 2025-11-06 09:47:23
 categories: OpenGL学习
 tags: OpenGL
 author: 朋也
